@@ -3,12 +3,11 @@ from industry import IndustryTertiary, TileLocationChecks
 industry = IndustryTertiary(
     id="power_plant",
     accept_cargo_types=["COAL", "PETR"],
-    prod_cargo_types=[],
+    prod_cargo_types=["ELEC"],
     prob_in_game="3",
     prob_map_gen="5",
     prod_multiplier="[0, 0]",
     map_colour="168",
-    life_type="IND_LIFE_TYPE_BLACK_HOLE",
     town_industry_for_cargoflow=False,
     prospect_chance="0.75",
     name="string(STR_IND_POWER_PLANT)",

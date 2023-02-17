@@ -157,7 +157,7 @@ STR_CARGO_NAME_WOOL                                                             
 STR_CARGO_NAME_YARN                                                             :Yarn
 STR_CARGO_NAME_ZINC                                                             :Zinc
 STR_ELECTRICITY                                                                 :Electricity (batteries)
-
+STR_PACK                                                                        :Packaging
 STR_CARGO_UNIT_ACID                                                             :{VOLUME} of acid
 STR_CARGO_UNIT_ALCOHOL                                                          :{VOLUME} of alcohol
 STR_CARGO_UNIT_ALLOY_STEEL                                                      :{WEIGHT} of alloy steel
@@ -262,7 +262,7 @@ STR_CARGO_UNIT_WOOL                                                             
 STR_CARGO_UNIT_YARN                                                             :{SIGNED_WORD} bale{P 0 "" s} of yarn
 STR_CARGO_UNIT_ZINC                                                             :{WEIGHT} of zinc
 STR_CARGO_UNIT_BATTERIES                                                        :{SIGNED_WORD} battery{P batteries} of electricity
-
+STR_UNIT_PACK                                                                   :{SIGNED_WORD} crate{P 0 "" s} of packaging
 # it seems that using 2 chars for these is a convention not a limit, I tested 4 chars and OpenTTD renders it fine - May 2020
 STR_CID_ACID                                                                    :{TINYFONT}ACID
 STR_CID_ALCOHOL                                                                 :{TINYFONT}ALCO
@@ -378,6 +378,7 @@ STR_CID_WOOL                                                                    
 STR_CID_YARN                                                                    :{TINYFONT}YARN
 STR_CID_ZINC                                                                    :{TINYFONT}ZINC
 STR_CID_ELECTRICITY                                                             :{TINYFONT}DC
+STR_CID_PACK                                                                    :{TINYFONT}PACK
 
 STR_ERR_CLIMATE_TOYLAND                                                         :{ORANGE}FIRS is not designed to be used with Toyland climate
 STR_ERR_OPENTTD_VERSION                                                         :{ORANGE}E00: FIRS requires OpenTTD 1.7.0 (or for those using trunk builds, r27769)

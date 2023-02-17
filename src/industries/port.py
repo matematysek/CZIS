@@ -3,7 +3,7 @@ from industry import IndustryPrimaryPort, TileLocationChecks
 industry = IndustryPrimaryPort(
     id="port",
     accept_cargo_types=[],
-    prod_cargo_types_with_multipliers=[],
+    prod_cargo_types_with_multipliers=[("NH3_", 4),("NITR", 2)],
     prob_in_game="2",
     prob_map_gen="8",
     map_colour="186",

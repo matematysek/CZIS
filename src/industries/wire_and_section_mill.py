@@ -2,7 +2,7 @@ from industry import IndustrySecondary, TileLocationChecks
 
 industry = IndustrySecondary(
     id="wire_and_section_mill",
-    accept_cargos_with_input_ratios=[("STCB", 3), ("SOAP", 1), ("ALUM", 2), ("COPR", 2)],
+    accept_cargos_with_input_ratios=[("STCB", 3), ("ALUM", 2), ("COPR", 2)],
     combined_cargos_boost_prod=True,
     prod_cargo_types_with_output_ratios=[
         ("STSE", 4),

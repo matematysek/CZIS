@@ -9,7 +9,7 @@ industry = IndustrySecondary(
         ("TYRE", 4),
     ],
     combined_cargos_boost_prod=True,
-    prod_cargo_types_with_output_ratios=[("VEHI", 6), ("ENSP", 1), ("FMSP", 1)],
+    prod_cargo_types_with_output_ratios=[("VEHI", 8)],
     prob_in_game="3",
     prob_map_gen="5",
     map_colour="141",

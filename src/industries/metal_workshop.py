@@ -5,7 +5,6 @@ industry = IndustrySecondary(
     accept_cargos_with_input_ratios=[
     ("STSH", 2),
     ("COAT", 2),
-    ("ZINC", 2),
     ("STWR", 2),
 ]
     combined_cargos_boost_prod=True,

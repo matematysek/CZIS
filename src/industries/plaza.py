@@ -2,12 +2,11 @@ from industry import IndustryInformative, TileLocationChecks
 
 industry = IndustryInformative(
     id="plaza",
-    accept_cargo_types=[PASS, ELEC, MAIL],
-    prod_cargo_types=[PASS, MAIL],
+    accept_cargo_types=["PASS", "ELEC", "MAIL"],
+    prod_cargo_types=["PASS", "MAIL"],
     prob_in_game="12",
     prob_map_gen="24",
     map_colour="168",
-    life_type="IND_LIFE_TYPE_BLACK_HOLE",
     special_flags=["IND_FLAG_ONLY_IN_TOWNS"],
     location_checks=dict(same_type_distance=16),
     prospect_chance="0.75",

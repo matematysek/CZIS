@@ -2,7 +2,7 @@ from industry import IndustrySecondary, TileLocationChecks
 
 industry = IndustrySecondary(
     id="flour_mill",
-    accept_cargos_with_input_ratios=[("GRAI", 6)],
+    accept_cargos_with_input_ratios=[("GRAI", 6), ("PACK", 1)],
     prod_cargo_types_with_output_ratios=[("FOOD", 8)],
     prob_map_gen="10",
     prob_in_game="10",

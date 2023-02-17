@@ -3,7 +3,7 @@ rom cargo import Cargo
 cargo = Cargo(
     id="electricity",
     type_name="STR_ELECTRICITY",
-    unit_name="STR_ELECTRICITY",
+    unit_name="STR_CARGO_UNIT_BATTERIES",
     type_abbreviation="string(STR_CID_ELECTRICITY)",
     sprite="NEW_CARGO_SPRITE",
     weight="0.5",

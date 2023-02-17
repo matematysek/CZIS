@@ -6,7 +6,6 @@ industry = IndustrySecondary(
         ("SCMT", 4),
         ("FECR", 2), 
         ("QLME", 1),
-        ("O2__", 1),
     ],
     combined_cargos_boost_prod=True,
     prod_cargo_types_with_output_ratios=[("STCB", 4), ("STAL", 2), ("SLAG", 2)],

@@ -2,7 +2,7 @@ from industry import IndustryPrimaryOrganic, TileLocationChecks
 
 industry = IndustryPrimaryOrganic(
     id="farm",
-    prod_cargo_types_with_multipliers=[],
+    prod_cargo_types_with_multipliers= [("GRAI", 14), ("LVST", 13)],
     prob_in_game="3",
     prob_map_gen="15",  # intended to be relatively prevalent in Steeltown, split this per economy if needed
     map_colour="85",

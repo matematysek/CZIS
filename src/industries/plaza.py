@@ -2,6 +2,8 @@ from industry import IndustryInformative, TileLocationChecks
 
 industry = IndustryInformative(
     id="plaza",
+    accept_cargo_types=[PASS, ELEC, MAIL],
+    prod_cargo_types=[PASS, MAIL],
     prob_in_game="12",
     prob_map_gen="24",
     map_colour="168",

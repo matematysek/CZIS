@@ -1,0 +1,3420 @@
+/* ******************************************************************
+ * Definition of the industry tile, its callbacks, and graphics chain
+ * ******************************************************************/
+
+
+    
+
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+
+    
+
+    
+
+    
+        
+        
+    
+        
+        
+    
+        
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_2_0) {
+                
+                    
+                        [10, 10, 64, 57, -31, -26, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_1.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_2_0_snow) {
+                
+                    
+                            [10, 10, 64, 57, -31, -26, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_1_snow.png"]
+                    
+                
+            }
+        
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_2_1) {
+                
+                    
+                        [10, 10, 64, 57, -31, -26, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_2.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_2_1_snow) {
+                
+                    
+                            [10, 10, 64, 57, -31, -26, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_2_snow.png"]
+                    
+                
+            }
+        
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_2_2) {
+                
+                    
+                        [10, 10, 64, 57, -31, -26, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_3.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_2_2_snow) {
+                
+                    
+                            [10, 10, 64, 57, -31, -26, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_3_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_3_0) {
+                
+                    
+                        [80, 10, 64, 66, -31, -26, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_1.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_3_0_snow) {
+                
+                    
+                            [80, 10, 64, 66, -31, -26, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_1_snow.png"]
+                    
+                
+            }
+        
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_3_1) {
+                
+                    
+                        [80, 10, 64, 66, -31, -26, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_2.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_3_1_snow) {
+                
+                    
+                            [80, 10, 64, 66, -31, -26, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_2_snow.png"]
+                    
+                
+            }
+        
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_3_2) {
+                
+                    
+                        [80, 10, 64, 66, -31, -26, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_3.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_3_2_snow) {
+                
+                    
+                            [80, 10, 64, 66, -31, -26, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_3_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_4_0) {
+                
+                    
+                        [150, 10, 64, 92, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_1.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_4_0_snow) {
+                
+                    
+                            [150, 10, 64, 92, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_1_snow.png"]
+                    
+                
+            }
+        
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_4_1) {
+                
+                    
+                        [150, 10, 64, 92, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_2.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_4_1_snow) {
+                
+                    
+                            [150, 10, 64, 92, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_2_snow.png"]
+                    
+                
+            }
+        
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_4_2) {
+                
+                    
+                        [150, 10, 64, 92, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_3.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_4_2_snow) {
+                
+                    
+                            [150, 10, 64, 92, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_3_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_5_0) {
+                
+                    
+                        [220, 10, 64, 90, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_1.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_5_0_snow) {
+                
+                    
+                            [220, 10, 64, 90, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_1_snow.png"]
+                    
+                
+            }
+        
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_5_1) {
+                
+                    
+                        [220, 10, 64, 90, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_2.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_5_1_snow) {
+                
+                    
+                            [220, 10, 64, 90, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_2_snow.png"]
+                    
+                
+            }
+        
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_5_2) {
+                
+                    
+                        [220, 10, 64, 90, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_3.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_5_2_snow) {
+                
+                    
+                            [220, 10, 64, 90, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_3_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_6_0) {
+                
+                    
+                        [290, 10, 64, 100, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_1.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_6_0_snow) {
+                
+                    
+                            [290, 10, 64, 100, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_1_snow.png"]
+                    
+                
+            }
+        
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_6_1) {
+                
+                    
+                        [290, 10, 64, 100, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_2.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_6_1_snow) {
+                
+                    
+                            [290, 10, 64, 100, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_2_snow.png"]
+                    
+                
+            }
+        
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_6_2) {
+                
+                    
+                        [290, 10, 64, 100, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_3.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_6_2_snow) {
+                
+                    
+                            [290, 10, 64, 100, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_3_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_7_0) {
+                
+                    
+                        [360, 10, 64, 100, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_1.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_7_0_snow) {
+                
+                    
+                            [360, 10, 64, 100, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_1_snow.png"]
+                    
+                
+            }
+        
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_7_1) {
+                
+                    
+                        [360, 10, 64, 100, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_2.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_7_1_snow) {
+                
+                    
+                            [360, 10, 64, 100, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_2_snow.png"]
+                    
+                
+            }
+        
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_7_2) {
+                
+                    
+                        [360, 10, 64, 100, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_3.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_7_2_snow) {
+                
+                    
+                            [360, 10, 64, 100, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_3_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_8_0) {
+                
+                    
+                        [430, 10, 64, 56, -31, -26, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_1.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_8_0_snow) {
+                
+                    
+                            [430, 10, 64, 56, -31, -26, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_1_snow.png"]
+                    
+                
+            }
+        
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_8_1) {
+                
+                    
+                        [430, 10, 64, 56, -31, -26, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_2.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_8_1_snow) {
+                
+                    
+                            [430, 10, 64, 56, -31, -26, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_2_snow.png"]
+                    
+                
+            }
+        
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_8_2) {
+                
+                    
+                        [430, 10, 64, 56, -31, -26, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_3.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_8_2_snow) {
+                
+                    
+                            [430, 10, 64, 56, -31, -26, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_3_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_9_0) {
+                
+                    
+                        [500, 10, 64, 56, -31, -26, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_1.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_9_0_snow) {
+                
+                    
+                            [500, 10, 64, 56, -31, -26, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_1_snow.png"]
+                    
+                
+            }
+        
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_9_1) {
+                
+                    
+                        [500, 10, 64, 56, -31, -26, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_2.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_9_1_snow) {
+                
+                    
+                            [500, 10, 64, 56, -31, -26, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_2_snow.png"]
+                    
+                
+            }
+        
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_9_2) {
+                
+                    
+                        [500, 10, 64, 56, -31, -26, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_3.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_9_2_snow) {
+                
+                    
+                            [500, 10, 64, 56, -31, -26, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_3_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_10_0) {
+                
+                    
+                        [570, 10, 64, 110, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_1.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_10_0_snow) {
+                
+                    
+                            [570, 10, 64, 110, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_1_snow.png"]
+                    
+                
+            }
+        
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_10_1) {
+                
+                    
+                        [570, 10, 64, 110, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_2.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_10_1_snow) {
+                
+                    
+                            [570, 10, 64, 110, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_2_snow.png"]
+                    
+                
+            }
+        
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_10_2) {
+                
+                    
+                        [570, 10, 64, 110, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_3.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_10_2_snow) {
+                
+                    
+                            [570, 10, 64, 110, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_3_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_11_0) {
+                
+                    
+                        [640, 10, 64, 110, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_1.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_11_0_snow) {
+                
+                    
+                            [640, 10, 64, 110, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_1_snow.png"]
+                    
+                
+            }
+        
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_11_1) {
+                
+                    
+                        [640, 10, 64, 110, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_2.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_11_1_snow) {
+                
+                    
+                            [640, 10, 64, 110, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_2_snow.png"]
+                    
+                
+            }
+        
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_11_2) {
+                
+                    
+                        [640, 10, 64, 110, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_3.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_11_2_snow) {
+                
+                    
+                            [640, 10, 64, 110, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_3_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_12_0) {
+                
+                    
+                        [710, 10, 64, 110, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_1.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_12_0_snow) {
+                
+                    
+                            [710, 10, 64, 110, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_1_snow.png"]
+                    
+                
+            }
+        
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_12_1) {
+                
+                    
+                        [710, 10, 64, 110, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_2.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_12_1_snow) {
+                
+                    
+                            [710, 10, 64, 110, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_2_snow.png"]
+                    
+                
+            }
+        
+    
+        
+        
+            spriteset(aluminium_plant_spriteset_12_2) {
+                
+                    
+                        [710, 10, 64, 110, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_3.png"]
+                    
+                
+            }
+            spriteset(aluminium_plant_spriteset_12_2_snow) {
+                
+                    
+                            [710, 10, 64, 110, -31, -61, ANIM | NOCROP, "src/graphics/industries/aluminium_plant_3_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+
+
+
+    spritelayout aluminium_plant_spritelayout_1 {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_2_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_2_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_2_1(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(126));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_2_1_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(116));
+                }
+            
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_2_2(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(125));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_2_2_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(115));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout aluminium_plant_spritelayout_2 {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_3_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_3_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_3_1(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(126));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_3_1_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(116));
+                }
+            
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_3_2(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(125));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_3_2_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(115));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout aluminium_plant_spritelayout_3 {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_4_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_4_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_4_1(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(126));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_4_1_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(116));
+                }
+            
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_4_2(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(125));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_4_2_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(115));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout aluminium_plant_spritelayout_4 {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_5_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_5_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_5_1(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(126));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_5_1_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(116));
+                }
+            
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_5_2(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(125));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_5_2_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(115));
+                }
+            
+        
+
+        
+
+        
+            
+            building {
+                sprite: 2040 + (animation_frame / 4);
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                xoffset: 5;
+                yoffset: 0;
+                zoffset: 64+ animation_frame;
+                xextent: 11;
+                yextent: 16;
+                zextent: 7;
+                hide_sprite: animation_frame &gt; 19;
+            }
+        
+
+        
+        
+
+    }
+
+    spritelayout aluminium_plant_spritelayout_5 {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_6_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_6_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_6_1(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(126));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_6_1_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(116));
+                }
+            
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_6_2(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(125));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_6_2_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(115));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout aluminium_plant_spritelayout_6 {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_7_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_7_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_7_1(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(126));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_7_1_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(116));
+                }
+            
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_7_2(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(125));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_7_2_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(115));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout aluminium_plant_spritelayout_7 {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_8_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_8_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_8_1(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(126));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_8_1_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(116));
+                }
+            
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_8_2(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(125));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_8_2_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(115));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout aluminium_plant_spritelayout_8 {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_9_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_9_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_9_1(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(126));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_9_1_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(116));
+                }
+            
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_9_2(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(125));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_9_2_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(115));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout aluminium_plant_spritelayout_9 {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_10_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_10_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_10_1(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(126));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_10_1_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(116));
+                }
+            
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_10_2(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(125));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_10_2_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(115));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout aluminium_plant_spritelayout_10 {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_11_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_11_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_11_1(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(126));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_11_1_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(116));
+                }
+            
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_11_2(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(125));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_11_2_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(115));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout aluminium_plant_spritelayout_11 {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_12_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_12_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_12_1(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(126));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_12_1_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(116));
+                }
+            
+        
+            
+                
+                building {
+                    sprite: aluminium_plant_spriteset_12_2(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(125));
+                }
+                building {
+                    sprite: aluminium_plant_spriteset_12_2_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(115));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout aluminium_plant_spritelayout_concrete {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+        
+            
+        
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout aluminium_plant_spritelayout_transformer {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: 2054;
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 16;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: 2054;
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 16;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+            
+                
+                building {
+                    sprite: 2054;
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 16;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(126));
+                }
+                building {
+                    sprite: 2054;
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 16;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(116));
+                }
+            
+        
+            
+                
+                building {
+                    sprite: 2054;
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 16;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(125));
+                }
+                building {
+                    sprite: 2054;
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 16;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(115));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+
+
+
+
+
+    switch(FEAT_INDUSTRYTILES, SELF, aluminium_plant_industry_layout_1_graphics_switch, relative_pos) {
+        
+            
+            
+                relative_coord(0, 1): aluminium_plant_spritelayout_transformer;
+            
+        
+            
+            
+                relative_coord(0, 2): aluminium_plant_spritelayout_concrete;
+            
+        
+            
+            
+                relative_coord(0, 3): aluminium_plant_spritelayout_11;
+            
+        
+            
+            
+                relative_coord(1, 2): aluminium_plant_spritelayout_9;
+            
+        
+            
+            
+                relative_coord(1, 3): aluminium_plant_spritelayout_10;
+            
+        
+            
+            
+                relative_coord(2, 0): aluminium_plant_spritelayout_3;
+            
+        
+            
+            
+                relative_coord(2, 1): aluminium_plant_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(2, 2): aluminium_plant_spritelayout_5;
+            
+        
+            
+            
+                relative_coord(2, 3): aluminium_plant_spritelayout_6;
+            
+        
+            
+            
+                relative_coord(3, 0): aluminium_plant_spritelayout_4;
+            
+        
+            
+            
+                relative_coord(3, 1): aluminium_plant_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(3, 2): aluminium_plant_spritelayout_concrete;
+            
+        
+            
+            
+                relative_coord(3, 3): aluminium_plant_spritelayout_8;
+            
+        
+            
+            
+                relative_coord(4, 0): aluminium_plant_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(4, 1): aluminium_plant_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(4, 2): aluminium_plant_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(4, 3): aluminium_plant_spritelayout_2;
+            
+        
+            
+            
+                relative_coord(5, 0): aluminium_plant_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(5, 1): aluminium_plant_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(5, 2): aluminium_plant_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(5, 3): aluminium_plant_spritelayout_7;
+            
+        
+        return 0; // a default is needed, but should never be reached, layout definitions are explicit
+    }
+
+    switch(FEAT_INDUSTRYTILES, SELF, aluminium_plant_industry_layout_2_graphics_switch, relative_pos) {
+        
+            
+            
+                relative_coord(0, 0): aluminium_plant_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(0, 1): aluminium_plant_spritelayout_concrete;
+            
+        
+            
+            
+                relative_coord(0, 2): aluminium_plant_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(0, 3): aluminium_plant_spritelayout_concrete;
+            
+        
+            
+            
+                relative_coord(0, 4): aluminium_plant_spritelayout_11;
+            
+        
+            
+            
+                relative_coord(1, 0): aluminium_plant_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(1, 1): aluminium_plant_spritelayout_4;
+            
+        
+            
+            
+                relative_coord(1, 2): aluminium_plant_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(1, 3): aluminium_plant_spritelayout_9;
+            
+        
+            
+            
+                relative_coord(1, 4): aluminium_plant_spritelayout_10;
+            
+        
+            
+            
+                relative_coord(2, 0): aluminium_plant_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(2, 1): aluminium_plant_spritelayout_3;
+            
+        
+            
+            
+                relative_coord(2, 2): aluminium_plant_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(2, 3): aluminium_plant_spritelayout_5;
+            
+        
+            
+            
+                relative_coord(2, 4): aluminium_plant_spritelayout_6;
+            
+        
+            
+            
+                relative_coord(3, 0): aluminium_plant_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(3, 1): aluminium_plant_spritelayout_concrete;
+            
+        
+            
+            
+                relative_coord(3, 2): aluminium_plant_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(3, 3): aluminium_plant_spritelayout_8;
+            
+        
+            
+            
+                relative_coord(3, 4): aluminium_plant_spritelayout_concrete;
+            
+        
+            
+            
+                relative_coord(4, 0): aluminium_plant_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(4, 1): aluminium_plant_spritelayout_transformer;
+            
+        
+            
+            
+                relative_coord(4, 2): aluminium_plant_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(4, 3): aluminium_plant_spritelayout_2;
+            
+        
+            
+            
+                relative_coord(4, 4): aluminium_plant_spritelayout_7;
+            
+        
+        return 0; // a default is needed, but should never be reached, layout definitions are explicit
+    }
+
+    switch(FEAT_INDUSTRYTILES, SELF, aluminium_plant_industry_layout_3_graphics_switch, relative_pos) {
+        
+            
+            
+                relative_coord(0, 0): aluminium_plant_spritelayout_transformer;
+            
+        
+            
+            
+                relative_coord(1, 0): aluminium_plant_spritelayout_3;
+            
+        
+            
+            
+                relative_coord(1, 1): aluminium_plant_spritelayout_2;
+            
+        
+            
+            
+                relative_coord(2, 0): aluminium_plant_spritelayout_4;
+            
+        
+            
+            
+                relative_coord(2, 1): aluminium_plant_spritelayout_8;
+            
+        
+            
+            
+                relative_coord(3, 0): aluminium_plant_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(3, 1): aluminium_plant_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(4, 0): aluminium_plant_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(4, 1): aluminium_plant_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(5, 0): aluminium_plant_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(5, 1): aluminium_plant_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(6, 0): aluminium_plant_spritelayout_7;
+            
+        
+            
+            
+                relative_coord(6, 1): aluminium_plant_spritelayout_7;
+            
+        
+            
+            
+                relative_coord(7, 0): aluminium_plant_spritelayout_9;
+            
+        
+            
+            
+                relative_coord(7, 1): aluminium_plant_spritelayout_11;
+            
+        
+            
+            
+                relative_coord(8, 0): aluminium_plant_spritelayout_9;
+            
+        
+            
+            
+                relative_coord(8, 1): aluminium_plant_spritelayout_10;
+            
+        
+            
+            
+                relative_coord(9, 0): aluminium_plant_spritelayout_5;
+            
+        
+            
+            
+                relative_coord(9, 1): aluminium_plant_spritelayout_6;
+            
+        
+        return 0; // a default is needed, but should never be reached, layout definitions are explicit
+    }
+
+
+
+switch(FEAT_INDUSTRYTILES, PARENT, aluminium_plant_industry_graphics_switch_layouts, layout_num) {
+    
+        1: aluminium_plant_industry_layout_1_graphics_switch;
+    
+        2: aluminium_plant_industry_layout_2_graphics_switch;
+    
+        3: aluminium_plant_industry_layout_3_graphics_switch;
+    
+    aluminium_plant_industry_layout_1_graphics_switch; // default
+}
+
+
+switch(FEAT_INDUSTRYTILES, SELF, aluminium_plant_industry_construction_state_graphics_switch, construction_state) {
+    0..2: spritelayout_default_construction_states;
+    
+    aluminium_plant_industry_graphics_switch_layouts; // default
+}
+
+switch(FEAT_INDUSTRYTILES, SELF, aluminium_plant_store_temp_vars,
+        [STORE_TEMP(random_bits, 14),
+         STORE_TEMP(terrain_type == TILETYPE_SNOW, 13)
+            
+                , STORE_TEMP((current_year + 5 * LOAD_TEMP(14) / 0x10000) &gt;= 1942,
+                             127) 
+                , STORE_TEMP(construction_state != 3 ? 1 : LOAD_TEMP(127),
+                             127)
+                , STORE_TEMP(LOAD_TEMP(13) == 0 ? 1 : LOAD_TEMP(127), 
+                             117) 
+                , STORE_TEMP(LOAD_TEMP(13) == 1 ? 1 : LOAD_TEMP(127), 
+                             127)
+            
+                , STORE_TEMP((current_year + 5 * LOAD_TEMP(14) / 0x10000) &lt; 1942 || (current_year + 5 * LOAD_TEMP(14) / 0x10000) &gt;= 1980,
+                             126) 
+                , STORE_TEMP(construction_state != 3 ? 1 : LOAD_TEMP(126),
+                             126)
+                , STORE_TEMP(LOAD_TEMP(13) == 0 ? 1 : LOAD_TEMP(126), 
+                             116) 
+                , STORE_TEMP(LOAD_TEMP(13) == 1 ? 1 : LOAD_TEMP(126), 
+                             126)
+            
+                , STORE_TEMP((current_year + 5 * LOAD_TEMP(14) / 0x10000) &lt; 1980,
+                             125) 
+                , STORE_TEMP(construction_state != 3 ? 1 : LOAD_TEMP(125),
+                             125)
+                , STORE_TEMP(LOAD_TEMP(13) == 0 ? 1 : LOAD_TEMP(125), 
+                             115) 
+                , STORE_TEMP(LOAD_TEMP(13) == 1 ? 1 : LOAD_TEMP(125), 
+                             125)
+            
+        ]) {
+    aluminium_plant_industry_construction_state_graphics_switch; // default
+}
+
+switch (FEAT_INDUSTRYTILES, SELF, aluminium_plant_switch_graphics, [
+                                    switch_tile_fences(),
+                                    switch_terrain_sprite(),
+                                    
+                                 ]) {
+    aluminium_plant_store_temp_vars;
+}
+
+
+
+    
+        
+            
+    
+    switch(FEAT_INDUSTRYTILES, SELF, aluminium_plant_tile_1_lc_2,
+            (nearby_tile_class( 2,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2, -2) == TILE_CLASS_INDUSTRY)
+        ) {
+        1: return CB_RESULT_LOCATION_DISALLOW;
+        return CB_RESULT_LOCATION_ALLOW;
+    }
+
+        
+            
+    
+    switch (FEAT_INDUSTRYTILES, PARENT, aluminium_plant_tile_1_lc_1, (
+                (((extra_callback_info2 & 0xFF00) >> 8) == IND_CREATION_FUND) ||
+                (((extra_callback_info2 & 0xFF00) >> 8) == IND_CREATION_PROSPECT)
+                )
+            ) {
+        1: return CB_RESULT_LOCATION_ALLOW;
+        aluminium_plant_tile_1_lc_2;
+    }
+
+        
+            
+    
+    switch (FEAT_INDUSTRYTILES, SELF, aluminium_plant_tile_1_lc_0,
+                (
+                nearby_tile_height(-relative_x, -relative_y)
+                + (nearby_tile_slope(-relative_x, -relative_y)
+                == SLOPE_FLAT ? 0 :
+                nearby_tile_slope(-relative_x, -relative_y) == bitmask(IS_STEEP_SLOPE) ? 2 : 1
+                )) == (nearby_tile_height(0, 0)
+                + (nearby_tile_slope(0, 0)
+                == SLOPE_FLAT ? 0 :
+                nearby_tile_slope(0, 0) == bitmask(IS_STEEP_SLOPE) ? 2 : 1))
+                ) {
+        1: aluminium_plant_tile_1_lc_1;
+        return CB_RESULT_LOCATION_DISALLOW;
+    }
+
+        
+    
+
+
+
+    
+        
+    
+
+
+
+    
+    item(FEAT_INDUSTRYTILES, aluminium_plant_tile_1, 185) {
+        property {
+            substitute:         0;
+            land_shape_flags:   0;
+            special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+            
+            
+                animation_info: [ANIMATION_LOOPING, 47];
+            
+            
+                animation_speed: 2;
+            
+            animation_triggers: bitmask();
+        }
+
+        graphics {
+    		
+    		    tile_check: aluminium_plant_tile_1_lc_0;
+            
+            
+    		
+            
+    		
+    		
+            aluminium_plant_switch_graphics;
+        }
+    }
+
+
+
+
+/* *************************************************
+ * Definition of the industry
+ * *************************************************/
+
+
+    tilelayout aluminium_plant_industry_layout_1_tilelayout {
+        
+            0, 1: aluminium_plant_tile_1;
+        
+            0, 2: aluminium_plant_tile_1;
+        
+            0, 3: aluminium_plant_tile_1;
+        
+            1, 2: aluminium_plant_tile_1;
+        
+            1, 3: aluminium_plant_tile_1;
+        
+            2, 0: aluminium_plant_tile_1;
+        
+            2, 1: aluminium_plant_tile_1;
+        
+            2, 2: aluminium_plant_tile_1;
+        
+            2, 3: aluminium_plant_tile_1;
+        
+            3, 0: aluminium_plant_tile_1;
+        
+            3, 1: aluminium_plant_tile_1;
+        
+            3, 2: aluminium_plant_tile_1;
+        
+            3, 3: aluminium_plant_tile_1;
+        
+            4, 0: aluminium_plant_tile_1;
+        
+            4, 1: aluminium_plant_tile_1;
+        
+            4, 2: aluminium_plant_tile_1;
+        
+            4, 3: aluminium_plant_tile_1;
+        
+            5, 0: aluminium_plant_tile_1;
+        
+            5, 1: aluminium_plant_tile_1;
+        
+            5, 2: aluminium_plant_tile_1;
+        
+            5, 3: aluminium_plant_tile_1;
+        
+    }
+
+    tilelayout aluminium_plant_industry_layout_2_tilelayout {
+        
+            0, 0: aluminium_plant_tile_1;
+        
+            0, 1: aluminium_plant_tile_1;
+        
+            0, 2: aluminium_plant_tile_1;
+        
+            0, 3: aluminium_plant_tile_1;
+        
+            0, 4: aluminium_plant_tile_1;
+        
+            1, 0: aluminium_plant_tile_1;
+        
+            1, 1: aluminium_plant_tile_1;
+        
+            1, 2: aluminium_plant_tile_1;
+        
+            1, 3: aluminium_plant_tile_1;
+        
+            1, 4: aluminium_plant_tile_1;
+        
+            2, 0: aluminium_plant_tile_1;
+        
+            2, 1: aluminium_plant_tile_1;
+        
+            2, 2: aluminium_plant_tile_1;
+        
+            2, 3: aluminium_plant_tile_1;
+        
+            2, 4: aluminium_plant_tile_1;
+        
+            3, 0: aluminium_plant_tile_1;
+        
+            3, 1: aluminium_plant_tile_1;
+        
+            3, 2: aluminium_plant_tile_1;
+        
+            3, 3: aluminium_plant_tile_1;
+        
+            3, 4: aluminium_plant_tile_1;
+        
+            4, 0: aluminium_plant_tile_1;
+        
+            4, 1: aluminium_plant_tile_1;
+        
+            4, 2: aluminium_plant_tile_1;
+        
+            4, 3: aluminium_plant_tile_1;
+        
+            4, 4: aluminium_plant_tile_1;
+        
+    }
+
+    tilelayout aluminium_plant_industry_layout_3_tilelayout {
+        
+            0, 0: aluminium_plant_tile_1;
+        
+            1, 0: aluminium_plant_tile_1;
+        
+            1, 1: aluminium_plant_tile_1;
+        
+            2, 0: aluminium_plant_tile_1;
+        
+            2, 1: aluminium_plant_tile_1;
+        
+            3, 0: aluminium_plant_tile_1;
+        
+            3, 1: aluminium_plant_tile_1;
+        
+            4, 0: aluminium_plant_tile_1;
+        
+            4, 1: aluminium_plant_tile_1;
+        
+            5, 0: aluminium_plant_tile_1;
+        
+            5, 1: aluminium_plant_tile_1;
+        
+            6, 0: aluminium_plant_tile_1;
+        
+            6, 1: aluminium_plant_tile_1;
+        
+            7, 0: aluminium_plant_tile_1;
+        
+            7, 1: aluminium_plant_tile_1;
+        
+            8, 0: aluminium_plant_tile_1;
+        
+            8, 1: aluminium_plant_tile_1;
+        
+            9, 0: aluminium_plant_tile_1;
+        
+            9, 1: aluminium_plant_tile_1;
+        
+    }
+
+
+
+
+
+switch (FEAT_INDUSTRIES, SELF, aluminium_plant_extra_text, economy) {
+    
+        5: return string(STR_EXTRA_TEXT_SECONDARY_NON_COMBINATORY);
+    
+}
+
+
+
+
+
+    
+    
+        switch (FEAT_INDUSTRIES, SELF, aluminium_plant_cargo_subtype_display_cargo_AORE_economy_5, [
+                LOAD_PERM(3)
+            ]) {
+            0: return 0x3800 + string(STR_EMPTY);
+            return 0x3800 + string(STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG);
+        }
+    
+        switch (FEAT_INDUSTRIES, SELF, aluminium_plant_cargo_subtype_display_cargo_ACID_economy_5, [
+                LOAD_PERM(4)
+            ]) {
+            0: return 0x3800 + string(STR_EMPTY);
+            return 0x3800 + string(STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG);
+        }
+    
+        switch (FEAT_INDUSTRIES, SELF, aluminium_plant_cargo_subtype_display_cargo_ELEC_economy_5, [
+                LOAD_PERM(5)
+            ]) {
+            0: return 0x3800 + string(STR_EMPTY);
+            return 0x3800 + string(STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG);
+        }
+    
+    switch (FEAT_INDUSTRIES, SELF, aluminium_plant_cargo_subtype_display_switch_cargo_economy_5, getbits(extra_callback_info2, 16, 8)) {
+        
+        
+            AORE: aluminium_plant_cargo_subtype_display_cargo_AORE_economy_5;
+        
+            ACID: aluminium_plant_cargo_subtype_display_cargo_ACID_economy_5;
+        
+            ELEC: aluminium_plant_cargo_subtype_display_cargo_ELEC_economy_5;
+        
+        return CB_RESULT_NO_TEXT;
+    }
+
+
+switch (FEAT_INDUSTRIES, SELF, aluminium_plant_cargo_subtype_display_switch_economy, economy) {
+    
+        5:  aluminium_plant_cargo_subtype_display_switch_cargo_economy_5;
+    
+}
+
+
+switch (FEAT_INDUSTRIES, SELF, aluminium_plant_cargo_subtype_display, getbits(extra_callback_info2, 8, 8)) {
+    1: aluminium_plant_cargo_subtype_display_switch_economy;
+    return CB_RESULT_NO_TEXT;
+}
+
+
+
+
+
+    produce (aluminium_plant_produce_5,
+        [
+            
+                
+                AORE: incoming_cargo_waiting("AORE");
+            
+                
+                ACID: incoming_cargo_waiting("ACID");
+            
+                
+                ELEC: incoming_cargo_waiting("ELEC");
+            
+        ],
+        [
+            
+                ALUM: (LOAD_PERM(11) * 8) / 8;
+            
+                SLAG: (LOAD_PERM(11) * 8) / 8;
+            
+        ],
+    0)
+
+
+    switch (FEAT_INDUSTRIES, SELF, aluminium_plant_produce_update_supplied_cycles_remaining_per_cargo_5,
+        [
+            
+            
+                STORE_PERM_ALT(
+                    3,
+                    (incoming_cargo_waiting("AORE") > 0)
+                    ?
+                    28
+                    :
+                    LOAD_PERM(3)
+                ),
+            
+                STORE_PERM_ALT(
+                    4,
+                    (incoming_cargo_waiting("ACID") > 0)
+                    ?
+                    28
+                    :
+                    LOAD_PERM(4)
+                ),
+            
+                STORE_PERM_ALT(
+                    5,
+                    (incoming_cargo_waiting("ELEC") > 0)
+                    ?
+                    28
+                    :
+                    LOAD_PERM(5)
+                ),
+            
+            0 
+        ]) {
+        return 0;
+    }
+
+    switch (FEAT_INDUSTRIES, SELF, aluminium_plant_produce_calculate_current_production_level_5,
+        [
+            
+                
+                STORE_PERM_ALT(
+                    1,
+                    LOAD_PERM(1)
+                    +
+                    (
+                        LOAD_PERM(3)
+                        > 0 ? 8 : 0
+                    )
+                ),
+            
+                
+                STORE_PERM_ALT(
+                    1,
+                    LOAD_PERM(1)
+                    +
+                    (
+                        LOAD_PERM(4)
+                        > 0 ? 8 : 0
+                    )
+                ),
+            
+                
+                STORE_PERM_ALT(
+                    1,
+                    LOAD_PERM(1)
+                    +
+                    (
+                        LOAD_PERM(5)
+                        > 0 ? 2 : 0
+                    )
+                ),
+            
+            0 
+        ]) {
+        return 0;
+    }
+
+    switch (FEAT_INDUSTRIES, SELF, aluminium_plant_produce_calculation_5,
+            [
+                
+                STORE_PERM_ALT(1, 0),
+                
+                STORE_PERM_ALT(2, 0),
+                aluminium_plant_produce_update_supplied_cycles_remaining_per_cargo_5(),
+                aluminium_plant_produce_calculate_current_production_level_5(),
+                
+                
+                    STORE_PERM_ALT(
+                        2,
+                        LOAD_PERM(2)
+                        + ((incoming_cargo_waiting("AORE") * LOAD_PERM(1)) / 8)
+                    ),
+                
+                    STORE_PERM_ALT(
+                        2,
+                        LOAD_PERM(2)
+                        + ((incoming_cargo_waiting("ACID") * LOAD_PERM(1)) / 8)
+                    ),
+                
+                    STORE_PERM_ALT(
+                        2,
+                        LOAD_PERM(2)
+                        + ((incoming_cargo_waiting("ELEC") * LOAD_PERM(1)) / 8)
+                    ),
+                
+                
+                STORE_PERM_ALT(
+                    12,
+                    LOAD_PERM(12) + LOAD_PERM(2)
+                ),
+                
+
+                
+                STORE_PERM_ALT(
+                    11,
+                    (LOAD_PERM(12) / 8) >= 1
+                    ?
+                    LOAD_PERM(12)
+                    :
+                    0
+                ),
+                STORE_PERM_ALT(
+                    12,
+                    (LOAD_PERM(12) / 8) >= 1
+                    ?
+                    0
+                    :
+                    LOAD_PERM(12)
+                ),
+                
+                
+                STORE_PERM_ALT(
+                    0,
+                    (LOAD_PERM(2) == 0)
+                    ?
+                    LOAD_PERM(0)
+                    :
+                    0
+                ),
+            ]) {
+        aluminium_plant_produce_5;
+    }
+
+
+switch (FEAT_INDUSTRIES, SELF, aluminium_plant_produce_cargo_arrival, economy) {
+    
+        5: aluminium_plant_produce_calculation_5;
+    
+}
+
+
+
+
+produce(aluminium_plant_produce_256_ticks_produce,
+    [],
+    [],
+0)
+
+
+switch(FEAT_INDUSTRIES, SELF, aluminium_plant_update_supplied_cycles_remaining_per_cargo,
+    [
+        
+            
+            STORE_PERM_ALT(
+                3,
+                max(
+                    0,
+                    LOAD_PERM(3)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                4,
+                max(
+                    0,
+                    LOAD_PERM(4)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                5,
+                max(
+                    0,
+                    LOAD_PERM(5)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                6,
+                max(
+                    0,
+                    LOAD_PERM(6)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                7,
+                max(
+                    0,
+                    LOAD_PERM(7)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                8,
+                max(
+                    0,
+                    LOAD_PERM(8)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                9,
+                max(
+                    0,
+                    LOAD_PERM(9)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                10,
+                max(
+                    0,
+                    LOAD_PERM(10)
+                    - 1
+                )
+            ),
+        
+    ]) {
+    return 0;
+}
+
+switch(FEAT_INDUSTRIES, SELF, aluminium_plant_produce_256_ticks,
+    [
+        aluminium_plant_update_supplied_cycles_remaining_per_cargo(),
+    ]) {
+    aluminium_plant_produce_256_ticks_produce;
+}
+
+
+switch(FEAT_INDUSTRIES, SELF, aluminium_plant_monthly_prod_change,
+    [
+        monthly_town_loop(
+            0,
+            0
+        )
+    ]) {
+    return CB_RESULT_IND_PROD_NO_CHANGE;
+}
+
+
+
+
+
+
+
+
+switch(FEAT_INDUSTRIES, SELF, aluminium_plant_check_availability_param, restrict_open_during_gameplay) {
+	1..255: return CB_RESULT_IND_NO_CONSTRUCTION;         // disallow when restrictions in place
+	return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;       // we may build
+}
+
+
+switch (FEAT_INDUSTRIES, SELF, aluminium_plant_check_map_gen, extra_callback_info2 == IND_CREATION_GENERATION) {
+	1: return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;
+	aluminium_plant_check_availability_param;
+}
+
+switch (FEAT_INDUSTRIES, SELF, aluminium_plant_available_game_mode, game_mode == GAMEMODE_GAME) {
+	1: aluminium_plant_check_map_gen;
+	return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;
+}
+
+
+
+    /* 0 */
+    switch (FEAT_INDUSTRIES, SELF, aluminium_plant_check_availability_5, current_date) {
+        date(0,1,1) .. date(5000000,12,31): aluminium_plant_available_game_mode;
+        return CB_RESULT_IND_NO_CONSTRUCTION;
+    }
+
+
+switch (FEAT_INDUSTRIES, SELF, aluminium_plant_check_availability, economy) {
+    
+        5: aluminium_plant_check_availability_5;
+    
+}
+
+
+
+
+
+
+
+    if (economy==5) {
+        item(FEAT_INDUSTRIES, aluminium_plant, 5) {
+            property {
+                
+                substitute: 0;
+                override: 0;
+                map_colour: 19;
+                life_type: IND_LIFE_TYPE_PROCESSING;
+                
+                
+                
+                
+                min_cargo_distr: 1;
+                layouts: [aluminium_plant_industry_layout_1_tilelayout,aluminium_plant_industry_layout_2_tilelayout,aluminium_plant_industry_layout_3_tilelayout];
+                spec_flags: bitmask(IND_FLAG_LONG_CARGO_TYPE_LISTS);
+                conflicting_ind_types: []; // set this prop empty, FIRS has it's own better checks for this
+                random_sound_effects: []; // set this empty to avoid spurious default industry sounds (as of May 2017 FIRS does not yet use sound effects)
+                
+                name: string(STR_IND_ALUMINIUM_PLANT);
+                prob_map_gen: 5;
+                prob_in_game: 3;
+                
+                fund_cost_multiplier: 200;
+                remove_cost_multiplier: 0;
+                remove_cost_multiplier: 0;
+                
+                cargo_types: [accept_cargo("AORE"),accept_cargo("ACID"),accept_cargo("ELEC"),produce_cargo("ALUM",0),produce_cargo("SLAG",0)];
+                nearby_station_name: string(STR_STATION, string(STR_TOWN),string(STR_STATION_SMELTER));
+            }
+        }
+    }
+
+
+
+
+
+    if (economy==5) {
+        item(FEAT_INDUSTRIES, aluminium_plant, 5) {
+            graphics {
+                construction_probability: aluminium_plant_check_availability;
+                produce_cargo_arrival:    aluminium_plant_produce_cargo_arrival;
+                produce_256_ticks:        aluminium_plant_produce_256_ticks;
+                monthly_prod_change:     aluminium_plant_monthly_prod_change;
+                random_prod_change:       CB_RESULT_IND_PROD_NO_CHANGE;
+                location_check:           aluminium_plant_check_location;
+                extra_text_fund:          return CB_RESULT_NO_TEXT;
+                extra_text_industry:      aluminium_plant_extra_text;
+                cargo_subtype_display:    aluminium_plant_cargo_subtype_display;
+                colour:                   switch_colour;
+            }
+        }
+    }
+

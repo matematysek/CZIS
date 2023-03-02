@@ -1,0 +1,1920 @@
+/* ******************************************************************
+ * Definition of the industry tile, its callbacks, and graphics chain
+ * ******************************************************************/
+
+
+    
+
+    
+        
+        
+    
+
+    
+
+    
+
+    
+        
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(paper_mill_spriteset_2_0) {
+                
+                    
+                        [80, 10, 64, 64, -31, -33, ANIM | NOCROP, "src/graphics/industries/paper_mill_1.png"]
+                    
+                
+            }
+            spriteset(paper_mill_spriteset_2_0_snow) {
+                
+                    
+                            [80, 10, 64, 64, -31, -33, ANIM | NOCROP, "src/graphics/industries/paper_mill_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(paper_mill_spriteset_3_0) {
+                
+                    
+                        [150, 10, 64, 64, -31, -33, ANIM | NOCROP, "src/graphics/industries/paper_mill_1.png"]
+                    
+                
+            }
+            spriteset(paper_mill_spriteset_3_0_snow) {
+                
+                    
+                            [150, 10, 64, 64, -31, -33, ANIM | NOCROP, "src/graphics/industries/paper_mill_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(paper_mill_spriteset_4_0) {
+                
+                    
+                        [220, 10, 64, 64, -31, -33, ANIM | NOCROP, "src/graphics/industries/paper_mill_1.png"]
+                    
+                
+            }
+            spriteset(paper_mill_spriteset_4_0_snow) {
+                
+                    
+                            [220, 10, 64, 64, -31, -33, ANIM | NOCROP, "src/graphics/industries/paper_mill_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(paper_mill_spriteset_5_0) {
+                
+                    
+                        [290, 10, 64, 64, -31, -33, ANIM | NOCROP, "src/graphics/industries/paper_mill_1.png"]
+                    
+                
+            }
+            spriteset(paper_mill_spriteset_5_0_snow) {
+                
+                    
+                            [290, 10, 64, 64, -31, -33, ANIM | NOCROP, "src/graphics/industries/paper_mill_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(paper_mill_spriteset_6_0) {
+                
+                    
+                        [360, 10, 64, 64, -31, -33, ANIM | NOCROP, "src/graphics/industries/paper_mill_1.png"]
+                    
+                
+            }
+            spriteset(paper_mill_spriteset_6_0_snow) {
+                
+                    
+                            [360, 10, 64, 64, -31, -33, ANIM | NOCROP, "src/graphics/industries/paper_mill_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(paper_mill_spriteset_7_0) {
+                
+                    
+                        [10, 84, 64, 120, -31, -89, ANIM | NOCROP, "src/graphics/industries/paper_mill_1.png"]
+                    
+                
+            }
+            spriteset(paper_mill_spriteset_7_0_snow) {
+                
+                    
+                            [10, 84, 64, 120, -31, -89, ANIM | NOCROP, "src/graphics/industries/paper_mill_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(paper_mill_spriteset_8_0) {
+                
+                    
+                        [80, 84, 64, 120, -31, -89, ANIM | NOCROP, "src/graphics/industries/paper_mill_1.png"]
+                    
+                
+            }
+            spriteset(paper_mill_spriteset_8_0_snow) {
+                
+                    
+                            [80, 84, 64, 120, -31, -89, ANIM | NOCROP, "src/graphics/industries/paper_mill_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(paper_mill_spriteset_9_0) {
+                
+                    
+                        [150, 84, 64, 120, -31, -89, ANIM | NOCROP, "src/graphics/industries/paper_mill_1.png"]
+                    
+                
+            }
+            spriteset(paper_mill_spriteset_9_0_snow) {
+                
+                    
+                            [150, 84, 64, 120, -31, -89, ANIM | NOCROP, "src/graphics/industries/paper_mill_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(paper_mill_spriteset_10_0) {
+                
+                    
+                        [220, 84, 64, 120, -31, -89, ANIM | NOCROP, "src/graphics/industries/paper_mill_1.png"]
+                    
+                
+            }
+            spriteset(paper_mill_spriteset_10_0_snow) {
+                
+                    
+                            [220, 84, 64, 120, -31, -89, ANIM | NOCROP, "src/graphics/industries/paper_mill_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+
+
+
+    spritelayout paper_mill_spritelayout_paper_store_empty {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_dirty_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_dirty_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: paper_mill_spriteset_2_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: paper_mill_spriteset_2_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout paper_mill_spritelayout_paper_store_full {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_dirty_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_dirty_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: paper_mill_spriteset_3_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: paper_mill_spriteset_3_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout paper_mill_spritelayout_wood_store_forklift {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_dirty_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_dirty_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: paper_mill_spriteset_4_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: paper_mill_spriteset_4_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout paper_mill_spritelayout_wood_store_full {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_dirty_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_dirty_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: paper_mill_spriteset_5_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: paper_mill_spriteset_5_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout paper_mill_spritelayout_chemical_tanks {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_dirty_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_dirty_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: paper_mill_spriteset_6_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: paper_mill_spriteset_6_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout paper_mill_spritelayout_tall_building_1 {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_dirty_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_dirty_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: paper_mill_spriteset_7_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: paper_mill_spriteset_7_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout paper_mill_spritelayout_tall_building_2 {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_dirty_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_dirty_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: paper_mill_spriteset_8_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: paper_mill_spriteset_8_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout paper_mill_spritelayout_pulp_processor {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_dirty_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_dirty_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: paper_mill_spriteset_9_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: paper_mill_spriteset_9_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout paper_mill_spritelayout_boilerhouse {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_dirty_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_dirty_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: paper_mill_spriteset_10_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: paper_mill_spriteset_10_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+            
+            building {
+                sprite: 3701 + ((animation_frame + 0)%8);
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                xoffset: 10;
+                yoffset: 0;
+                zoffset: 93;
+                xextent: 15;
+                yextent: 7;
+                zextent: 7;
+                hide_sprite: 0;
+            }
+        
+            
+            building {
+                sprite: 3701 + ((animation_frame + 1)%8);
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                xoffset: 6;
+                yoffset: 0;
+                zoffset: 79;
+                xextent: 15;
+                yextent: 7;
+                zextent: 7;
+                hide_sprite: 0;
+            }
+        
+
+        
+        
+
+    }
+
+
+
+
+
+
+    switch(FEAT_INDUSTRYTILES, SELF, paper_mill_industry_layout_1_graphics_switch, relative_pos) {
+        
+            
+            
+                relative_coord(0, 0): paper_mill_spritelayout_tall_building_1;
+            
+        
+            
+            
+                relative_coord(0, 1): paper_mill_spritelayout_tall_building_1;
+            
+        
+            
+            
+                relative_coord(0, 2): paper_mill_spritelayout_paper_store_full;
+            
+        
+            
+            
+                relative_coord(1, 0): paper_mill_spritelayout_tall_building_2;
+            
+        
+            
+            
+                relative_coord(1, 1): paper_mill_spritelayout_pulp_processor;
+            
+        
+            
+            
+                relative_coord(1, 2): paper_mill_spritelayout_paper_store_empty;
+            
+        
+            
+            
+                relative_coord(2, 0): paper_mill_spritelayout_tall_building_1;
+            
+        
+            
+            
+                relative_coord(2, 1): paper_mill_spritelayout_chemical_tanks;
+            
+        
+            
+            
+                relative_coord(2, 2): paper_mill_spritelayout_paper_store_full;
+            
+        
+            
+            
+                relative_coord(3, 0): paper_mill_spritelayout_tall_building_2;
+            
+        
+            
+            
+                relative_coord(3, 1): paper_mill_spritelayout_wood_store_forklift;
+            
+        
+            
+            
+                relative_coord(3, 2): paper_mill_spritelayout_wood_store_full;
+            
+        
+            
+            
+                relative_coord(4, 0): paper_mill_spritelayout_boilerhouse;
+            
+        
+            
+            
+                relative_coord(4, 1): paper_mill_spritelayout_wood_store_full;
+            
+        
+            
+            
+                relative_coord(4, 2): paper_mill_spritelayout_wood_store_forklift;
+            
+        
+        return 0; // a default is needed, but should never be reached, layout definitions are explicit
+    }
+
+    switch(FEAT_INDUSTRYTILES, SELF, paper_mill_industry_layout_2_graphics_switch, relative_pos) {
+        
+            
+            
+                relative_coord(0, 0): paper_mill_spritelayout_tall_building_1;
+            
+        
+            
+            
+                relative_coord(0, 1): paper_mill_spritelayout_tall_building_1;
+            
+        
+            
+            
+                relative_coord(0, 2): paper_mill_spritelayout_chemical_tanks;
+            
+        
+            
+            
+                relative_coord(1, 0): paper_mill_spritelayout_tall_building_2;
+            
+        
+            
+            
+                relative_coord(1, 1): paper_mill_spritelayout_tall_building_2;
+            
+        
+            
+            
+                relative_coord(1, 2): paper_mill_spritelayout_paper_store_empty;
+            
+        
+            
+            
+                relative_coord(2, 0): paper_mill_spritelayout_boilerhouse;
+            
+        
+            
+            
+                relative_coord(2, 1): paper_mill_spritelayout_pulp_processor;
+            
+        
+            
+            
+                relative_coord(2, 2): paper_mill_spritelayout_paper_store_full;
+            
+        
+            
+            
+                relative_coord(3, 0): paper_mill_spritelayout_wood_store_forklift;
+            
+        
+            
+            
+                relative_coord(3, 1): paper_mill_spritelayout_wood_store_full;
+            
+        
+            
+            
+                relative_coord(3, 2): paper_mill_spritelayout_wood_store_full;
+            
+        
+        return 0; // a default is needed, but should never be reached, layout definitions are explicit
+    }
+
+    switch(FEAT_INDUSTRYTILES, SELF, paper_mill_industry_layout_3_graphics_switch, relative_pos) {
+        
+            
+            
+                relative_coord(0, 0): paper_mill_spritelayout_tall_building_1;
+            
+        
+            
+            
+                relative_coord(0, 1): paper_mill_spritelayout_tall_building_1;
+            
+        
+            
+            
+                relative_coord(0, 2): paper_mill_spritelayout_pulp_processor;
+            
+        
+            
+            
+                relative_coord(0, 3): paper_mill_spritelayout_chemical_tanks;
+            
+        
+            
+            
+                relative_coord(1, 0): paper_mill_spritelayout_tall_building_2;
+            
+        
+            
+            
+                relative_coord(1, 1): paper_mill_spritelayout_tall_building_2;
+            
+        
+            
+            
+                relative_coord(1, 2): paper_mill_spritelayout_boilerhouse;
+            
+        
+            
+            
+                relative_coord(1, 3): paper_mill_spritelayout_wood_store_forklift;
+            
+        
+            
+            
+                relative_coord(2, 0): paper_mill_spritelayout_paper_store_full;
+            
+        
+            
+            
+                relative_coord(2, 1): paper_mill_spritelayout_paper_store_empty;
+            
+        
+            
+            
+                relative_coord(2, 2): paper_mill_spritelayout_wood_store_forklift;
+            
+        
+            
+            
+                relative_coord(2, 3): paper_mill_spritelayout_wood_store_full;
+            
+        
+        return 0; // a default is needed, but should never be reached, layout definitions are explicit
+    }
+
+    switch(FEAT_INDUSTRYTILES, SELF, paper_mill_industry_layout_4_graphics_switch, relative_pos) {
+        
+            
+            
+                relative_coord(0, 0): paper_mill_spritelayout_tall_building_1;
+            
+        
+            
+            
+                relative_coord(0, 1): paper_mill_spritelayout_tall_building_1;
+            
+        
+            
+            
+                relative_coord(0, 2): paper_mill_spritelayout_tall_building_2;
+            
+        
+            
+            
+                relative_coord(0, 3): paper_mill_spritelayout_wood_store_forklift;
+            
+        
+            
+            
+                relative_coord(1, 0): paper_mill_spritelayout_tall_building_2;
+            
+        
+            
+            
+                relative_coord(1, 1): paper_mill_spritelayout_tall_building_2;
+            
+        
+            
+            
+                relative_coord(1, 2): paper_mill_spritelayout_boilerhouse;
+            
+        
+            
+            
+                relative_coord(1, 3): paper_mill_spritelayout_wood_store_full;
+            
+        
+            
+            
+                relative_coord(2, 0): paper_mill_spritelayout_pulp_processor;
+            
+        
+            
+            
+                relative_coord(2, 1): paper_mill_spritelayout_paper_store_full;
+            
+        
+            
+            
+                relative_coord(2, 2): paper_mill_spritelayout_wood_store_forklift;
+            
+        
+            
+            
+                relative_coord(2, 3): paper_mill_spritelayout_wood_store_full;
+            
+        
+            
+            
+                relative_coord(3, 0): paper_mill_spritelayout_chemical_tanks;
+            
+        
+            
+            
+                relative_coord(3, 1): paper_mill_spritelayout_paper_store_empty;
+            
+        
+            
+            
+                relative_coord(3, 2): paper_mill_spritelayout_paper_store_full;
+            
+        
+        return 0; // a default is needed, but should never be reached, layout definitions are explicit
+    }
+
+
+
+switch(FEAT_INDUSTRYTILES, PARENT, paper_mill_industry_graphics_switch_layouts, layout_num) {
+    
+        1: paper_mill_industry_layout_1_graphics_switch;
+    
+        2: paper_mill_industry_layout_2_graphics_switch;
+    
+        3: paper_mill_industry_layout_3_graphics_switch;
+    
+        4: paper_mill_industry_layout_4_graphics_switch;
+    
+    paper_mill_industry_layout_1_graphics_switch; // default
+}
+
+
+switch(FEAT_INDUSTRYTILES, SELF, paper_mill_industry_construction_state_graphics_switch, construction_state) {
+    0..2: spritelayout_default_construction_states;
+    
+    paper_mill_industry_graphics_switch_layouts; // default
+}
+
+switch(FEAT_INDUSTRYTILES, SELF, paper_mill_store_temp_vars,
+        [STORE_TEMP(random_bits, 14),
+         STORE_TEMP(terrain_type == TILETYPE_SNOW, 13)
+            
+                , STORE_TEMP(0,
+                             127) 
+                , STORE_TEMP(construction_state != 3 ? 1 : LOAD_TEMP(127),
+                             127)
+                , STORE_TEMP(LOAD_TEMP(13) == 0 ? 1 : LOAD_TEMP(127), 
+                             117) 
+                , STORE_TEMP(LOAD_TEMP(13) == 1 ? 1 : LOAD_TEMP(127), 
+                             127)
+            
+        ]) {
+    paper_mill_industry_construction_state_graphics_switch; // default
+}
+
+switch (FEAT_INDUSTRYTILES, SELF, paper_mill_switch_graphics, [
+                                    switch_tile_fences(),
+                                    switch_terrain_sprite(),
+                                    
+                                 ]) {
+    paper_mill_store_temp_vars;
+}
+
+
+
+    
+        
+            
+    
+    switch(FEAT_INDUSTRYTILES, SELF, paper_mill_tile_1_lc_2,
+            (nearby_tile_class( 2,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2, -2) == TILE_CLASS_INDUSTRY)
+        ) {
+        1: return CB_RESULT_LOCATION_DISALLOW;
+        return CB_RESULT_LOCATION_ALLOW;
+    }
+
+        
+            
+    
+    switch (FEAT_INDUSTRYTILES, PARENT, paper_mill_tile_1_lc_1, (
+                (((extra_callback_info2 & 0xFF00) >> 8) == IND_CREATION_FUND) ||
+                (((extra_callback_info2 & 0xFF00) >> 8) == IND_CREATION_PROSPECT)
+                )
+            ) {
+        1: return CB_RESULT_LOCATION_ALLOW;
+        paper_mill_tile_1_lc_2;
+    }
+
+        
+            
+    
+    switch (FEAT_INDUSTRYTILES, SELF, paper_mill_tile_1_lc_0,
+                (
+                nearby_tile_height(-relative_x, -relative_y)
+                + (nearby_tile_slope(-relative_x, -relative_y)
+                == SLOPE_FLAT ? 0 :
+                nearby_tile_slope(-relative_x, -relative_y) == bitmask(IS_STEEP_SLOPE) ? 2 : 1
+                )) == (nearby_tile_height(0, 0)
+                + (nearby_tile_slope(0, 0)
+                == SLOPE_FLAT ? 0 :
+                nearby_tile_slope(0, 0) == bitmask(IS_STEEP_SLOPE) ? 2 : 1))
+                ) {
+        1: paper_mill_tile_1_lc_1;
+        return CB_RESULT_LOCATION_DISALLOW;
+    }
+
+        
+    
+
+
+
+    
+        
+    
+
+
+
+    
+    item(FEAT_INDUSTRYTILES, paper_mill_tile_1, 138) {
+        property {
+            substitute:         0;
+            land_shape_flags:   0;
+            special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+            
+            
+                animation_info: [ANIMATION_LOOPING, 7];
+            
+            
+                animation_speed: 3;
+            
+            animation_triggers: bitmask();
+        }
+
+        graphics {
+    		
+    		    tile_check: paper_mill_tile_1_lc_0;
+            
+            
+    		
+            
+    		
+    		
+            paper_mill_switch_graphics;
+        }
+    }
+
+
+
+
+/* *************************************************
+ * Definition of the industry
+ * *************************************************/
+
+
+    tilelayout paper_mill_industry_layout_1_tilelayout {
+        
+            0, 0: paper_mill_tile_1;
+        
+            0, 1: paper_mill_tile_1;
+        
+            0, 2: paper_mill_tile_1;
+        
+            1, 0: paper_mill_tile_1;
+        
+            1, 1: paper_mill_tile_1;
+        
+            1, 2: paper_mill_tile_1;
+        
+            2, 0: paper_mill_tile_1;
+        
+            2, 1: paper_mill_tile_1;
+        
+            2, 2: paper_mill_tile_1;
+        
+            3, 0: paper_mill_tile_1;
+        
+            3, 1: paper_mill_tile_1;
+        
+            3, 2: paper_mill_tile_1;
+        
+            4, 0: paper_mill_tile_1;
+        
+            4, 1: paper_mill_tile_1;
+        
+            4, 2: paper_mill_tile_1;
+        
+    }
+
+    tilelayout paper_mill_industry_layout_2_tilelayout {
+        
+            0, 0: paper_mill_tile_1;
+        
+            0, 1: paper_mill_tile_1;
+        
+            0, 2: paper_mill_tile_1;
+        
+            1, 0: paper_mill_tile_1;
+        
+            1, 1: paper_mill_tile_1;
+        
+            1, 2: paper_mill_tile_1;
+        
+            2, 0: paper_mill_tile_1;
+        
+            2, 1: paper_mill_tile_1;
+        
+            2, 2: paper_mill_tile_1;
+        
+            3, 0: paper_mill_tile_1;
+        
+            3, 1: paper_mill_tile_1;
+        
+            3, 2: paper_mill_tile_1;
+        
+    }
+
+    tilelayout paper_mill_industry_layout_3_tilelayout {
+        
+            0, 0: paper_mill_tile_1;
+        
+            0, 1: paper_mill_tile_1;
+        
+            0, 2: paper_mill_tile_1;
+        
+            0, 3: paper_mill_tile_1;
+        
+            1, 0: paper_mill_tile_1;
+        
+            1, 1: paper_mill_tile_1;
+        
+            1, 2: paper_mill_tile_1;
+        
+            1, 3: paper_mill_tile_1;
+        
+            2, 0: paper_mill_tile_1;
+        
+            2, 1: paper_mill_tile_1;
+        
+            2, 2: paper_mill_tile_1;
+        
+            2, 3: paper_mill_tile_1;
+        
+    }
+
+    tilelayout paper_mill_industry_layout_4_tilelayout {
+        
+            0, 0: paper_mill_tile_1;
+        
+            0, 1: paper_mill_tile_1;
+        
+            0, 2: paper_mill_tile_1;
+        
+            0, 3: paper_mill_tile_1;
+        
+            1, 0: paper_mill_tile_1;
+        
+            1, 1: paper_mill_tile_1;
+        
+            1, 2: paper_mill_tile_1;
+        
+            1, 3: paper_mill_tile_1;
+        
+            2, 0: paper_mill_tile_1;
+        
+            2, 1: paper_mill_tile_1;
+        
+            2, 2: paper_mill_tile_1;
+        
+            2, 3: paper_mill_tile_1;
+        
+            3, 0: paper_mill_tile_1;
+        
+            3, 1: paper_mill_tile_1;
+        
+            3, 2: paper_mill_tile_1;
+        
+    }
+
+
+
+
+
+switch (FEAT_INDUSTRIES, SELF, paper_mill_extra_text, economy) {
+    
+        5: return string(STR_EXTRA_TEXT_SECONDARY_COMBINATORY);
+    
+}
+
+
+
+
+
+    
+    
+        switch (FEAT_INDUSTRIES, SELF, paper_mill_cargo_subtype_display_cargo_KAOL_economy_5, [
+                LOAD_PERM(3)
+            ]) {
+            0: return 0x3800 + string(STR_EMPTY);
+            return 0x3800 + string(STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG);
+        }
+    
+        switch (FEAT_INDUSTRIES, SELF, paper_mill_cargo_subtype_display_cargo_WOOD_economy_5, [
+                LOAD_PERM(4)
+            ]) {
+            0: return 0x3800 + string(STR_EMPTY);
+            return 0x3800 + string(STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG);
+        }
+    
+        switch (FEAT_INDUSTRIES, SELF, paper_mill_cargo_subtype_display_cargo_SULP_economy_5, [
+                LOAD_PERM(5)
+            ]) {
+            0: return 0x3800 + string(STR_EMPTY);
+            return 0x3800 + string(STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG);
+        }
+    
+    switch (FEAT_INDUSTRIES, SELF, paper_mill_cargo_subtype_display_switch_cargo_economy_5, getbits(extra_callback_info2, 16, 8)) {
+        
+        
+            KAOL: paper_mill_cargo_subtype_display_cargo_KAOL_economy_5;
+        
+            WOOD: paper_mill_cargo_subtype_display_cargo_WOOD_economy_5;
+        
+            SULP: paper_mill_cargo_subtype_display_cargo_SULP_economy_5;
+        
+        return CB_RESULT_NO_TEXT;
+    }
+
+
+switch (FEAT_INDUSTRIES, SELF, paper_mill_cargo_subtype_display_switch_economy, economy) {
+    
+        5:  paper_mill_cargo_subtype_display_switch_cargo_economy_5;
+    
+}
+
+
+switch (FEAT_INDUSTRIES, SELF, paper_mill_cargo_subtype_display, getbits(extra_callback_info2, 8, 8)) {
+    1: paper_mill_cargo_subtype_display_switch_economy;
+    return CB_RESULT_NO_TEXT;
+}
+
+
+
+
+
+    produce (paper_mill_produce_5,
+        [
+            
+                
+                KAOL: incoming_cargo_waiting("KAOL");
+            
+                
+                WOOD: incoming_cargo_waiting("WOOD");
+            
+                
+                SULP: incoming_cargo_waiting("SULP");
+            
+        ],
+        [
+            
+                GOOD: (LOAD_PERM(11) * 8) / 8;
+            
+        ],
+    0)
+
+
+    switch (FEAT_INDUSTRIES, SELF, paper_mill_produce_update_supplied_cycles_remaining_per_cargo_5,
+        [
+            
+            
+                STORE_PERM_ALT(
+                    3,
+                    (incoming_cargo_waiting("KAOL") > 0)
+                    ?
+                    28
+                    :
+                    LOAD_PERM(3)
+                ),
+            
+                STORE_PERM_ALT(
+                    4,
+                    (incoming_cargo_waiting("WOOD") > 0)
+                    ?
+                    28
+                    :
+                    LOAD_PERM(4)
+                ),
+            
+                STORE_PERM_ALT(
+                    5,
+                    (incoming_cargo_waiting("SULP") > 0)
+                    ?
+                    28
+                    :
+                    LOAD_PERM(5)
+                ),
+            
+            0 
+        ]) {
+        return 0;
+    }
+
+    switch (FEAT_INDUSTRIES, SELF, paper_mill_produce_calculate_current_production_level_5,
+        [
+            
+                
+                STORE_PERM_ALT(
+                    1,
+                    LOAD_PERM(1)
+                    +
+                    (
+                        LOAD_PERM(3)
+                        > 0 ? 2 : 0
+                    )
+                ),
+            
+                
+                STORE_PERM_ALT(
+                    1,
+                    LOAD_PERM(1)
+                    +
+                    (
+                        LOAD_PERM(4)
+                        > 0 ? 4 : 0
+                    )
+                ),
+            
+                
+                STORE_PERM_ALT(
+                    1,
+                    LOAD_PERM(1)
+                    +
+                    (
+                        LOAD_PERM(5)
+                        > 0 ? 2 : 0
+                    )
+                ),
+            
+            0 
+        ]) {
+        return 0;
+    }
+
+    switch (FEAT_INDUSTRIES, SELF, paper_mill_produce_calculation_5,
+            [
+                
+                STORE_PERM_ALT(1, 0),
+                
+                STORE_PERM_ALT(2, 0),
+                paper_mill_produce_update_supplied_cycles_remaining_per_cargo_5(),
+                paper_mill_produce_calculate_current_production_level_5(),
+                
+                
+                    STORE_PERM_ALT(
+                        2,
+                        LOAD_PERM(2)
+                        + ((incoming_cargo_waiting("KAOL") * LOAD_PERM(1)) / 8)
+                    ),
+                
+                    STORE_PERM_ALT(
+                        2,
+                        LOAD_PERM(2)
+                        + ((incoming_cargo_waiting("WOOD") * LOAD_PERM(1)) / 8)
+                    ),
+                
+                    STORE_PERM_ALT(
+                        2,
+                        LOAD_PERM(2)
+                        + ((incoming_cargo_waiting("SULP") * LOAD_PERM(1)) / 8)
+                    ),
+                
+                
+                STORE_PERM_ALT(
+                    12,
+                    LOAD_PERM(12) + LOAD_PERM(2)
+                ),
+                
+
+                
+                STORE_PERM_ALT(
+                    11,
+                    (LOAD_PERM(12) / 8) >= 1
+                    ?
+                    LOAD_PERM(12)
+                    :
+                    0
+                ),
+                STORE_PERM_ALT(
+                    12,
+                    (LOAD_PERM(12) / 8) >= 1
+                    ?
+                    0
+                    :
+                    LOAD_PERM(12)
+                ),
+                
+                
+                STORE_PERM_ALT(
+                    0,
+                    (LOAD_PERM(2) == 0)
+                    ?
+                    LOAD_PERM(0)
+                    :
+                    0
+                ),
+            ]) {
+        paper_mill_produce_5;
+    }
+
+
+switch (FEAT_INDUSTRIES, SELF, paper_mill_produce_cargo_arrival, economy) {
+    
+        5: paper_mill_produce_calculation_5;
+    
+}
+
+
+
+
+produce(paper_mill_produce_256_ticks_produce,
+    [],
+    [],
+0)
+
+
+switch(FEAT_INDUSTRIES, SELF, paper_mill_update_supplied_cycles_remaining_per_cargo,
+    [
+        
+            
+            STORE_PERM_ALT(
+                3,
+                max(
+                    0,
+                    LOAD_PERM(3)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                4,
+                max(
+                    0,
+                    LOAD_PERM(4)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                5,
+                max(
+                    0,
+                    LOAD_PERM(5)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                6,
+                max(
+                    0,
+                    LOAD_PERM(6)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                7,
+                max(
+                    0,
+                    LOAD_PERM(7)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                8,
+                max(
+                    0,
+                    LOAD_PERM(8)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                9,
+                max(
+                    0,
+                    LOAD_PERM(9)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                10,
+                max(
+                    0,
+                    LOAD_PERM(10)
+                    - 1
+                )
+            ),
+        
+    ]) {
+    return 0;
+}
+
+switch(FEAT_INDUSTRIES, SELF, paper_mill_produce_256_ticks,
+    [
+        paper_mill_update_supplied_cycles_remaining_per_cargo(),
+    ]) {
+    paper_mill_produce_256_ticks_produce;
+}
+
+
+switch(FEAT_INDUSTRIES, SELF, paper_mill_monthly_prod_change,
+    [
+        monthly_town_loop(
+            0,
+            2
+        )
+    ]) {
+    return CB_RESULT_IND_PROD_NO_CHANGE;
+}
+
+
+
+
+
+
+
+
+switch(FEAT_INDUSTRIES, SELF, paper_mill_check_availability_param, restrict_open_during_gameplay) {
+	1..255: return CB_RESULT_IND_NO_CONSTRUCTION;         // disallow when restrictions in place
+	return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;       // we may build
+}
+
+
+switch (FEAT_INDUSTRIES, SELF, paper_mill_check_map_gen, extra_callback_info2 == IND_CREATION_GENERATION) {
+	1: return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;
+	paper_mill_check_availability_param;
+}
+
+switch (FEAT_INDUSTRIES, SELF, paper_mill_available_game_mode, game_mode == GAMEMODE_GAME) {
+	1: paper_mill_check_map_gen;
+	return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;
+}
+
+
+
+    /* 0 */
+    switch (FEAT_INDUSTRIES, SELF, paper_mill_check_availability_5, current_date) {
+        date(0,1,1) .. date(5000000,12,31): paper_mill_available_game_mode;
+        return CB_RESULT_IND_NO_CONSTRUCTION;
+    }
+
+
+switch (FEAT_INDUSTRIES, SELF, paper_mill_check_availability, economy) {
+    
+        5: paper_mill_check_availability_5;
+    
+}
+
+
+
+
+
+
+
+    if (economy==5) {
+        item(FEAT_INDUSTRIES, paper_mill, 48) {
+            property {
+                
+                substitute: 14;
+                override: 14;
+                map_colour: 164;
+                life_type: IND_LIFE_TYPE_PROCESSING;
+                
+                
+                
+                
+                min_cargo_distr: 1;
+                layouts: [paper_mill_industry_layout_1_tilelayout,paper_mill_industry_layout_2_tilelayout,paper_mill_industry_layout_3_tilelayout,paper_mill_industry_layout_4_tilelayout];
+                spec_flags: bitmask(IND_FLAG_LONG_CARGO_TYPE_LISTS);
+                conflicting_ind_types: []; // set this prop empty, FIRS has it's own better checks for this
+                random_sound_effects: []; // set this empty to avoid spurious default industry sounds (as of May 2017 FIRS does not yet use sound effects)
+                
+                name: TTD_STR_INDUSTRY_NAME_PAPER_MILL;
+                prob_map_gen: 5;
+                prob_in_game: 3;
+                
+                fund_cost_multiplier: 120;
+                remove_cost_multiplier: 0;
+                remove_cost_multiplier: 0;
+                
+                cargo_types: [accept_cargo("KAOL"),accept_cargo("WOOD"),accept_cargo("SULP"),produce_cargo("GOOD",0)];
+                nearby_station_name: string(STR_STATION, string(STR_TOWN),string(STR_STATION_MILL));
+            }
+        }
+    }
+
+
+
+
+
+    if (economy==5) {
+        item(FEAT_INDUSTRIES, paper_mill, 48) {
+            graphics {
+                construction_probability: paper_mill_check_availability;
+                produce_cargo_arrival:    paper_mill_produce_cargo_arrival;
+                produce_256_ticks:        paper_mill_produce_256_ticks;
+                monthly_prod_change:     paper_mill_monthly_prod_change;
+                random_prod_change:       CB_RESULT_IND_PROD_NO_CHANGE;
+                location_check:           paper_mill_check_location;
+                extra_text_fund:          return CB_RESULT_NO_TEXT;
+                extra_text_industry:      paper_mill_extra_text;
+                cargo_subtype_display:    paper_mill_cargo_subtype_display;
+                colour:                   switch_colour;
+            }
+        }
+    }
+

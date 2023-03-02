@@ -1,0 +1,505 @@
+
+template tmpl_ground_tile(x, y) {
+	[x, y, 64, 31, -31, 0, ANIM]
+}
+
+
+    
+    
+        spriteset(spriteset_ground_tile_mud_1, "src/graphics/other/ground_tiles.png") {
+            
+                tmpl_ground_tile(0, 10)
+            
+        }
+    
+        spriteset(spriteset_ground_tile_mud_6, "src/graphics/other/ground_tiles.png") {
+            
+                tmpl_ground_tile(0, 10)
+            
+                tmpl_ground_tile(0, 10)
+            
+                tmpl_ground_tile(0, 10)
+            
+                tmpl_ground_tile(0, 10)
+            
+                tmpl_ground_tile(0, 10)
+            
+                tmpl_ground_tile(0, 10)
+            
+        }
+    
+        spriteset(spriteset_ground_tile_mud_7, "src/graphics/other/ground_tiles.png") {
+            
+                tmpl_ground_tile(0, 10)
+            
+                tmpl_ground_tile(0, 10)
+            
+                tmpl_ground_tile(0, 10)
+            
+                tmpl_ground_tile(0, 10)
+            
+                tmpl_ground_tile(0, 10)
+            
+                tmpl_ground_tile(0, 10)
+            
+                tmpl_ground_tile(0, 10)
+            
+        }
+    
+        spriteset(spriteset_ground_tile_mud_12, "src/graphics/other/ground_tiles.png") {
+            
+                tmpl_ground_tile(0, 10)
+            
+                tmpl_ground_tile(0, 10)
+            
+                tmpl_ground_tile(0, 10)
+            
+                tmpl_ground_tile(0, 10)
+            
+                tmpl_ground_tile(0, 10)
+            
+                tmpl_ground_tile(0, 10)
+            
+                tmpl_ground_tile(0, 10)
+            
+                tmpl_ground_tile(0, 10)
+            
+                tmpl_ground_tile(0, 10)
+            
+                tmpl_ground_tile(0, 10)
+            
+                tmpl_ground_tile(0, 10)
+            
+                tmpl_ground_tile(0, 10)
+            
+        }
+    
+
+    
+    
+        spriteset(spriteset_ground_tile_concrete_1, "src/graphics/other/ground_tiles.png") {
+            
+                tmpl_ground_tile(80, 10)
+            
+        }
+    
+        spriteset(spriteset_ground_tile_concrete_6, "src/graphics/other/ground_tiles.png") {
+            
+                tmpl_ground_tile(80, 10)
+            
+                tmpl_ground_tile(80, 10)
+            
+                tmpl_ground_tile(80, 10)
+            
+                tmpl_ground_tile(80, 10)
+            
+                tmpl_ground_tile(80, 10)
+            
+                tmpl_ground_tile(80, 10)
+            
+        }
+    
+        spriteset(spriteset_ground_tile_concrete_7, "src/graphics/other/ground_tiles.png") {
+            
+                tmpl_ground_tile(80, 10)
+            
+                tmpl_ground_tile(80, 10)
+            
+                tmpl_ground_tile(80, 10)
+            
+                tmpl_ground_tile(80, 10)
+            
+                tmpl_ground_tile(80, 10)
+            
+                tmpl_ground_tile(80, 10)
+            
+                tmpl_ground_tile(80, 10)
+            
+        }
+    
+        spriteset(spriteset_ground_tile_concrete_12, "src/graphics/other/ground_tiles.png") {
+            
+                tmpl_ground_tile(80, 10)
+            
+                tmpl_ground_tile(80, 10)
+            
+                tmpl_ground_tile(80, 10)
+            
+                tmpl_ground_tile(80, 10)
+            
+                tmpl_ground_tile(80, 10)
+            
+                tmpl_ground_tile(80, 10)
+            
+                tmpl_ground_tile(80, 10)
+            
+                tmpl_ground_tile(80, 10)
+            
+                tmpl_ground_tile(80, 10)
+            
+                tmpl_ground_tile(80, 10)
+            
+                tmpl_ground_tile(80, 10)
+            
+                tmpl_ground_tile(80, 10)
+            
+        }
+    
+
+    
+    
+        spriteset(spriteset_ground_tile_cobble_1, "src/graphics/other/ground_tiles.png") {
+            
+                tmpl_ground_tile(150, 10)
+            
+        }
+    
+        spriteset(spriteset_ground_tile_cobble_6, "src/graphics/other/ground_tiles.png") {
+            
+                tmpl_ground_tile(150, 10)
+            
+                tmpl_ground_tile(150, 10)
+            
+                tmpl_ground_tile(150, 10)
+            
+                tmpl_ground_tile(150, 10)
+            
+                tmpl_ground_tile(150, 10)
+            
+                tmpl_ground_tile(150, 10)
+            
+        }
+    
+        spriteset(spriteset_ground_tile_cobble_7, "src/graphics/other/ground_tiles.png") {
+            
+                tmpl_ground_tile(150, 10)
+            
+                tmpl_ground_tile(150, 10)
+            
+                tmpl_ground_tile(150, 10)
+            
+                tmpl_ground_tile(150, 10)
+            
+                tmpl_ground_tile(150, 10)
+            
+                tmpl_ground_tile(150, 10)
+            
+                tmpl_ground_tile(150, 10)
+            
+        }
+    
+        spriteset(spriteset_ground_tile_cobble_12, "src/graphics/other/ground_tiles.png") {
+            
+                tmpl_ground_tile(150, 10)
+            
+                tmpl_ground_tile(150, 10)
+            
+                tmpl_ground_tile(150, 10)
+            
+                tmpl_ground_tile(150, 10)
+            
+                tmpl_ground_tile(150, 10)
+            
+                tmpl_ground_tile(150, 10)
+            
+                tmpl_ground_tile(150, 10)
+            
+                tmpl_ground_tile(150, 10)
+            
+                tmpl_ground_tile(150, 10)
+            
+                tmpl_ground_tile(150, 10)
+            
+                tmpl_ground_tile(150, 10)
+            
+                tmpl_ground_tile(150, 10)
+            
+        }
+    
+
+    
+    
+        spriteset(spriteset_ground_tile_snow_1, "src/graphics/other/ground_tiles.png") {
+            
+                tmpl_ground_tile(220, 10)
+            
+        }
+    
+        spriteset(spriteset_ground_tile_snow_6, "src/graphics/other/ground_tiles.png") {
+            
+                tmpl_ground_tile(220, 10)
+            
+                tmpl_ground_tile(220, 10)
+            
+                tmpl_ground_tile(220, 10)
+            
+                tmpl_ground_tile(220, 10)
+            
+                tmpl_ground_tile(220, 10)
+            
+                tmpl_ground_tile(220, 10)
+            
+        }
+    
+        spriteset(spriteset_ground_tile_snow_7, "src/graphics/other/ground_tiles.png") {
+            
+                tmpl_ground_tile(220, 10)
+            
+                tmpl_ground_tile(220, 10)
+            
+                tmpl_ground_tile(220, 10)
+            
+                tmpl_ground_tile(220, 10)
+            
+                tmpl_ground_tile(220, 10)
+            
+                tmpl_ground_tile(220, 10)
+            
+                tmpl_ground_tile(220, 10)
+            
+        }
+    
+        spriteset(spriteset_ground_tile_snow_12, "src/graphics/other/ground_tiles.png") {
+            
+                tmpl_ground_tile(220, 10)
+            
+                tmpl_ground_tile(220, 10)
+            
+                tmpl_ground_tile(220, 10)
+            
+                tmpl_ground_tile(220, 10)
+            
+                tmpl_ground_tile(220, 10)
+            
+                tmpl_ground_tile(220, 10)
+            
+                tmpl_ground_tile(220, 10)
+            
+                tmpl_ground_tile(220, 10)
+            
+                tmpl_ground_tile(220, 10)
+            
+                tmpl_ground_tile(220, 10)
+            
+                tmpl_ground_tile(220, 10)
+            
+                tmpl_ground_tile(220, 10)
+            
+        }
+    
+
+    
+    
+        spriteset(spriteset_ground_tile_slab_1, "src/graphics/other/ground_tiles.png") {
+            
+                tmpl_ground_tile(290, 10)
+            
+        }
+    
+        spriteset(spriteset_ground_tile_slab_6, "src/graphics/other/ground_tiles.png") {
+            
+                tmpl_ground_tile(290, 10)
+            
+                tmpl_ground_tile(290, 10)
+            
+                tmpl_ground_tile(290, 10)
+            
+                tmpl_ground_tile(290, 10)
+            
+                tmpl_ground_tile(290, 10)
+            
+                tmpl_ground_tile(290, 10)
+            
+        }
+    
+        spriteset(spriteset_ground_tile_slab_7, "src/graphics/other/ground_tiles.png") {
+            
+                tmpl_ground_tile(290, 10)
+            
+                tmpl_ground_tile(290, 10)
+            
+                tmpl_ground_tile(290, 10)
+            
+                tmpl_ground_tile(290, 10)
+            
+                tmpl_ground_tile(290, 10)
+            
+                tmpl_ground_tile(290, 10)
+            
+                tmpl_ground_tile(290, 10)
+            
+        }
+    
+        spriteset(spriteset_ground_tile_slab_12, "src/graphics/other/ground_tiles.png") {
+            
+                tmpl_ground_tile(290, 10)
+            
+                tmpl_ground_tile(290, 10)
+            
+                tmpl_ground_tile(290, 10)
+            
+                tmpl_ground_tile(290, 10)
+            
+                tmpl_ground_tile(290, 10)
+            
+                tmpl_ground_tile(290, 10)
+            
+                tmpl_ground_tile(290, 10)
+            
+                tmpl_ground_tile(290, 10)
+            
+                tmpl_ground_tile(290, 10)
+            
+                tmpl_ground_tile(290, 10)
+            
+                tmpl_ground_tile(290, 10)
+            
+                tmpl_ground_tile(290, 10)
+            
+        }
+    
+
+    
+    
+        spriteset(spriteset_ground_tile_dirty_concrete_1, "src/graphics/other/ground_tiles.png") {
+            
+                tmpl_ground_tile(360, 10)
+            
+        }
+    
+        spriteset(spriteset_ground_tile_dirty_concrete_6, "src/graphics/other/ground_tiles.png") {
+            
+                tmpl_ground_tile(360, 10)
+            
+                tmpl_ground_tile(360, 10)
+            
+                tmpl_ground_tile(360, 10)
+            
+                tmpl_ground_tile(360, 10)
+            
+                tmpl_ground_tile(360, 10)
+            
+                tmpl_ground_tile(360, 10)
+            
+        }
+    
+        spriteset(spriteset_ground_tile_dirty_concrete_7, "src/graphics/other/ground_tiles.png") {
+            
+                tmpl_ground_tile(360, 10)
+            
+                tmpl_ground_tile(360, 10)
+            
+                tmpl_ground_tile(360, 10)
+            
+                tmpl_ground_tile(360, 10)
+            
+                tmpl_ground_tile(360, 10)
+            
+                tmpl_ground_tile(360, 10)
+            
+                tmpl_ground_tile(360, 10)
+            
+        }
+    
+        spriteset(spriteset_ground_tile_dirty_concrete_12, "src/graphics/other/ground_tiles.png") {
+            
+                tmpl_ground_tile(360, 10)
+            
+                tmpl_ground_tile(360, 10)
+            
+                tmpl_ground_tile(360, 10)
+            
+                tmpl_ground_tile(360, 10)
+            
+                tmpl_ground_tile(360, 10)
+            
+                tmpl_ground_tile(360, 10)
+            
+                tmpl_ground_tile(360, 10)
+            
+                tmpl_ground_tile(360, 10)
+            
+                tmpl_ground_tile(360, 10)
+            
+                tmpl_ground_tile(360, 10)
+            
+                tmpl_ground_tile(360, 10)
+            
+                tmpl_ground_tile(360, 10)
+            
+        }
+    
+
+    
+    
+        spriteset(spriteset_ground_tile_hard_standing_dirt_1, "src/graphics/other/ground_tiles.png") {
+            
+                tmpl_ground_tile(430, 10)
+            
+        }
+    
+        spriteset(spriteset_ground_tile_hard_standing_dirt_6, "src/graphics/other/ground_tiles.png") {
+            
+                tmpl_ground_tile(430, 10)
+            
+                tmpl_ground_tile(430, 10)
+            
+                tmpl_ground_tile(430, 10)
+            
+                tmpl_ground_tile(430, 10)
+            
+                tmpl_ground_tile(430, 10)
+            
+                tmpl_ground_tile(430, 10)
+            
+        }
+    
+        spriteset(spriteset_ground_tile_hard_standing_dirt_7, "src/graphics/other/ground_tiles.png") {
+            
+                tmpl_ground_tile(430, 10)
+            
+                tmpl_ground_tile(430, 10)
+            
+                tmpl_ground_tile(430, 10)
+            
+                tmpl_ground_tile(430, 10)
+            
+                tmpl_ground_tile(430, 10)
+            
+                tmpl_ground_tile(430, 10)
+            
+                tmpl_ground_tile(430, 10)
+            
+        }
+    
+        spriteset(spriteset_ground_tile_hard_standing_dirt_12, "src/graphics/other/ground_tiles.png") {
+            
+                tmpl_ground_tile(430, 10)
+            
+                tmpl_ground_tile(430, 10)
+            
+                tmpl_ground_tile(430, 10)
+            
+                tmpl_ground_tile(430, 10)
+            
+                tmpl_ground_tile(430, 10)
+            
+                tmpl_ground_tile(430, 10)
+            
+                tmpl_ground_tile(430, 10)
+            
+                tmpl_ground_tile(430, 10)
+            
+                tmpl_ground_tile(430, 10)
+            
+                tmpl_ground_tile(430, 10)
+            
+                tmpl_ground_tile(430, 10)
+            
+                tmpl_ground_tile(430, 10)
+            
+        }
+    
+
+
+

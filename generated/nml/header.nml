@@ -1,0 +1,87 @@
+grf {
+	grfid: "MG\10\01";
+	name: string(STR_GRF_NAME);
+	desc: string(STR_GRF_DESC);
+	url: string(STR_GRF_DOCS_URL);
+	version: 7000;
+	min_compatible_version: 7000;
+	
+	param 2 {
+	    
+		restrict_open_during_gameplay {
+			name: string(STR_PARAM_NAME_NO_OPENINGS);
+			desc: string(STR_PARAM_DESC_NO_OPENINGS);
+			type: bool;
+			bit: 2;
+		}
+	}
+	param 7 {
+		primary_level1_produced_percent {
+			name: string(STR_PARAM_NAME_PRIMARY_LEVEL1_BONUS);
+			desc: string(STR_PARAM_DESC_PRIMARY_LEVEL_BONUS);
+			def_value: 150;
+			min_value: 100;
+			max_value: 1000;
+		}
+	}
+	param 9 {
+		primary_level2_produced_percent {
+			name: string(STR_PARAM_NAME_PRIMARY_LEVEL2_BONUS);
+			desc: string(STR_PARAM_DESC_PRIMARY_LEVEL_BONUS);
+			def_value: 300;
+			min_value: 100;
+			max_value: 1000;
+		}
+	}
+	param 6 {
+		primary_level1_requirement {
+			name: string(STR_PARAM_NAME_PRIMARY_LEVEL1_REQUIREMENT);
+			desc: string(STR_PARAM_DESC_PRIMARY_LEVEL_REQUIREMENT);
+			def_value: 16;
+			min_value: 1;
+			max_value: 10000;
+		}
+	}
+	param 8 {
+		primary_level2_requirement {
+			name: string(STR_PARAM_NAME_PRIMARY_LEVEL2_REQUIREMENT);
+			desc: string(STR_PARAM_DESC_PRIMARY_LEVEL_REQUIREMENT);
+			def_value: 80;
+			min_value: 1;
+			max_value: 10000;
+		}
+	}
+	param 4 {
+		marine_industry_max_coastal_distance {
+			name: string(STR_PARAM_NAME_COAST_DISTANCE_MARINE_INDUSTRY);
+			desc: string(STR_PARAM_DESC_COAST_DISTANCE_MARINE_INDUSTRY);
+			type: int;
+			def_value: 0;
+			min_value: 0;
+			max_value: 255;
+			names: {
+				0: string(STR_PARAM_VALUE_SECONDARY_NEVER_CLOSE_0);
+			};
+		}
+	}
+	param 5 {
+	    
+		experimental_features {
+			name: string(STR_PARAM_NAME_EXPERIMENTAL_FEATURES);
+			desc: string(STR_PARAM_DESC_EXPERIMENTAL_FEATURES);
+			type: bool;
+			bit: 5;
+		}
+	}
+}
+
+basecost {
+	PR_BUILD_INDUSTRY: 2;       // Industries are more expensive
+	PR_BUILD_INDUSTRY_RAW : 2;  // Building primary industries is also expensive
+	PR_CLEAR_INDUSTRY : 2;      // Deleting industries must also be expensive
+}
+
+
+
+disable_item(FEAT_INDUSTRIES, 0, 36);
+

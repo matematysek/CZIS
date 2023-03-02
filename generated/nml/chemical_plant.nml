@@ -1,0 +1,2895 @@
+/* ******************************************************************
+ * Definition of the industry tile, its callbacks, and graphics chain
+ * ******************************************************************/
+
+
+    
+
+    
+        
+        
+    
+
+    
+
+    
+
+    
+        
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(chemical_plant_spriteset_2_0) {
+                
+                    
+                        [150, 10, 64, 114, -31, -83, ANIM | NOCROP, "src/graphics/industries/chemical_plant_1.png"]
+                    
+                
+            }
+            spriteset(chemical_plant_spriteset_2_0_snow) {
+                
+                    
+                            [150, 10, 64, 114, -31, -83, ANIM | NOCROP, "src/graphics/industries/chemical_plant_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(chemical_plant_spriteset_3_0) {
+                
+                    
+                        [220, 10, 64, 114, -31, -83, ANIM | NOCROP, "src/graphics/industries/chemical_plant_1.png"]
+                    
+                
+            }
+            spriteset(chemical_plant_spriteset_3_0_snow) {
+                
+                    
+                            [220, 10, 64, 114, -31, -83, ANIM | NOCROP, "src/graphics/industries/chemical_plant_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(chemical_plant_spriteset_4_0) {
+                
+                    
+                        [290, 10, 64, 114, -31, -83, ANIM | NOCROP, "src/graphics/industries/chemical_plant_1.png"]
+                    
+                
+            }
+            spriteset(chemical_plant_spriteset_4_0_snow) {
+                
+                    
+                            [290, 10, 64, 114, -31, -83, ANIM | NOCROP, "src/graphics/industries/chemical_plant_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(chemical_plant_spriteset_5_0) {
+                
+                    
+                        [360, 10, 64, 114, -31, -83, ANIM | NOCROP, "src/graphics/industries/chemical_plant_1.png"]
+                    
+                
+            }
+            spriteset(chemical_plant_spriteset_5_0_snow) {
+                
+                    
+                            [360, 10, 64, 114, -31, -83, ANIM | NOCROP, "src/graphics/industries/chemical_plant_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(chemical_plant_spriteset_6_0) {
+                
+                    
+                        [430, 10, 64, 114, -31, -83, ANIM | NOCROP, "src/graphics/industries/chemical_plant_1.png"]
+                    
+                
+            }
+            spriteset(chemical_plant_spriteset_6_0_snow) {
+                
+                    
+                            [430, 10, 64, 114, -31, -83, ANIM | NOCROP, "src/graphics/industries/chemical_plant_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(chemical_plant_spriteset_7_0) {
+                
+                    
+                        [500, 10, 64, 66, -31, -35, ANIM | NOCROP, "src/graphics/industries/chemical_plant_1.png"]
+                    
+                
+            }
+            spriteset(chemical_plant_spriteset_7_0_snow) {
+                
+                    
+                            [500, 10, 64, 66, -31, -35, ANIM | NOCROP, "src/graphics/industries/chemical_plant_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(chemical_plant_spriteset_8_0) {
+                
+                    
+                        [570, 10, 64, 66, -31, -35, ANIM | NOCROP, "src/graphics/industries/chemical_plant_1.png"]
+                    
+                
+            }
+            spriteset(chemical_plant_spriteset_8_0_snow) {
+                
+                    
+                            [570, 10, 64, 66, -31, -35, ANIM | NOCROP, "src/graphics/industries/chemical_plant_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(chemical_plant_spriteset_9_0) {
+                
+                    
+                        [710, 10, 64, 66, -31, -35, ANIM | NOCROP, "src/graphics/industries/chemical_plant_1.png"]
+                    
+                
+            }
+            spriteset(chemical_plant_spriteset_9_0_snow) {
+                
+                    
+                            [710, 10, 64, 66, -31, -35, ANIM | NOCROP, "src/graphics/industries/chemical_plant_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+
+
+
+    spritelayout chemical_plant_spritelayout_horizontal_tanks {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(1);
+                hide_sprite: (LOAD_TEMP(9) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(5) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(2);
+                hide_sprite: (LOAD_TEMP(10) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(6) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: chemical_plant_spriteset_2_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: chemical_plant_spriteset_2_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(3);
+                hide_sprite: (LOAD_TEMP(11) == 0);
+                xoffset: 0;
+                yoffset:  16;
+                zoffset:  LOAD_TEMP(7) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(4);
+                hide_sprite: (LOAD_TEMP(12) == 0);
+                xoffset: 16;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(8) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+    }
+
+    spritelayout chemical_plant_spritelayout_frac_columns {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(1);
+                hide_sprite: (LOAD_TEMP(9) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(5) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(2);
+                hide_sprite: (LOAD_TEMP(10) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(6) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: chemical_plant_spriteset_3_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: chemical_plant_spriteset_3_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(3);
+                hide_sprite: (LOAD_TEMP(11) == 0);
+                xoffset: 0;
+                yoffset:  16;
+                zoffset:  LOAD_TEMP(7) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(4);
+                hide_sprite: (LOAD_TEMP(12) == 0);
+                xoffset: 16;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(8) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+    }
+
+    spritelayout chemical_plant_spritelayout_drop_tower_and_thin_chimney {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(1);
+                hide_sprite: (LOAD_TEMP(9) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(5) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(2);
+                hide_sprite: (LOAD_TEMP(10) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(6) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: chemical_plant_spriteset_4_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: chemical_plant_spriteset_4_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+            
+            building {
+                sprite: 3701 + ((animation_frame + 0)%8);
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                xoffset: 0;
+                yoffset: 0;
+                zoffset: 81;
+                xextent: 15;
+                yextent: 7;
+                zextent: 7;
+                hide_sprite: 0;
+            }
+        
+
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(3);
+                hide_sprite: (LOAD_TEMP(11) == 0);
+                xoffset: 0;
+                yoffset:  16;
+                zoffset:  LOAD_TEMP(7) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(4);
+                hide_sprite: (LOAD_TEMP(12) == 0);
+                xoffset: 16;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(8) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+    }
+
+    spritelayout chemical_plant_spritelayout_large_building {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(1);
+                hide_sprite: (LOAD_TEMP(9) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(5) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(2);
+                hide_sprite: (LOAD_TEMP(10) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(6) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: chemical_plant_spriteset_5_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: chemical_plant_spriteset_5_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+            
+            building {
+                sprite: 3079 + (animation_frame / 4);
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                xoffset: 6;
+                yoffset: -1;
+                zoffset: 45+ animation_frame;
+                xextent: 11;
+                yextent: 16;
+                zextent: 7;
+                hide_sprite: animation_frame &gt; 19;
+            }
+        
+            
+            building {
+                sprite: 3079 + (animation_frame / 4);
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                xoffset: 6;
+                yoffset: 3;
+                zoffset: 45+ animation_frame;
+                xextent: 11;
+                yextent: 16;
+                zextent: 7;
+                hide_sprite: animation_frame &gt; 19;
+            }
+        
+            
+            building {
+                sprite: 3079 + (animation_frame / 4);
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                xoffset: 2;
+                yoffset: -1;
+                zoffset: 45+ animation_frame;
+                xextent: 11;
+                yextent: 16;
+                zextent: 7;
+                hide_sprite: animation_frame &gt; 19;
+            }
+        
+            
+            building {
+                sprite: 3079 + (animation_frame / 4);
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                xoffset: 2;
+                yoffset: 3;
+                zoffset: 45+ animation_frame;
+                xextent: 11;
+                yextent: 16;
+                zextent: 7;
+                hide_sprite: animation_frame &gt; 19;
+            }
+        
+
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(3);
+                hide_sprite: (LOAD_TEMP(11) == 0);
+                xoffset: 0;
+                yoffset:  16;
+                zoffset:  LOAD_TEMP(7) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(4);
+                hide_sprite: (LOAD_TEMP(12) == 0);
+                xoffset: 16;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(8) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+    }
+
+    spritelayout chemical_plant_spritelayout_fat_chimney {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(1);
+                hide_sprite: (LOAD_TEMP(9) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(5) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(2);
+                hide_sprite: (LOAD_TEMP(10) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(6) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: chemical_plant_spriteset_6_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: chemical_plant_spriteset_6_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+            
+            building {
+                sprite: 3079 + (animation_frame / 4);
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                xoffset: 6;
+                yoffset: 0;
+                zoffset: 60+ animation_frame;
+                xextent: 11;
+                yextent: 16;
+                zextent: 7;
+                hide_sprite: animation_frame &gt; 19;
+            }
+        
+            
+            building {
+                sprite: 3079 + (animation_frame / 4);
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                xoffset: 6;
+                yoffset: 3;
+                zoffset: 60+ animation_frame;
+                xextent: 11;
+                yextent: 16;
+                zextent: 7;
+                hide_sprite: animation_frame &gt; 19;
+            }
+        
+            
+            building {
+                sprite: 3079 + (animation_frame / 4);
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                xoffset: 3;
+                yoffset: 0;
+                zoffset: 60+ animation_frame;
+                xextent: 11;
+                yextent: 16;
+                zextent: 7;
+                hide_sprite: animation_frame &gt; 19;
+            }
+        
+            
+            building {
+                sprite: 3079 + (animation_frame / 4);
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                xoffset: 3;
+                yoffset: 3;
+                zoffset: 60+ animation_frame;
+                xextent: 11;
+                yextent: 16;
+                zextent: 7;
+                hide_sprite: animation_frame &gt; 19;
+            }
+        
+
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(3);
+                hide_sprite: (LOAD_TEMP(11) == 0);
+                xoffset: 0;
+                yoffset:  16;
+                zoffset:  LOAD_TEMP(7) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(4);
+                hide_sprite: (LOAD_TEMP(12) == 0);
+                xoffset: 16;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(8) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+    }
+
+    spritelayout chemical_plant_spritelayout_spherical_tanks {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(1);
+                hide_sprite: (LOAD_TEMP(9) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(5) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(2);
+                hide_sprite: (LOAD_TEMP(10) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(6) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: chemical_plant_spriteset_7_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: chemical_plant_spriteset_7_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(3);
+                hide_sprite: (LOAD_TEMP(11) == 0);
+                xoffset: 0;
+                yoffset:  16;
+                zoffset:  LOAD_TEMP(7) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(4);
+                hide_sprite: (LOAD_TEMP(12) == 0);
+                xoffset: 16;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(8) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+    }
+
+    spritelayout chemical_plant_spritelayout_vertical_tanks {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(1);
+                hide_sprite: (LOAD_TEMP(9) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(5) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(2);
+                hide_sprite: (LOAD_TEMP(10) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(6) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: chemical_plant_spriteset_8_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: chemical_plant_spriteset_8_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(3);
+                hide_sprite: (LOAD_TEMP(11) == 0);
+                xoffset: 0;
+                yoffset:  16;
+                zoffset:  LOAD_TEMP(7) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(4);
+                hide_sprite: (LOAD_TEMP(12) == 0);
+                xoffset: 16;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(8) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+    }
+
+    spritelayout chemical_plant_spritelayout_barrels {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(1);
+                hide_sprite: (LOAD_TEMP(9) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(5) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(2);
+                hide_sprite: (LOAD_TEMP(10) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(6) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: chemical_plant_spriteset_9_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: chemical_plant_spriteset_9_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(3);
+                hide_sprite: (LOAD_TEMP(11) == 0);
+                xoffset: 0;
+                yoffset:  16;
+                zoffset:  LOAD_TEMP(7) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(4);
+                hide_sprite: (LOAD_TEMP(12) == 0);
+                xoffset: 16;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(8) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+    }
+
+
+
+
+
+
+    switch(FEAT_INDUSTRYTILES, SELF, chemical_plant_industry_layout_1_graphics_switch, relative_pos) {
+        
+            
+            
+                relative_coord(0, 0): chemical_plant_spritelayout_fat_chimney;
+            
+        
+            
+            
+                relative_coord(0, 1): chemical_plant_spritelayout_fat_chimney;
+            
+        
+            
+            
+                relative_coord(0, 2): chemical_plant_spritelayout_spherical_tanks;
+            
+        
+            
+            
+                relative_coord(1, 0): chemical_plant_spritelayout_large_building;
+            
+        
+            
+            
+                relative_coord(1, 1): chemical_plant_spritelayout_large_building;
+            
+        
+            
+            
+                relative_coord(1, 2): chemical_plant_spritelayout_barrels;
+            
+        
+            
+            
+                relative_coord(2, 0): chemical_plant_spritelayout_horizontal_tanks;
+            
+        
+            
+            
+                relative_coord(2, 1): chemical_plant_spritelayout_horizontal_tanks;
+            
+        
+            
+            
+                relative_coord(2, 2): chemical_plant_spritelayout_barrels;
+            
+        
+            
+            
+                relative_coord(3, 0): chemical_plant_spritelayout_frac_columns;
+            
+        
+            
+            
+                relative_coord(3, 1): chemical_plant_spritelayout_frac_columns;
+            
+        
+            
+            
+                relative_coord(3, 2): chemical_plant_spritelayout_vertical_tanks;
+            
+        
+            
+            
+                relative_coord(4, 0): chemical_plant_spritelayout_drop_tower_and_thin_chimney;
+            
+        
+            
+            
+                relative_coord(4, 1): chemical_plant_spritelayout_horizontal_tanks;
+            
+        
+            
+            
+                relative_coord(4, 2): chemical_plant_spritelayout_vertical_tanks;
+            
+        
+        return 0; // a default is needed, but should never be reached, layout definitions are explicit
+    }
+
+    switch(FEAT_INDUSTRYTILES, SELF, chemical_plant_industry_layout_2_graphics_switch, relative_pos) {
+        
+            
+            
+                relative_coord(0, 1): chemical_plant_spritelayout_drop_tower_and_thin_chimney;
+            
+        
+            
+            
+                relative_coord(0, 2): chemical_plant_spritelayout_horizontal_tanks;
+            
+        
+            
+            
+                relative_coord(0, 3): chemical_plant_spritelayout_fat_chimney;
+            
+        
+            
+            
+                relative_coord(0, 4): chemical_plant_spritelayout_fat_chimney;
+            
+        
+            
+            
+                relative_coord(1, 0): chemical_plant_spritelayout_horizontal_tanks;
+            
+        
+            
+            
+                relative_coord(1, 1): chemical_plant_spritelayout_frac_columns;
+            
+        
+            
+            
+                relative_coord(1, 2): chemical_plant_spritelayout_horizontal_tanks;
+            
+        
+            
+            
+                relative_coord(1, 3): chemical_plant_spritelayout_large_building;
+            
+        
+            
+            
+                relative_coord(1, 4): chemical_plant_spritelayout_large_building;
+            
+        
+            
+            
+                relative_coord(2, 0): chemical_plant_spritelayout_vertical_tanks;
+            
+        
+            
+            
+                relative_coord(2, 1): chemical_plant_spritelayout_vertical_tanks;
+            
+        
+            
+            
+                relative_coord(2, 2): chemical_plant_spritelayout_barrels;
+            
+        
+            
+            
+                relative_coord(2, 3): chemical_plant_spritelayout_spherical_tanks;
+            
+        
+            
+            
+                relative_coord(2, 4): chemical_plant_spritelayout_spherical_tanks;
+            
+        
+        return 0; // a default is needed, but should never be reached, layout definitions are explicit
+    }
+
+    switch(FEAT_INDUSTRYTILES, SELF, chemical_plant_industry_layout_3_graphics_switch, relative_pos) {
+        
+            
+            
+                relative_coord(0, 0): chemical_plant_spritelayout_fat_chimney;
+            
+        
+            
+            
+                relative_coord(0, 1): chemical_plant_spritelayout_fat_chimney;
+            
+        
+            
+            
+                relative_coord(0, 2): chemical_plant_spritelayout_horizontal_tanks;
+            
+        
+            
+            
+                relative_coord(0, 3): chemical_plant_spritelayout_frac_columns;
+            
+        
+            
+            
+                relative_coord(0, 4): chemical_plant_spritelayout_horizontal_tanks;
+            
+        
+            
+            
+                relative_coord(1, 0): chemical_plant_spritelayout_large_building;
+            
+        
+            
+            
+                relative_coord(1, 1): chemical_plant_spritelayout_large_building;
+            
+        
+            
+            
+                relative_coord(1, 2): chemical_plant_spritelayout_horizontal_tanks;
+            
+        
+            
+            
+                relative_coord(1, 3): chemical_plant_spritelayout_frac_columns;
+            
+        
+            
+            
+                relative_coord(1, 4): chemical_plant_spritelayout_drop_tower_and_thin_chimney;
+            
+        
+            
+            
+                relative_coord(2, 0): chemical_plant_spritelayout_spherical_tanks;
+            
+        
+            
+            
+                relative_coord(2, 1): chemical_plant_spritelayout_barrels;
+            
+        
+            
+            
+                relative_coord(2, 2): chemical_plant_spritelayout_barrels;
+            
+        
+            
+            
+                relative_coord(2, 3): chemical_plant_spritelayout_vertical_tanks;
+            
+        
+            
+            
+                relative_coord(2, 4): chemical_plant_spritelayout_vertical_tanks;
+            
+        
+        return 0; // a default is needed, but should never be reached, layout definitions are explicit
+    }
+
+    switch(FEAT_INDUSTRYTILES, SELF, chemical_plant_industry_layout_4_graphics_switch, relative_pos) {
+        
+            
+            
+                relative_coord(0, 0): chemical_plant_spritelayout_vertical_tanks;
+            
+        
+            
+            
+                relative_coord(0, 1): chemical_plant_spritelayout_vertical_tanks;
+            
+        
+            
+            
+                relative_coord(1, 0): chemical_plant_spritelayout_frac_columns;
+            
+        
+            
+            
+                relative_coord(1, 1): chemical_plant_spritelayout_frac_columns;
+            
+        
+            
+            
+                relative_coord(2, 0): chemical_plant_spritelayout_horizontal_tanks;
+            
+        
+            
+            
+                relative_coord(2, 1): chemical_plant_spritelayout_horizontal_tanks;
+            
+        
+            
+            
+                relative_coord(3, 0): chemical_plant_spritelayout_fat_chimney;
+            
+        
+            
+            
+                relative_coord(3, 1): chemical_plant_spritelayout_fat_chimney;
+            
+        
+            
+            
+                relative_coord(4, 0): chemical_plant_spritelayout_large_building;
+            
+        
+            
+            
+                relative_coord(4, 1): chemical_plant_spritelayout_large_building;
+            
+        
+            
+            
+                relative_coord(5, 0): chemical_plant_spritelayout_drop_tower_and_thin_chimney;
+            
+        
+            
+            
+                relative_coord(5, 1): chemical_plant_spritelayout_barrels;
+            
+        
+            
+            
+                relative_coord(6, 0): chemical_plant_spritelayout_spherical_tanks;
+            
+        
+            
+            
+                relative_coord(6, 1): chemical_plant_spritelayout_spherical_tanks;
+            
+        
+        return 0; // a default is needed, but should never be reached, layout definitions are explicit
+    }
+
+    switch(FEAT_INDUSTRYTILES, SELF, chemical_plant_industry_layout_5_graphics_switch, relative_pos) {
+        
+            
+            
+                relative_coord(0, 0): chemical_plant_spritelayout_horizontal_tanks;
+            
+        
+            
+            
+                relative_coord(0, 1): chemical_plant_spritelayout_horizontal_tanks;
+            
+        
+            
+            
+                relative_coord(0, 2): chemical_plant_spritelayout_fat_chimney;
+            
+        
+            
+            
+                relative_coord(0, 3): chemical_plant_spritelayout_fat_chimney;
+            
+        
+            
+            
+                relative_coord(1, 0): chemical_plant_spritelayout_drop_tower_and_thin_chimney;
+            
+        
+            
+            
+                relative_coord(1, 1): chemical_plant_spritelayout_frac_columns;
+            
+        
+            
+            
+                relative_coord(1, 2): chemical_plant_spritelayout_large_building;
+            
+        
+            
+            
+                relative_coord(1, 3): chemical_plant_spritelayout_large_building;
+            
+        
+            
+            
+                relative_coord(2, 0): chemical_plant_spritelayout_horizontal_tanks;
+            
+        
+            
+            
+                relative_coord(2, 1): chemical_plant_spritelayout_horizontal_tanks;
+            
+        
+            
+            
+                relative_coord(2, 2): chemical_plant_spritelayout_barrels;
+            
+        
+            
+            
+                relative_coord(2, 3): chemical_plant_spritelayout_spherical_tanks;
+            
+        
+            
+            
+                relative_coord(3, 0): chemical_plant_spritelayout_vertical_tanks;
+            
+        
+            
+            
+                relative_coord(3, 1): chemical_plant_spritelayout_vertical_tanks;
+            
+        
+            
+            
+                relative_coord(3, 2): chemical_plant_spritelayout_barrels;
+            
+        
+            
+            
+                relative_coord(3, 3): chemical_plant_spritelayout_spherical_tanks;
+            
+        
+        return 0; // a default is needed, but should never be reached, layout definitions are explicit
+    }
+
+    switch(FEAT_INDUSTRYTILES, SELF, chemical_plant_industry_layout_6_graphics_switch, relative_pos) {
+        
+            
+            
+                relative_coord(0, 0): chemical_plant_spritelayout_fat_chimney;
+            
+        
+            
+            
+                relative_coord(0, 1): chemical_plant_spritelayout_frac_columns;
+            
+        
+            
+            
+                relative_coord(0, 2): chemical_plant_spritelayout_vertical_tanks;
+            
+        
+            
+            
+                relative_coord(0, 3): chemical_plant_spritelayout_vertical_tanks;
+            
+        
+            
+            
+                relative_coord(1, 0): chemical_plant_spritelayout_large_building;
+            
+        
+            
+            
+                relative_coord(1, 1): chemical_plant_spritelayout_horizontal_tanks;
+            
+        
+            
+            
+                relative_coord(1, 2): chemical_plant_spritelayout_drop_tower_and_thin_chimney;
+            
+        
+            
+            
+                relative_coord(1, 3): chemical_plant_spritelayout_horizontal_tanks;
+            
+        
+            
+            
+                relative_coord(2, 0): chemical_plant_spritelayout_fat_chimney;
+            
+        
+            
+            
+                relative_coord(2, 1): chemical_plant_spritelayout_horizontal_tanks;
+            
+        
+            
+            
+                relative_coord(2, 2): chemical_plant_spritelayout_frac_columns;
+            
+        
+            
+            
+                relative_coord(2, 3): chemical_plant_spritelayout_horizontal_tanks;
+            
+        
+            
+            
+                relative_coord(3, 0): chemical_plant_spritelayout_large_building;
+            
+        
+            
+            
+                relative_coord(3, 1): chemical_plant_spritelayout_barrels;
+            
+        
+            
+            
+                relative_coord(3, 2): chemical_plant_spritelayout_spherical_tanks;
+            
+        
+            
+            
+                relative_coord(3, 3): chemical_plant_spritelayout_spherical_tanks;
+            
+        
+        return 0; // a default is needed, but should never be reached, layout definitions are explicit
+    }
+
+
+
+switch(FEAT_INDUSTRYTILES, PARENT, chemical_plant_industry_graphics_switch_layouts, layout_num) {
+    
+        1: chemical_plant_industry_layout_1_graphics_switch;
+    
+        2: chemical_plant_industry_layout_2_graphics_switch;
+    
+        3: chemical_plant_industry_layout_3_graphics_switch;
+    
+        4: chemical_plant_industry_layout_4_graphics_switch;
+    
+        5: chemical_plant_industry_layout_5_graphics_switch;
+    
+        6: chemical_plant_industry_layout_6_graphics_switch;
+    
+    chemical_plant_industry_layout_1_graphics_switch; // default
+}
+
+
+switch(FEAT_INDUSTRYTILES, SELF, chemical_plant_industry_construction_state_graphics_switch, construction_state) {
+    0..2: spritelayout_default_construction_states;
+    
+    chemical_plant_industry_graphics_switch_layouts; // default
+}
+
+switch(FEAT_INDUSTRYTILES, SELF, chemical_plant_store_temp_vars,
+        [STORE_TEMP(random_bits, 14),
+         STORE_TEMP(terrain_type == TILETYPE_SNOW, 13)
+            
+                , STORE_TEMP(0,
+                             127) 
+                , STORE_TEMP(construction_state != 3 ? 1 : LOAD_TEMP(127),
+                             127)
+                , STORE_TEMP(LOAD_TEMP(13) == 0 ? 1 : LOAD_TEMP(127), 
+                             117) 
+                , STORE_TEMP(LOAD_TEMP(13) == 1 ? 1 : LOAD_TEMP(127), 
+                             127)
+            
+        ]) {
+    chemical_plant_industry_construction_state_graphics_switch; // default
+}
+
+switch (FEAT_INDUSTRYTILES, SELF, chemical_plant_switch_graphics, [
+                                    switch_tile_fences(),
+                                    switch_terrain_sprite(),
+                                    
+                                 ]) {
+    chemical_plant_store_temp_vars;
+}
+
+
+
+    
+        
+            
+    
+    switch(FEAT_INDUSTRYTILES, SELF, chemical_plant_tile_1_lc_2,
+            (nearby_tile_class( 2,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2, -2) == TILE_CLASS_INDUSTRY)
+        ) {
+        1: return CB_RESULT_LOCATION_DISALLOW;
+        return CB_RESULT_LOCATION_ALLOW;
+    }
+
+        
+            
+    
+    switch (FEAT_INDUSTRYTILES, PARENT, chemical_plant_tile_1_lc_1, (
+                (((extra_callback_info2 & 0xFF00) >> 8) == IND_CREATION_FUND) ||
+                (((extra_callback_info2 & 0xFF00) >> 8) == IND_CREATION_PROSPECT)
+                )
+            ) {
+        1: return CB_RESULT_LOCATION_ALLOW;
+        chemical_plant_tile_1_lc_2;
+    }
+
+        
+            
+    
+    switch (FEAT_INDUSTRYTILES, SELF, chemical_plant_tile_1_lc_0,
+                (
+                nearby_tile_height(-relative_x, -relative_y)
+                + (nearby_tile_slope(-relative_x, -relative_y)
+                == SLOPE_FLAT ? 0 :
+                nearby_tile_slope(-relative_x, -relative_y) == bitmask(IS_STEEP_SLOPE) ? 2 : 1
+                )) == (nearby_tile_height(0, 0)
+                + (nearby_tile_slope(0, 0)
+                == SLOPE_FLAT ? 0 :
+                nearby_tile_slope(0, 0) == bitmask(IS_STEEP_SLOPE) ? 2 : 1))
+                ) {
+        1: chemical_plant_tile_1_lc_1;
+        return CB_RESULT_LOCATION_DISALLOW;
+    }
+
+        
+    
+        
+            
+    
+    switch(FEAT_INDUSTRYTILES, SELF, chemical_plant_tile_2_lc_2,
+            (nearby_tile_class( 2,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2, -2) == TILE_CLASS_INDUSTRY)
+        ) {
+        1: return CB_RESULT_LOCATION_DISALLOW;
+        return CB_RESULT_LOCATION_ALLOW;
+    }
+
+        
+            
+    
+    switch (FEAT_INDUSTRYTILES, PARENT, chemical_plant_tile_2_lc_1, (
+                (((extra_callback_info2 & 0xFF00) >> 8) == IND_CREATION_FUND) ||
+                (((extra_callback_info2 & 0xFF00) >> 8) == IND_CREATION_PROSPECT)
+                )
+            ) {
+        1: return CB_RESULT_LOCATION_ALLOW;
+        chemical_plant_tile_2_lc_2;
+    }
+
+        
+            
+    
+    switch (FEAT_INDUSTRYTILES, SELF, chemical_plant_tile_2_lc_0,
+                (
+                nearby_tile_height(-relative_x, -relative_y)
+                + (nearby_tile_slope(-relative_x, -relative_y)
+                == SLOPE_FLAT ? 0 :
+                nearby_tile_slope(-relative_x, -relative_y) == bitmask(IS_STEEP_SLOPE) ? 2 : 1
+                )) == (nearby_tile_height(0, 0)
+                + (nearby_tile_slope(0, 0)
+                == SLOPE_FLAT ? 0 :
+                nearby_tile_slope(0, 0) == bitmask(IS_STEEP_SLOPE) ? 2 : 1))
+                ) {
+        1: chemical_plant_tile_2_lc_1;
+        return CB_RESULT_LOCATION_DISALLOW;
+    }
+
+        
+    
+
+
+
+    
+        
+    
+        
+    
+    
+    switch(FEAT_INDUSTRYTILES, SELF, chemical_plant_tile_2_anim_control, (extra_callback_info1 % 47)) {
+        
+            0: return 0;
+        
+            1: return 1;
+        
+            2: return 2;
+        
+            3: return 3;
+        
+            4: return 4;
+        
+            5: return 5;
+        
+            6: return 6;
+        
+            7: return 7;
+        
+            8: return 8;
+        
+            9: return 9;
+        
+            10: return 10;
+        
+            11: return 11;
+        
+            12: return 12;
+        
+            13: return 13;
+        
+            14: return 14;
+        
+            15: return 15;
+        
+            16: return 16;
+        
+            17: return 17;
+        
+            18: return 18;
+        
+            19: return 19;
+        
+            20: return 20;
+        
+            21: return 21;
+        
+            22: return 22;
+        
+            23: return 23;
+        
+            24: return 24;
+        
+            25: return 25;
+        
+            26: return 26;
+        
+            27: return 27;
+        
+            28: return 28;
+        
+            29: return 29;
+        
+            30: return 30;
+        
+            31: return 31;
+        
+            32: return 32;
+        
+            33: return 33;
+        
+            34: return 34;
+        
+            35: return 35;
+        
+            36: return 36;
+        
+            37: return 37;
+        
+            38: return 38;
+        
+            39: return 39;
+        
+            40: return 40;
+        
+            41: return 41;
+        
+            42: return 42;
+        
+            43: return 43;
+        
+            44: return 44;
+        
+            45: return 45;
+        
+            46: return 46;
+        
+        return CB_RESULT_NEXT_FRAME;
+    }
+
+    
+
+
+
+    
+    item(FEAT_INDUSTRYTILES, chemical_plant_tile_1, 231) {
+        property {
+            substitute:         0;
+            land_shape_flags:   0;
+            special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+            
+            
+                animation_info: [ANIMATION_LOOPING, 7];
+            
+            
+                animation_speed: 3;
+            
+            animation_triggers: bitmask();
+        }
+
+        graphics {
+    		
+    		    tile_check: chemical_plant_tile_1_lc_0;
+            
+            
+    		
+            
+    		
+    		
+            chemical_plant_switch_graphics;
+        }
+    }
+
+    
+    item(FEAT_INDUSTRYTILES, chemical_plant_tile_2, 254) {
+        property {
+            substitute:         0;
+            land_shape_flags:   0;
+            special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+            
+            
+                animation_info: [ANIMATION_LOOPING, 47];
+            
+            
+                animation_speed: 2;
+            
+            animation_triggers: bitmask(ANIM_TRIGGER_INDTILE_CONSTRUCTION_STATE);
+        }
+
+        graphics {
+    		
+    		    tile_check: chemical_plant_tile_2_lc_0;
+            
+            
+    		
+    		    
+                
+                
+        		    anim_control: chemical_plant_tile_2_anim_control;
+                
+    		
+            
+    		
+    		
+            chemical_plant_switch_graphics;
+        }
+    }
+
+
+
+
+/* *************************************************
+ * Definition of the industry
+ * *************************************************/
+
+
+    tilelayout chemical_plant_industry_layout_1_tilelayout {
+        
+            0, 0: chemical_plant_tile_2;
+        
+            0, 1: chemical_plant_tile_2;
+        
+            0, 2: chemical_plant_tile_1;
+        
+            1, 0: chemical_plant_tile_2;
+        
+            1, 1: chemical_plant_tile_2;
+        
+            1, 2: chemical_plant_tile_1;
+        
+            2, 0: chemical_plant_tile_1;
+        
+            2, 1: chemical_plant_tile_1;
+        
+            2, 2: chemical_plant_tile_1;
+        
+            3, 0: chemical_plant_tile_1;
+        
+            3, 1: chemical_plant_tile_1;
+        
+            3, 2: chemical_plant_tile_1;
+        
+            4, 0: chemical_plant_tile_1;
+        
+            4, 1: chemical_plant_tile_1;
+        
+            4, 2: chemical_plant_tile_1;
+        
+    }
+
+    tilelayout chemical_plant_industry_layout_2_tilelayout {
+        
+            0, 1: chemical_plant_tile_1;
+        
+            0, 2: chemical_plant_tile_1;
+        
+            0, 3: chemical_plant_tile_2;
+        
+            0, 4: chemical_plant_tile_2;
+        
+            1, 0: chemical_plant_tile_1;
+        
+            1, 1: chemical_plant_tile_1;
+        
+            1, 2: chemical_plant_tile_1;
+        
+            1, 3: chemical_plant_tile_2;
+        
+            1, 4: chemical_plant_tile_2;
+        
+            2, 0: chemical_plant_tile_1;
+        
+            2, 1: chemical_plant_tile_1;
+        
+            2, 2: chemical_plant_tile_1;
+        
+            2, 3: chemical_plant_tile_1;
+        
+            2, 4: chemical_plant_tile_1;
+        
+    }
+
+    tilelayout chemical_plant_industry_layout_3_tilelayout {
+        
+            0, 0: chemical_plant_tile_2;
+        
+            0, 1: chemical_plant_tile_2;
+        
+            0, 2: chemical_plant_tile_1;
+        
+            0, 3: chemical_plant_tile_1;
+        
+            0, 4: chemical_plant_tile_1;
+        
+            1, 0: chemical_plant_tile_2;
+        
+            1, 1: chemical_plant_tile_2;
+        
+            1, 2: chemical_plant_tile_1;
+        
+            1, 3: chemical_plant_tile_1;
+        
+            1, 4: chemical_plant_tile_1;
+        
+            2, 0: chemical_plant_tile_2;
+        
+            2, 1: chemical_plant_tile_2;
+        
+            2, 2: chemical_plant_tile_2;
+        
+            2, 3: chemical_plant_tile_2;
+        
+            2, 4: chemical_plant_tile_2;
+        
+    }
+
+    tilelayout chemical_plant_industry_layout_4_tilelayout {
+        
+            0, 0: chemical_plant_tile_1;
+        
+            0, 1: chemical_plant_tile_1;
+        
+            1, 0: chemical_plant_tile_1;
+        
+            1, 1: chemical_plant_tile_1;
+        
+            2, 0: chemical_plant_tile_1;
+        
+            2, 1: chemical_plant_tile_1;
+        
+            3, 0: chemical_plant_tile_2;
+        
+            3, 1: chemical_plant_tile_2;
+        
+            4, 0: chemical_plant_tile_2;
+        
+            4, 1: chemical_plant_tile_2;
+        
+            5, 0: chemical_plant_tile_1;
+        
+            5, 1: chemical_plant_tile_1;
+        
+            6, 0: chemical_plant_tile_1;
+        
+            6, 1: chemical_plant_tile_1;
+        
+    }
+
+    tilelayout chemical_plant_industry_layout_5_tilelayout {
+        
+            0, 0: chemical_plant_tile_1;
+        
+            0, 1: chemical_plant_tile_1;
+        
+            0, 2: chemical_plant_tile_2;
+        
+            0, 3: chemical_plant_tile_2;
+        
+            1, 0: chemical_plant_tile_1;
+        
+            1, 1: chemical_plant_tile_1;
+        
+            1, 2: chemical_plant_tile_2;
+        
+            1, 3: chemical_plant_tile_2;
+        
+            2, 0: chemical_plant_tile_1;
+        
+            2, 1: chemical_plant_tile_1;
+        
+            2, 2: chemical_plant_tile_1;
+        
+            2, 3: chemical_plant_tile_1;
+        
+            3, 0: chemical_plant_tile_1;
+        
+            3, 1: chemical_plant_tile_1;
+        
+            3, 2: chemical_plant_tile_1;
+        
+            3, 3: chemical_plant_tile_1;
+        
+    }
+
+    tilelayout chemical_plant_industry_layout_6_tilelayout {
+        
+            0, 0: chemical_plant_tile_2;
+        
+            0, 1: chemical_plant_tile_1;
+        
+            0, 2: chemical_plant_tile_1;
+        
+            0, 3: chemical_plant_tile_1;
+        
+            1, 0: chemical_plant_tile_2;
+        
+            1, 1: chemical_plant_tile_1;
+        
+            1, 2: chemical_plant_tile_1;
+        
+            1, 3: chemical_plant_tile_1;
+        
+            2, 0: chemical_plant_tile_2;
+        
+            2, 1: chemical_plant_tile_1;
+        
+            2, 2: chemical_plant_tile_1;
+        
+            2, 3: chemical_plant_tile_1;
+        
+            3, 0: chemical_plant_tile_2;
+        
+            3, 1: chemical_plant_tile_1;
+        
+            3, 2: chemical_plant_tile_1;
+        
+            3, 3: chemical_plant_tile_1;
+        
+    }
+
+
+
+
+
+switch (FEAT_INDUSTRIES, SELF, chemical_plant_extra_text, economy) {
+    
+        5: return string(STR_EXTRA_TEXT_SECONDARY_NON_COMBINATORY);
+    
+}
+
+
+
+
+
+    
+    
+        switch (FEAT_INDUSTRIES, SELF, chemical_plant_cargo_subtype_display_cargo_PETR_economy_5, [
+                LOAD_PERM(3)
+            ]) {
+            0: return 0x3800 + string(STR_EMPTY);
+            return 0x3800 + string(STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG);
+        }
+    
+        switch (FEAT_INDUSTRIES, SELF, chemical_plant_cargo_subtype_display_cargo_SULP_economy_5, [
+                LOAD_PERM(4)
+            ]) {
+            0: return 0x3800 + string(STR_EMPTY);
+            return 0x3800 + string(STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG);
+        }
+    
+        switch (FEAT_INDUSTRIES, SELF, chemical_plant_cargo_subtype_display_cargo_NH3__economy_5, [
+                LOAD_PERM(5)
+            ]) {
+            0: return 0x3800 + string(STR_EMPTY);
+            return 0x3800 + string(STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG);
+        }
+    
+        switch (FEAT_INDUSTRIES, SELF, chemical_plant_cargo_subtype_display_cargo_NITR_economy_5, [
+                LOAD_PERM(6)
+            ]) {
+            0: return 0x3800 + string(STR_EMPTY);
+            return 0x3800 + string(STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG);
+        }
+    
+    switch (FEAT_INDUSTRIES, SELF, chemical_plant_cargo_subtype_display_switch_cargo_economy_5, getbits(extra_callback_info2, 16, 8)) {
+        
+        
+            PETR: chemical_plant_cargo_subtype_display_cargo_PETR_economy_5;
+        
+            SULP: chemical_plant_cargo_subtype_display_cargo_SULP_economy_5;
+        
+            NH3_: chemical_plant_cargo_subtype_display_cargo_NH3__economy_5;
+        
+            NITR: chemical_plant_cargo_subtype_display_cargo_NITR_economy_5;
+        
+        return CB_RESULT_NO_TEXT;
+    }
+
+
+switch (FEAT_INDUSTRIES, SELF, chemical_plant_cargo_subtype_display_switch_economy, economy) {
+    
+        5:  chemical_plant_cargo_subtype_display_switch_cargo_economy_5;
+    
+}
+
+
+switch (FEAT_INDUSTRIES, SELF, chemical_plant_cargo_subtype_display, getbits(extra_callback_info2, 8, 8)) {
+    1: chemical_plant_cargo_subtype_display_switch_economy;
+    return CB_RESULT_NO_TEXT;
+}
+
+
+
+
+
+    produce (chemical_plant_produce_5,
+        [
+            
+                
+                PETR: incoming_cargo_waiting("PETR");
+            
+                
+                SULP: incoming_cargo_waiting("SULP");
+            
+                
+                NH3_: incoming_cargo_waiting("NH3_");
+            
+                
+                NITR: incoming_cargo_waiting("NITR");
+            
+        ],
+        [
+            
+                RFPR: (LOAD_PERM(11) * 8) / 8;
+            
+                FMSP: (LOAD_PERM(11) * 3) / 8;
+            
+                ENSP: (LOAD_PERM(11) * 3) / 8;
+            
+                NHNO: (LOAD_PERM(11) * 2) / 8;
+            
+        ],
+    0)
+
+
+    switch (FEAT_INDUSTRIES, SELF, chemical_plant_produce_update_supplied_cycles_remaining_per_cargo_5,
+        [
+            
+            
+                STORE_PERM_ALT(
+                    3,
+                    (incoming_cargo_waiting("PETR") > 0)
+                    ?
+                    28
+                    :
+                    LOAD_PERM(3)
+                ),
+            
+                STORE_PERM_ALT(
+                    4,
+                    (incoming_cargo_waiting("SULP") > 0)
+                    ?
+                    28
+                    :
+                    LOAD_PERM(4)
+                ),
+            
+                STORE_PERM_ALT(
+                    5,
+                    (incoming_cargo_waiting("NH3_") > 0)
+                    ?
+                    28
+                    :
+                    LOAD_PERM(5)
+                ),
+            
+                STORE_PERM_ALT(
+                    6,
+                    (incoming_cargo_waiting("NITR") > 0)
+                    ?
+                    28
+                    :
+                    LOAD_PERM(6)
+                ),
+            
+            0 
+        ]) {
+        return 0;
+    }
+
+    switch (FEAT_INDUSTRIES, SELF, chemical_plant_produce_calculate_current_production_level_5,
+        [
+            
+                
+                STORE_PERM_ALT(
+                    1,
+                    LOAD_PERM(1)
+                    +
+                    (
+                        LOAD_PERM(3)
+                        > 0 ? 4 : 0
+                    )
+                ),
+            
+                
+                STORE_PERM_ALT(
+                    1,
+                    LOAD_PERM(1)
+                    +
+                    (
+                        LOAD_PERM(4)
+                        > 0 ? 2 : 0
+                    )
+                ),
+            
+                
+                STORE_PERM_ALT(
+                    1,
+                    LOAD_PERM(1)
+                    +
+                    (
+                        LOAD_PERM(5)
+                        > 0 ? 2 : 0
+                    )
+                ),
+            
+                
+                STORE_PERM_ALT(
+                    1,
+                    LOAD_PERM(1)
+                    +
+                    (
+                        LOAD_PERM(6)
+                        > 0 ? 4 : 0
+                    )
+                ),
+            
+            0 
+        ]) {
+        return 0;
+    }
+
+    switch (FEAT_INDUSTRIES, SELF, chemical_plant_produce_calculation_5,
+            [
+                
+                STORE_PERM_ALT(1, 0),
+                
+                STORE_PERM_ALT(2, 0),
+                chemical_plant_produce_update_supplied_cycles_remaining_per_cargo_5(),
+                chemical_plant_produce_calculate_current_production_level_5(),
+                
+                
+                    STORE_PERM_ALT(
+                        2,
+                        LOAD_PERM(2)
+                        + ((incoming_cargo_waiting("PETR") * LOAD_PERM(1)) / 8)
+                    ),
+                
+                    STORE_PERM_ALT(
+                        2,
+                        LOAD_PERM(2)
+                        + ((incoming_cargo_waiting("SULP") * LOAD_PERM(1)) / 8)
+                    ),
+                
+                    STORE_PERM_ALT(
+                        2,
+                        LOAD_PERM(2)
+                        + ((incoming_cargo_waiting("NH3_") * LOAD_PERM(1)) / 8)
+                    ),
+                
+                    STORE_PERM_ALT(
+                        2,
+                        LOAD_PERM(2)
+                        + ((incoming_cargo_waiting("NITR") * LOAD_PERM(1)) / 8)
+                    ),
+                
+                
+                STORE_PERM_ALT(
+                    12,
+                    LOAD_PERM(12) + LOAD_PERM(2)
+                ),
+                
+
+                
+                STORE_PERM_ALT(
+                    11,
+                    (LOAD_PERM(12) / 8) >= 1
+                    ?
+                    LOAD_PERM(12)
+                    :
+                    0
+                ),
+                STORE_PERM_ALT(
+                    12,
+                    (LOAD_PERM(12) / 8) >= 1
+                    ?
+                    0
+                    :
+                    LOAD_PERM(12)
+                ),
+                
+                
+                STORE_PERM_ALT(
+                    0,
+                    (LOAD_PERM(2) == 0)
+                    ?
+                    LOAD_PERM(0)
+                    :
+                    0
+                ),
+            ]) {
+        chemical_plant_produce_5;
+    }
+
+
+switch (FEAT_INDUSTRIES, SELF, chemical_plant_produce_cargo_arrival, economy) {
+    
+        5: chemical_plant_produce_calculation_5;
+    
+}
+
+
+
+
+produce(chemical_plant_produce_256_ticks_produce,
+    [],
+    [],
+0)
+
+
+switch(FEAT_INDUSTRIES, SELF, chemical_plant_update_supplied_cycles_remaining_per_cargo,
+    [
+        
+            
+            STORE_PERM_ALT(
+                3,
+                max(
+                    0,
+                    LOAD_PERM(3)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                4,
+                max(
+                    0,
+                    LOAD_PERM(4)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                5,
+                max(
+                    0,
+                    LOAD_PERM(5)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                6,
+                max(
+                    0,
+                    LOAD_PERM(6)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                7,
+                max(
+                    0,
+                    LOAD_PERM(7)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                8,
+                max(
+                    0,
+                    LOAD_PERM(8)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                9,
+                max(
+                    0,
+                    LOAD_PERM(9)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                10,
+                max(
+                    0,
+                    LOAD_PERM(10)
+                    - 1
+                )
+            ),
+        
+    ]) {
+    return 0;
+}
+
+switch(FEAT_INDUSTRIES, SELF, chemical_plant_produce_256_ticks,
+    [
+        chemical_plant_update_supplied_cycles_remaining_per_cargo(),
+    ]) {
+    chemical_plant_produce_256_ticks_produce;
+}
+
+
+switch(FEAT_INDUSTRIES, SELF, chemical_plant_monthly_prod_change,
+    [
+        monthly_town_loop(
+            0,
+            2
+        )
+    ]) {
+    return CB_RESULT_IND_PROD_NO_CHANGE;
+}
+
+
+
+
+
+
+
+
+switch(FEAT_INDUSTRIES, SELF, chemical_plant_check_availability_param, restrict_open_during_gameplay) {
+	1..255: return CB_RESULT_IND_NO_CONSTRUCTION;         // disallow when restrictions in place
+	return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;       // we may build
+}
+
+
+switch (FEAT_INDUSTRIES, SELF, chemical_plant_check_map_gen, extra_callback_info2 == IND_CREATION_GENERATION) {
+	1: return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;
+	chemical_plant_check_availability_param;
+}
+
+switch (FEAT_INDUSTRIES, SELF, chemical_plant_available_game_mode, game_mode == GAMEMODE_GAME) {
+	1: chemical_plant_check_map_gen;
+	return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;
+}
+
+
+
+    /* 0 */
+    switch (FEAT_INDUSTRIES, SELF, chemical_plant_check_availability_5, current_date) {
+        date(0,1,1) .. date(5000000,12,31): chemical_plant_available_game_mode;
+        return CB_RESULT_IND_NO_CONSTRUCTION;
+    }
+
+
+switch (FEAT_INDUSTRIES, SELF, chemical_plant_check_availability, economy) {
+    
+        5: chemical_plant_check_availability_5;
+    
+}
+
+
+
+
+
+
+
+    if (economy==5) {
+        item(FEAT_INDUSTRIES, chemical_plant, 33) {
+            property {
+                
+                substitute: 0;
+                override: 0;
+                map_colour: 191;
+                life_type: IND_LIFE_TYPE_PROCESSING;
+                
+                
+                
+                
+                min_cargo_distr: 1;
+                layouts: [chemical_plant_industry_layout_1_tilelayout,chemical_plant_industry_layout_2_tilelayout,chemical_plant_industry_layout_3_tilelayout,chemical_plant_industry_layout_4_tilelayout,chemical_plant_industry_layout_5_tilelayout,chemical_plant_industry_layout_6_tilelayout];
+                spec_flags: bitmask(IND_FLAG_LONG_CARGO_TYPE_LISTS);
+                conflicting_ind_types: []; // set this prop empty, FIRS has it's own better checks for this
+                random_sound_effects: []; // set this empty to avoid spurious default industry sounds (as of May 2017 FIRS does not yet use sound effects)
+                
+                name: string(STR_IND_CHEMICAL_PLANT);
+                prob_map_gen: 5;
+                prob_in_game: 3;
+                
+                fund_cost_multiplier: 170;
+                remove_cost_multiplier: 0;
+                remove_cost_multiplier: 0;
+                
+                cargo_types: [accept_cargo("PETR"),accept_cargo("SULP"),accept_cargo("NH3_"),accept_cargo("NITR"),produce_cargo("RFPR",0),produce_cargo("FMSP",0),produce_cargo("ENSP",0),produce_cargo("NHNO",0)];
+                nearby_station_name: string(STR_STATION, string(STR_TOWN),string(STR_STATION_HEAVY_INDUSTRY_2));
+            }
+        }
+    }
+
+
+
+
+
+    if (economy==5) {
+        item(FEAT_INDUSTRIES, chemical_plant, 33) {
+            graphics {
+                construction_probability: chemical_plant_check_availability;
+                produce_cargo_arrival:    chemical_plant_produce_cargo_arrival;
+                produce_256_ticks:        chemical_plant_produce_256_ticks;
+                monthly_prod_change:     chemical_plant_monthly_prod_change;
+                random_prod_change:       CB_RESULT_IND_PROD_NO_CHANGE;
+                location_check:           chemical_plant_check_location;
+                extra_text_fund:          return CB_RESULT_NO_TEXT;
+                extra_text_industry:      chemical_plant_extra_text;
+                cargo_subtype_display:    chemical_plant_cargo_subtype_display;
+                colour:                   switch_colour;
+            }
+        }
+    }
+

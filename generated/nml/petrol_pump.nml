@@ -1,0 +1,1018 @@
+/* ******************************************************************
+ * Definition of the industry tile, its callbacks, and graphics chain
+ * ******************************************************************/
+
+
+    
+
+    
+        
+        
+            spriteset(petrol_pump_spriteset_0_0) {
+                
+                    
+                        [10, 60, 64, 59, -31, -28, ANIM | NOCROP, "src/graphics/industries/petrol_pump_1.png"]
+                    
+                
+            }
+            spriteset(petrol_pump_spriteset_0_0_snow) {
+                
+                    
+                            [10, 60, 64, 59, -31, -28, ANIM | NOCROP, "src/graphics/industries/petrol_pump_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(petrol_pump_spriteset_1_0) {
+                
+                    
+                        [80, 60, 64, 59, -31, -28, ANIM | NOCROP, "src/graphics/industries/petrol_pump_1.png"]
+                    
+                
+            }
+            spriteset(petrol_pump_spriteset_1_0_snow) {
+                
+                    
+                            [80, 60, 64, 59, -31, -28, ANIM | NOCROP, "src/graphics/industries/petrol_pump_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+
+
+
+    spritelayout petrol_pump_spritelayout_1 {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: 1420;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: 1420;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+            childsprite {
+                sprite: 1420;
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                hide_sprite: (LOAD_TEMP(13));
+                always_draw: 1;
+            }
+            
+            childsprite {
+                sprite: 1420;
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                hide_sprite: (!LOAD_TEMP(13));
+                always_draw: 1;
+            }
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: petrol_pump_spriteset_0_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: petrol_pump_spriteset_0_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout petrol_pump_spritelayout_2 {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: 1420;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: 1420;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+            childsprite {
+                sprite: 1420;
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                hide_sprite: (LOAD_TEMP(13));
+                always_draw: 1;
+            }
+            
+            childsprite {
+                sprite: 1420;
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                hide_sprite: (!LOAD_TEMP(13));
+                always_draw: 1;
+            }
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: petrol_pump_spriteset_1_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: petrol_pump_spriteset_1_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+
+
+
+
+
+    switch(FEAT_INDUSTRYTILES, SELF, petrol_pump_industry_layout_1_graphics_switch, relative_pos) {
+        
+            
+            
+                relative_coord(0, 0): petrol_pump_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(0, 1): petrol_pump_spritelayout_2;
+            
+        
+        return 0; // a default is needed, but should never be reached, layout definitions are explicit
+    }
+
+    switch(FEAT_INDUSTRYTILES, SELF, petrol_pump_industry_layout_2_graphics_switch, relative_pos) {
+        
+            
+            
+                relative_coord(0, 0): petrol_pump_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(1, 0): petrol_pump_spritelayout_2;
+            
+        
+        return 0; // a default is needed, but should never be reached, layout definitions are explicit
+    }
+
+
+
+switch(FEAT_INDUSTRYTILES, PARENT, petrol_pump_industry_graphics_switch_layouts, layout_num) {
+    
+        1: petrol_pump_industry_layout_1_graphics_switch;
+    
+        2: petrol_pump_industry_layout_2_graphics_switch;
+    
+    petrol_pump_industry_layout_1_graphics_switch; // default
+}
+
+
+switch(FEAT_INDUSTRYTILES, SELF, petrol_pump_industry_construction_state_graphics_switch, construction_state) {
+    0..2: spritelayout_default_construction_states;
+    
+    petrol_pump_industry_graphics_switch_layouts; // default
+}
+
+switch(FEAT_INDUSTRYTILES, SELF, petrol_pump_store_temp_vars,
+        [STORE_TEMP(random_bits, 14),
+         STORE_TEMP(terrain_type == TILETYPE_SNOW, 13)
+            
+                , STORE_TEMP(0,
+                             127) 
+                , STORE_TEMP(construction_state != 3 ? 1 : LOAD_TEMP(127),
+                             127)
+                , STORE_TEMP(LOAD_TEMP(13) == 0 ? 1 : LOAD_TEMP(127), 
+                             117) 
+                , STORE_TEMP(LOAD_TEMP(13) == 1 ? 1 : LOAD_TEMP(127), 
+                             127)
+            
+        ]) {
+    petrol_pump_industry_construction_state_graphics_switch; // default
+}
+
+switch (FEAT_INDUSTRYTILES, SELF, petrol_pump_switch_graphics, [
+                                    switch_tile_fences(),
+                                    switch_terrain_sprite(),
+                                    
+                                 ]) {
+    petrol_pump_store_temp_vars;
+}
+
+
+
+    
+        
+            
+    
+    
+
+    switch (FEAT_INDUSTRYTILES, SELF, petrol_pump_tile_1_lc_2,
+                                                      (
+                                                      nearby_tile_class(0, -1) == TILE_CLASS_ROAD ? 1 :
+                                                      (nearby_tile_class(0, 1) == TILE_CLASS_ROAD ? 1 :
+                                                      (nearby_tile_class(-1, 0) == TILE_CLASS_ROAD ? 1 :
+                                                      (nearby_tile_class(1, 0) == TILE_CLASS_ROAD ? 1 : 0
+                                                      ))))) {
+        1: return CB_RESULT_LOCATION_ALLOW;
+        return CB_RESULT_LOCATION_DISALLOW;
+    }
+
+        
+            
+    
+    switch (FEAT_INDUSTRYTILES, PARENT, petrol_pump_tile_1_lc_1, (
+                (((extra_callback_info2 & 0xFF00) >> 8) == IND_CREATION_FUND) ||
+                (((extra_callback_info2 & 0xFF00) >> 8) == IND_CREATION_PROSPECT)
+                )
+            ) {
+        1: return CB_RESULT_LOCATION_ALLOW;
+        petrol_pump_tile_1_lc_2;
+    }
+
+        
+            
+    
+    switch (FEAT_INDUSTRYTILES, SELF, petrol_pump_tile_1_lc_0,
+                (
+                nearby_tile_height(-relative_x, -relative_y)
+                + (nearby_tile_slope(-relative_x, -relative_y)
+                == SLOPE_FLAT ? 0 :
+                nearby_tile_slope(-relative_x, -relative_y) == bitmask(IS_STEEP_SLOPE) ? 2 : 1
+                )) == (nearby_tile_height(0, 0)
+                + (nearby_tile_slope(0, 0)
+                == SLOPE_FLAT ? 0 :
+                nearby_tile_slope(0, 0) == bitmask(IS_STEEP_SLOPE) ? 2 : 1))
+                ) {
+        1: petrol_pump_tile_1_lc_1;
+        return CB_RESULT_LOCATION_DISALLOW;
+    }
+
+        
+    
+
+
+
+    
+        
+    
+
+
+
+    
+    item(FEAT_INDUSTRYTILES, petrol_pump_tile_1, 203) {
+        property {
+            substitute:         0;
+            land_shape_flags:   0;
+            special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+            
+            
+            
+            animation_triggers: bitmask();
+        }
+
+        graphics {
+    		
+    		    tile_check: petrol_pump_tile_1_lc_0;
+            
+            
+    		
+            
+    		
+    		
+            petrol_pump_switch_graphics;
+        }
+    }
+
+
+
+
+/* *************************************************
+ * Definition of the industry
+ * *************************************************/
+
+
+    tilelayout petrol_pump_industry_layout_1_tilelayout {
+        
+            0, 0: petrol_pump_tile_1;
+        
+            0, 1: petrol_pump_tile_1;
+        
+    }
+
+    tilelayout petrol_pump_industry_layout_2_tilelayout {
+        
+            0, 0: petrol_pump_tile_1;
+        
+            1, 0: petrol_pump_tile_1;
+        
+    }
+
+
+
+
+
+
+    
+    
+        switch (FEAT_INDUSTRIES, SELF, petrol_pump_cargo_subtype_display_cargo_FOOD_economy_5, [
+                LOAD_PERM(1)
+            ]) {
+            0: return 0x3800 + string(STR_EMPTY);
+            return 0x3800 + string(STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG);
+        }
+    
+        switch (FEAT_INDUSTRIES, SELF, petrol_pump_cargo_subtype_display_cargo_GOOD_economy_5, [
+                LOAD_PERM(2)
+            ]) {
+            0: return 0x3800 + string(STR_EMPTY);
+            return 0x3800 + string(STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG);
+        }
+    
+        switch (FEAT_INDUSTRIES, SELF, petrol_pump_cargo_subtype_display_cargo_PETR_economy_5, [
+                LOAD_PERM(3)
+            ]) {
+            0: return 0x3800 + string(STR_EMPTY);
+            return 0x3800 + string(STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG);
+        }
+    
+        switch (FEAT_INDUSTRIES, SELF, petrol_pump_cargo_subtype_display_cargo_ELEC_economy_5, [
+                LOAD_PERM(4)
+            ]) {
+            0: return 0x3800 + string(STR_EMPTY);
+            return 0x3800 + string(STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG);
+        }
+    
+    switch (FEAT_INDUSTRIES, SELF, petrol_pump_cargo_subtype_display_switch_cargo_economy_5, getbits(extra_callback_info2, 16, 8)) {
+        
+        
+            FOOD: petrol_pump_cargo_subtype_display_cargo_FOOD_economy_5;
+        
+            GOOD: petrol_pump_cargo_subtype_display_cargo_GOOD_economy_5;
+        
+            PETR: petrol_pump_cargo_subtype_display_cargo_PETR_economy_5;
+        
+            ELEC: petrol_pump_cargo_subtype_display_cargo_ELEC_economy_5;
+        
+        return CB_RESULT_NO_TEXT;
+    }
+
+
+switch (FEAT_INDUSTRIES, SELF, petrol_pump_cargo_subtype_display_switch_economy, economy) {
+    
+        5:  petrol_pump_cargo_subtype_display_switch_cargo_economy_5;
+    
+}
+
+
+switch (FEAT_INDUSTRIES, SELF, petrol_pump_cargo_subtype_display, getbits(extra_callback_info2, 8, 8)) {
+    1: petrol_pump_cargo_subtype_display_switch_economy;
+    return CB_RESULT_NO_TEXT;
+}
+
+
+
+
+
+switch(FEAT_INDUSTRIES, SELF, petrol_pump_produce_total_input_cargo_delivered,
+    [
+    
+        LOAD_PERM(9)
+        +
+    
+        LOAD_PERM(10)
+        +
+    
+        LOAD_PERM(11)
+        +
+    
+        LOAD_PERM(12)
+        +
+    
+        LOAD_PERM(13)
+        +
+    
+        LOAD_PERM(14)
+        +
+    
+        LOAD_PERM(15)
+        +
+    
+        LOAD_PERM(16)
+        +
+    
+        LOAD_PERM(17)
+        +
+    
+        LOAD_PERM(18)
+        +
+    
+        LOAD_PERM(19)
+        +
+    
+        LOAD_PERM(20)
+        +
+    
+        LOAD_PERM(21)
+        +
+    
+        LOAD_PERM(22)
+        +
+    
+        LOAD_PERM(23)
+        +
+    
+        LOAD_PERM(24)
+        +
+    
+        LOAD_PERM(25)
+        +
+    
+        LOAD_PERM(26)
+        +
+    
+        LOAD_PERM(27)
+        +
+    
+        LOAD_PERM(28)
+        +
+    
+        LOAD_PERM(29)
+        +
+    
+        LOAD_PERM(30)
+        +
+    
+        LOAD_PERM(31)
+        +
+    
+        LOAD_PERM(32)
+        +
+    
+        LOAD_PERM(33)
+        +
+    
+        LOAD_PERM(34)
+        +
+    
+        LOAD_PERM(35)
+        
+    
+    ]) {
+    return;
+}
+
+
+    
+    
+        
+        
+            produce(petrol_pump_produce_256_ticks_economy_5,
+                [],
+                [],
+            0)
+        
+    
+
+    
+    produce (petrol_pump_produce_cargo_arrival_economy_5,
+        [
+            
+                FOOD: incoming_cargo_waiting("FOOD");
+            
+                GOOD: incoming_cargo_waiting("GOOD");
+            
+                PETR: incoming_cargo_waiting("PETR");
+            
+                ELEC: incoming_cargo_waiting("ELEC");
+            
+        ],
+        [],
+    0)
+
+    switch(FEAT_INDUSTRIES, SELF, petrol_pump_store_incoming_cargo_waiting_5,
+        [
+            STORE_PERM_ALT(
+                35,
+                
+                    incoming_cargo_waiting("FOOD") +
+                
+                    incoming_cargo_waiting("GOOD") +
+                
+                    incoming_cargo_waiting("PETR") +
+                
+                    incoming_cargo_waiting("ELEC") +
+                
+                LOAD_PERM(35)
+            ),
+            
+            
+                STORE_PERM_ALT(
+                    1,
+                    (incoming_cargo_waiting("FOOD") > 0)
+                    ?
+                    28
+                    :
+                    LOAD_PERM(1)
+                ),
+            
+                STORE_PERM_ALT(
+                    2,
+                    (incoming_cargo_waiting("GOOD") > 0)
+                    ?
+                    28
+                    :
+                    LOAD_PERM(2)
+                ),
+            
+                STORE_PERM_ALT(
+                    3,
+                    (incoming_cargo_waiting("PETR") > 0)
+                    ?
+                    28
+                    :
+                    LOAD_PERM(3)
+                ),
+            
+                STORE_PERM_ALT(
+                    4,
+                    (incoming_cargo_waiting("ELEC") > 0)
+                    ?
+                    28
+                    :
+                    LOAD_PERM(4)
+                ),
+            
+        ]) {
+        petrol_pump_produce_cargo_arrival_economy_5;
+    }
+
+
+
+switch (FEAT_INDUSTRIES, SELF, petrol_pump_produce_cargo_arrival, economy) {
+    
+        5: petrol_pump_store_incoming_cargo_waiting_5;
+    
+}
+
+switch (FEAT_INDUSTRIES, SELF, petrol_pump_produce_256_ticks_switch_economy, economy) {
+
+    5: petrol_pump_produce_256_ticks_economy_5;
+
+}
+
+
+switch(FEAT_INDUSTRIES, SELF, petrol_pump_update_supplied_cycles_remaining_per_cargo,
+    [
+        
+            
+            STORE_PERM_ALT(
+                1,
+                max(
+                    0,
+                    LOAD_PERM(1)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                2,
+                max(
+                    0,
+                    LOAD_PERM(2)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                3,
+                max(
+                    0,
+                    LOAD_PERM(3)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                4,
+                max(
+                    0,
+                    LOAD_PERM(4)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                5,
+                max(
+                    0,
+                    LOAD_PERM(5)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                6,
+                max(
+                    0,
+                    LOAD_PERM(6)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                7,
+                max(
+                    0,
+                    LOAD_PERM(7)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                8,
+                max(
+                    0,
+                    LOAD_PERM(8)
+                    - 1
+                )
+            ),
+        
+    ]) {
+    return 0;
+}
+
+
+switch(FEAT_INDUSTRIES, SELF, petrol_pump_produce_256_ticks_shift_supplies_delivered,
+    [
+        
+            STORE_PERM_ALT(
+                9,
+                LOAD_PERM(10),
+            ),
+        
+            STORE_PERM_ALT(
+                10,
+                LOAD_PERM(11),
+            ),
+        
+            STORE_PERM_ALT(
+                11,
+                LOAD_PERM(12),
+            ),
+        
+            STORE_PERM_ALT(
+                12,
+                LOAD_PERM(13),
+            ),
+        
+            STORE_PERM_ALT(
+                13,
+                LOAD_PERM(14),
+            ),
+        
+            STORE_PERM_ALT(
+                14,
+                LOAD_PERM(15),
+            ),
+        
+            STORE_PERM_ALT(
+                15,
+                LOAD_PERM(16),
+            ),
+        
+            STORE_PERM_ALT(
+                16,
+                LOAD_PERM(17),
+            ),
+        
+            STORE_PERM_ALT(
+                17,
+                LOAD_PERM(18),
+            ),
+        
+            STORE_PERM_ALT(
+                18,
+                LOAD_PERM(19),
+            ),
+        
+            STORE_PERM_ALT(
+                19,
+                LOAD_PERM(20),
+            ),
+        
+            STORE_PERM_ALT(
+                20,
+                LOAD_PERM(21),
+            ),
+        
+            STORE_PERM_ALT(
+                21,
+                LOAD_PERM(22),
+            ),
+        
+            STORE_PERM_ALT(
+                22,
+                LOAD_PERM(23),
+            ),
+        
+            STORE_PERM_ALT(
+                23,
+                LOAD_PERM(24),
+            ),
+        
+            STORE_PERM_ALT(
+                24,
+                LOAD_PERM(25),
+            ),
+        
+            STORE_PERM_ALT(
+                25,
+                LOAD_PERM(26),
+            ),
+        
+            STORE_PERM_ALT(
+                26,
+                LOAD_PERM(27),
+            ),
+        
+            STORE_PERM_ALT(
+                27,
+                LOAD_PERM(28),
+            ),
+        
+            STORE_PERM_ALT(
+                28,
+                LOAD_PERM(29),
+            ),
+        
+            STORE_PERM_ALT(
+                29,
+                LOAD_PERM(30),
+            ),
+        
+            STORE_PERM_ALT(
+                30,
+                LOAD_PERM(31),
+            ),
+        
+            STORE_PERM_ALT(
+                31,
+                LOAD_PERM(32),
+            ),
+        
+            STORE_PERM_ALT(
+                32,
+                LOAD_PERM(33),
+            ),
+        
+            STORE_PERM_ALT(
+                33,
+                LOAD_PERM(34),
+            ),
+        
+            STORE_PERM_ALT(
+                34,
+                LOAD_PERM(35),
+            ),
+        
+        STORE_PERM_ALT(35, 0)
+    ]) {
+    return 0;
+}
+
+switch(FEAT_INDUSTRIES, SELF, petrol_pump_produce_256_ticks,
+    [
+        
+        petrol_pump_update_supplied_cycles_remaining_per_cargo(),
+        petrol_pump_produce_256_ticks_shift_supplies_delivered(),
+    ]) {
+    petrol_pump_produce_256_ticks_switch_economy;
+}
+
+
+
+
+switch(FEAT_INDUSTRIES, SELF, petrol_pump_calculate_town_optimism_contribution,
+    [
+        
+        
+        petrol_pump_produce_total_input_cargo_delivered() >= 80 ? 10 : 0
+    ]) {
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, petrol_pump_monthly_prod_change,
+    [
+        monthly_town_loop(
+            petrol_pump_calculate_town_optimism_contribution(),
+            0
+        )
+    ]) {
+    return CB_RESULT_IND_PROD_NO_CHANGE;
+}
+
+
+
+
+
+
+switch(FEAT_INDUSTRIES, SELF, petrol_pump_check_availability_param, restrict_open_during_gameplay) {
+	1..255: return CB_RESULT_IND_NO_CONSTRUCTION;         // disallow when restrictions in place
+	return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;       // we may build
+}
+
+
+switch (FEAT_INDUSTRIES, SELF, petrol_pump_check_map_gen, extra_callback_info2 == IND_CREATION_GENERATION) {
+	1: return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;
+	petrol_pump_check_availability_param;
+}
+
+switch (FEAT_INDUSTRIES, SELF, petrol_pump_available_game_mode, game_mode == GAMEMODE_GAME) {
+	1: petrol_pump_check_map_gen;
+	return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;
+}
+
+
+
+    /* 0 */
+    switch (FEAT_INDUSTRIES, SELF, petrol_pump_check_availability_5, current_date) {
+        date(0,1,1) .. date(5000000,12,31): petrol_pump_available_game_mode;
+        return CB_RESULT_IND_NO_CONSTRUCTION;
+    }
+
+
+switch (FEAT_INDUSTRIES, SELF, petrol_pump_check_availability, economy) {
+    
+        5: petrol_pump_check_availability_5;
+    
+}
+
+
+
+
+
+
+
+    if (economy==5) {
+        item(FEAT_INDUSTRIES, petrol_pump, 38) {
+            property {
+                
+                substitute: 0;
+                override: 0;
+                map_colour: 169;
+                life_type: IND_LIFE_TYPE_BLACK_HOLE;
+                
+                
+                
+                
+                min_cargo_distr: 1;
+                layouts: [petrol_pump_industry_layout_1_tilelayout,petrol_pump_industry_layout_2_tilelayout];
+                spec_flags: bitmask(IND_FLAG_LONG_CARGO_TYPE_LISTS);
+                conflicting_ind_types: []; // set this prop empty, FIRS has it's own better checks for this
+                random_sound_effects: []; // set this empty to avoid spurious default industry sounds (as of May 2017 FIRS does not yet use sound effects)
+                
+                name: string(STR_IND_PETROLPUMP);
+                prob_map_gen: 14;
+                prob_in_game: 14;
+                prospect_chance: 0.75;
+                fund_cost_multiplier: 8;
+                remove_cost_multiplier: 0;
+                remove_cost_multiplier: 0;
+                
+                cargo_types: [accept_cargo("FOOD"),accept_cargo("GOOD"),accept_cargo("PETR"),accept_cargo("ELEC")];
+                nearby_station_name: string(STR_STATION, string(STR_TOWN),string(STR_STATION_PUMPS));
+            }
+        }
+    }
+
+
+
+
+
+    if (economy==5) {
+        item(FEAT_INDUSTRIES, petrol_pump, 38) {
+            graphics {
+                construction_probability: petrol_pump_check_availability;
+                build_prod_change:        randomise_primary_production_on_build(0);
+                produce_cargo_arrival:    petrol_pump_produce_cargo_arrival;
+                produce_256_ticks:        petrol_pump_produce_256_ticks;
+                monthly_prod_change:      petrol_pump_monthly_prod_change;
+                location_check:           petrol_pump_check_location;
+                extra_text_fund:          return CB_RESULT_NO_TEXT;
+                cargo_subtype_display:    petrol_pump_cargo_subtype_display;
+                colour:                   switch_colour;
+            }
+        }
+    }
+

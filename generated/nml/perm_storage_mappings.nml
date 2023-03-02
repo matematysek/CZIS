@@ -1,0 +1,12 @@
+
+switch (FEAT_INDUSTRIES, SELF, STORE_PERM_ALT, storage_number, value,
+    [
+        STORE_PERM(
+            value,
+            storage_number,
+        )
+    ]) {
+    return;
+}
+
+

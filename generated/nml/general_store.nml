@@ -1,0 +1,863 @@
+/* ******************************************************************
+ * Definition of the industry tile, its callbacks, and graphics chain
+ * ******************************************************************/
+
+
+    
+
+    
+        
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(general_store_spriteset_1_0) {
+                
+                    
+                        [10, 10, 64, 31, -31, 0, ANIM | NOCROP, "src/graphics/industries/general_store_1.png"]
+                    
+                
+            }
+            spriteset(general_store_spriteset_1_0_snow) {
+                
+                    
+                            [10, 10, 64, 31, -31, 0, ANIM | NOCROP, "src/graphics/industries/general_store_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(general_store_spriteset_2_0) {
+                
+                    
+                        [10, 60, 64, 48, -31, -18, ANIM | NOCROP, "src/graphics/industries/general_store_1.png"]
+                    
+                
+            }
+            spriteset(general_store_spriteset_2_0_snow) {
+                
+                    
+                            [10, 60, 64, 48, -31, -18, ANIM | NOCROP, "src/graphics/industries/general_store_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+
+
+
+    spritelayout general_store_spritelayout {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_slab_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_slab_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+            childsprite {
+                sprite: general_store_spriteset_1_0(0);
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                hide_sprite: (LOAD_TEMP(13));
+                always_draw: 1;
+            }
+            
+            childsprite {
+                sprite: general_store_spriteset_1_0_snow(0);
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                hide_sprite: (!LOAD_TEMP(13));
+                always_draw: 1;
+            }
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: general_store_spriteset_2_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: general_store_spriteset_2_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+
+
+
+
+
+    switch(FEAT_INDUSTRYTILES, SELF, general_store_industry_layout_graphics_switch, relative_pos) {
+        
+            
+            
+                relative_coord(0, 0): general_store_spritelayout;
+            
+        
+        return 0; // a default is needed, but should never be reached, layout definitions are explicit
+    }
+
+
+
+
+switch(FEAT_INDUSTRYTILES, SELF, general_store_industry_construction_state_graphics_switch, construction_state) {
+    0..2: spritelayout_default_construction_states;
+    
+    general_store_industry_layout_graphics_switch; // default
+}
+
+switch(FEAT_INDUSTRYTILES, SELF, general_store_store_temp_vars,
+        [STORE_TEMP(random_bits, 14),
+         STORE_TEMP(terrain_type == TILETYPE_SNOW, 13)
+            
+                , STORE_TEMP(0,
+                             127) 
+                , STORE_TEMP(construction_state != 3 ? 1 : LOAD_TEMP(127),
+                             127)
+                , STORE_TEMP(LOAD_TEMP(13) == 0 ? 1 : LOAD_TEMP(127), 
+                             117) 
+                , STORE_TEMP(LOAD_TEMP(13) == 1 ? 1 : LOAD_TEMP(127), 
+                             127)
+            
+        ]) {
+    general_store_industry_construction_state_graphics_switch; // default
+}
+
+switch (FEAT_INDUSTRYTILES, SELF, general_store_switch_graphics, [
+                                    switch_tile_fences(),
+                                    switch_terrain_sprite(),
+                                    
+                                 ]) {
+    general_store_store_temp_vars;
+}
+
+
+
+    
+        
+            
+    
+    
+
+    switch (FEAT_INDUSTRYTILES, SELF, general_store_tile_1_lc_1,
+                                                      (
+                                                      nearby_tile_class(0, -1) == TILE_CLASS_ROAD ? 1 :
+                                                      (nearby_tile_class(0, 1) == TILE_CLASS_ROAD ? 1 :
+                                                      (nearby_tile_class(-1, 0) == TILE_CLASS_ROAD ? 1 :
+                                                      (nearby_tile_class(1, 0) == TILE_CLASS_ROAD ? 1 : 0
+                                                      ))))) {
+        1: return CB_RESULT_LOCATION_ALLOW;
+        return CB_RESULT_LOCATION_DISALLOW;
+    }
+
+        
+            
+    
+    switch (FEAT_INDUSTRYTILES, PARENT, general_store_tile_1_lc_0, (
+                (((extra_callback_info2 & 0xFF00) >> 8) == IND_CREATION_FUND) ||
+                (((extra_callback_info2 & 0xFF00) >> 8) == IND_CREATION_PROSPECT)
+                )
+            ) {
+        1: return CB_RESULT_LOCATION_ALLOW;
+        general_store_tile_1_lc_1;
+    }
+
+        
+    
+
+
+
+    
+        
+    
+
+
+
+    
+    item(FEAT_INDUSTRYTILES, general_store_tile_1, 219) {
+        property {
+            substitute:         0;
+            land_shape_flags:   0;
+            special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+            
+            
+            
+            animation_triggers: bitmask();
+        }
+
+        graphics {
+    		
+    		    tile_check: general_store_tile_1_lc_0;
+            
+            
+    		
+            
+    		
+    		
+            general_store_switch_graphics;
+        }
+    }
+
+
+
+
+/* *************************************************
+ * Definition of the industry
+ * *************************************************/
+
+
+    tilelayout general_store_industry_layout_tilelayout {
+        
+            0, 0: general_store_tile_1;
+        
+    }
+
+
+
+
+
+
+    
+    
+        switch (FEAT_INDUSTRIES, SELF, general_store_cargo_subtype_display_cargo_FOOD_economy_5, [
+                LOAD_PERM(1)
+            ]) {
+            0: return 0x3800 + string(STR_EMPTY);
+            return 0x3800 + string(STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG);
+        }
+    
+        switch (FEAT_INDUSTRIES, SELF, general_store_cargo_subtype_display_cargo_GOOD_economy_5, [
+                LOAD_PERM(2)
+            ]) {
+            0: return 0x3800 + string(STR_EMPTY);
+            return 0x3800 + string(STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG);
+        }
+    
+        switch (FEAT_INDUSTRIES, SELF, general_store_cargo_subtype_display_cargo_BEER_economy_5, [
+                LOAD_PERM(3)
+            ]) {
+            0: return 0x3800 + string(STR_EMPTY);
+            return 0x3800 + string(STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG);
+        }
+    
+    switch (FEAT_INDUSTRIES, SELF, general_store_cargo_subtype_display_switch_cargo_economy_5, getbits(extra_callback_info2, 16, 8)) {
+        
+        
+            FOOD: general_store_cargo_subtype_display_cargo_FOOD_economy_5;
+        
+            GOOD: general_store_cargo_subtype_display_cargo_GOOD_economy_5;
+        
+            BEER: general_store_cargo_subtype_display_cargo_BEER_economy_5;
+        
+        return CB_RESULT_NO_TEXT;
+    }
+
+
+switch (FEAT_INDUSTRIES, SELF, general_store_cargo_subtype_display_switch_economy, economy) {
+    
+        5:  general_store_cargo_subtype_display_switch_cargo_economy_5;
+    
+}
+
+
+switch (FEAT_INDUSTRIES, SELF, general_store_cargo_subtype_display, getbits(extra_callback_info2, 8, 8)) {
+    1: general_store_cargo_subtype_display_switch_economy;
+    return CB_RESULT_NO_TEXT;
+}
+
+
+
+
+
+switch(FEAT_INDUSTRIES, SELF, general_store_produce_total_input_cargo_delivered,
+    [
+    
+        LOAD_PERM(9)
+        +
+    
+        LOAD_PERM(10)
+        +
+    
+        LOAD_PERM(11)
+        +
+    
+        LOAD_PERM(12)
+        +
+    
+        LOAD_PERM(13)
+        +
+    
+        LOAD_PERM(14)
+        +
+    
+        LOAD_PERM(15)
+        +
+    
+        LOAD_PERM(16)
+        +
+    
+        LOAD_PERM(17)
+        +
+    
+        LOAD_PERM(18)
+        +
+    
+        LOAD_PERM(19)
+        +
+    
+        LOAD_PERM(20)
+        +
+    
+        LOAD_PERM(21)
+        +
+    
+        LOAD_PERM(22)
+        +
+    
+        LOAD_PERM(23)
+        +
+    
+        LOAD_PERM(24)
+        +
+    
+        LOAD_PERM(25)
+        +
+    
+        LOAD_PERM(26)
+        +
+    
+        LOAD_PERM(27)
+        +
+    
+        LOAD_PERM(28)
+        +
+    
+        LOAD_PERM(29)
+        +
+    
+        LOAD_PERM(30)
+        +
+    
+        LOAD_PERM(31)
+        +
+    
+        LOAD_PERM(32)
+        +
+    
+        LOAD_PERM(33)
+        +
+    
+        LOAD_PERM(34)
+        +
+    
+        LOAD_PERM(35)
+        
+    
+    ]) {
+    return;
+}
+
+
+    
+    
+        
+        
+            produce(general_store_produce_256_ticks_economy_5,
+                [],
+                [],
+            0)
+        
+    
+
+    
+    produce (general_store_produce_cargo_arrival_economy_5,
+        [
+            
+                FOOD: incoming_cargo_waiting("FOOD");
+            
+                GOOD: incoming_cargo_waiting("GOOD");
+            
+                BEER: incoming_cargo_waiting("BEER");
+            
+        ],
+        [],
+    0)
+
+    switch(FEAT_INDUSTRIES, SELF, general_store_store_incoming_cargo_waiting_5,
+        [
+            STORE_PERM_ALT(
+                35,
+                
+                    incoming_cargo_waiting("FOOD") +
+                
+                    incoming_cargo_waiting("GOOD") +
+                
+                    incoming_cargo_waiting("BEER") +
+                
+                LOAD_PERM(35)
+            ),
+            
+            
+                STORE_PERM_ALT(
+                    1,
+                    (incoming_cargo_waiting("FOOD") > 0)
+                    ?
+                    28
+                    :
+                    LOAD_PERM(1)
+                ),
+            
+                STORE_PERM_ALT(
+                    2,
+                    (incoming_cargo_waiting("GOOD") > 0)
+                    ?
+                    28
+                    :
+                    LOAD_PERM(2)
+                ),
+            
+                STORE_PERM_ALT(
+                    3,
+                    (incoming_cargo_waiting("BEER") > 0)
+                    ?
+                    28
+                    :
+                    LOAD_PERM(3)
+                ),
+            
+        ]) {
+        general_store_produce_cargo_arrival_economy_5;
+    }
+
+
+
+switch (FEAT_INDUSTRIES, SELF, general_store_produce_cargo_arrival, economy) {
+    
+        5: general_store_store_incoming_cargo_waiting_5;
+    
+}
+
+switch (FEAT_INDUSTRIES, SELF, general_store_produce_256_ticks_switch_economy, economy) {
+
+    5: general_store_produce_256_ticks_economy_5;
+
+}
+
+
+switch(FEAT_INDUSTRIES, SELF, general_store_update_supplied_cycles_remaining_per_cargo,
+    [
+        
+            
+            STORE_PERM_ALT(
+                1,
+                max(
+                    0,
+                    LOAD_PERM(1)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                2,
+                max(
+                    0,
+                    LOAD_PERM(2)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                3,
+                max(
+                    0,
+                    LOAD_PERM(3)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                4,
+                max(
+                    0,
+                    LOAD_PERM(4)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                5,
+                max(
+                    0,
+                    LOAD_PERM(5)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                6,
+                max(
+                    0,
+                    LOAD_PERM(6)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                7,
+                max(
+                    0,
+                    LOAD_PERM(7)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                8,
+                max(
+                    0,
+                    LOAD_PERM(8)
+                    - 1
+                )
+            ),
+        
+    ]) {
+    return 0;
+}
+
+
+switch(FEAT_INDUSTRIES, SELF, general_store_produce_256_ticks_shift_supplies_delivered,
+    [
+        
+            STORE_PERM_ALT(
+                9,
+                LOAD_PERM(10),
+            ),
+        
+            STORE_PERM_ALT(
+                10,
+                LOAD_PERM(11),
+            ),
+        
+            STORE_PERM_ALT(
+                11,
+                LOAD_PERM(12),
+            ),
+        
+            STORE_PERM_ALT(
+                12,
+                LOAD_PERM(13),
+            ),
+        
+            STORE_PERM_ALT(
+                13,
+                LOAD_PERM(14),
+            ),
+        
+            STORE_PERM_ALT(
+                14,
+                LOAD_PERM(15),
+            ),
+        
+            STORE_PERM_ALT(
+                15,
+                LOAD_PERM(16),
+            ),
+        
+            STORE_PERM_ALT(
+                16,
+                LOAD_PERM(17),
+            ),
+        
+            STORE_PERM_ALT(
+                17,
+                LOAD_PERM(18),
+            ),
+        
+            STORE_PERM_ALT(
+                18,
+                LOAD_PERM(19),
+            ),
+        
+            STORE_PERM_ALT(
+                19,
+                LOAD_PERM(20),
+            ),
+        
+            STORE_PERM_ALT(
+                20,
+                LOAD_PERM(21),
+            ),
+        
+            STORE_PERM_ALT(
+                21,
+                LOAD_PERM(22),
+            ),
+        
+            STORE_PERM_ALT(
+                22,
+                LOAD_PERM(23),
+            ),
+        
+            STORE_PERM_ALT(
+                23,
+                LOAD_PERM(24),
+            ),
+        
+            STORE_PERM_ALT(
+                24,
+                LOAD_PERM(25),
+            ),
+        
+            STORE_PERM_ALT(
+                25,
+                LOAD_PERM(26),
+            ),
+        
+            STORE_PERM_ALT(
+                26,
+                LOAD_PERM(27),
+            ),
+        
+            STORE_PERM_ALT(
+                27,
+                LOAD_PERM(28),
+            ),
+        
+            STORE_PERM_ALT(
+                28,
+                LOAD_PERM(29),
+            ),
+        
+            STORE_PERM_ALT(
+                29,
+                LOAD_PERM(30),
+            ),
+        
+            STORE_PERM_ALT(
+                30,
+                LOAD_PERM(31),
+            ),
+        
+            STORE_PERM_ALT(
+                31,
+                LOAD_PERM(32),
+            ),
+        
+            STORE_PERM_ALT(
+                32,
+                LOAD_PERM(33),
+            ),
+        
+            STORE_PERM_ALT(
+                33,
+                LOAD_PERM(34),
+            ),
+        
+            STORE_PERM_ALT(
+                34,
+                LOAD_PERM(35),
+            ),
+        
+        STORE_PERM_ALT(35, 0)
+    ]) {
+    return 0;
+}
+
+switch(FEAT_INDUSTRIES, SELF, general_store_produce_256_ticks,
+    [
+        
+        general_store_update_supplied_cycles_remaining_per_cargo(),
+        general_store_produce_256_ticks_shift_supplies_delivered(),
+    ]) {
+    general_store_produce_256_ticks_switch_economy;
+}
+
+
+
+
+switch(FEAT_INDUSTRIES, SELF, general_store_calculate_town_optimism_contribution,
+    [
+        
+        
+        general_store_produce_total_input_cargo_delivered() >= 80 ? 10 : 0
+    ]) {
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, general_store_monthly_prod_change,
+    [
+        monthly_town_loop(
+            general_store_calculate_town_optimism_contribution(),
+            0
+        )
+    ]) {
+    return CB_RESULT_IND_PROD_NO_CHANGE;
+}
+
+
+
+
+
+
+switch(FEAT_INDUSTRIES, SELF, general_store_check_availability_param, restrict_open_during_gameplay) {
+	1..255: return CB_RESULT_IND_NO_CONSTRUCTION;         // disallow when restrictions in place
+	return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;       // we may build
+}
+
+
+switch (FEAT_INDUSTRIES, SELF, general_store_check_map_gen, extra_callback_info2 == IND_CREATION_GENERATION) {
+	1: return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;
+	general_store_check_availability_param;
+}
+
+switch (FEAT_INDUSTRIES, SELF, general_store_available_game_mode, game_mode == GAMEMODE_GAME) {
+	1: general_store_check_map_gen;
+	return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;
+}
+
+
+
+    /* 0 */
+    switch (FEAT_INDUSTRIES, SELF, general_store_check_availability_5, current_date) {
+        date(0,1,1) .. date(5000000,12,31): general_store_available_game_mode;
+        return CB_RESULT_IND_NO_CONSTRUCTION;
+    }
+
+
+switch (FEAT_INDUSTRIES, SELF, general_store_check_availability, economy) {
+    
+        5: general_store_check_availability_5;
+    
+}
+
+
+
+
+
+
+
+    if (economy==5) {
+        item(FEAT_INDUSTRIES, general_store, 39) {
+            property {
+                
+                substitute: 0;
+                override: 0;
+                map_colour: 168;
+                life_type: IND_LIFE_TYPE_BLACK_HOLE;
+                
+                
+                
+                
+                min_cargo_distr: 1;
+                layouts: [general_store_industry_layout_tilelayout];
+                spec_flags: bitmask(IND_FLAG_LONG_CARGO_TYPE_LISTS,IND_FLAG_ONLY_IN_TOWNS);
+                conflicting_ind_types: []; // set this prop empty, FIRS has it's own better checks for this
+                random_sound_effects: []; // set this empty to avoid spurious default industry sounds (as of May 2017 FIRS does not yet use sound effects)
+                
+                name: string(STR_IND_GENERAL_STORE);
+                prob_map_gen: 24;
+                prob_in_game: 12;
+                prospect_chance: 0.75;
+                fund_cost_multiplier: 15;
+                remove_cost_multiplier: 0;
+                remove_cost_multiplier: 0;
+                
+                cargo_types: [accept_cargo("FOOD"),accept_cargo("GOOD"),accept_cargo("BEER")];
+                nearby_station_name: string(STR_STATION, string(STR_TOWN),string(STR_STATION_TOWN_3));
+            }
+        }
+    }
+
+
+
+
+
+    if (economy==5) {
+        item(FEAT_INDUSTRIES, general_store, 39) {
+            graphics {
+                construction_probability: general_store_check_availability;
+                build_prod_change:        randomise_primary_production_on_build(0);
+                produce_cargo_arrival:    general_store_produce_cargo_arrival;
+                produce_256_ticks:        general_store_produce_256_ticks;
+                monthly_prod_change:      general_store_monthly_prod_change;
+                location_check:           general_store_check_location;
+                extra_text_fund:          return CB_RESULT_NO_TEXT;
+                cargo_subtype_display:    general_store_cargo_subtype_display;
+                colour:                   switch_colour;
+            }
+        }
+    }
+

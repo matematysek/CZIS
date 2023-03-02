@@ -1,0 +1,38 @@
+
+switch (FEAT_INDUSTRYTILES, SELF, switch_tile_fences_neighbouring_station, [
+            STORE_TEMP(LOAD_TEMP(9) * (nearby_tile_class(-1,  0) != TILE_CLASS_STATION), 9),
+            STORE_TEMP(LOAD_TEMP(10) * (nearby_tile_class( 0, -1) != TILE_CLASS_STATION), 10),
+            STORE_TEMP(LOAD_TEMP(11) * (nearby_tile_class( 0,  1) != TILE_CLASS_STATION), 11),
+            STORE_TEMP(LOAD_TEMP(12) * (nearby_tile_class( 1,  0) != TILE_CLASS_STATION), 12),
+        ]) {
+    return 1;
+}
+
+switch (FEAT_INDUSTRYTILES, SELF, switch_tile_fences_neighbouring_industry, [
+            STORE_TEMP(LOAD_TEMP(9) * !nearby_tile_is_same_industry(-1,  0), 9),
+            STORE_TEMP(LOAD_TEMP(10) * !nearby_tile_is_same_industry( 0, -1), 10),
+            STORE_TEMP(LOAD_TEMP(11) * !nearby_tile_is_same_industry( 0,  1), 11),
+            STORE_TEMP(LOAD_TEMP(12) * !nearby_tile_is_same_industry( 1,  0), 12),
+        ]) {
+    switch_tile_fences_neighbouring_station;
+}
+
+switch (FEAT_INDUSTRYTILES, SELF, switch_tile_fences, [
+            STORE_TEMP(0, 1),
+            STORE_TEMP(0, 2),
+            STORE_TEMP(0, 3),
+            STORE_TEMP(0, 4),
+
+            STORE_TEMP(1, 9),
+            STORE_TEMP(1, 10),
+            STORE_TEMP(1, 11),
+            STORE_TEMP(1, 12),
+
+            STORE_TEMP(0, 5),
+            STORE_TEMP(0, 6),
+            STORE_TEMP(0, 7),
+            STORE_TEMP(0, 8),
+            ]) {
+    switch_tile_fences_neighbouring_industry;
+}
+

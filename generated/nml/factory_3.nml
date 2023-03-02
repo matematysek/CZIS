@@ -1,0 +1,1561 @@
+/* ******************************************************************
+ * Definition of the industry tile, its callbacks, and graphics chain
+ * ******************************************************************/
+
+
+    
+
+    
+        
+        
+    
+
+    
+
+    
+
+    
+        
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(factory_3_spriteset_2_0) {
+                
+                    
+                        [10, 60, 64, 70, -31, -39, ANIM | NOCROP, "src/graphics/industries/factory_3_1.png"]
+                    
+                
+            }
+            spriteset(factory_3_spriteset_2_0_snow) {
+                
+                    
+                            [10, 60, 64, 70, -31, -39, ANIM | NOCROP, "src/graphics/industries/factory_3_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(factory_3_spriteset_3_0) {
+                
+                    
+                        [80, 60, 64, 70, -31, -39, ANIM | NOCROP, "src/graphics/industries/factory_3_1.png"]
+                    
+                
+            }
+            spriteset(factory_3_spriteset_3_0_snow) {
+                
+                    
+                            [80, 60, 64, 70, -31, -39, ANIM | NOCROP, "src/graphics/industries/factory_3_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(factory_3_spriteset_4_0) {
+                
+                    
+                        [150, 60, 64, 55, -31, -24, ANIM | NOCROP, "src/graphics/industries/factory_3_1.png"]
+                    
+                
+            }
+            spriteset(factory_3_spriteset_4_0_snow) {
+                
+                    
+                            [150, 60, 64, 55, -31, -24, ANIM | NOCROP, "src/graphics/industries/factory_3_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(factory_3_spriteset_5_0) {
+                
+                    
+                        [220, 60, 64, 55, -31, -24, ANIM | NOCROP, "src/graphics/industries/factory_3_1.png"]
+                    
+                
+            }
+            spriteset(factory_3_spriteset_5_0_snow) {
+                
+                    
+                            [220, 60, 64, 55, -31, -24, ANIM | NOCROP, "src/graphics/industries/factory_3_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(factory_3_spriteset_6_0) {
+                
+                    
+                        [290, 60, 64, 55, -31, -24, ANIM | NOCROP, "src/graphics/industries/factory_3_1.png"]
+                    
+                
+            }
+            spriteset(factory_3_spriteset_6_0_snow) {
+                
+                    
+                            [290, 60, 64, 55, -31, -24, ANIM | NOCROP, "src/graphics/industries/factory_3_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(factory_3_spriteset_7_0) {
+                
+                    
+                        [360, 60, 64, 55, -31, -24, ANIM | NOCROP, "src/graphics/industries/factory_3_1.png"]
+                    
+                
+            }
+            spriteset(factory_3_spriteset_7_0_snow) {
+                
+                    
+                            [360, 60, 64, 55, -31, -24, ANIM | NOCROP, "src/graphics/industries/factory_3_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(factory_3_spriteset_8_0) {
+                
+                    
+                        [430, 60, 64, 31, -31, 0, ANIM | NOCROP, "src/graphics/industries/factory_3_1.png"]
+                    
+                
+            }
+            spriteset(factory_3_spriteset_8_0_snow) {
+                
+                    
+                            [430, 60, 64, 31, -31, 0, ANIM | NOCROP, "src/graphics/industries/factory_3_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+
+
+
+    spritelayout factory_3_spritelayout_1 {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: factory_3_spriteset_2_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: factory_3_spriteset_2_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+            
+            building {
+                sprite: 2040 + (animation_frame / 4);
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                xoffset: 0;
+                yoffset: 8;
+                zoffset: 53+ animation_frame;
+                xextent: 11;
+                yextent: 16;
+                zextent: 7;
+                hide_sprite: animation_frame &gt; 19;
+            }
+        
+
+        
+        
+
+    }
+
+    spritelayout factory_3_spritelayout_2 {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: factory_3_spriteset_3_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: factory_3_spriteset_3_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout factory_3_spritelayout_3 {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: factory_3_spriteset_4_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: factory_3_spriteset_4_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout factory_3_spritelayout_4 {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: factory_3_spriteset_5_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: factory_3_spriteset_5_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout factory_3_spritelayout_5 {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: factory_3_spriteset_6_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: factory_3_spriteset_6_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout factory_3_spritelayout_6 {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: factory_3_spriteset_7_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: factory_3_spriteset_7_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout factory_3_spritelayout_7 {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: factory_3_spriteset_8_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: factory_3_spriteset_8_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+
+
+
+
+
+    switch(FEAT_INDUSTRYTILES, SELF, factory_3_industry_layout_1_graphics_switch, relative_pos) {
+        
+            
+            
+                relative_coord(0, 0): factory_3_spritelayout_3;
+            
+        
+            
+            
+                relative_coord(0, 1): factory_3_spritelayout_3;
+            
+        
+            
+            
+                relative_coord(0, 2): factory_3_spritelayout_5;
+            
+        
+            
+            
+                relative_coord(0, 3): factory_3_spritelayout_4;
+            
+        
+            
+            
+                relative_coord(0, 4): factory_3_spritelayout_5;
+            
+        
+            
+            
+                relative_coord(1, 0): factory_3_spritelayout_3;
+            
+        
+            
+            
+                relative_coord(1, 1): factory_3_spritelayout_3;
+            
+        
+            
+            
+                relative_coord(1, 2): factory_3_spritelayout_5;
+            
+        
+            
+            
+                relative_coord(1, 3): factory_3_spritelayout_4;
+            
+        
+            
+            
+                relative_coord(1, 4): factory_3_spritelayout_6;
+            
+        
+            
+            
+                relative_coord(2, 0): factory_3_spritelayout_3;
+            
+        
+            
+            
+                relative_coord(2, 1): factory_3_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(2, 2): factory_3_spritelayout_2;
+            
+        
+            
+            
+                relative_coord(2, 3): factory_3_spritelayout_7;
+            
+        
+            
+            
+                relative_coord(2, 4): factory_3_spritelayout_7;
+            
+        
+        return 0; // a default is needed, but should never be reached, layout definitions are explicit
+    }
+
+    switch(FEAT_INDUSTRYTILES, SELF, factory_3_industry_layout_2_graphics_switch, relative_pos) {
+        
+            
+            
+                relative_coord(0, 2): factory_3_spritelayout_3;
+            
+        
+            
+            
+                relative_coord(0, 3): factory_3_spritelayout_3;
+            
+        
+            
+            
+                relative_coord(1, 0): factory_3_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(1, 1): factory_3_spritelayout_2;
+            
+        
+            
+            
+                relative_coord(1, 2): factory_3_spritelayout_3;
+            
+        
+            
+            
+                relative_coord(1, 3): factory_3_spritelayout_3;
+            
+        
+            
+            
+                relative_coord(2, 0): factory_3_spritelayout_4;
+            
+        
+            
+            
+                relative_coord(2, 1): factory_3_spritelayout_7;
+            
+        
+            
+            
+                relative_coord(2, 2): factory_3_spritelayout_6;
+            
+        
+            
+            
+                relative_coord(2, 3): factory_3_spritelayout_6;
+            
+        
+            
+            
+                relative_coord(3, 0): factory_3_spritelayout_4;
+            
+        
+            
+            
+                relative_coord(3, 1): factory_3_spritelayout_5;
+            
+        
+            
+            
+                relative_coord(3, 2): factory_3_spritelayout_4;
+            
+        
+            
+            
+                relative_coord(3, 3): factory_3_spritelayout_3;
+            
+        
+        return 0; // a default is needed, but should never be reached, layout definitions are explicit
+    }
+
+
+
+switch(FEAT_INDUSTRYTILES, PARENT, factory_3_industry_graphics_switch_layouts, layout_num) {
+    
+        1: factory_3_industry_layout_1_graphics_switch;
+    
+        2: factory_3_industry_layout_2_graphics_switch;
+    
+    factory_3_industry_layout_1_graphics_switch; // default
+}
+
+
+switch(FEAT_INDUSTRYTILES, SELF, factory_3_industry_construction_state_graphics_switch, construction_state) {
+    0..2: spritelayout_default_construction_states;
+    
+    factory_3_industry_graphics_switch_layouts; // default
+}
+
+switch(FEAT_INDUSTRYTILES, SELF, factory_3_store_temp_vars,
+        [STORE_TEMP(random_bits, 14),
+         STORE_TEMP(terrain_type == TILETYPE_SNOW, 13)
+            
+                , STORE_TEMP(0,
+                             127) 
+                , STORE_TEMP(construction_state != 3 ? 1 : LOAD_TEMP(127),
+                             127)
+                , STORE_TEMP(LOAD_TEMP(13) == 0 ? 1 : LOAD_TEMP(127), 
+                             117) 
+                , STORE_TEMP(LOAD_TEMP(13) == 1 ? 1 : LOAD_TEMP(127), 
+                             127)
+            
+        ]) {
+    factory_3_industry_construction_state_graphics_switch; // default
+}
+
+switch (FEAT_INDUSTRYTILES, SELF, factory_3_switch_graphics, [
+                                    switch_tile_fences(),
+                                    switch_terrain_sprite(),
+                                    
+                                 ]) {
+    factory_3_store_temp_vars;
+}
+
+
+
+    
+        
+            
+    
+    switch(FEAT_INDUSTRYTILES, SELF, factory_3_tile_1_lc_2,
+            (nearby_tile_class( 2,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2, -2) == TILE_CLASS_INDUSTRY)
+        ) {
+        1: return CB_RESULT_LOCATION_DISALLOW;
+        return CB_RESULT_LOCATION_ALLOW;
+    }
+
+        
+            
+    
+    switch (FEAT_INDUSTRYTILES, PARENT, factory_3_tile_1_lc_1, (
+                (((extra_callback_info2 & 0xFF00) >> 8) == IND_CREATION_FUND) ||
+                (((extra_callback_info2 & 0xFF00) >> 8) == IND_CREATION_PROSPECT)
+                )
+            ) {
+        1: return CB_RESULT_LOCATION_ALLOW;
+        factory_3_tile_1_lc_2;
+    }
+
+        
+            
+    
+    switch (FEAT_INDUSTRYTILES, SELF, factory_3_tile_1_lc_0,
+                (
+                nearby_tile_height(-relative_x, -relative_y)
+                + (nearby_tile_slope(-relative_x, -relative_y)
+                == SLOPE_FLAT ? 0 :
+                nearby_tile_slope(-relative_x, -relative_y) == bitmask(IS_STEEP_SLOPE) ? 2 : 1
+                )) == (nearby_tile_height(0, 0)
+                + (nearby_tile_slope(0, 0)
+                == SLOPE_FLAT ? 0 :
+                nearby_tile_slope(0, 0) == bitmask(IS_STEEP_SLOPE) ? 2 : 1))
+                ) {
+        1: factory_3_tile_1_lc_1;
+        return CB_RESULT_LOCATION_DISALLOW;
+    }
+
+        
+    
+
+
+
+    
+        
+    
+
+
+
+    
+    item(FEAT_INDUSTRYTILES, factory_3_tile_1, 107) {
+        property {
+            substitute:         0;
+            land_shape_flags:   0;
+            special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+            
+            
+                animation_info: [ANIMATION_LOOPING, 47];
+            
+            
+                animation_speed: 2;
+            
+            animation_triggers: bitmask();
+        }
+
+        graphics {
+    		
+    		    tile_check: factory_3_tile_1_lc_0;
+            
+            
+    		
+            
+    		
+    		
+            factory_3_switch_graphics;
+        }
+    }
+
+
+
+
+/* *************************************************
+ * Definition of the industry
+ * *************************************************/
+
+
+    tilelayout factory_3_industry_layout_1_tilelayout {
+        
+            0, 0: factory_3_tile_1;
+        
+            0, 1: factory_3_tile_1;
+        
+            0, 2: factory_3_tile_1;
+        
+            0, 3: factory_3_tile_1;
+        
+            0, 4: factory_3_tile_1;
+        
+            1, 0: factory_3_tile_1;
+        
+            1, 1: factory_3_tile_1;
+        
+            1, 2: factory_3_tile_1;
+        
+            1, 3: factory_3_tile_1;
+        
+            1, 4: factory_3_tile_1;
+        
+            2, 0: factory_3_tile_1;
+        
+            2, 1: factory_3_tile_1;
+        
+            2, 2: factory_3_tile_1;
+        
+            2, 3: factory_3_tile_1;
+        
+            2, 4: factory_3_tile_1;
+        
+    }
+
+    tilelayout factory_3_industry_layout_2_tilelayout {
+        
+            0, 2: factory_3_tile_1;
+        
+            0, 3: factory_3_tile_1;
+        
+            1, 0: factory_3_tile_1;
+        
+            1, 1: factory_3_tile_1;
+        
+            1, 2: factory_3_tile_1;
+        
+            1, 3: factory_3_tile_1;
+        
+            2, 0: factory_3_tile_1;
+        
+            2, 1: factory_3_tile_1;
+        
+            2, 2: factory_3_tile_1;
+        
+            2, 3: factory_3_tile_1;
+        
+            3, 0: factory_3_tile_1;
+        
+            3, 1: factory_3_tile_1;
+        
+            3, 2: factory_3_tile_1;
+        
+            3, 3: factory_3_tile_1;
+        
+    }
+
+
+
+
+
+switch (FEAT_INDUSTRIES, SELF, factory_3_extra_text, economy) {
+    
+        5: return string(STR_EXTRA_TEXT_SECONDARY_NON_COMBINATORY);
+    
+}
+
+
+
+
+
+    
+    
+        switch (FEAT_INDUSTRIES, SELF, factory_3_cargo_subtype_display_cargo_GLAS_economy_5, [
+                LOAD_PERM(3)
+            ]) {
+            0: return 0x3800 + string(STR_EMPTY);
+            return 0x3800 + string(STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG);
+        }
+    
+        switch (FEAT_INDUSTRIES, SELF, factory_3_cargo_subtype_display_cargo_PLAS_economy_5, [
+                LOAD_PERM(4)
+            ]) {
+            0: return 0x3800 + string(STR_EMPTY);
+            return 0x3800 + string(STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG);
+        }
+    
+        switch (FEAT_INDUSTRIES, SELF, factory_3_cargo_subtype_display_cargo_ALUM_economy_5, [
+                LOAD_PERM(5)
+            ]) {
+            0: return 0x3800 + string(STR_EMPTY);
+            return 0x3800 + string(STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG);
+        }
+    
+        switch (FEAT_INDUSTRIES, SELF, factory_3_cargo_subtype_display_cargo_ELEC_economy_5, [
+                LOAD_PERM(6)
+            ]) {
+            0: return 0x3800 + string(STR_EMPTY);
+            return 0x3800 + string(STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG);
+        }
+    
+    switch (FEAT_INDUSTRIES, SELF, factory_3_cargo_subtype_display_switch_cargo_economy_5, getbits(extra_callback_info2, 16, 8)) {
+        
+        
+            GLAS: factory_3_cargo_subtype_display_cargo_GLAS_economy_5;
+        
+            PLAS: factory_3_cargo_subtype_display_cargo_PLAS_economy_5;
+        
+            ALUM: factory_3_cargo_subtype_display_cargo_ALUM_economy_5;
+        
+            ELEC: factory_3_cargo_subtype_display_cargo_ELEC_economy_5;
+        
+        return CB_RESULT_NO_TEXT;
+    }
+
+
+switch (FEAT_INDUSTRIES, SELF, factory_3_cargo_subtype_display_switch_economy, economy) {
+    
+        5:  factory_3_cargo_subtype_display_switch_cargo_economy_5;
+    
+}
+
+
+switch (FEAT_INDUSTRIES, SELF, factory_3_cargo_subtype_display, getbits(extra_callback_info2, 8, 8)) {
+    1: factory_3_cargo_subtype_display_switch_economy;
+    return CB_RESULT_NO_TEXT;
+}
+
+
+
+
+
+    produce (factory_3_produce_5,
+        [
+            
+                
+                GLAS: incoming_cargo_waiting("GLAS");
+            
+                
+                PLAS: incoming_cargo_waiting("PLAS");
+            
+                
+                ALUM: incoming_cargo_waiting("ALUM");
+            
+                
+                ELEC: incoming_cargo_waiting("ELEC");
+            
+        ],
+        [
+            
+                PACK: (LOAD_PERM(11) * 8) / 8;
+            
+        ],
+    0)
+
+
+    switch (FEAT_INDUSTRIES, SELF, factory_3_produce_update_supplied_cycles_remaining_per_cargo_5,
+        [
+            
+            
+                STORE_PERM_ALT(
+                    3,
+                    (incoming_cargo_waiting("GLAS") > 0)
+                    ?
+                    28
+                    :
+                    LOAD_PERM(3)
+                ),
+            
+                STORE_PERM_ALT(
+                    4,
+                    (incoming_cargo_waiting("PLAS") > 0)
+                    ?
+                    28
+                    :
+                    LOAD_PERM(4)
+                ),
+            
+                STORE_PERM_ALT(
+                    5,
+                    (incoming_cargo_waiting("ALUM") > 0)
+                    ?
+                    28
+                    :
+                    LOAD_PERM(5)
+                ),
+            
+                STORE_PERM_ALT(
+                    6,
+                    (incoming_cargo_waiting("ELEC") > 0)
+                    ?
+                    28
+                    :
+                    LOAD_PERM(6)
+                ),
+            
+            0 
+        ]) {
+        return 0;
+    }
+
+    switch (FEAT_INDUSTRIES, SELF, factory_3_produce_calculate_current_production_level_5,
+        [
+            
+                
+                STORE_PERM_ALT(
+                    1,
+                    LOAD_PERM(1)
+                    +
+                    (
+                        LOAD_PERM(3)
+                        > 0 ? 2 : 0
+                    )
+                ),
+            
+                
+                STORE_PERM_ALT(
+                    1,
+                    LOAD_PERM(1)
+                    +
+                    (
+                        LOAD_PERM(4)
+                        > 0 ? 2 : 0
+                    )
+                ),
+            
+                
+                STORE_PERM_ALT(
+                    1,
+                    LOAD_PERM(1)
+                    +
+                    (
+                        LOAD_PERM(5)
+                        > 0 ? 2 : 0
+                    )
+                ),
+            
+                
+                STORE_PERM_ALT(
+                    1,
+                    LOAD_PERM(1)
+                    +
+                    (
+                        LOAD_PERM(6)
+                        > 0 ? 2 : 0
+                    )
+                ),
+            
+            0 
+        ]) {
+        return 0;
+    }
+
+    switch (FEAT_INDUSTRIES, SELF, factory_3_produce_calculation_5,
+            [
+                
+                STORE_PERM_ALT(1, 0),
+                
+                STORE_PERM_ALT(2, 0),
+                factory_3_produce_update_supplied_cycles_remaining_per_cargo_5(),
+                factory_3_produce_calculate_current_production_level_5(),
+                
+                
+                    STORE_PERM_ALT(
+                        2,
+                        LOAD_PERM(2)
+                        + ((incoming_cargo_waiting("GLAS") * LOAD_PERM(1)) / 8)
+                    ),
+                
+                    STORE_PERM_ALT(
+                        2,
+                        LOAD_PERM(2)
+                        + ((incoming_cargo_waiting("PLAS") * LOAD_PERM(1)) / 8)
+                    ),
+                
+                    STORE_PERM_ALT(
+                        2,
+                        LOAD_PERM(2)
+                        + ((incoming_cargo_waiting("ALUM") * LOAD_PERM(1)) / 8)
+                    ),
+                
+                    STORE_PERM_ALT(
+                        2,
+                        LOAD_PERM(2)
+                        + ((incoming_cargo_waiting("ELEC") * LOAD_PERM(1)) / 8)
+                    ),
+                
+                
+                STORE_PERM_ALT(
+                    12,
+                    LOAD_PERM(12) + LOAD_PERM(2)
+                ),
+                
+
+                
+                STORE_PERM_ALT(
+                    11,
+                    (LOAD_PERM(12) / 8) >= 1
+                    ?
+                    LOAD_PERM(12)
+                    :
+                    0
+                ),
+                STORE_PERM_ALT(
+                    12,
+                    (LOAD_PERM(12) / 8) >= 1
+                    ?
+                    0
+                    :
+                    LOAD_PERM(12)
+                ),
+                
+                
+                STORE_PERM_ALT(
+                    0,
+                    (LOAD_PERM(2) == 0)
+                    ?
+                    LOAD_PERM(0)
+                    :
+                    0
+                ),
+            ]) {
+        factory_3_produce_5;
+    }
+
+
+switch (FEAT_INDUSTRIES, SELF, factory_3_produce_cargo_arrival, economy) {
+    
+        5: factory_3_produce_calculation_5;
+    
+}
+
+
+
+
+produce(factory_3_produce_256_ticks_produce,
+    [],
+    [],
+0)
+
+
+switch(FEAT_INDUSTRIES, SELF, factory_3_update_supplied_cycles_remaining_per_cargo,
+    [
+        
+            
+            STORE_PERM_ALT(
+                3,
+                max(
+                    0,
+                    LOAD_PERM(3)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                4,
+                max(
+                    0,
+                    LOAD_PERM(4)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                5,
+                max(
+                    0,
+                    LOAD_PERM(5)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                6,
+                max(
+                    0,
+                    LOAD_PERM(6)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                7,
+                max(
+                    0,
+                    LOAD_PERM(7)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                8,
+                max(
+                    0,
+                    LOAD_PERM(8)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                9,
+                max(
+                    0,
+                    LOAD_PERM(9)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                10,
+                max(
+                    0,
+                    LOAD_PERM(10)
+                    - 1
+                )
+            ),
+        
+    ]) {
+    return 0;
+}
+
+switch(FEAT_INDUSTRIES, SELF, factory_3_produce_256_ticks,
+    [
+        factory_3_update_supplied_cycles_remaining_per_cargo(),
+    ]) {
+    factory_3_produce_256_ticks_produce;
+}
+
+
+switch(FEAT_INDUSTRIES, SELF, factory_3_monthly_prod_change,
+    [
+        monthly_town_loop(
+            0,
+            0
+        )
+    ]) {
+    return CB_RESULT_IND_PROD_NO_CHANGE;
+}
+
+
+
+
+
+
+
+
+switch(FEAT_INDUSTRIES, SELF, factory_3_check_availability_param, restrict_open_during_gameplay) {
+	1..255: return CB_RESULT_IND_NO_CONSTRUCTION;         // disallow when restrictions in place
+	return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;       // we may build
+}
+
+
+switch (FEAT_INDUSTRIES, SELF, factory_3_check_map_gen, extra_callback_info2 == IND_CREATION_GENERATION) {
+	1: return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;
+	factory_3_check_availability_param;
+}
+
+switch (FEAT_INDUSTRIES, SELF, factory_3_available_game_mode, game_mode == GAMEMODE_GAME) {
+	1: factory_3_check_map_gen;
+	return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;
+}
+
+
+
+    /* 0 */
+    switch (FEAT_INDUSTRIES, SELF, factory_3_check_availability_5, current_date) {
+        date(0,1,1) .. date(5000000,12,31): factory_3_available_game_mode;
+        return CB_RESULT_IND_NO_CONSTRUCTION;
+    }
+
+
+switch (FEAT_INDUSTRIES, SELF, factory_3_check_availability, economy) {
+    
+        5: factory_3_check_availability_5;
+    
+}
+
+
+
+
+
+
+
+    if (economy==5) {
+        item(FEAT_INDUSTRIES, factory_3, 62) {
+            property {
+                
+                substitute: 0;
+                override: 0;
+                map_colour: 166;
+                life_type: IND_LIFE_TYPE_PROCESSING;
+                
+                
+                
+                
+                min_cargo_distr: 1;
+                layouts: [factory_3_industry_layout_1_tilelayout,factory_3_industry_layout_2_tilelayout];
+                spec_flags: bitmask(IND_FLAG_LONG_CARGO_TYPE_LISTS);
+                conflicting_ind_types: []; // set this prop empty, FIRS has it's own better checks for this
+                random_sound_effects: []; // set this empty to avoid spurious default industry sounds (as of May 2017 FIRS does not yet use sound effects)
+                
+                name: string(STR_IND_PAINT_FACTORY);
+                prob_map_gen: 8;
+                prob_in_game: 7;
+                
+                fund_cost_multiplier: 95;
+                remove_cost_multiplier: 0;
+                remove_cost_multiplier: 0;
+                
+                cargo_types: [accept_cargo("GLAS"),accept_cargo("PLAS"),accept_cargo("ALUM"),accept_cargo("ELEC"),produce_cargo("PACK",0)];
+                nearby_station_name: string(STR_STATION, string(STR_TOWN),string(STR_STATION_INDUSTRY_ESTATE_1));
+            }
+        }
+    }
+
+
+
+
+
+    if (economy==5) {
+        item(FEAT_INDUSTRIES, factory_3, 62) {
+            graphics {
+                construction_probability: factory_3_check_availability;
+                produce_cargo_arrival:    factory_3_produce_cargo_arrival;
+                produce_256_ticks:        factory_3_produce_256_ticks;
+                monthly_prod_change:     factory_3_monthly_prod_change;
+                random_prod_change:       CB_RESULT_IND_PROD_NO_CHANGE;
+                location_check:           factory_3_check_location;
+                extra_text_fund:          return CB_RESULT_NO_TEXT;
+                extra_text_industry:      factory_3_extra_text;
+                cargo_subtype_display:    factory_3_cargo_subtype_display;
+                colour:                   switch_colour;
+            }
+        }
+    }
+

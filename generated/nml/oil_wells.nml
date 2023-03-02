@@ -1,0 +1,1377 @@
+/* ******************************************************************
+ * Definition of the industry tile, its callbacks, and graphics chain
+ * ******************************************************************/
+
+
+    
+
+    
+        
+        
+    
+
+    
+
+    
+
+    
+        
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(oil_wells_spriteset_2_0) {
+                
+                    
+                        [10, 10, 64, 38, -31, -9, ANIM | NOCROP, "src/graphics/industries/oil_wells_1.png"]
+                    
+                
+            }
+            spriteset(oil_wells_spriteset_2_0_snow) {
+                
+                    
+                            [10, 10, 64, 38, -31, -9, ANIM | NOCROP, "src/graphics/industries/oil_wells_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+
+
+
+    spritelayout oil_wells_spritelayout_pump {
+        
+            
+            
+                
+                
+            
+        
+
+        
+        
+            childsprite {
+                sprite: 2173;
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                hide_sprite: (LOAD_TEMP(13));
+                always_draw: 1;
+            }
+            
+            childsprite {
+                sprite: 2173;
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                hide_sprite: (!LOAD_TEMP(13));
+                always_draw: 1;
+            }
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: 2174 + (((animation_frame % 11) &lt; 6) ? (animation_frame % 11) : 10 - (animation_frame % 11));
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 1;
+                    yoffset: 2;
+                    zoffset: 0;
+                    xextent: 15;
+                    yextent: 14;
+                    zextent: 16;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: 2174 + (((animation_frame % 11) &lt; 6) ? (animation_frame % 11) : 10 - (animation_frame % 11));
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 1;
+                    yoffset: 2;
+                    zoffset: 0;
+                    xextent: 15;
+                    yextent: 14;
+                    zextent: 16;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout oil_wells_spritelayout_building {
+        
+            
+            
+                
+                
+            
+        
+
+        
+        
+            childsprite {
+                sprite: 2022;
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                hide_sprite: (LOAD_TEMP(13));
+                always_draw: 1;
+            }
+            
+            childsprite {
+                sprite: 2022;
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                hide_sprite: (!LOAD_TEMP(13));
+                always_draw: 1;
+            }
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: oil_wells_spriteset_2_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 1;
+                    yoffset: 2;
+                    zoffset: 0;
+                    xextent: 15;
+                    yextent: 14;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: oil_wells_spriteset_2_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 1;
+                    yoffset: 2;
+                    zoffset: 0;
+                    xextent: 15;
+                    yextent: 14;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+
+
+
+
+
+    switch(FEAT_INDUSTRYTILES, SELF, oil_wells_industry_layout_1_graphics_switch, relative_pos) {
+        
+            
+            
+                relative_coord(0, 0): oil_wells_spritelayout_pump;
+            
+        
+            
+            
+                relative_coord(0, 7): oil_wells_spritelayout_pump;
+            
+        
+            
+            
+                relative_coord(1, 4): oil_wells_spritelayout_pump;
+            
+        
+            
+            
+                relative_coord(2, 1): oil_wells_spritelayout_pump;
+            
+        
+            
+            
+                relative_coord(3, 5): oil_wells_spritelayout_building;
+            
+        
+            
+            
+                relative_coord(4, 8): oil_wells_spritelayout_pump;
+            
+        
+            
+            
+                relative_coord(5, 1): oil_wells_spritelayout_pump;
+            
+        
+            
+            
+                relative_coord(5, 4): oil_wells_spritelayout_pump;
+            
+        
+        return 0; // a default is needed, but should never be reached, layout definitions are explicit
+    }
+
+    switch(FEAT_INDUSTRYTILES, SELF, oil_wells_industry_layout_2_graphics_switch, relative_pos) {
+        
+            
+            
+                relative_coord(0, 0): oil_wells_spritelayout_pump;
+            
+        
+            
+            
+                relative_coord(0, 4): oil_wells_spritelayout_pump;
+            
+        
+            
+            
+                relative_coord(1, 4): oil_wells_spritelayout_pump;
+            
+        
+            
+            
+                relative_coord(2, 8): oil_wells_spritelayout_pump;
+            
+        
+            
+            
+                relative_coord(4, 4): oil_wells_spritelayout_building;
+            
+        
+            
+            
+                relative_coord(4, 8): oil_wells_spritelayout_pump;
+            
+        
+            
+            
+                relative_coord(5, 2): oil_wells_spritelayout_pump;
+            
+        
+            
+            
+                relative_coord(6, 2): oil_wells_spritelayout_pump;
+            
+        
+            
+            
+                relative_coord(6, 4): oil_wells_spritelayout_pump;
+            
+        
+        return 0; // a default is needed, but should never be reached, layout definitions are explicit
+    }
+
+    switch(FEAT_INDUSTRYTILES, SELF, oil_wells_industry_layout_3_graphics_switch, relative_pos) {
+        
+            
+            
+                relative_coord(0, 0): oil_wells_spritelayout_pump;
+            
+        
+            
+            
+                relative_coord(0, 2): oil_wells_spritelayout_pump;
+            
+        
+            
+            
+                relative_coord(1, 4): oil_wells_spritelayout_pump;
+            
+        
+            
+            
+                relative_coord(1, 6): oil_wells_spritelayout_pump;
+            
+        
+            
+            
+                relative_coord(2, 0): oil_wells_spritelayout_building;
+            
+        
+            
+            
+                relative_coord(3, 2): oil_wells_spritelayout_pump;
+            
+        
+            
+            
+                relative_coord(3, 4): oil_wells_spritelayout_pump;
+            
+        
+        return 0; // a default is needed, but should never be reached, layout definitions are explicit
+    }
+
+    switch(FEAT_INDUSTRYTILES, SELF, oil_wells_industry_layout_4_graphics_switch, relative_pos) {
+        
+            
+            
+                relative_coord(0, 0): oil_wells_spritelayout_pump;
+            
+        
+            
+            
+                relative_coord(0, 4): oil_wells_spritelayout_pump;
+            
+        
+            
+            
+                relative_coord(0, 6): oil_wells_spritelayout_pump;
+            
+        
+            
+            
+                relative_coord(1, 2): oil_wells_spritelayout_pump;
+            
+        
+            
+            
+                relative_coord(1, 8): oil_wells_spritelayout_building;
+            
+        
+            
+            
+                relative_coord(2, 0): oil_wells_spritelayout_pump;
+            
+        
+            
+            
+                relative_coord(2, 2): oil_wells_spritelayout_pump;
+            
+        
+            
+            
+                relative_coord(3, 1): oil_wells_spritelayout_pump;
+            
+        
+            
+            
+                relative_coord(5, 0): oil_wells_spritelayout_pump;
+            
+        
+            
+            
+                relative_coord(5, 2): oil_wells_spritelayout_pump;
+            
+        
+            
+            
+                relative_coord(6, 0): oil_wells_spritelayout_pump;
+            
+        
+        return 0; // a default is needed, but should never be reached, layout definitions are explicit
+    }
+
+
+
+switch(FEAT_INDUSTRYTILES, PARENT, oil_wells_industry_graphics_switch_layouts, layout_num) {
+    
+        1: oil_wells_industry_layout_1_graphics_switch;
+    
+        2: oil_wells_industry_layout_2_graphics_switch;
+    
+        3: oil_wells_industry_layout_3_graphics_switch;
+    
+        4: oil_wells_industry_layout_4_graphics_switch;
+    
+    oil_wells_industry_layout_1_graphics_switch; // default
+}
+
+
+switch(FEAT_INDUSTRYTILES, SELF, oil_wells_industry_construction_state_graphics_switch, construction_state) {
+    0..2: spritelayout_default_construction_states;
+    
+    oil_wells_industry_graphics_switch_layouts; // default
+}
+
+switch(FEAT_INDUSTRYTILES, SELF, oil_wells_store_temp_vars,
+        [STORE_TEMP(random_bits, 14),
+         STORE_TEMP(terrain_type == TILETYPE_SNOW, 13)
+            
+                , STORE_TEMP(0,
+                             127) 
+                , STORE_TEMP(construction_state != 3 ? 1 : LOAD_TEMP(127),
+                             127)
+                , STORE_TEMP(LOAD_TEMP(13) == 0 ? 1 : LOAD_TEMP(127), 
+                             117) 
+                , STORE_TEMP(LOAD_TEMP(13) == 1 ? 1 : LOAD_TEMP(127), 
+                             127)
+            
+        ]) {
+    oil_wells_industry_construction_state_graphics_switch; // default
+}
+
+switch (FEAT_INDUSTRYTILES, SELF, oil_wells_switch_graphics, [
+                                    switch_tile_fences(),
+                                    switch_terrain_sprite(),
+                                    
+                                 ]) {
+    oil_wells_store_temp_vars;
+}
+
+
+
+    
+        
+            
+    
+    switch(FEAT_INDUSTRYTILES, SELF, oil_wells_tile_1_lc_1,
+            (nearby_tile_class( 2,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2, -2) == TILE_CLASS_INDUSTRY)
+        ) {
+        1: return CB_RESULT_LOCATION_DISALLOW;
+        return CB_RESULT_LOCATION_ALLOW;
+    }
+
+        
+            
+    
+    switch (FEAT_INDUSTRYTILES, PARENT, oil_wells_tile_1_lc_0, (
+                (((extra_callback_info2 & 0xFF00) >> 8) == IND_CREATION_FUND) ||
+                (((extra_callback_info2 & 0xFF00) >> 8) == IND_CREATION_PROSPECT)
+                )
+            ) {
+        1: return CB_RESULT_LOCATION_ALLOW;
+        oil_wells_tile_1_lc_1;
+    }
+
+        
+    
+        
+            
+    
+    switch(FEAT_INDUSTRYTILES, SELF, oil_wells_tile_2_lc_1,
+            (nearby_tile_class( 2,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2, -2) == TILE_CLASS_INDUSTRY)
+        ) {
+        1: return CB_RESULT_LOCATION_DISALLOW;
+        return CB_RESULT_LOCATION_ALLOW;
+    }
+
+        
+            
+    
+    switch (FEAT_INDUSTRYTILES, PARENT, oil_wells_tile_2_lc_0, (
+                (((extra_callback_info2 & 0xFF00) >> 8) == IND_CREATION_FUND) ||
+                (((extra_callback_info2 & 0xFF00) >> 8) == IND_CREATION_PROSPECT)
+                )
+            ) {
+        1: return CB_RESULT_LOCATION_ALLOW;
+        oil_wells_tile_2_lc_1;
+    }
+
+        
+    
+
+
+
+    
+        
+    
+    switch (FEAT_INDUSTRYTILES, SELF, oil_wells_tile_1_stop_anim, animation_frame) {
+        1: return 11; // jump to the 'stop animation cycle' when triggered and currently animated
+        2: return 12;
+        3: return 13;
+        4: return 14;
+        5: return 15;
+        6: return 16;
+        7: return 17;
+        8: return 18;
+        9: return 19;
+        10: return 20;
+        return CB_RESULT_DO_NOTHING;
+    }
+
+    switch (FEAT_INDUSTRYTILES, SELF, oil_wells_tile_1_start_anim, animation_frame) {
+        11: return 1;
+        12: return 2;
+        13: return 3;
+        14: return 4;
+        15: return 5;
+        16: return 6;
+        17: return 7;
+        18: return 8;
+        19: return 9;
+        20: return 10;
+        return CB_RESULT_START_ANIMATION;
+    }
+
+    random_switch (FEAT_INDUSTRYTILES, SELF, oil_wells_tile_1_anim_control, bitmask(TRIGGER_INDUSTRYTILE_TILELOOP)) {
+        1: return oil_wells_tile_1_stop_anim;
+        1: return oil_wells_tile_1_start_anim;
+    }
+
+    switch (FEAT_INDUSTRYTILES, SELF, oil_wells_tile_1_anim_next_frame, animation_frame) {
+        10: return 1;
+        11: return CB_RESULT_STOP_ANIMATION; // Don't actually stop animation, just keep looping the same frame over and over.
+        20: return 11;
+        return CB_RESULT_NEXT_FRAME;
+    }
+
+    
+        
+    
+
+
+
+    
+    item(FEAT_INDUSTRYTILES, oil_wells_tile_1, 215) {
+        property {
+            substitute:         0;
+            land_shape_flags:   0;
+            special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL,INDTILE_FLAG_RANDOM_ANIMATION);
+            
+            
+                animation_info: [ANIMATION_LOOPING, 20];
+            
+            
+                animation_speed: 3;
+            
+            animation_triggers: bitmask(ANIM_TRIGGER_INDTILE_TILE_LOOP);
+        }
+
+        graphics {
+    		
+    		    tile_check: oil_wells_tile_1_lc_0;
+            
+            
+                anim_next_frame: return oil_wells_tile_1_anim_next_frame;
+            
+    		
+    		    
+                
+                
+        		    anim_control: oil_wells_tile_1_anim_control;
+                
+    		
+            
+                random_trigger: oil_wells_tile_1_anim_control;
+            
+    		
+    		
+            oil_wells_switch_graphics;
+        }
+    }
+
+    
+    item(FEAT_INDUSTRYTILES, oil_wells_tile_2, 216) {
+        property {
+            substitute:         0;
+            land_shape_flags:   0;
+            special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+            
+            
+            
+            animation_triggers: bitmask();
+        }
+
+        graphics {
+    		
+    		    tile_check: oil_wells_tile_2_lc_0;
+            
+            
+    		
+            
+    		
+    		
+            oil_wells_switch_graphics;
+        }
+    }
+
+
+
+
+/* *************************************************
+ * Definition of the industry
+ * *************************************************/
+
+
+    tilelayout oil_wells_industry_layout_1_tilelayout {
+        
+            0, 0: oil_wells_tile_1;
+        
+            0, 7: oil_wells_tile_1;
+        
+            1, 4: oil_wells_tile_1;
+        
+            2, 1: oil_wells_tile_1;
+        
+            3, 5: oil_wells_tile_2;
+        
+            4, 8: oil_wells_tile_1;
+        
+            5, 1: oil_wells_tile_1;
+        
+            5, 4: oil_wells_tile_1;
+        
+    }
+
+    tilelayout oil_wells_industry_layout_2_tilelayout {
+        
+            0, 0: oil_wells_tile_1;
+        
+            0, 4: oil_wells_tile_1;
+        
+            1, 4: oil_wells_tile_1;
+        
+            2, 8: oil_wells_tile_1;
+        
+            4, 4: oil_wells_tile_2;
+        
+            4, 8: oil_wells_tile_1;
+        
+            5, 2: oil_wells_tile_1;
+        
+            6, 2: oil_wells_tile_1;
+        
+            6, 4: oil_wells_tile_1;
+        
+    }
+
+    tilelayout oil_wells_industry_layout_3_tilelayout {
+        
+            0, 0: oil_wells_tile_1;
+        
+            0, 2: oil_wells_tile_1;
+        
+            1, 4: oil_wells_tile_1;
+        
+            1, 6: oil_wells_tile_1;
+        
+            2, 0: oil_wells_tile_2;
+        
+            3, 2: oil_wells_tile_1;
+        
+            3, 4: oil_wells_tile_1;
+        
+    }
+
+    tilelayout oil_wells_industry_layout_4_tilelayout {
+        
+            0, 0: oil_wells_tile_1;
+        
+            0, 4: oil_wells_tile_1;
+        
+            0, 6: oil_wells_tile_1;
+        
+            1, 2: oil_wells_tile_1;
+        
+            1, 8: oil_wells_tile_2;
+        
+            2, 0: oil_wells_tile_1;
+        
+            2, 2: oil_wells_tile_1;
+        
+            3, 1: oil_wells_tile_1;
+        
+            5, 0: oil_wells_tile_1;
+        
+            5, 2: oil_wells_tile_1;
+        
+            6, 0: oil_wells_tile_1;
+        
+    }
+
+
+
+
+
+switch(FEAT_INDUSTRIES, SELF, oil_wells_extra_text, [
+	STORE_TEMP((primary_level1_requirement * 1) |
+	(primary_level2_requirement * 1) << 16, 0x100),
+	LOAD_PERM(3)
+]) {
+	primary_level2_produced_percent: return string(STR_PRIMARY_PRODUCTION_4X);
+	primary_level1_produced_percent: return string(STR_PRIMARY_PRODUCTION_2X);
+	return string(STR_PRIMARY_PRODUCTION_1X);
+}
+
+
+
+
+    
+    
+        switch (FEAT_INDUSTRIES, SELF, oil_wells_cargo_subtype_display_cargo_ENSP_economy_5, [
+                LOAD_PERM(4)
+            ]) {
+            0: return 0x3800 + string(STR_EMPTY);
+            return 0x3800 + string(STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG);
+        }
+    
+    switch (FEAT_INDUSTRIES, SELF, oil_wells_cargo_subtype_display_switch_cargo_economy_5, getbits(extra_callback_info2, 16, 8)) {
+        
+        
+            ENSP: oil_wells_cargo_subtype_display_cargo_ENSP_economy_5;
+        
+        return CB_RESULT_NO_TEXT;
+    }
+
+
+switch (FEAT_INDUSTRIES, SELF, oil_wells_cargo_subtype_display_switch_economy, economy) {
+    
+        5:  oil_wells_cargo_subtype_display_switch_cargo_economy_5;
+    
+}
+
+
+switch (FEAT_INDUSTRIES, SELF, oil_wells_cargo_subtype_display, getbits(extra_callback_info2, 8, 8)) {
+    1: oil_wells_cargo_subtype_display_switch_economy;
+    return CB_RESULT_NO_TEXT;
+}
+
+
+
+
+
+switch(FEAT_INDUSTRIES, SELF, oil_wells_produce_total_supplies_delivered,
+    [
+    
+        LOAD_PERM(12)
+        +
+    
+        LOAD_PERM(13)
+        +
+    
+        LOAD_PERM(14)
+        +
+    
+        LOAD_PERM(15)
+        +
+    
+        LOAD_PERM(16)
+        +
+    
+        LOAD_PERM(17)
+        +
+    
+        LOAD_PERM(18)
+        +
+    
+        LOAD_PERM(19)
+        +
+    
+        LOAD_PERM(20)
+        +
+    
+        LOAD_PERM(21)
+        +
+    
+        LOAD_PERM(22)
+        +
+    
+        LOAD_PERM(23)
+        +
+    
+        LOAD_PERM(24)
+        +
+    
+        LOAD_PERM(25)
+        +
+    
+        LOAD_PERM(26)
+        +
+    
+        LOAD_PERM(27)
+        +
+    
+        LOAD_PERM(28)
+        +
+    
+        LOAD_PERM(29)
+        +
+    
+        LOAD_PERM(30)
+        +
+    
+        LOAD_PERM(31)
+        +
+    
+        LOAD_PERM(32)
+        +
+    
+        LOAD_PERM(33)
+        +
+    
+        LOAD_PERM(34)
+        +
+    
+        LOAD_PERM(35)
+        +
+    
+        LOAD_PERM(36)
+        +
+    
+        LOAD_PERM(37)
+        +
+    
+        LOAD_PERM(38)
+        
+    
+    ]) {
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, oil_wells_produce_calculate_current_production_level,
+    [
+         STORE_TEMP(oil_wells_produce_total_supplies_delivered(), 8),
+         STORE_TEMP((LOAD_TEMP(8) >= (1 * primary_level2_requirement)) ? primary_level2_produced_percent :
+                    (LOAD_TEMP(8) >= (1 * primary_level1_requirement)) ? primary_level1_produced_percent : 100, 9),
+         STORE_PERM_ALT(3, LOAD_TEMP(9)),
+    ]) {
+    return 0;
+}
+
+
+
+    produce (oil_wells_clear_incoming_cargo_waiting_5,
+        [
+            
+                
+                ENSP: incoming_cargo_waiting("ENSP");
+            
+        ],
+        [],
+    0)
+    switch(FEAT_INDUSTRIES, SELF, oil_wells_store_incoming_cargo_waiting_5,
+        [
+            STORE_PERM_ALT(
+                38,
+                
+                    incoming_cargo_waiting("ENSP") +
+                
+                LOAD_PERM(38)
+            ),
+            
+            
+                STORE_PERM_ALT(
+                    4,
+                    (incoming_cargo_waiting("ENSP") > 0)
+                    ?
+                    28
+                    :
+                    LOAD_PERM(4)
+                ),
+            
+            
+            oil_wells_produce_calculate_current_production_level(),
+        ]) {
+        oil_wells_clear_incoming_cargo_waiting_5;
+    }
+
+
+
+switch (FEAT_INDUSTRIES, SELF, oil_wells_produce_cargo_arrival, economy) {
+    
+        5: oil_wells_store_incoming_cargo_waiting_5;
+    
+}
+
+
+
+
+    produce(oil_wells_produce_256_ticks_economy_5,
+        [],
+        [
+            
+                
+                OIL_: (28 * production_level * LOAD_PERM(2) * LOAD_TEMP(9)) / (16 * 16 * 100);
+            
+        ],
+    0)
+
+
+switch (FEAT_INDUSTRIES, SELF, oil_wells_produce_256_ticks_switch_economy, economy) {
+
+    5: oil_wells_produce_256_ticks_economy_5;
+
+}
+
+
+switch(FEAT_INDUSTRIES, SELF, oil_wells_update_supplied_cycles_remaining_per_cargo,
+    [
+        
+            
+            STORE_PERM_ALT(
+                4,
+                max(
+                    0,
+                    LOAD_PERM(4)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                5,
+                max(
+                    0,
+                    LOAD_PERM(5)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                6,
+                max(
+                    0,
+                    LOAD_PERM(6)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                7,
+                max(
+                    0,
+                    LOAD_PERM(7)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                8,
+                max(
+                    0,
+                    LOAD_PERM(8)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                9,
+                max(
+                    0,
+                    LOAD_PERM(9)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                10,
+                max(
+                    0,
+                    LOAD_PERM(10)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                11,
+                max(
+                    0,
+                    LOAD_PERM(11)
+                    - 1
+                )
+            ),
+        
+    ]) {
+    return 0;
+}
+
+
+switch(FEAT_INDUSTRIES, SELF, oil_wells_produce_256_ticks_shift_supplies_delivered,
+    [
+        
+            STORE_PERM_ALT(
+                12,
+                LOAD_PERM(13),
+            ),
+        
+            STORE_PERM_ALT(
+                13,
+                LOAD_PERM(14),
+            ),
+        
+            STORE_PERM_ALT(
+                14,
+                LOAD_PERM(15),
+            ),
+        
+            STORE_PERM_ALT(
+                15,
+                LOAD_PERM(16),
+            ),
+        
+            STORE_PERM_ALT(
+                16,
+                LOAD_PERM(17),
+            ),
+        
+            STORE_PERM_ALT(
+                17,
+                LOAD_PERM(18),
+            ),
+        
+            STORE_PERM_ALT(
+                18,
+                LOAD_PERM(19),
+            ),
+        
+            STORE_PERM_ALT(
+                19,
+                LOAD_PERM(20),
+            ),
+        
+            STORE_PERM_ALT(
+                20,
+                LOAD_PERM(21),
+            ),
+        
+            STORE_PERM_ALT(
+                21,
+                LOAD_PERM(22),
+            ),
+        
+            STORE_PERM_ALT(
+                22,
+                LOAD_PERM(23),
+            ),
+        
+            STORE_PERM_ALT(
+                23,
+                LOAD_PERM(24),
+            ),
+        
+            STORE_PERM_ALT(
+                24,
+                LOAD_PERM(25),
+            ),
+        
+            STORE_PERM_ALT(
+                25,
+                LOAD_PERM(26),
+            ),
+        
+            STORE_PERM_ALT(
+                26,
+                LOAD_PERM(27),
+            ),
+        
+            STORE_PERM_ALT(
+                27,
+                LOAD_PERM(28),
+            ),
+        
+            STORE_PERM_ALT(
+                28,
+                LOAD_PERM(29),
+            ),
+        
+            STORE_PERM_ALT(
+                29,
+                LOAD_PERM(30),
+            ),
+        
+            STORE_PERM_ALT(
+                30,
+                LOAD_PERM(31),
+            ),
+        
+            STORE_PERM_ALT(
+                31,
+                LOAD_PERM(32),
+            ),
+        
+            STORE_PERM_ALT(
+                32,
+                LOAD_PERM(33),
+            ),
+        
+            STORE_PERM_ALT(
+                33,
+                LOAD_PERM(34),
+            ),
+        
+            STORE_PERM_ALT(
+                34,
+                LOAD_PERM(35),
+            ),
+        
+            STORE_PERM_ALT(
+                35,
+                LOAD_PERM(36),
+            ),
+        
+            STORE_PERM_ALT(
+                36,
+                LOAD_PERM(37),
+            ),
+        
+            STORE_PERM_ALT(
+                37,
+                LOAD_PERM(38),
+            ),
+        
+        STORE_PERM_ALT(38, 0)
+    ]) {
+    return 0;
+}
+
+switch(FEAT_INDUSTRIES, SELF, oil_wells_produce_256_ticks,
+    [
+        
+        oil_wells_produce_calculate_current_production_level(),
+        oil_wells_update_supplied_cycles_remaining_per_cargo(),
+        oil_wells_produce_256_ticks_shift_supplies_delivered(),
+    ]) {
+    oil_wells_produce_256_ticks_switch_economy;
+}
+
+
+
+
+switch(FEAT_INDUSTRIES, SELF, oil_wells_new_production_level,
+    [
+        
+        min(production_level + 16, 105)
+    ]) {
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, oil_wells_monthly_prod_change_increase,
+    [
+        
+        STORE_PERM_ALT(
+            0,
+            60
+        ),
+        
+        STORE_TEMP(
+            string(STR_PROD_CHANGE_TEST) | (oil_wells_new_production_level() << 16),
+            256
+        )
+    ]) {
+    return CB_RESULT_IND_PROD_SET_BY_0x100 | (1 << 8);  
+}
+
+
+switch(FEAT_INDUSTRIES, PARENT, oil_wells_monthly_prod_change_dice_roll,
+    [
+        getbits(extra_callback_info2, 0, 5) * (LOAD_PERM(2) >= 4)
+    ]) {
+    1: oil_wells_monthly_prod_change_increase;
+    return CB_RESULT_IND_PROD_NO_CHANGE;
+}
+
+
+switch(FEAT_INDUSTRIES, PARENT, oil_wells_initialise_permanent_prod_change, [(town_index % 3) + 1]) {
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, oil_wells_monthly_prod_change_update_cycle_counter_decrement_or_reset,
+    [
+        LOAD_PERM(0) == 1
+        ?
+        3
+        :
+        LOAD_PERM(0) - 1
+    ]) {
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, oil_wells_monthly_prod_change_update_cycle_counter,
+    [
+        STORE_PERM_ALT(
+            0,
+            LOAD_PERM(0) == 0
+            ?
+            oil_wells_initialise_permanent_prod_change()
+            :
+            oil_wells_monthly_prod_change_update_cycle_counter_decrement_or_reset()
+        )
+    ]) {
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, oil_wells_monthly_prod_change,
+    [
+        
+        monthly_town_loop(
+            0,
+            1
+        ),
+        oil_wells_monthly_prod_change_update_cycle_counter(),
+    ]) {
+    1: oil_wells_monthly_prod_change_dice_roll;
+    return CB_RESULT_IND_PROD_NO_CHANGE;
+}
+
+
+
+
+
+switch(FEAT_INDUSTRIES, SELF, oil_wells_check_availability_param, restrict_open_during_gameplay) {
+	1..255: return CB_RESULT_IND_NO_CONSTRUCTION;         // disallow when restrictions in place
+	return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;       // we may build
+}
+
+
+switch (FEAT_INDUSTRIES, SELF, oil_wells_check_map_gen, extra_callback_info2 == IND_CREATION_GENERATION) {
+	1: return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;
+	oil_wells_check_availability_param;
+}
+
+switch (FEAT_INDUSTRIES, SELF, oil_wells_available_game_mode, game_mode == GAMEMODE_GAME) {
+	1: oil_wells_check_map_gen;
+	return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;
+}
+
+
+
+    /* 0 */
+    switch (FEAT_INDUSTRIES, SELF, oil_wells_check_availability_5, current_date) {
+        date(0,1,1) .. date(5000000,12,31): oil_wells_available_game_mode;
+        return CB_RESULT_IND_NO_CONSTRUCTION;
+    }
+
+
+switch (FEAT_INDUSTRIES, SELF, oil_wells_check_availability, economy) {
+    
+        5: oil_wells_check_availability_5;
+    
+}
+
+
+
+
+
+
+
+    if (economy==5) {
+        item(FEAT_INDUSTRIES, oil_wells, 11) {
+            property {
+                
+                substitute: 0;
+                override: 0;
+                map_colour: 151;
+                life_type: IND_LIFE_TYPE_EXTRACTIVE;
+                
+                
+                
+                
+                min_cargo_distr: 1;
+                layouts: [oil_wells_industry_layout_1_tilelayout,oil_wells_industry_layout_2_tilelayout,oil_wells_industry_layout_3_tilelayout,oil_wells_industry_layout_4_tilelayout];
+                spec_flags: bitmask(IND_FLAG_LONG_CARGO_TYPE_LISTS);
+                conflicting_ind_types: []; // set this prop empty, FIRS has it's own better checks for this
+                random_sound_effects: []; // set this empty to avoid spurious default industry sounds (as of May 2017 FIRS does not yet use sound effects)
+                
+                name: TTD_STR_INDUSTRY_NAME_OIL_WELLS;
+                prob_map_gen: 8;
+                prob_in_game: 6;
+                prospect_chance: 0.75;
+                fund_cost_multiplier: 230;
+                remove_cost_multiplier: 0;
+                remove_cost_multiplier: 0;
+                
+                cargo_types: [accept_cargo("ENSP"),produce_cargo("OIL_",0)];
+                nearby_station_name: string(STR_STATION, string(STR_TOWN),string(STR_STATION_WELLS));
+            }
+        }
+    }
+
+
+
+
+
+    if (economy==5) {
+        item(FEAT_INDUSTRIES, oil_wells, 11) {
+            graphics {
+                construction_probability: oil_wells_check_availability;
+                build_prod_change:        randomise_primary_production_on_build(2);
+                produce_cargo_arrival:    oil_wells_produce_cargo_arrival;
+                produce_256_ticks:        oil_wells_produce_256_ticks;
+                monthly_prod_change:      oil_wells_monthly_prod_change;
+                random_prod_change:       CB_RESULT_IND_PROD_NO_CHANGE;
+                location_check:           oil_wells_check_location;
+                extra_text_fund:          return CB_RESULT_NO_TEXT;
+                extra_text_industry:      oil_wells_extra_text;
+                cargo_subtype_display:    oil_wells_cargo_subtype_display;
+                colour:                   switch_colour;
+            }
+        }
+    }
+

@@ -1,0 +1,1694 @@
+/* ******************************************************************
+ * Definition of the industry tile, its callbacks, and graphics chain
+ * ******************************************************************/
+
+
+
+
+
+    spritelayout copper_mine_spritelayout_1 {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: 2022;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: 2022;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+            childsprite {
+                sprite: 2022;
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                hide_sprite: (LOAD_TEMP(13));
+                always_draw: 1;
+            }
+            
+            childsprite {
+                sprite: 2022;
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                hide_sprite: (!LOAD_TEMP(13));
+                always_draw: 1;
+            }
+        
+
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(1);
+                hide_sprite: (LOAD_TEMP(9) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(5) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(2);
+                hide_sprite: (LOAD_TEMP(10) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(6) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: 2039;
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 16;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: 2039;
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 16;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(3);
+                hide_sprite: (LOAD_TEMP(11) == 0);
+                xoffset: 0;
+                yoffset:  16;
+                zoffset:  LOAD_TEMP(7) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(4);
+                hide_sprite: (LOAD_TEMP(12) == 0);
+                xoffset: 16;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(8) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+    }
+
+    spritelayout copper_mine_spritelayout_2 {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: 2022;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: 2022;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+            childsprite {
+                sprite: 2022;
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                hide_sprite: (LOAD_TEMP(13));
+                always_draw: 1;
+            }
+            
+            childsprite {
+                sprite: 2022;
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                hide_sprite: (!LOAD_TEMP(13));
+                always_draw: 1;
+            }
+        
+
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(1);
+                hide_sprite: (LOAD_TEMP(9) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(5) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(2);
+                hide_sprite: (LOAD_TEMP(10) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(6) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+        
+        
+            
+        
+
+        
+
+        
+
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(3);
+                hide_sprite: (LOAD_TEMP(11) == 0);
+                xoffset: 0;
+                yoffset:  16;
+                zoffset:  LOAD_TEMP(7) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(4);
+                hide_sprite: (LOAD_TEMP(12) == 0);
+                xoffset: 16;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(8) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+    }
+
+    spritelayout copper_mine_spritelayout_3_anim {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: 2022;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: 2022;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+            childsprite {
+                sprite: 2022;
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                hide_sprite: (LOAD_TEMP(13));
+                always_draw: 1;
+            }
+            
+            childsprite {
+                sprite: 2022;
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                hide_sprite: (!LOAD_TEMP(13));
+                always_draw: 1;
+            }
+        
+
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(1);
+                hide_sprite: (LOAD_TEMP(9) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(5) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(2);
+                hide_sprite: (LOAD_TEMP(10) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(6) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: 2028 + ((animation_frame &lt; 33) ? (animation_frame %3) : 0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 2;
+                    yoffset: 3;
+                    zoffset: 0;
+                    xextent: 13;
+                    yextent: 12;
+                    zextent: 16;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: 2028 + ((animation_frame &lt; 33) ? (animation_frame %3) : 0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 2;
+                    yoffset: 3;
+                    zoffset: 0;
+                    xextent: 13;
+                    yextent: 12;
+                    zextent: 16;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(3);
+                hide_sprite: (LOAD_TEMP(11) == 0);
+                xoffset: 0;
+                yoffset:  16;
+                zoffset:  LOAD_TEMP(7) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(4);
+                hide_sprite: (LOAD_TEMP(12) == 0);
+                xoffset: 16;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(8) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+    }
+
+    spritelayout copper_mine_spritelayout_4 {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: 2022;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: 2022;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+            childsprite {
+                sprite: 2022;
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                hide_sprite: (LOAD_TEMP(13));
+                always_draw: 1;
+            }
+            
+            childsprite {
+                sprite: 2022;
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                hide_sprite: (!LOAD_TEMP(13));
+                always_draw: 1;
+            }
+        
+
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(1);
+                hide_sprite: (LOAD_TEMP(9) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(5) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(2);
+                hide_sprite: (LOAD_TEMP(10) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(6) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: 2036;
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 16;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: 2036;
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 16;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(3);
+                hide_sprite: (LOAD_TEMP(11) == 0);
+                xoffset: 0;
+                yoffset:  16;
+                zoffset:  LOAD_TEMP(7) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(4);
+                hide_sprite: (LOAD_TEMP(12) == 0);
+                xoffset: 16;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(8) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+    }
+
+    spritelayout copper_mine_spritelayout_5 {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: 2022;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: 2022;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+            childsprite {
+                sprite: 2022;
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                hide_sprite: (LOAD_TEMP(13));
+                always_draw: 1;
+            }
+            
+            childsprite {
+                sprite: 2022;
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                hide_sprite: (!LOAD_TEMP(13));
+                always_draw: 1;
+            }
+        
+
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(1);
+                hide_sprite: (LOAD_TEMP(9) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(5) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(2);
+                hide_sprite: (LOAD_TEMP(10) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(6) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: 2033;
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 16;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: 2033;
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 16;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+            
+            building {
+                sprite: 2040 + (animation_frame / 4);
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                xoffset: 0;
+                yoffset: 2;
+                zoffset: 38+ animation_frame;
+                xextent: 11;
+                yextent: 16;
+                zextent: 7;
+                hide_sprite: animation_frame &gt; 19;
+            }
+        
+
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(3);
+                hide_sprite: (LOAD_TEMP(11) == 0);
+                xoffset: 0;
+                yoffset:  16;
+                zoffset:  LOAD_TEMP(7) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(4);
+                hide_sprite: (LOAD_TEMP(12) == 0);
+                xoffset: 16;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(8) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+    }
+
+
+
+
+
+
+    switch(FEAT_INDUSTRYTILES, SELF, copper_mine_industry_layout_1_graphics_switch, relative_pos) {
+        
+            
+            
+                relative_coord(0, 0): copper_mine_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(0, 1): copper_mine_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(0, 2): copper_mine_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(1, 0): copper_mine_spritelayout_5;
+            
+        
+            
+            
+                relative_coord(1, 1): copper_mine_spritelayout_3_anim;
+            
+        
+            
+            
+                relative_coord(1, 2): copper_mine_spritelayout_4;
+            
+        
+            
+            
+                relative_coord(2, 0): copper_mine_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(2, 1): copper_mine_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(2, 2): copper_mine_spritelayout_2;
+            
+        
+            
+            
+                relative_coord(3, 1): copper_mine_spritelayout_1;
+            
+        
+        return 0; // a default is needed, but should never be reached, layout definitions are explicit
+    }
+
+
+
+
+switch(FEAT_INDUSTRYTILES, SELF, copper_mine_industry_construction_state_graphics_switch, construction_state) {
+    0..2: spritelayout_default_construction_states;
+    
+    copper_mine_industry_layout_1_graphics_switch; // default
+}
+
+switch(FEAT_INDUSTRYTILES, SELF, copper_mine_store_temp_vars,
+        [STORE_TEMP(random_bits, 14),
+         STORE_TEMP(terrain_type == TILETYPE_SNOW, 13)
+            
+                , STORE_TEMP(0,
+                             127) 
+                , STORE_TEMP(construction_state != 3 ? 1 : LOAD_TEMP(127),
+                             127)
+                , STORE_TEMP(LOAD_TEMP(13) == 0 ? 1 : LOAD_TEMP(127), 
+                             117) 
+                , STORE_TEMP(LOAD_TEMP(13) == 1 ? 1 : LOAD_TEMP(127), 
+                             127)
+            
+        ]) {
+    copper_mine_industry_construction_state_graphics_switch; // default
+}
+
+switch (FEAT_INDUSTRYTILES, SELF, copper_mine_switch_graphics, [
+                                    switch_tile_fences(),
+                                    switch_terrain_sprite(),
+                                    
+                                 ]) {
+    copper_mine_store_temp_vars;
+}
+
+
+
+    
+        
+            
+    
+    switch(FEAT_INDUSTRYTILES, SELF, copper_mine_tile_1_lc_1,
+            (nearby_tile_class( 2,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2, -2) == TILE_CLASS_INDUSTRY)
+        ) {
+        1: return CB_RESULT_LOCATION_DISALLOW;
+        return CB_RESULT_LOCATION_ALLOW;
+    }
+
+        
+            
+    
+    switch (FEAT_INDUSTRYTILES, PARENT, copper_mine_tile_1_lc_0, (
+                (((extra_callback_info2 & 0xFF00) >> 8) == IND_CREATION_FUND) ||
+                (((extra_callback_info2 & 0xFF00) >> 8) == IND_CREATION_PROSPECT)
+                )
+            ) {
+        1: return CB_RESULT_LOCATION_ALLOW;
+        copper_mine_tile_1_lc_1;
+    }
+
+        
+    
+
+
+
+    
+        
+    
+    
+    switch(FEAT_INDUSTRYTILES, SELF, copper_mine_tile_1_anim_control, (extra_callback_info1 % 71)) {
+        
+            0: return 0;
+        
+            1: return 1;
+        
+            2: return 2;
+        
+            3: return 3;
+        
+            4: return 4;
+        
+            5: return 5;
+        
+            6: return 6;
+        
+            7: return 7;
+        
+            8: return 8;
+        
+            9: return 9;
+        
+            10: return 10;
+        
+            11: return 11;
+        
+            12: return 12;
+        
+            13: return 13;
+        
+            14: return 14;
+        
+            15: return 15;
+        
+            16: return 16;
+        
+            17: return 17;
+        
+            18: return 18;
+        
+            19: return 19;
+        
+            20: return 20;
+        
+            21: return 21;
+        
+            22: return 22;
+        
+            23: return 23;
+        
+            24: return 24;
+        
+            25: return 25;
+        
+            26: return 26;
+        
+            27: return 27;
+        
+            28: return 28;
+        
+            29: return 29;
+        
+            30: return 30;
+        
+            31: return 31;
+        
+            32: return 32;
+        
+            33: return 33;
+        
+            34: return 34;
+        
+            35: return 35;
+        
+            36: return 36;
+        
+            37: return 37;
+        
+            38: return 38;
+        
+            39: return 39;
+        
+            40: return 40;
+        
+            41: return 41;
+        
+            42: return 42;
+        
+            43: return 43;
+        
+            44: return 44;
+        
+            45: return 45;
+        
+            46: return 46;
+        
+            47: return 47;
+        
+            48: return 48;
+        
+            49: return 49;
+        
+            50: return 50;
+        
+            51: return 51;
+        
+            52: return 52;
+        
+            53: return 53;
+        
+            54: return 54;
+        
+            55: return 55;
+        
+            56: return 56;
+        
+            57: return 57;
+        
+            58: return 58;
+        
+            59: return 59;
+        
+            60: return 60;
+        
+            61: return 61;
+        
+            62: return 62;
+        
+            63: return 63;
+        
+            64: return 64;
+        
+            65: return 65;
+        
+            66: return 66;
+        
+            67: return 67;
+        
+            68: return 68;
+        
+            69: return 69;
+        
+            70: return 70;
+        
+        return CB_RESULT_NEXT_FRAME;
+    }
+
+    
+
+
+
+    
+    item(FEAT_INDUSTRYTILES, copper_mine_tile_1, 174) {
+        property {
+            substitute:         0;
+            land_shape_flags:   0;
+            special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+            
+            
+                animation_info: [ANIMATION_LOOPING, 71];
+            
+            
+                animation_speed: 2;
+            
+            animation_triggers: bitmask(ANIM_TRIGGER_INDTILE_CONSTRUCTION_STATE);
+        }
+
+        graphics {
+    		
+    		    tile_check: copper_mine_tile_1_lc_0;
+            
+            
+    		
+    		    
+                
+                
+        		    anim_control: copper_mine_tile_1_anim_control;
+                
+    		
+            
+    		
+    		
+            copper_mine_switch_graphics;
+        }
+    }
+
+
+
+
+/* *************************************************
+ * Definition of the industry
+ * *************************************************/
+
+
+    tilelayout copper_mine_industry_layout_1_tilelayout {
+        
+            0, 0: copper_mine_tile_1;
+        
+            0, 1: copper_mine_tile_1;
+        
+            0, 2: copper_mine_tile_1;
+        
+            1, 0: copper_mine_tile_1;
+        
+            1, 1: copper_mine_tile_1;
+        
+            1, 2: copper_mine_tile_1;
+        
+            2, 0: copper_mine_tile_1;
+        
+            2, 1: copper_mine_tile_1;
+        
+            2, 2: copper_mine_tile_1;
+        
+            3, 1: copper_mine_tile_1;
+        
+    }
+
+
+
+
+
+switch(FEAT_INDUSTRIES, SELF, copper_mine_extra_text, [
+	STORE_TEMP((primary_level1_requirement * 1) |
+	(primary_level2_requirement * 1) << 16, 0x100),
+	LOAD_PERM(3)
+]) {
+	primary_level2_produced_percent: return string(STR_PRIMARY_PRODUCTION_4X);
+	primary_level1_produced_percent: return string(STR_PRIMARY_PRODUCTION_2X);
+	return string(STR_PRIMARY_PRODUCTION_1X);
+}
+
+
+
+
+    
+    
+        switch (FEAT_INDUSTRIES, SELF, copper_mine_cargo_subtype_display_cargo_ENSP_economy_5, [
+                LOAD_PERM(4)
+            ]) {
+            0: return 0x3800 + string(STR_EMPTY);
+            return 0x3800 + string(STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG);
+        }
+    
+    switch (FEAT_INDUSTRIES, SELF, copper_mine_cargo_subtype_display_switch_cargo_economy_5, getbits(extra_callback_info2, 16, 8)) {
+        
+        
+            ENSP: copper_mine_cargo_subtype_display_cargo_ENSP_economy_5;
+        
+        return CB_RESULT_NO_TEXT;
+    }
+
+
+switch (FEAT_INDUSTRIES, SELF, copper_mine_cargo_subtype_display_switch_economy, economy) {
+    
+        5:  copper_mine_cargo_subtype_display_switch_cargo_economy_5;
+    
+}
+
+
+switch (FEAT_INDUSTRIES, SELF, copper_mine_cargo_subtype_display, getbits(extra_callback_info2, 8, 8)) {
+    1: copper_mine_cargo_subtype_display_switch_economy;
+    return CB_RESULT_NO_TEXT;
+}
+
+
+
+
+
+switch(FEAT_INDUSTRIES, SELF, copper_mine_produce_total_supplies_delivered,
+    [
+    
+        LOAD_PERM(12)
+        +
+    
+        LOAD_PERM(13)
+        +
+    
+        LOAD_PERM(14)
+        +
+    
+        LOAD_PERM(15)
+        +
+    
+        LOAD_PERM(16)
+        +
+    
+        LOAD_PERM(17)
+        +
+    
+        LOAD_PERM(18)
+        +
+    
+        LOAD_PERM(19)
+        +
+    
+        LOAD_PERM(20)
+        +
+    
+        LOAD_PERM(21)
+        +
+    
+        LOAD_PERM(22)
+        +
+    
+        LOAD_PERM(23)
+        +
+    
+        LOAD_PERM(24)
+        +
+    
+        LOAD_PERM(25)
+        +
+    
+        LOAD_PERM(26)
+        +
+    
+        LOAD_PERM(27)
+        +
+    
+        LOAD_PERM(28)
+        +
+    
+        LOAD_PERM(29)
+        +
+    
+        LOAD_PERM(30)
+        +
+    
+        LOAD_PERM(31)
+        +
+    
+        LOAD_PERM(32)
+        +
+    
+        LOAD_PERM(33)
+        +
+    
+        LOAD_PERM(34)
+        +
+    
+        LOAD_PERM(35)
+        +
+    
+        LOAD_PERM(36)
+        +
+    
+        LOAD_PERM(37)
+        +
+    
+        LOAD_PERM(38)
+        
+    
+    ]) {
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, copper_mine_produce_calculate_current_production_level,
+    [
+         STORE_TEMP(copper_mine_produce_total_supplies_delivered(), 8),
+         STORE_TEMP((LOAD_TEMP(8) >= (1 * primary_level2_requirement)) ? primary_level2_produced_percent :
+                    (LOAD_TEMP(8) >= (1 * primary_level1_requirement)) ? primary_level1_produced_percent : 100, 9),
+         STORE_PERM_ALT(3, LOAD_TEMP(9)),
+    ]) {
+    return 0;
+}
+
+
+
+    produce (copper_mine_clear_incoming_cargo_waiting_5,
+        [
+            
+                
+                ENSP: incoming_cargo_waiting("ENSP");
+            
+        ],
+        [],
+    0)
+    switch(FEAT_INDUSTRIES, SELF, copper_mine_store_incoming_cargo_waiting_5,
+        [
+            STORE_PERM_ALT(
+                38,
+                
+                    incoming_cargo_waiting("ENSP") +
+                
+                LOAD_PERM(38)
+            ),
+            
+            
+                STORE_PERM_ALT(
+                    4,
+                    (incoming_cargo_waiting("ENSP") > 0)
+                    ?
+                    28
+                    :
+                    LOAD_PERM(4)
+                ),
+            
+            
+            copper_mine_produce_calculate_current_production_level(),
+        ]) {
+        copper_mine_clear_incoming_cargo_waiting_5;
+    }
+
+
+
+switch (FEAT_INDUSTRIES, SELF, copper_mine_produce_cargo_arrival, economy) {
+    
+        5: copper_mine_store_incoming_cargo_waiting_5;
+    
+}
+
+
+
+
+    produce(copper_mine_produce_256_ticks_economy_5,
+        [],
+        [
+            
+                
+                CORE: (20 * production_level * LOAD_PERM(2) * LOAD_TEMP(9)) / (16 * 16 * 100);
+            
+        ],
+    0)
+
+
+switch (FEAT_INDUSTRIES, SELF, copper_mine_produce_256_ticks_switch_economy, economy) {
+
+    5: copper_mine_produce_256_ticks_economy_5;
+
+}
+
+
+switch(FEAT_INDUSTRIES, SELF, copper_mine_update_supplied_cycles_remaining_per_cargo,
+    [
+        
+            
+            STORE_PERM_ALT(
+                4,
+                max(
+                    0,
+                    LOAD_PERM(4)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                5,
+                max(
+                    0,
+                    LOAD_PERM(5)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                6,
+                max(
+                    0,
+                    LOAD_PERM(6)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                7,
+                max(
+                    0,
+                    LOAD_PERM(7)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                8,
+                max(
+                    0,
+                    LOAD_PERM(8)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                9,
+                max(
+                    0,
+                    LOAD_PERM(9)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                10,
+                max(
+                    0,
+                    LOAD_PERM(10)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                11,
+                max(
+                    0,
+                    LOAD_PERM(11)
+                    - 1
+                )
+            ),
+        
+    ]) {
+    return 0;
+}
+
+
+switch(FEAT_INDUSTRIES, SELF, copper_mine_produce_256_ticks_shift_supplies_delivered,
+    [
+        
+            STORE_PERM_ALT(
+                12,
+                LOAD_PERM(13),
+            ),
+        
+            STORE_PERM_ALT(
+                13,
+                LOAD_PERM(14),
+            ),
+        
+            STORE_PERM_ALT(
+                14,
+                LOAD_PERM(15),
+            ),
+        
+            STORE_PERM_ALT(
+                15,
+                LOAD_PERM(16),
+            ),
+        
+            STORE_PERM_ALT(
+                16,
+                LOAD_PERM(17),
+            ),
+        
+            STORE_PERM_ALT(
+                17,
+                LOAD_PERM(18),
+            ),
+        
+            STORE_PERM_ALT(
+                18,
+                LOAD_PERM(19),
+            ),
+        
+            STORE_PERM_ALT(
+                19,
+                LOAD_PERM(20),
+            ),
+        
+            STORE_PERM_ALT(
+                20,
+                LOAD_PERM(21),
+            ),
+        
+            STORE_PERM_ALT(
+                21,
+                LOAD_PERM(22),
+            ),
+        
+            STORE_PERM_ALT(
+                22,
+                LOAD_PERM(23),
+            ),
+        
+            STORE_PERM_ALT(
+                23,
+                LOAD_PERM(24),
+            ),
+        
+            STORE_PERM_ALT(
+                24,
+                LOAD_PERM(25),
+            ),
+        
+            STORE_PERM_ALT(
+                25,
+                LOAD_PERM(26),
+            ),
+        
+            STORE_PERM_ALT(
+                26,
+                LOAD_PERM(27),
+            ),
+        
+            STORE_PERM_ALT(
+                27,
+                LOAD_PERM(28),
+            ),
+        
+            STORE_PERM_ALT(
+                28,
+                LOAD_PERM(29),
+            ),
+        
+            STORE_PERM_ALT(
+                29,
+                LOAD_PERM(30),
+            ),
+        
+            STORE_PERM_ALT(
+                30,
+                LOAD_PERM(31),
+            ),
+        
+            STORE_PERM_ALT(
+                31,
+                LOAD_PERM(32),
+            ),
+        
+            STORE_PERM_ALT(
+                32,
+                LOAD_PERM(33),
+            ),
+        
+            STORE_PERM_ALT(
+                33,
+                LOAD_PERM(34),
+            ),
+        
+            STORE_PERM_ALT(
+                34,
+                LOAD_PERM(35),
+            ),
+        
+            STORE_PERM_ALT(
+                35,
+                LOAD_PERM(36),
+            ),
+        
+            STORE_PERM_ALT(
+                36,
+                LOAD_PERM(37),
+            ),
+        
+            STORE_PERM_ALT(
+                37,
+                LOAD_PERM(38),
+            ),
+        
+        STORE_PERM_ALT(38, 0)
+    ]) {
+    return 0;
+}
+
+switch(FEAT_INDUSTRIES, SELF, copper_mine_produce_256_ticks,
+    [
+        
+        copper_mine_produce_calculate_current_production_level(),
+        copper_mine_update_supplied_cycles_remaining_per_cargo(),
+        copper_mine_produce_256_ticks_shift_supplies_delivered(),
+    ]) {
+    copper_mine_produce_256_ticks_switch_economy;
+}
+
+
+
+
+switch(FEAT_INDUSTRIES, SELF, copper_mine_new_production_level,
+    [
+        
+        min(production_level + 16, 105)
+    ]) {
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, copper_mine_monthly_prod_change_increase,
+    [
+        
+        STORE_PERM_ALT(
+            0,
+            60
+        ),
+        
+        STORE_TEMP(
+            string(STR_PROD_CHANGE_TEST) | (copper_mine_new_production_level() << 16),
+            256
+        )
+    ]) {
+    return CB_RESULT_IND_PROD_SET_BY_0x100 | (1 << 8);  
+}
+
+
+switch(FEAT_INDUSTRIES, PARENT, copper_mine_monthly_prod_change_dice_roll,
+    [
+        getbits(extra_callback_info2, 0, 5) * (LOAD_PERM(2) >= 4)
+    ]) {
+    1: copper_mine_monthly_prod_change_increase;
+    return CB_RESULT_IND_PROD_NO_CHANGE;
+}
+
+
+switch(FEAT_INDUSTRIES, PARENT, copper_mine_initialise_permanent_prod_change, [(town_index % 3) + 1]) {
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, copper_mine_monthly_prod_change_update_cycle_counter_decrement_or_reset,
+    [
+        LOAD_PERM(0) == 1
+        ?
+        3
+        :
+        LOAD_PERM(0) - 1
+    ]) {
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, copper_mine_monthly_prod_change_update_cycle_counter,
+    [
+        STORE_PERM_ALT(
+            0,
+            LOAD_PERM(0) == 0
+            ?
+            copper_mine_initialise_permanent_prod_change()
+            :
+            copper_mine_monthly_prod_change_update_cycle_counter_decrement_or_reset()
+        )
+    ]) {
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, copper_mine_monthly_prod_change,
+    [
+        
+        monthly_town_loop(
+            0,
+            1
+        ),
+        copper_mine_monthly_prod_change_update_cycle_counter(),
+    ]) {
+    1: copper_mine_monthly_prod_change_dice_roll;
+    return CB_RESULT_IND_PROD_NO_CHANGE;
+}
+
+
+
+
+
+switch(FEAT_INDUSTRIES, SELF, copper_mine_check_availability_param, restrict_open_during_gameplay) {
+	1..255: return CB_RESULT_IND_NO_CONSTRUCTION;         // disallow when restrictions in place
+	return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;       // we may build
+}
+
+
+switch (FEAT_INDUSTRIES, SELF, copper_mine_check_map_gen, extra_callback_info2 == IND_CREATION_GENERATION) {
+	1: return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;
+	copper_mine_check_availability_param;
+}
+
+switch (FEAT_INDUSTRIES, SELF, copper_mine_available_game_mode, game_mode == GAMEMODE_GAME) {
+	1: copper_mine_check_map_gen;
+	return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;
+}
+
+
+
+    /* 0 */
+    switch (FEAT_INDUSTRIES, SELF, copper_mine_check_availability_5, current_date) {
+        date(0,1,1) .. date(5000000,12,31): copper_mine_available_game_mode;
+        return CB_RESULT_IND_NO_CONSTRUCTION;
+    }
+
+
+switch (FEAT_INDUSTRIES, SELF, copper_mine_check_availability, economy) {
+    
+        5: copper_mine_check_availability_5;
+    
+}
+
+
+
+
+
+
+
+    if (economy==5) {
+        item(FEAT_INDUSTRIES, copper_mine, 42) {
+            property {
+                
+                substitute: 0;
+                override: 0;
+                map_colour: 10;
+                life_type: IND_LIFE_TYPE_EXTRACTIVE;
+                
+                
+                
+                
+                min_cargo_distr: 1;
+                layouts: [copper_mine_industry_layout_1_tilelayout];
+                spec_flags: bitmask(IND_FLAG_LONG_CARGO_TYPE_LISTS);
+                conflicting_ind_types: []; // set this prop empty, FIRS has it's own better checks for this
+                random_sound_effects: []; // set this empty to avoid spurious default industry sounds (as of May 2017 FIRS does not yet use sound effects)
+                
+                name: TTD_STR_INDUSTRY_NAME_COPPER_ORE_MINE;
+                prob_map_gen: 7;
+                prob_in_game: 7;
+                prospect_chance: 0.75;
+                fund_cost_multiplier: 238;
+                remove_cost_multiplier: 0;
+                remove_cost_multiplier: 0;
+                
+                cargo_types: [accept_cargo("ENSP"),produce_cargo("CORE",0)];
+                nearby_station_name: string(STR_STATION, string(STR_TOWN),string(STR_STATION_COPPER_LODE));
+            }
+        }
+    }
+
+
+
+
+
+    if (economy==5) {
+        item(FEAT_INDUSTRIES, copper_mine, 42) {
+            graphics {
+                construction_probability: copper_mine_check_availability;
+                build_prod_change:        randomise_primary_production_on_build(2);
+                produce_cargo_arrival:    copper_mine_produce_cargo_arrival;
+                produce_256_ticks:        copper_mine_produce_256_ticks;
+                monthly_prod_change:      copper_mine_monthly_prod_change;
+                random_prod_change:       CB_RESULT_IND_PROD_NO_CHANGE;
+                location_check:           copper_mine_check_location;
+                extra_text_fund:          return CB_RESULT_NO_TEXT;
+                extra_text_industry:      copper_mine_extra_text;
+                cargo_subtype_display:    copper_mine_cargo_subtype_display;
+                colour:                   switch_colour;
+            }
+        }
+    }
+

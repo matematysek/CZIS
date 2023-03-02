@@ -1,0 +1,3310 @@
+/* ******************************************************************
+ * Definition of the industry tile, its callbacks, and graphics chain
+ * ******************************************************************/
+
+
+    
+
+    
+        
+        
+    
+
+    
+
+    
+
+    
+        
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(vehicle_distributor_spriteset_2_0) {
+                
+                    
+                        [10, 60, 64, 59, -31, -28, ANIM | NOCROP, "src/graphics/industries/vehicle_distributor_1.png"]
+                    
+                
+            }
+            spriteset(vehicle_distributor_spriteset_2_0_snow) {
+                
+                    
+                            [10, 60, 64, 59, -31, -28, ANIM | NOCROP, "src/graphics/industries/vehicle_distributor_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(vehicle_distributor_spriteset_3_0) {
+                
+                    
+                        [80, 60, 64, 59, -31, -28, ANIM | NOCROP, "src/graphics/industries/vehicle_distributor_1.png"]
+                    
+                
+            }
+            spriteset(vehicle_distributor_spriteset_3_0_snow) {
+                
+                    
+                            [80, 60, 64, 59, -31, -28, ANIM | NOCROP, "src/graphics/industries/vehicle_distributor_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+
+
+
+    spritelayout vehicle_distributor_spritelayout_1 {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(1);
+                hide_sprite: (LOAD_TEMP(9) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(5) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(2);
+                hide_sprite: (LOAD_TEMP(10) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(6) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: vehicle_distributor_spriteset_2_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: vehicle_distributor_spriteset_2_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(3);
+                hide_sprite: (LOAD_TEMP(11) == 0);
+                xoffset: 0;
+                yoffset:  16;
+                zoffset:  LOAD_TEMP(7) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(4);
+                hide_sprite: (LOAD_TEMP(12) == 0);
+                xoffset: 16;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(8) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+    }
+
+    spritelayout vehicle_distributor_spritelayout_2 {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_concrete_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(1);
+                hide_sprite: (LOAD_TEMP(9) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(5) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(2);
+                hide_sprite: (LOAD_TEMP(10) == 0);
+                xoffset:  0;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(6) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: vehicle_distributor_spriteset_3_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: vehicle_distributor_spriteset_3_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+            
+            building {
+                sprite: 1301 + LOAD_TEMP(3);
+                hide_sprite: (LOAD_TEMP(11) == 0);
+                xoffset: 0;
+                yoffset:  16;
+                zoffset:  LOAD_TEMP(7) * 8;
+                xextent: 16;
+                yextent: 1;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+        
+            
+            building {
+                sprite: 1302 + LOAD_TEMP(4);
+                hide_sprite: (LOAD_TEMP(12) == 0);
+                xoffset: 16;
+                yoffset:  0;
+                zoffset:  LOAD_TEMP(8) * 8;
+                xextent: 1;
+                yextent: 16;
+                zextent: 6;
+                recolour_mode: RECOLOUR_REMAP;
+                palette:       PALETTE_USE_DEFAULT;
+            }
+        
+
+    }
+
+
+
+
+
+
+    switch(FEAT_INDUSTRYTILES, SELF, vehicle_distributor_industry_layout_1_graphics_switch, relative_pos) {
+        
+            
+            
+                relative_coord(0, 0): vehicle_distributor_spritelayout_1;
+            
+        
+            
+            
+                relative_coord(0, 1): vehicle_distributor_spritelayout_2;
+            
+        
+            
+            
+                relative_coord(0, 2): vehicle_distributor_spritelayout_2;
+            
+        
+            
+            
+                relative_coord(1, 0): vehicle_distributor_spritelayout_2;
+            
+        
+            
+            
+                relative_coord(1, 1): vehicle_distributor_spritelayout_2;
+            
+        
+            
+            
+                relative_coord(1, 2): vehicle_distributor_spritelayout_2;
+            
+        
+        return 0; // a default is needed, but should never be reached, layout definitions are explicit
+    }
+
+
+
+
+switch(FEAT_INDUSTRYTILES, SELF, vehicle_distributor_industry_construction_state_graphics_switch, construction_state) {
+    0..2: spritelayout_default_construction_states;
+    
+    vehicle_distributor_industry_layout_1_graphics_switch; // default
+}
+
+switch(FEAT_INDUSTRYTILES, SELF, vehicle_distributor_store_temp_vars,
+        [STORE_TEMP(random_bits, 14),
+         STORE_TEMP(terrain_type == TILETYPE_SNOW, 13)
+            
+                , STORE_TEMP(0,
+                             127) 
+                , STORE_TEMP(construction_state != 3 ? 1 : LOAD_TEMP(127),
+                             127)
+                , STORE_TEMP(LOAD_TEMP(13) == 0 ? 1 : LOAD_TEMP(127), 
+                             117) 
+                , STORE_TEMP(LOAD_TEMP(13) == 1 ? 1 : LOAD_TEMP(127), 
+                             127)
+            
+        ]) {
+    vehicle_distributor_industry_construction_state_graphics_switch; // default
+}
+
+switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_switch_graphics, [
+                                    switch_tile_fences(),
+                                    switch_terrain_sprite(),
+                                    
+                                 ]) {
+    vehicle_distributor_store_temp_vars;
+}
+
+
+
+    
+        
+            
+    
+    
+
+    switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_3,
+                                                      (
+                                                      nearby_tile_class(0, -1) == TILE_CLASS_ROAD ? 1 :
+                                                      (nearby_tile_class(0, 1) == TILE_CLASS_ROAD ? 1 :
+                                                      (nearby_tile_class(-1, 0) == TILE_CLASS_ROAD ? 1 :
+                                                      (nearby_tile_class(1, 0) == TILE_CLASS_ROAD ? 1 : 0
+                                                      ))))) {
+        1: return CB_RESULT_LOCATION_ALLOW;
+        return CB_RESULT_LOCATION_DISALLOW;
+    }
+
+        
+            
+    
+    
+    switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_225, LOAD_TEMP(0)) {
+        1: vehicle_distributor_tile_1_lc_3;
+        return CB_RESULT_LOCATION_DISALLOW;
+    }
+    
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_224, [
+                 nearby_tile_class(-7, -7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_225;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_223, [
+                 nearby_tile_class(-7, -6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_224;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_222, [
+                 nearby_tile_class(-7, -5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_223;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_221, [
+                 nearby_tile_class(-7, -4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_222;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_220, [
+                 nearby_tile_class(-7, -3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_221;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_219, [
+                 nearby_tile_class(-7, -2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_220;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_218, [
+                 nearby_tile_class(-7, -1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_219;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_217, [
+                 nearby_tile_class(-7, 0) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_218;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_216, [
+                 nearby_tile_class(-7, 1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_217;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_215, [
+                 nearby_tile_class(-7, 2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_216;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_214, [
+                 nearby_tile_class(-7, 3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_215;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_213, [
+                 nearby_tile_class(-7, 4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_214;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_212, [
+                 nearby_tile_class(-7, 5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_213;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_211, [
+                 nearby_tile_class(-7, 6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_212;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_210, [
+                 nearby_tile_class(-7, 7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_211;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_209, [
+                 nearby_tile_class(-6, -7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_210;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_208, [
+                 nearby_tile_class(-6, -6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_209;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_207, [
+                 nearby_tile_class(-6, -5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_208;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_206, [
+                 nearby_tile_class(-6, -4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_207;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_205, [
+                 nearby_tile_class(-6, -3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_206;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_204, [
+                 nearby_tile_class(-6, -2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_205;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_203, [
+                 nearby_tile_class(-6, -1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_204;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_202, [
+                 nearby_tile_class(-6, 0) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_203;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_201, [
+                 nearby_tile_class(-6, 1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_202;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_200, [
+                 nearby_tile_class(-6, 2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_201;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_199, [
+                 nearby_tile_class(-6, 3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_200;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_198, [
+                 nearby_tile_class(-6, 4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_199;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_197, [
+                 nearby_tile_class(-6, 5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_198;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_196, [
+                 nearby_tile_class(-6, 6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_197;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_195, [
+                 nearby_tile_class(-6, 7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_196;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_194, [
+                 nearby_tile_class(-5, -7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_195;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_193, [
+                 nearby_tile_class(-5, -6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_194;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_192, [
+                 nearby_tile_class(-5, -5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_193;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_191, [
+                 nearby_tile_class(-5, -4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_192;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_190, [
+                 nearby_tile_class(-5, -3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_191;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_189, [
+                 nearby_tile_class(-5, -2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_190;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_188, [
+                 nearby_tile_class(-5, -1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_189;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_187, [
+                 nearby_tile_class(-5, 0) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_188;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_186, [
+                 nearby_tile_class(-5, 1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_187;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_185, [
+                 nearby_tile_class(-5, 2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_186;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_184, [
+                 nearby_tile_class(-5, 3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_185;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_183, [
+                 nearby_tile_class(-5, 4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_184;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_182, [
+                 nearby_tile_class(-5, 5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_183;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_181, [
+                 nearby_tile_class(-5, 6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_182;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_180, [
+                 nearby_tile_class(-5, 7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_181;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_179, [
+                 nearby_tile_class(-4, -7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_180;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_178, [
+                 nearby_tile_class(-4, -6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_179;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_177, [
+                 nearby_tile_class(-4, -5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_178;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_176, [
+                 nearby_tile_class(-4, -4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_177;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_175, [
+                 nearby_tile_class(-4, -3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_176;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_174, [
+                 nearby_tile_class(-4, -2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_175;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_173, [
+                 nearby_tile_class(-4, -1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_174;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_172, [
+                 nearby_tile_class(-4, 0) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_173;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_171, [
+                 nearby_tile_class(-4, 1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_172;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_170, [
+                 nearby_tile_class(-4, 2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_171;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_169, [
+                 nearby_tile_class(-4, 3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_170;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_168, [
+                 nearby_tile_class(-4, 4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_169;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_167, [
+                 nearby_tile_class(-4, 5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_168;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_166, [
+                 nearby_tile_class(-4, 6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_167;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_165, [
+                 nearby_tile_class(-4, 7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_166;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_164, [
+                 nearby_tile_class(-3, -7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_165;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_163, [
+                 nearby_tile_class(-3, -6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_164;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_162, [
+                 nearby_tile_class(-3, -5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_163;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_161, [
+                 nearby_tile_class(-3, -4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_162;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_160, [
+                 nearby_tile_class(-3, -3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_161;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_159, [
+                 nearby_tile_class(-3, -2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_160;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_158, [
+                 nearby_tile_class(-3, -1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_159;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_157, [
+                 nearby_tile_class(-3, 0) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_158;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_156, [
+                 nearby_tile_class(-3, 1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_157;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_155, [
+                 nearby_tile_class(-3, 2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_156;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_154, [
+                 nearby_tile_class(-3, 3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_155;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_153, [
+                 nearby_tile_class(-3, 4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_154;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_152, [
+                 nearby_tile_class(-3, 5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_153;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_151, [
+                 nearby_tile_class(-3, 6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_152;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_150, [
+                 nearby_tile_class(-3, 7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_151;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_149, [
+                 nearby_tile_class(-2, -7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_150;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_148, [
+                 nearby_tile_class(-2, -6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_149;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_147, [
+                 nearby_tile_class(-2, -5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_148;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_146, [
+                 nearby_tile_class(-2, -4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_147;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_145, [
+                 nearby_tile_class(-2, -3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_146;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_144, [
+                 nearby_tile_class(-2, -2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_145;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_143, [
+                 nearby_tile_class(-2, -1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_144;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_142, [
+                 nearby_tile_class(-2, 0) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_143;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_141, [
+                 nearby_tile_class(-2, 1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_142;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_140, [
+                 nearby_tile_class(-2, 2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_141;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_139, [
+                 nearby_tile_class(-2, 3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_140;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_138, [
+                 nearby_tile_class(-2, 4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_139;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_137, [
+                 nearby_tile_class(-2, 5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_138;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_136, [
+                 nearby_tile_class(-2, 6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_137;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_135, [
+                 nearby_tile_class(-2, 7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_136;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_134, [
+                 nearby_tile_class(-1, -7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_135;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_133, [
+                 nearby_tile_class(-1, -6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_134;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_132, [
+                 nearby_tile_class(-1, -5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_133;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_131, [
+                 nearby_tile_class(-1, -4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_132;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_130, [
+                 nearby_tile_class(-1, -3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_131;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_129, [
+                 nearby_tile_class(-1, -2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_130;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_128, [
+                 nearby_tile_class(-1, -1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_129;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_127, [
+                 nearby_tile_class(-1, 0) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_128;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_126, [
+                 nearby_tile_class(-1, 1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_127;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_125, [
+                 nearby_tile_class(-1, 2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_126;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_124, [
+                 nearby_tile_class(-1, 3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_125;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_123, [
+                 nearby_tile_class(-1, 4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_124;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_122, [
+                 nearby_tile_class(-1, 5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_123;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_121, [
+                 nearby_tile_class(-1, 6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_122;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_120, [
+                 nearby_tile_class(-1, 7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_121;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_119, [
+                 nearby_tile_class(0, -7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_120;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_118, [
+                 nearby_tile_class(0, -6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_119;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_117, [
+                 nearby_tile_class(0, -5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_118;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_116, [
+                 nearby_tile_class(0, -4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_117;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_115, [
+                 nearby_tile_class(0, -3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_116;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_114, [
+                 nearby_tile_class(0, -2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_115;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_113, [
+                 nearby_tile_class(0, -1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_114;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_112, [
+                 nearby_tile_class(0, 0) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_113;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_111, [
+                 nearby_tile_class(0, 1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_112;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_110, [
+                 nearby_tile_class(0, 2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_111;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_109, [
+                 nearby_tile_class(0, 3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_110;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_108, [
+                 nearby_tile_class(0, 4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_109;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_107, [
+                 nearby_tile_class(0, 5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_108;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_106, [
+                 nearby_tile_class(0, 6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_107;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_105, [
+                 nearby_tile_class(0, 7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_106;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_104, [
+                 nearby_tile_class(1, -7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_105;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_103, [
+                 nearby_tile_class(1, -6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_104;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_102, [
+                 nearby_tile_class(1, -5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_103;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_101, [
+                 nearby_tile_class(1, -4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_102;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_100, [
+                 nearby_tile_class(1, -3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_101;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_99, [
+                 nearby_tile_class(1, -2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_100;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_98, [
+                 nearby_tile_class(1, -1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_99;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_97, [
+                 nearby_tile_class(1, 0) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_98;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_96, [
+                 nearby_tile_class(1, 1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_97;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_95, [
+                 nearby_tile_class(1, 2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_96;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_94, [
+                 nearby_tile_class(1, 3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_95;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_93, [
+                 nearby_tile_class(1, 4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_94;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_92, [
+                 nearby_tile_class(1, 5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_93;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_91, [
+                 nearby_tile_class(1, 6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_92;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_90, [
+                 nearby_tile_class(1, 7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_91;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_89, [
+                 nearby_tile_class(2, -7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_90;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_88, [
+                 nearby_tile_class(2, -6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_89;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_87, [
+                 nearby_tile_class(2, -5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_88;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_86, [
+                 nearby_tile_class(2, -4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_87;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_85, [
+                 nearby_tile_class(2, -3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_86;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_84, [
+                 nearby_tile_class(2, -2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_85;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_83, [
+                 nearby_tile_class(2, -1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_84;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_82, [
+                 nearby_tile_class(2, 0) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_83;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_81, [
+                 nearby_tile_class(2, 1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_82;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_80, [
+                 nearby_tile_class(2, 2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_81;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_79, [
+                 nearby_tile_class(2, 3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_80;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_78, [
+                 nearby_tile_class(2, 4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_79;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_77, [
+                 nearby_tile_class(2, 5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_78;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_76, [
+                 nearby_tile_class(2, 6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_77;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_75, [
+                 nearby_tile_class(2, 7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_76;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_74, [
+                 nearby_tile_class(3, -7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_75;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_73, [
+                 nearby_tile_class(3, -6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_74;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_72, [
+                 nearby_tile_class(3, -5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_73;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_71, [
+                 nearby_tile_class(3, -4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_72;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_70, [
+                 nearby_tile_class(3, -3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_71;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_69, [
+                 nearby_tile_class(3, -2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_70;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_68, [
+                 nearby_tile_class(3, -1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_69;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_67, [
+                 nearby_tile_class(3, 0) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_68;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_66, [
+                 nearby_tile_class(3, 1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_67;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_65, [
+                 nearby_tile_class(3, 2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_66;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_64, [
+                 nearby_tile_class(3, 3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_65;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_63, [
+                 nearby_tile_class(3, 4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_64;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_62, [
+                 nearby_tile_class(3, 5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_63;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_61, [
+                 nearby_tile_class(3, 6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_62;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_60, [
+                 nearby_tile_class(3, 7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_61;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_59, [
+                 nearby_tile_class(4, -7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_60;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_58, [
+                 nearby_tile_class(4, -6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_59;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_57, [
+                 nearby_tile_class(4, -5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_58;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_56, [
+                 nearby_tile_class(4, -4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_57;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_55, [
+                 nearby_tile_class(4, -3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_56;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_54, [
+                 nearby_tile_class(4, -2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_55;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_53, [
+                 nearby_tile_class(4, -1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_54;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_52, [
+                 nearby_tile_class(4, 0) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_53;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_51, [
+                 nearby_tile_class(4, 1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_52;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_50, [
+                 nearby_tile_class(4, 2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_51;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_49, [
+                 nearby_tile_class(4, 3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_50;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_48, [
+                 nearby_tile_class(4, 4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_49;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_47, [
+                 nearby_tile_class(4, 5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_48;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_46, [
+                 nearby_tile_class(4, 6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_47;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_45, [
+                 nearby_tile_class(4, 7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_46;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_44, [
+                 nearby_tile_class(5, -7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_45;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_43, [
+                 nearby_tile_class(5, -6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_44;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_42, [
+                 nearby_tile_class(5, -5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_43;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_41, [
+                 nearby_tile_class(5, -4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_42;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_40, [
+                 nearby_tile_class(5, -3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_41;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_39, [
+                 nearby_tile_class(5, -2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_40;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_38, [
+                 nearby_tile_class(5, -1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_39;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_37, [
+                 nearby_tile_class(5, 0) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_38;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_36, [
+                 nearby_tile_class(5, 1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_37;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_35, [
+                 nearby_tile_class(5, 2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_36;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_34, [
+                 nearby_tile_class(5, 3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_35;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_33, [
+                 nearby_tile_class(5, 4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_34;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_32, [
+                 nearby_tile_class(5, 5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_33;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_31, [
+                 nearby_tile_class(5, 6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_32;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_30, [
+                 nearby_tile_class(5, 7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_31;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_29, [
+                 nearby_tile_class(6, -7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_30;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_28, [
+                 nearby_tile_class(6, -6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_29;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_27, [
+                 nearby_tile_class(6, -5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_28;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_26, [
+                 nearby_tile_class(6, -4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_27;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_25, [
+                 nearby_tile_class(6, -3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_26;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_24, [
+                 nearby_tile_class(6, -2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_25;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_23, [
+                 nearby_tile_class(6, -1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_24;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_22, [
+                 nearby_tile_class(6, 0) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_23;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_21, [
+                 nearby_tile_class(6, 1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_22;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_20, [
+                 nearby_tile_class(6, 2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_21;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_19, [
+                 nearby_tile_class(6, 3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_20;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_18, [
+                 nearby_tile_class(6, 4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_19;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_17, [
+                 nearby_tile_class(6, 5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_18;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_16, [
+                 nearby_tile_class(6, 6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_17;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_15, [
+                 nearby_tile_class(6, 7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_16;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_14, [
+                 nearby_tile_class(7, -7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_15;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_13, [
+                 nearby_tile_class(7, -6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_14;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_12, [
+                 nearby_tile_class(7, -5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_13;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_11, [
+                 nearby_tile_class(7, -4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_12;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_10, [
+                 nearby_tile_class(7, -3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_11;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_9, [
+                 nearby_tile_class(7, -2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_10;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_8, [
+                 nearby_tile_class(7, -1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_9;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_7, [
+                 nearby_tile_class(7, 0) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_8;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_6, [
+                 nearby_tile_class(7, 1) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_7;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_5, [
+                 nearby_tile_class(7, 2) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_6;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_4, [
+                 nearby_tile_class(7, 3) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_5;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_3, [
+                 nearby_tile_class(7, 4) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_4;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_2, [
+                 nearby_tile_class(7, 5) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_3;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_1, [
+                 nearby_tile_class(7, 6) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_2;
+            }
+        
+    
+        
+            switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2_0, [
+                 nearby_tile_class(7, 7) == TILE_CLASS_HOUSE ? STORE_TEMP(1, 0) : 0,
+                 LOAD_TEMP(0)
+                ]) {
+                1: vehicle_distributor_tile_1_lc_2_225;
+                return vehicle_distributor_tile_1_lc_2_1;
+            }
+        
+    
+    switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_2, STORE_TEMP(0, 0)) {
+        return vehicle_distributor_tile_1_lc_2_0;
+    }
+
+        
+            
+    
+    switch (FEAT_INDUSTRYTILES, PARENT, vehicle_distributor_tile_1_lc_1, (
+                (((extra_callback_info2 & 0xFF00) >> 8) == IND_CREATION_FUND) ||
+                (((extra_callback_info2 & 0xFF00) >> 8) == IND_CREATION_PROSPECT)
+                )
+            ) {
+        1: return CB_RESULT_LOCATION_ALLOW;
+        vehicle_distributor_tile_1_lc_2;
+    }
+
+        
+            
+    
+    switch (FEAT_INDUSTRYTILES, SELF, vehicle_distributor_tile_1_lc_0,
+                (
+                nearby_tile_height(-relative_x, -relative_y)
+                + (nearby_tile_slope(-relative_x, -relative_y)
+                == SLOPE_FLAT ? 0 :
+                nearby_tile_slope(-relative_x, -relative_y) == bitmask(IS_STEEP_SLOPE) ? 2 : 1
+                )) == (nearby_tile_height(0, 0)
+                + (nearby_tile_slope(0, 0)
+                == SLOPE_FLAT ? 0 :
+                nearby_tile_slope(0, 0) == bitmask(IS_STEEP_SLOPE) ? 2 : 1))
+                ) {
+        1: vehicle_distributor_tile_1_lc_1;
+        return CB_RESULT_LOCATION_DISALLOW;
+    }
+
+        
+    
+
+
+
+    
+        
+    
+
+
+
+    
+    item(FEAT_INDUSTRYTILES, vehicle_distributor_tile_1, 133) {
+        property {
+            substitute:         0;
+            land_shape_flags:   0;
+            special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+            
+            
+            
+            animation_triggers: bitmask();
+        }
+
+        graphics {
+    		
+    		    tile_check: vehicle_distributor_tile_1_lc_0;
+            
+            
+    		
+            
+    		
+    		
+            vehicle_distributor_switch_graphics;
+        }
+    }
+
+
+
+
+/* *************************************************
+ * Definition of the industry
+ * *************************************************/
+
+
+    tilelayout vehicle_distributor_industry_layout_1_tilelayout {
+        
+            0, 0: vehicle_distributor_tile_1;
+        
+            0, 1: vehicle_distributor_tile_1;
+        
+            0, 2: vehicle_distributor_tile_1;
+        
+            1, 0: vehicle_distributor_tile_1;
+        
+            1, 1: vehicle_distributor_tile_1;
+        
+            1, 2: vehicle_distributor_tile_1;
+        
+    }
+
+
+
+
+
+
+    
+    
+        switch (FEAT_INDUSTRIES, SELF, vehicle_distributor_cargo_subtype_display_cargo_VEHI_economy_5, [
+                LOAD_PERM(1)
+            ]) {
+            0: return 0x3800 + string(STR_EMPTY);
+            return 0x3800 + string(STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG);
+        }
+    
+    switch (FEAT_INDUSTRIES, SELF, vehicle_distributor_cargo_subtype_display_switch_cargo_economy_5, getbits(extra_callback_info2, 16, 8)) {
+        
+        
+            VEHI: vehicle_distributor_cargo_subtype_display_cargo_VEHI_economy_5;
+        
+        return CB_RESULT_NO_TEXT;
+    }
+
+
+switch (FEAT_INDUSTRIES, SELF, vehicle_distributor_cargo_subtype_display_switch_economy, economy) {
+    
+        5:  vehicle_distributor_cargo_subtype_display_switch_cargo_economy_5;
+    
+}
+
+
+switch (FEAT_INDUSTRIES, SELF, vehicle_distributor_cargo_subtype_display, getbits(extra_callback_info2, 8, 8)) {
+    1: vehicle_distributor_cargo_subtype_display_switch_economy;
+    return CB_RESULT_NO_TEXT;
+}
+
+
+
+
+
+switch(FEAT_INDUSTRIES, SELF, vehicle_distributor_produce_total_input_cargo_delivered,
+    [
+    
+        LOAD_PERM(9)
+        +
+    
+        LOAD_PERM(10)
+        +
+    
+        LOAD_PERM(11)
+        +
+    
+        LOAD_PERM(12)
+        +
+    
+        LOAD_PERM(13)
+        +
+    
+        LOAD_PERM(14)
+        +
+    
+        LOAD_PERM(15)
+        +
+    
+        LOAD_PERM(16)
+        +
+    
+        LOAD_PERM(17)
+        +
+    
+        LOAD_PERM(18)
+        +
+    
+        LOAD_PERM(19)
+        +
+    
+        LOAD_PERM(20)
+        +
+    
+        LOAD_PERM(21)
+        +
+    
+        LOAD_PERM(22)
+        +
+    
+        LOAD_PERM(23)
+        +
+    
+        LOAD_PERM(24)
+        +
+    
+        LOAD_PERM(25)
+        +
+    
+        LOAD_PERM(26)
+        +
+    
+        LOAD_PERM(27)
+        +
+    
+        LOAD_PERM(28)
+        +
+    
+        LOAD_PERM(29)
+        +
+    
+        LOAD_PERM(30)
+        +
+    
+        LOAD_PERM(31)
+        +
+    
+        LOAD_PERM(32)
+        +
+    
+        LOAD_PERM(33)
+        +
+    
+        LOAD_PERM(34)
+        +
+    
+        LOAD_PERM(35)
+        
+    
+    ]) {
+    return;
+}
+
+
+    
+    
+        
+        
+            produce(vehicle_distributor_produce_256_ticks_economy_5,
+                [],
+                [],
+            0)
+        
+    
+
+    
+    produce (vehicle_distributor_produce_cargo_arrival_economy_5,
+        [
+            
+                VEHI: incoming_cargo_waiting("VEHI");
+            
+        ],
+        [],
+    0)
+
+    switch(FEAT_INDUSTRIES, SELF, vehicle_distributor_store_incoming_cargo_waiting_5,
+        [
+            STORE_PERM_ALT(
+                35,
+                
+                    incoming_cargo_waiting("VEHI") +
+                
+                LOAD_PERM(35)
+            ),
+            
+            
+                STORE_PERM_ALT(
+                    1,
+                    (incoming_cargo_waiting("VEHI") > 0)
+                    ?
+                    28
+                    :
+                    LOAD_PERM(1)
+                ),
+            
+        ]) {
+        vehicle_distributor_produce_cargo_arrival_economy_5;
+    }
+
+
+
+switch (FEAT_INDUSTRIES, SELF, vehicle_distributor_produce_cargo_arrival, economy) {
+    
+        5: vehicle_distributor_store_incoming_cargo_waiting_5;
+    
+}
+
+switch (FEAT_INDUSTRIES, SELF, vehicle_distributor_produce_256_ticks_switch_economy, economy) {
+
+    5: vehicle_distributor_produce_256_ticks_economy_5;
+
+}
+
+
+switch(FEAT_INDUSTRIES, SELF, vehicle_distributor_update_supplied_cycles_remaining_per_cargo,
+    [
+        
+            
+            STORE_PERM_ALT(
+                1,
+                max(
+                    0,
+                    LOAD_PERM(1)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                2,
+                max(
+                    0,
+                    LOAD_PERM(2)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                3,
+                max(
+                    0,
+                    LOAD_PERM(3)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                4,
+                max(
+                    0,
+                    LOAD_PERM(4)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                5,
+                max(
+                    0,
+                    LOAD_PERM(5)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                6,
+                max(
+                    0,
+                    LOAD_PERM(6)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                7,
+                max(
+                    0,
+                    LOAD_PERM(7)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                8,
+                max(
+                    0,
+                    LOAD_PERM(8)
+                    - 1
+                )
+            ),
+        
+    ]) {
+    return 0;
+}
+
+
+switch(FEAT_INDUSTRIES, SELF, vehicle_distributor_produce_256_ticks_shift_supplies_delivered,
+    [
+        
+            STORE_PERM_ALT(
+                9,
+                LOAD_PERM(10),
+            ),
+        
+            STORE_PERM_ALT(
+                10,
+                LOAD_PERM(11),
+            ),
+        
+            STORE_PERM_ALT(
+                11,
+                LOAD_PERM(12),
+            ),
+        
+            STORE_PERM_ALT(
+                12,
+                LOAD_PERM(13),
+            ),
+        
+            STORE_PERM_ALT(
+                13,
+                LOAD_PERM(14),
+            ),
+        
+            STORE_PERM_ALT(
+                14,
+                LOAD_PERM(15),
+            ),
+        
+            STORE_PERM_ALT(
+                15,
+                LOAD_PERM(16),
+            ),
+        
+            STORE_PERM_ALT(
+                16,
+                LOAD_PERM(17),
+            ),
+        
+            STORE_PERM_ALT(
+                17,
+                LOAD_PERM(18),
+            ),
+        
+            STORE_PERM_ALT(
+                18,
+                LOAD_PERM(19),
+            ),
+        
+            STORE_PERM_ALT(
+                19,
+                LOAD_PERM(20),
+            ),
+        
+            STORE_PERM_ALT(
+                20,
+                LOAD_PERM(21),
+            ),
+        
+            STORE_PERM_ALT(
+                21,
+                LOAD_PERM(22),
+            ),
+        
+            STORE_PERM_ALT(
+                22,
+                LOAD_PERM(23),
+            ),
+        
+            STORE_PERM_ALT(
+                23,
+                LOAD_PERM(24),
+            ),
+        
+            STORE_PERM_ALT(
+                24,
+                LOAD_PERM(25),
+            ),
+        
+            STORE_PERM_ALT(
+                25,
+                LOAD_PERM(26),
+            ),
+        
+            STORE_PERM_ALT(
+                26,
+                LOAD_PERM(27),
+            ),
+        
+            STORE_PERM_ALT(
+                27,
+                LOAD_PERM(28),
+            ),
+        
+            STORE_PERM_ALT(
+                28,
+                LOAD_PERM(29),
+            ),
+        
+            STORE_PERM_ALT(
+                29,
+                LOAD_PERM(30),
+            ),
+        
+            STORE_PERM_ALT(
+                30,
+                LOAD_PERM(31),
+            ),
+        
+            STORE_PERM_ALT(
+                31,
+                LOAD_PERM(32),
+            ),
+        
+            STORE_PERM_ALT(
+                32,
+                LOAD_PERM(33),
+            ),
+        
+            STORE_PERM_ALT(
+                33,
+                LOAD_PERM(34),
+            ),
+        
+            STORE_PERM_ALT(
+                34,
+                LOAD_PERM(35),
+            ),
+        
+        STORE_PERM_ALT(35, 0)
+    ]) {
+    return 0;
+}
+
+switch(FEAT_INDUSTRIES, SELF, vehicle_distributor_produce_256_ticks,
+    [
+        
+        vehicle_distributor_update_supplied_cycles_remaining_per_cargo(),
+        vehicle_distributor_produce_256_ticks_shift_supplies_delivered(),
+    ]) {
+    vehicle_distributor_produce_256_ticks_switch_economy;
+}
+
+
+
+
+switch(FEAT_INDUSTRIES, SELF, vehicle_distributor_calculate_town_optimism_contribution,
+    [
+        
+        
+        vehicle_distributor_produce_total_input_cargo_delivered() >= 80 ? 10 : 0
+    ]) {
+    return;
+}
+
+switch(FEAT_INDUSTRIES, SELF, vehicle_distributor_monthly_prod_change,
+    [
+        monthly_town_loop(
+            vehicle_distributor_calculate_town_optimism_contribution(),
+            0
+        )
+    ]) {
+    return CB_RESULT_IND_PROD_NO_CHANGE;
+}
+
+
+
+
+
+
+switch(FEAT_INDUSTRIES, SELF, vehicle_distributor_check_availability_param, restrict_open_during_gameplay) {
+	1..255: return CB_RESULT_IND_NO_CONSTRUCTION;         // disallow when restrictions in place
+	return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;       // we may build
+}
+
+
+switch (FEAT_INDUSTRIES, SELF, vehicle_distributor_check_map_gen, extra_callback_info2 == IND_CREATION_GENERATION) {
+	1: return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;
+	vehicle_distributor_check_availability_param;
+}
+
+switch (FEAT_INDUSTRIES, SELF, vehicle_distributor_available_game_mode, game_mode == GAMEMODE_GAME) {
+	1: vehicle_distributor_check_map_gen;
+	return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;
+}
+
+
+
+    /* 0 */
+    switch (FEAT_INDUSTRIES, SELF, vehicle_distributor_check_availability_5, current_date) {
+        date(0,1,1) .. date(5000000,12,31): vehicle_distributor_available_game_mode;
+        return CB_RESULT_IND_NO_CONSTRUCTION;
+    }
+
+
+switch (FEAT_INDUSTRIES, SELF, vehicle_distributor_check_availability, economy) {
+    
+        5: vehicle_distributor_check_availability_5;
+    
+}
+
+
+
+
+
+
+
+    if (economy==5) {
+        item(FEAT_INDUSTRIES, vehicle_distributor, 21) {
+            property {
+                
+                substitute: 0;
+                override: 0;
+                map_colour: 207;
+                life_type: IND_LIFE_TYPE_BLACK_HOLE;
+                
+                
+                
+                
+                min_cargo_distr: 1;
+                layouts: [vehicle_distributor_industry_layout_1_tilelayout];
+                spec_flags: bitmask(IND_FLAG_LONG_CARGO_TYPE_LISTS);
+                conflicting_ind_types: []; // set this prop empty, FIRS has it's own better checks for this
+                random_sound_effects: []; // set this empty to avoid spurious default industry sounds (as of May 2017 FIRS does not yet use sound effects)
+                
+                name: string(STR_IND_VEHICLE_DISTRIBUTOR);
+                prob_map_gen: 10;
+                prob_in_game: 3;
+                prospect_chance: 0.75;
+                fund_cost_multiplier: 8;
+                remove_cost_multiplier: 0;
+                remove_cost_multiplier: 0;
+                
+                cargo_types: [accept_cargo("VEHI")];
+                nearby_station_name: string(STR_STATION, string(STR_TOWN),string(STR_STATION_VEHICLE_DISTRIBUTOR));
+            }
+        }
+    }
+
+
+
+
+
+    if (economy==5) {
+        item(FEAT_INDUSTRIES, vehicle_distributor, 21) {
+            graphics {
+                construction_probability: vehicle_distributor_check_availability;
+                build_prod_change:        randomise_primary_production_on_build(0);
+                produce_cargo_arrival:    vehicle_distributor_produce_cargo_arrival;
+                produce_256_ticks:        vehicle_distributor_produce_256_ticks;
+                monthly_prod_change:      vehicle_distributor_monthly_prod_change;
+                location_check:           vehicle_distributor_check_location;
+                extra_text_fund:          return CB_RESULT_NO_TEXT;
+                cargo_subtype_display:    vehicle_distributor_cargo_subtype_display;
+                colour:                   switch_colour;
+            }
+        }
+    }
+

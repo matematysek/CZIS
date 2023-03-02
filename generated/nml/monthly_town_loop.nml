@@ -1,0 +1,244 @@
+
+switch(FEAT_INDUSTRIES, SELF, count_industries_in_town,
+    [
+        
+            industry_town_count(5) +
+        
+            industry_town_count(17) +
+        
+            industry_town_count(40) +
+        
+            industry_town_count(49) +
+        
+            industry_town_count(53) +
+        
+            industry_town_count(4) +
+        
+            industry_town_count(58) +
+        
+            industry_town_count(23) +
+        
+            industry_town_count(31) +
+        
+            industry_town_count(41) +
+        
+            industry_town_count(45) +
+        
+            industry_town_count(33) +
+        
+            industry_town_count(64) +
+        
+            industry_town_count(30) +
+        
+            industry_town_count(0) +
+        
+            industry_town_count(50) +
+        
+            industry_town_count(55) +
+        
+            industry_town_count(42) +
+        
+            industry_town_count(44) +
+        
+            industry_town_count(24) +
+        
+            industry_town_count(18) +
+        
+            industry_town_count(52) +
+        
+            industry_town_count(60) +
+        
+            industry_town_count(61) +
+        
+            industry_town_count(62) +
+        
+            industry_town_count(19) +
+        
+            industry_town_count(14) +
+        
+            industry_town_count(22) +
+        
+            industry_town_count(37) +
+        
+            industry_town_count(34) +
+        
+            industry_town_count(8) +
+        
+            industry_town_count(20) +
+        
+            industry_town_count(10) +
+        
+            industry_town_count(39) +
+        
+            industry_town_count(15) +
+        
+            industry_town_count(35) +
+        
+            industry_town_count(36) +
+        
+            industry_town_count(56) +
+        
+            industry_town_count(3) +
+        
+            industry_town_count(16) +
+        
+            industry_town_count(59) +
+        
+            industry_town_count(28) +
+        
+            industry_town_count(26) +
+        
+            industry_town_count(54) +
+        
+            industry_town_count(6) +
+        
+            industry_town_count(11) +
+        
+            industry_town_count(12) +
+        
+            industry_town_count(32) +
+        
+            industry_town_count(48) +
+        
+            industry_town_count(38) +
+        
+            industry_town_count(13) +
+        
+            industry_town_count(1) +
+        
+            industry_town_count(27) +
+        
+            industry_town_count(43) +
+        
+            industry_town_count(7) +
+        
+            industry_town_count(9) +
+        
+            industry_town_count(63) +
+        
+            industry_town_count(51) +
+        
+            industry_town_count(2) +
+        
+            industry_town_count(25) +
+        
+            industry_town_count(65) +
+        
+            industry_town_count(46) +
+        
+            industry_town_count(47) +
+        
+            industry_town_count(21) +
+        
+            industry_town_count(29) +
+        
+            industry_town_count(57) +
+        
+        1 
+    ]) {
+    return;
+}
+
+
+
+
+switch(FEAT_INDUSTRIES, PARENT, increment_town_monthly_cycle_industry_counter,
+    [
+        STORE_PERM(
+            LOAD_PERM(1) + 1,
+            1
+        )
+        
+    ]) {
+    return;
+}
+
+switch(FEAT_INDUSTRIES, PARENT, reset_town_monthly_cycle_industry_counter,
+    [
+        STORE_PERM(
+            0,
+            1
+        )
+    ]) {
+    return;
+}
+
+switch(FEAT_INDUSTRIES, PARENT, rollover_next_and_current_optimism_scores,
+    [
+        STORE_PERM(
+            LOAD_PERM(4),
+            3
+        )
+        ,
+        STORE_PERM(
+            0,
+            4
+        ),
+        STORE_PERM(
+            LOAD_PERM(6),
+            5
+        )
+        ,
+        STORE_PERM(
+            0,
+            6
+        ),
+        
+        STORE_PERM(
+            LOAD_PERM(3) - LOAD_PERM(5),
+            2
+        )
+    ]) {
+    return;
+}
+
+switch(FEAT_INDUSTRIES, PARENT, town_monthly_cycle_complete,
+    [
+        rollover_next_and_current_optimism_scores(),
+        reset_town_monthly_cycle_industry_counter()
+    ]) {
+    return 1;
+}
+
+switch(FEAT_INDUSTRIES, PARENT, check_if_town_monthly_cycle_complete,
+    [
+        LOAD_PERM(1) == count_industries_in_town()
+    ]) {
+    1: return town_monthly_cycle_complete;
+    return 0;
+}
+
+switch(FEAT_INDUSTRIES, PARENT, contribute_to_town_optimism, basic_needs_and_luxuries_score, pollution_and_squalor_score,
+    [
+        STORE_PERM(
+            LOAD_PERM(4) + basic_needs_and_luxuries_score,
+            4
+        ),
+        
+        STORE_PERM(
+            LOAD_PERM(6) + pollution_and_squalor_score,
+            6
+        ),
+    ]) {
+    return;
+}
+
+switch(FEAT_INDUSTRIES, PARENT, monthly_town_loop_enabled, basic_needs_and_luxuries_score, pollution_and_squalor_score,
+    [
+        contribute_to_town_optimism(basic_needs_and_luxuries_score, pollution_and_squalor_score),
+        increment_town_monthly_cycle_industry_counter(),
+        STORE_PERM(
+            count_industries_in_town(),
+            0
+        ),
+        check_if_town_monthly_cycle_complete(),
+    ]) {
+    return;
+}
+
+
+switch(FEAT_INDUSTRIES, PARENT, monthly_town_loop, basic_needs_and_luxuries_score, pollution_and_squalor_score, experimental_features) {
+    1: monthly_town_loop_enabled(basic_needs_and_luxuries_score, pollution_and_squalor_score);
+    return;
+}
+

@@ -1,0 +1,41 @@
+
+
+switch (FEAT_INDUSTRYTILES, SELF, switch_magic_trees_default, [
+                climate == CLIMATE_TROPIC
+                ||
+                nearby_tile_height(0, 0) >= snowline_height
+                ||
+                construction_state == 0
+    ]) {
+    1: return 1;
+    return 0;
+}
+
+switch (FEAT_INDUSTRYTILES, SELF, switch_magic_trees_snow, [
+                climate != CLIMATE_ARCTIC
+                ||
+                nearby_tile_height(0, 0) < snowline_height
+                ||
+                construction_state == 0
+    ]) {
+    1: return 1;
+    return 0;
+}
+
+switch (FEAT_INDUSTRYTILES, SELF, switch_magic_trees_tropic, [
+                climate != CLIMATE_TROPIC
+                ||
+                construction_state == 0
+    ]) {
+    1: return 1;
+    return 0;
+}
+
+switch (FEAT_INDUSTRYTILES, SELF, switch_magic_trees, [
+                STORE_TEMP(switch_magic_trees_default(), 15),
+                STORE_TEMP(switch_magic_trees_snow(), 16),
+                STORE_TEMP(switch_magic_trees_tropic(), 17),
+            ]) {
+    return;
+}
+

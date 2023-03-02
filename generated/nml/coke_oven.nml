@@ -1,0 +1,2631 @@
+/* ******************************************************************
+ * Definition of the industry tile, its callbacks, and graphics chain
+ * ******************************************************************/
+
+
+    
+
+    
+        
+        
+    
+
+    
+
+    
+
+    
+        
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(coke_oven_spriteset_2_0) {
+                
+                    
+                        [10, 10, 64, 122, -31, -91, ANIM | NOCROP, "src/graphics/industries/coke_oven_1.png"]
+                    
+                
+            }
+            spriteset(coke_oven_spriteset_2_0_snow) {
+                
+                    
+                            [10, 10, 64, 122, -31, -91, ANIM | NOCROP, "src/graphics/industries/coke_oven_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(coke_oven_spriteset_3_0) {
+                
+                    
+                        [80, 10, 64, 122, -31, -91, ANIM | NOCROP, "src/graphics/industries/coke_oven_1.png"]
+                    
+                
+            }
+            spriteset(coke_oven_spriteset_3_0_snow) {
+                
+                    
+                            [80, 10, 64, 122, -31, -91, ANIM | NOCROP, "src/graphics/industries/coke_oven_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(coke_oven_spriteset_4_0) {
+                
+                    
+                        [150, 10, 64, 122, -31, -91, ANIM | NOCROP, "src/graphics/industries/coke_oven_1.png"]
+                    
+                
+            }
+            spriteset(coke_oven_spriteset_4_0_snow) {
+                
+                    
+                            [150, 10, 64, 122, -31, -91, ANIM | NOCROP, "src/graphics/industries/coke_oven_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(coke_oven_spriteset_5_0) {
+                
+                    
+                        [220, 10, 64, 122, -31, -91, ANIM | NOCROP, "src/graphics/industries/coke_oven_1.png"]
+                    
+                
+            }
+            spriteset(coke_oven_spriteset_5_0_snow) {
+                
+                    
+                            [220, 10, 64, 122, -31, -91, ANIM | NOCROP, "src/graphics/industries/coke_oven_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(coke_oven_spriteset_6_0) {
+                
+                    
+                        [10, 234, 64, 64, -31, -32, ANIM | NOCROP, "src/graphics/industries/coke_oven_1.png"]
+                    
+                
+            }
+            spriteset(coke_oven_spriteset_6_0_snow) {
+                
+                    
+                            [10, 234, 64, 64, -31, -32, ANIM | NOCROP, "src/graphics/industries/coke_oven_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(coke_oven_spriteset_7_0) {
+                
+                    
+                        [290, 10, 64, 122, -31, -91, ANIM | NOCROP, "src/graphics/industries/coke_oven_1.png"]
+                    
+                
+            }
+            spriteset(coke_oven_spriteset_7_0_snow) {
+                
+                    
+                            [290, 10, 64, 122, -31, -91, ANIM | NOCROP, "src/graphics/industries/coke_oven_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(coke_oven_spriteset_8_0) {
+                
+                    
+                        [360, 10, 64, 122, -31, -91, ANIM | NOCROP, "src/graphics/industries/coke_oven_1.png"]
+                    
+                
+            }
+            spriteset(coke_oven_spriteset_8_0_snow) {
+                
+                    
+                            [360, 10, 64, 122, -31, -91, ANIM | NOCROP, "src/graphics/industries/coke_oven_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(coke_oven_spriteset_9_0) {
+                
+                    
+                        [430, 10, 64, 122, -31, -91, ANIM | NOCROP, "src/graphics/industries/coke_oven_1.png"]
+                    
+                
+            }
+            spriteset(coke_oven_spriteset_9_0_snow) {
+                
+                    
+                            [430, 10, 64, 122, -31, -91, ANIM | NOCROP, "src/graphics/industries/coke_oven_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(coke_oven_spriteset_10_0) {
+                
+                    
+                        [500, 10, 64, 122, -31, -91, ANIM | NOCROP, "src/graphics/industries/coke_oven_1.png"]
+                    
+                
+            }
+            spriteset(coke_oven_spriteset_10_0_snow) {
+                
+                    
+                            [500, 10, 64, 122, -31, -91, ANIM | NOCROP, "src/graphics/industries/coke_oven_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(coke_oven_spriteset_11_0) {
+                
+                    
+                        [570, 10, 64, 122, -31, -91, ANIM | NOCROP, "src/graphics/industries/coke_oven_1.png"]
+                    
+                
+            }
+            spriteset(coke_oven_spriteset_11_0_snow) {
+                
+                    
+                            [570, 10, 64, 122, -31, -91, ANIM | NOCROP, "src/graphics/industries/coke_oven_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+    
+
+    
+        
+        
+            spriteset(coke_oven_spriteset_12_0) {
+                
+                    
+                        [640, 10, 64, 122, -31, -91, ANIM | NOCROP, "src/graphics/industries/coke_oven_1.png"]
+                    
+                
+            }
+            spriteset(coke_oven_spriteset_12_0_snow) {
+                
+                    
+                            [640, 10, 64, 122, -31, -91, ANIM | NOCROP, "src/graphics/industries/coke_oven_1_snow.png"]
+                    
+                
+            }
+        
+    
+
+    
+
+
+
+
+    spritelayout coke_oven_spritelayout_empty {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_hard_standing_dirt_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_hard_standing_dirt_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout coke_oven_spritelayout_oven_battery_pipes_only {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_hard_standing_dirt_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_hard_standing_dirt_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: coke_oven_spriteset_3_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: coke_oven_spriteset_3_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout coke_oven_spritelayout_oven_battery_larry_car {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_hard_standing_dirt_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_hard_standing_dirt_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: coke_oven_spriteset_4_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: coke_oven_spriteset_4_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+            
+            building {
+                sprite: 3079 + (animation_frame / 4);
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                xoffset: 0;
+                yoffset: 0;
+                zoffset: 16+ animation_frame;
+                xextent: 11;
+                yextent: 16;
+                zextent: 7;
+                hide_sprite: animation_frame &gt; 19;
+            }
+        
+            
+            building {
+                sprite: 3079 + (animation_frame / 4);
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                xoffset: 0;
+                yoffset: 5;
+                zoffset: 16+ animation_frame;
+                xextent: 11;
+                yextent: 16;
+                zextent: 7;
+                hide_sprite: animation_frame &gt; 19;
+            }
+        
+
+        
+        
+
+    }
+
+    spritelayout coke_oven_spritelayout_silo {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_hard_standing_dirt_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_hard_standing_dirt_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: coke_oven_spriteset_2_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: coke_oven_spriteset_2_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+            
+            building {
+                sprite: 3701 + ((animation_frame + 0)%8);
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                xoffset: 8;
+                yoffset: 5;
+                zoffset: 104;
+                xextent: 15;
+                yextent: 7;
+                zextent: 7;
+                hide_sprite: 0;
+            }
+        
+
+        
+        
+
+    }
+
+    spritelayout coke_oven_spritelayout_pusher_rails_empty {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_hard_standing_dirt_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_hard_standing_dirt_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: coke_oven_spriteset_5_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 8;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: coke_oven_spriteset_5_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 8;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+                
+                building {
+                    sprite: coke_oven_spriteset_7_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: coke_oven_spriteset_7_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout coke_oven_spritelayout_pusher_rails_animated {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_hard_standing_dirt_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_hard_standing_dirt_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: coke_oven_spriteset_5_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 8;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: coke_oven_spriteset_5_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 8;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+                
+                building {
+                    sprite: coke_oven_spriteset_6_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 8;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: coke_oven_spriteset_6_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 8;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+                
+                building {
+                    sprite: coke_oven_spriteset_7_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: coke_oven_spriteset_7_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout coke_oven_spritelayout_pusher_rails_with_house {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_hard_standing_dirt_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_hard_standing_dirt_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: coke_oven_spriteset_5_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 8;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: coke_oven_spriteset_5_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 8;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+                
+                building {
+                    sprite: coke_oven_spriteset_8_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: coke_oven_spriteset_8_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout coke_oven_spritelayout_quench_tower {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_hard_standing_dirt_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_hard_standing_dirt_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: coke_oven_spriteset_11_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: coke_oven_spriteset_11_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+            
+            building {
+                sprite: 3701 + ((animation_frame + 0)%8);
+                recolour_mode: RECOLOUR_REMAP;
+                palette: PALETTE_USE_DEFAULT;
+                xoffset: 0;
+                yoffset: 7;
+                zoffset: 76;
+                xextent: 15;
+                yextent: 7;
+                zextent: 7;
+                hide_sprite: 0;
+            }
+        
+
+        
+        
+
+    }
+
+    spritelayout coke_oven_spritelayout_gas_plant_1 {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_hard_standing_dirt_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_hard_standing_dirt_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: coke_oven_spriteset_12_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: coke_oven_spriteset_12_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout coke_oven_spritelayout_coal_handling_front {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_hard_standing_dirt_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_hard_standing_dirt_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: coke_oven_spriteset_9_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: coke_oven_spriteset_9_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+    spritelayout coke_oven_spritelayout_coal_handling_rear {
+        
+            
+            
+                
+                
+                    childsprite {
+                        sprite: spriteset_ground_tile_hard_standing_dirt_1;
+                        hide_sprite: (LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                    
+                    childsprite {
+                        sprite: spriteset_ground_tile_hard_standing_dirt_1;
+                        hide_sprite: (!LOAD_TEMP(13));
+                        always_draw: 1;
+                    }
+                
+            
+        
+
+        
+        
+
+        
+        
+
+        
+        
+            
+                
+                building {
+                    sprite: coke_oven_spriteset_10_0(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(127));
+                }
+                building {
+                    sprite: coke_oven_spriteset_10_0_snow(0);
+                    recolour_mode: RECOLOUR_REMAP;
+                    palette: PALETTE_USE_DEFAULT;
+                    xoffset: 0;
+                    yoffset: 0;
+                    zoffset: 0;
+                    xextent: 16;
+                    yextent: 16;
+                    zextent: 32;
+                    always_draw: 0;
+                    hide_sprite: (LOAD_TEMP(117));
+                }
+            
+        
+
+        
+
+        
+
+        
+        
+
+    }
+
+
+
+
+
+
+    switch(FEAT_INDUSTRYTILES, SELF, coke_oven_industry_layout_1_graphics_switch, relative_pos) {
+        
+            
+            
+                relative_coord(0, 0): coke_oven_spritelayout_gas_plant_1;
+            
+        
+            
+            
+                relative_coord(0, 1): coke_oven_spritelayout_oven_battery_larry_car;
+            
+        
+            
+            
+                relative_coord(0, 2): coke_oven_spritelayout_pusher_rails_empty;
+            
+        
+            
+            
+                relative_coord(1, 0): coke_oven_spritelayout_coal_handling_rear;
+            
+        
+            
+            
+                relative_coord(1, 1): coke_oven_spritelayout_oven_battery_pipes_only;
+            
+        
+            
+            
+                relative_coord(1, 2): coke_oven_spritelayout_pusher_rails_with_house;
+            
+        
+            
+            
+                relative_coord(2, 0): coke_oven_spritelayout_coal_handling_front;
+            
+        
+            
+            
+                relative_coord(2, 1): coke_oven_spritelayout_silo;
+            
+        
+            
+            
+                relative_coord(2, 2): coke_oven_spritelayout_pusher_rails_animated;
+            
+        
+            
+            
+                relative_coord(3, 0): coke_oven_spritelayout_coal_handling_rear;
+            
+        
+            
+            
+                relative_coord(3, 1): coke_oven_spritelayout_oven_battery_pipes_only;
+            
+        
+            
+            
+                relative_coord(3, 2): coke_oven_spritelayout_pusher_rails_with_house;
+            
+        
+            
+            
+                relative_coord(4, 0): coke_oven_spritelayout_coal_handling_front;
+            
+        
+            
+            
+                relative_coord(4, 1): coke_oven_spritelayout_quench_tower;
+            
+        
+            
+            
+                relative_coord(4, 2): coke_oven_spritelayout_pusher_rails_empty;
+            
+        
+        return 0; // a default is needed, but should never be reached, layout definitions are explicit
+    }
+
+    switch(FEAT_INDUSTRYTILES, SELF, coke_oven_industry_layout_2_graphics_switch, relative_pos) {
+        
+            
+            
+                relative_coord(0, 0): coke_oven_spritelayout_coal_handling_rear;
+            
+        
+            
+            
+                relative_coord(0, 1): coke_oven_spritelayout_oven_battery_pipes_only;
+            
+        
+            
+            
+                relative_coord(0, 2): coke_oven_spritelayout_pusher_rails_with_house;
+            
+        
+            
+            
+                relative_coord(0, 3): coke_oven_spritelayout_gas_plant_1;
+            
+        
+            
+            
+                relative_coord(1, 0): coke_oven_spritelayout_coal_handling_front;
+            
+        
+            
+            
+                relative_coord(1, 1): coke_oven_spritelayout_oven_battery_larry_car;
+            
+        
+            
+            
+                relative_coord(1, 2): coke_oven_spritelayout_pusher_rails_empty;
+            
+        
+            
+            
+                relative_coord(1, 3): coke_oven_spritelayout_empty;
+            
+        
+            
+            
+                relative_coord(2, 0): coke_oven_spritelayout_empty;
+            
+        
+            
+            
+                relative_coord(2, 1): coke_oven_spritelayout_oven_battery_pipes_only;
+            
+        
+            
+            
+                relative_coord(2, 2): coke_oven_spritelayout_pusher_rails_with_house;
+            
+        
+            
+            
+                relative_coord(2, 3): coke_oven_spritelayout_coal_handling_rear;
+            
+        
+            
+            
+                relative_coord(3, 0): coke_oven_spritelayout_quench_tower;
+            
+        
+            
+            
+                relative_coord(3, 1): coke_oven_spritelayout_silo;
+            
+        
+            
+            
+                relative_coord(3, 2): coke_oven_spritelayout_pusher_rails_animated;
+            
+        
+            
+            
+                relative_coord(3, 3): coke_oven_spritelayout_coal_handling_front;
+            
+        
+        return 0; // a default is needed, but should never be reached, layout definitions are explicit
+    }
+
+    switch(FEAT_INDUSTRYTILES, SELF, coke_oven_industry_layout_3_graphics_switch, relative_pos) {
+        
+            
+            
+                relative_coord(0, 0): coke_oven_spritelayout_oven_battery_larry_car;
+            
+        
+            
+            
+                relative_coord(0, 1): coke_oven_spritelayout_pusher_rails_with_house;
+            
+        
+            
+            
+                relative_coord(0, 2): coke_oven_spritelayout_quench_tower;
+            
+        
+            
+            
+                relative_coord(0, 3): coke_oven_spritelayout_gas_plant_1;
+            
+        
+            
+            
+                relative_coord(0, 4): coke_oven_spritelayout_coal_handling_rear;
+            
+        
+            
+            
+                relative_coord(1, 0): coke_oven_spritelayout_silo;
+            
+        
+            
+            
+                relative_coord(1, 1): coke_oven_spritelayout_pusher_rails_animated;
+            
+        
+            
+            
+                relative_coord(1, 2): coke_oven_spritelayout_oven_battery_larry_car;
+            
+        
+            
+            
+                relative_coord(1, 3): coke_oven_spritelayout_pusher_rails_empty;
+            
+        
+            
+            
+                relative_coord(1, 4): coke_oven_spritelayout_coal_handling_front;
+            
+        
+            
+            
+                relative_coord(2, 0): coke_oven_spritelayout_oven_battery_pipes_only;
+            
+        
+            
+            
+                relative_coord(2, 1): coke_oven_spritelayout_pusher_rails_empty;
+            
+        
+            
+            
+                relative_coord(2, 2): coke_oven_spritelayout_silo;
+            
+        
+            
+            
+                relative_coord(2, 3): coke_oven_spritelayout_pusher_rails_animated;
+            
+        
+            
+            
+                relative_coord(2, 4): coke_oven_spritelayout_coal_handling_rear;
+            
+        
+            
+            
+                relative_coord(3, 0): coke_oven_spritelayout_quench_tower;
+            
+        
+            
+            
+                relative_coord(3, 1): coke_oven_spritelayout_pusher_rails_with_house;
+            
+        
+            
+            
+                relative_coord(3, 2): coke_oven_spritelayout_oven_battery_pipes_only;
+            
+        
+            
+            
+                relative_coord(3, 3): coke_oven_spritelayout_pusher_rails_empty;
+            
+        
+            
+            
+                relative_coord(3, 4): coke_oven_spritelayout_coal_handling_front;
+            
+        
+        return 0; // a default is needed, but should never be reached, layout definitions are explicit
+    }
+
+    switch(FEAT_INDUSTRYTILES, SELF, coke_oven_industry_layout_4_graphics_switch, relative_pos) {
+        
+            
+            
+                relative_coord(0, 0): coke_oven_spritelayout_empty;
+            
+        
+            
+            
+                relative_coord(0, 1): coke_oven_spritelayout_oven_battery_pipes_only;
+            
+        
+            
+            
+                relative_coord(0, 2): coke_oven_spritelayout_pusher_rails_with_house;
+            
+        
+            
+            
+                relative_coord(0, 3): coke_oven_spritelayout_oven_battery_pipes_only;
+            
+        
+            
+            
+                relative_coord(0, 4): coke_oven_spritelayout_pusher_rails_with_house;
+            
+        
+            
+            
+                relative_coord(1, 0): coke_oven_spritelayout_coal_handling_rear;
+            
+        
+            
+            
+                relative_coord(1, 1): coke_oven_spritelayout_silo;
+            
+        
+            
+            
+                relative_coord(1, 2): coke_oven_spritelayout_pusher_rails_empty;
+            
+        
+            
+            
+                relative_coord(1, 3): coke_oven_spritelayout_oven_battery_larry_car;
+            
+        
+            
+            
+                relative_coord(1, 4): coke_oven_spritelayout_pusher_rails_empty;
+            
+        
+            
+            
+                relative_coord(2, 0): coke_oven_spritelayout_coal_handling_front;
+            
+        
+            
+            
+                relative_coord(2, 1): coke_oven_spritelayout_oven_battery_larry_car;
+            
+        
+            
+            
+                relative_coord(2, 2): coke_oven_spritelayout_pusher_rails_animated;
+            
+        
+            
+            
+                relative_coord(2, 3): coke_oven_spritelayout_silo;
+            
+        
+            
+            
+                relative_coord(2, 4): coke_oven_spritelayout_pusher_rails_animated;
+            
+        
+            
+            
+                relative_coord(3, 0): coke_oven_spritelayout_gas_plant_1;
+            
+        
+            
+            
+                relative_coord(3, 1): coke_oven_spritelayout_quench_tower;
+            
+        
+            
+            
+                relative_coord(3, 2): coke_oven_spritelayout_pusher_rails_empty;
+            
+        
+            
+            
+                relative_coord(3, 3): coke_oven_spritelayout_quench_tower;
+            
+        
+            
+            
+                relative_coord(3, 4): coke_oven_spritelayout_pusher_rails_empty;
+            
+        
+        return 0; // a default is needed, but should never be reached, layout definitions are explicit
+    }
+
+    switch(FEAT_INDUSTRYTILES, SELF, coke_oven_industry_layout_5_graphics_switch, relative_pos) {
+        
+            
+            
+                relative_coord(0, 0): coke_oven_spritelayout_empty;
+            
+        
+            
+            
+                relative_coord(0, 1): coke_oven_spritelayout_coal_handling_rear;
+            
+        
+            
+            
+                relative_coord(0, 2): coke_oven_spritelayout_silo;
+            
+        
+            
+            
+                relative_coord(0, 3): coke_oven_spritelayout_quench_tower;
+            
+        
+            
+            
+                relative_coord(0, 4): coke_oven_spritelayout_silo;
+            
+        
+            
+            
+                relative_coord(0, 5): coke_oven_spritelayout_gas_plant_1;
+            
+        
+            
+            
+                relative_coord(1, 0): coke_oven_spritelayout_coal_handling_rear;
+            
+        
+            
+            
+                relative_coord(1, 1): coke_oven_spritelayout_coal_handling_front;
+            
+        
+            
+            
+                relative_coord(1, 2): coke_oven_spritelayout_oven_battery_pipes_only;
+            
+        
+            
+            
+                relative_coord(1, 3): coke_oven_spritelayout_pusher_rails_animated;
+            
+        
+            
+            
+                relative_coord(1, 4): coke_oven_spritelayout_oven_battery_larry_car;
+            
+        
+            
+            
+                relative_coord(1, 5): coke_oven_spritelayout_pusher_rails_with_house;
+            
+        
+            
+            
+                relative_coord(2, 0): coke_oven_spritelayout_coal_handling_front;
+            
+        
+            
+            
+                relative_coord(2, 1): coke_oven_spritelayout_quench_tower;
+            
+        
+            
+            
+                relative_coord(2, 2): coke_oven_spritelayout_oven_battery_larry_car;
+            
+        
+            
+            
+                relative_coord(2, 3): coke_oven_spritelayout_pusher_rails_with_house;
+            
+        
+            
+            
+                relative_coord(2, 4): coke_oven_spritelayout_oven_battery_pipes_only;
+            
+        
+            
+            
+                relative_coord(2, 5): coke_oven_spritelayout_pusher_rails_animated;
+            
+        
+        return 0; // a default is needed, but should never be reached, layout definitions are explicit
+    }
+
+
+
+switch(FEAT_INDUSTRYTILES, PARENT, coke_oven_industry_graphics_switch_layouts, layout_num) {
+    
+        1: coke_oven_industry_layout_1_graphics_switch;
+    
+        2: coke_oven_industry_layout_2_graphics_switch;
+    
+        3: coke_oven_industry_layout_3_graphics_switch;
+    
+        4: coke_oven_industry_layout_4_graphics_switch;
+    
+        5: coke_oven_industry_layout_5_graphics_switch;
+    
+    coke_oven_industry_layout_1_graphics_switch; // default
+}
+
+
+switch(FEAT_INDUSTRYTILES, SELF, coke_oven_industry_construction_state_graphics_switch, construction_state) {
+    0..2: spritelayout_default_construction_states;
+    
+    coke_oven_industry_graphics_switch_layouts; // default
+}
+
+switch(FEAT_INDUSTRYTILES, SELF, coke_oven_store_temp_vars,
+        [STORE_TEMP(random_bits, 14),
+         STORE_TEMP(terrain_type == TILETYPE_SNOW, 13)
+            
+                , STORE_TEMP(0,
+                             127) 
+                , STORE_TEMP(construction_state != 3 ? 1 : LOAD_TEMP(127),
+                             127)
+                , STORE_TEMP(LOAD_TEMP(13) == 0 ? 1 : LOAD_TEMP(127), 
+                             117) 
+                , STORE_TEMP(LOAD_TEMP(13) == 1 ? 1 : LOAD_TEMP(127), 
+                             127)
+            
+        ]) {
+    coke_oven_industry_construction_state_graphics_switch; // default
+}
+
+switch (FEAT_INDUSTRYTILES, SELF, coke_oven_switch_graphics, [
+                                    switch_tile_fences(),
+                                    switch_terrain_sprite(),
+                                    
+                                 ]) {
+    coke_oven_store_temp_vars;
+}
+
+
+
+    
+        
+            
+    
+    switch(FEAT_INDUSTRYTILES, SELF, coke_oven_tile_1_lc_2,
+            (nearby_tile_class( 2,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2, -2) == TILE_CLASS_INDUSTRY)
+        ) {
+        1: return CB_RESULT_LOCATION_DISALLOW;
+        return CB_RESULT_LOCATION_ALLOW;
+    }
+
+        
+            
+    
+    switch (FEAT_INDUSTRYTILES, PARENT, coke_oven_tile_1_lc_1, (
+                (((extra_callback_info2 & 0xFF00) >> 8) == IND_CREATION_FUND) ||
+                (((extra_callback_info2 & 0xFF00) >> 8) == IND_CREATION_PROSPECT)
+                )
+            ) {
+        1: return CB_RESULT_LOCATION_ALLOW;
+        coke_oven_tile_1_lc_2;
+    }
+
+        
+            
+    
+    switch (FEAT_INDUSTRYTILES, SELF, coke_oven_tile_1_lc_0,
+                (
+                nearby_tile_height(-relative_x, -relative_y)
+                + (nearby_tile_slope(-relative_x, -relative_y)
+                == SLOPE_FLAT ? 0 :
+                nearby_tile_slope(-relative_x, -relative_y) == bitmask(IS_STEEP_SLOPE) ? 2 : 1
+                )) == (nearby_tile_height(0, 0)
+                + (nearby_tile_slope(0, 0)
+                == SLOPE_FLAT ? 0 :
+                nearby_tile_slope(0, 0) == bitmask(IS_STEEP_SLOPE) ? 2 : 1))
+                ) {
+        1: coke_oven_tile_1_lc_1;
+        return CB_RESULT_LOCATION_DISALLOW;
+    }
+
+        
+    
+        
+            
+    
+    switch(FEAT_INDUSTRYTILES, SELF, coke_oven_tile_2_lc_2,
+            (nearby_tile_class( 2,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 2, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 1, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( 0, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -1, -2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  2) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2,  0) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2, -1) == TILE_CLASS_INDUSTRY) ||
+            (nearby_tile_class( -2, -2) == TILE_CLASS_INDUSTRY)
+        ) {
+        1: return CB_RESULT_LOCATION_DISALLOW;
+        return CB_RESULT_LOCATION_ALLOW;
+    }
+
+        
+            
+    
+    switch (FEAT_INDUSTRYTILES, PARENT, coke_oven_tile_2_lc_1, (
+                (((extra_callback_info2 & 0xFF00) >> 8) == IND_CREATION_FUND) ||
+                (((extra_callback_info2 & 0xFF00) >> 8) == IND_CREATION_PROSPECT)
+                )
+            ) {
+        1: return CB_RESULT_LOCATION_ALLOW;
+        coke_oven_tile_2_lc_2;
+    }
+
+        
+            
+    
+    switch (FEAT_INDUSTRYTILES, SELF, coke_oven_tile_2_lc_0,
+                (
+                nearby_tile_height(-relative_x, -relative_y)
+                + (nearby_tile_slope(-relative_x, -relative_y)
+                == SLOPE_FLAT ? 0 :
+                nearby_tile_slope(-relative_x, -relative_y) == bitmask(IS_STEEP_SLOPE) ? 2 : 1
+                )) == (nearby_tile_height(0, 0)
+                + (nearby_tile_slope(0, 0)
+                == SLOPE_FLAT ? 0 :
+                nearby_tile_slope(0, 0) == bitmask(IS_STEEP_SLOPE) ? 2 : 1))
+                ) {
+        1: coke_oven_tile_2_lc_1;
+        return CB_RESULT_LOCATION_DISALLOW;
+    }
+
+        
+    
+
+
+
+    
+        
+    
+    
+    switch(FEAT_INDUSTRYTILES, SELF, coke_oven_tile_1_anim_control, (extra_callback_info1 % 7)) {
+        
+            0: return 0;
+        
+            1: return 1;
+        
+            2: return 2;
+        
+            3: return 3;
+        
+            4: return 4;
+        
+            5: return 5;
+        
+            6: return 6;
+        
+        return CB_RESULT_NEXT_FRAME;
+    }
+
+    
+        
+    
+    
+    switch(FEAT_INDUSTRYTILES, SELF, coke_oven_tile_2_anim_control, (extra_callback_info1 % 47)) {
+        
+            0: return 0;
+        
+            1: return 1;
+        
+            2: return 2;
+        
+            3: return 3;
+        
+            4: return 4;
+        
+            5: return 5;
+        
+            6: return 6;
+        
+            7: return 7;
+        
+            8: return 8;
+        
+            9: return 9;
+        
+            10: return 10;
+        
+            11: return 11;
+        
+            12: return 12;
+        
+            13: return 13;
+        
+            14: return 14;
+        
+            15: return 15;
+        
+            16: return 16;
+        
+            17: return 17;
+        
+            18: return 18;
+        
+            19: return 19;
+        
+            20: return 20;
+        
+            21: return 21;
+        
+            22: return 22;
+        
+            23: return 23;
+        
+            24: return 24;
+        
+            25: return 25;
+        
+            26: return 26;
+        
+            27: return 27;
+        
+            28: return 28;
+        
+            29: return 29;
+        
+            30: return 30;
+        
+            31: return 31;
+        
+            32: return 32;
+        
+            33: return 33;
+        
+            34: return 34;
+        
+            35: return 35;
+        
+            36: return 36;
+        
+            37: return 37;
+        
+            38: return 38;
+        
+            39: return 39;
+        
+            40: return 40;
+        
+            41: return 41;
+        
+            42: return 42;
+        
+            43: return 43;
+        
+            44: return 44;
+        
+            45: return 45;
+        
+            46: return 46;
+        
+        return CB_RESULT_NEXT_FRAME;
+    }
+
+    
+
+
+
+    
+    item(FEAT_INDUSTRYTILES, coke_oven_tile_1, 167) {
+        property {
+            substitute:         0;
+            land_shape_flags:   0;
+            special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+            
+            
+                animation_info: [ANIMATION_LOOPING, 7];
+            
+            
+                animation_speed: 3;
+            
+            animation_triggers: bitmask(ANIM_TRIGGER_INDTILE_CONSTRUCTION_STATE);
+        }
+
+        graphics {
+    		
+    		    tile_check: coke_oven_tile_1_lc_0;
+            
+            
+    		
+    		    
+                
+                
+        		    anim_control: coke_oven_tile_1_anim_control;
+                
+    		
+            
+    		
+    		
+            coke_oven_switch_graphics;
+        }
+    }
+
+    
+    item(FEAT_INDUSTRYTILES, coke_oven_tile_2, 168) {
+        property {
+            substitute:         0;
+            land_shape_flags:   0;
+            special_flags: bitmask(INDTILE_FLAG_ACCEPT_ALL);
+            
+            
+                animation_info: [ANIMATION_LOOPING, 47];
+            
+            
+                animation_speed: 2;
+            
+            animation_triggers: bitmask(ANIM_TRIGGER_INDTILE_CONSTRUCTION_STATE);
+        }
+
+        graphics {
+    		
+    		    tile_check: coke_oven_tile_2_lc_0;
+            
+            
+    		
+    		    
+                
+                
+        		    anim_control: coke_oven_tile_2_anim_control;
+                
+    		
+            
+    		
+    		
+            coke_oven_switch_graphics;
+        }
+    }
+
+
+
+
+/* *************************************************
+ * Definition of the industry
+ * *************************************************/
+
+
+    tilelayout coke_oven_industry_layout_1_tilelayout {
+        
+            0, 0: coke_oven_tile_1;
+        
+            0, 1: coke_oven_tile_2;
+        
+            0, 2: coke_oven_tile_1;
+        
+            1, 0: coke_oven_tile_1;
+        
+            1, 1: coke_oven_tile_1;
+        
+            1, 2: coke_oven_tile_1;
+        
+            2, 0: coke_oven_tile_1;
+        
+            2, 1: coke_oven_tile_1;
+        
+            2, 2: coke_oven_tile_1;
+        
+            3, 0: coke_oven_tile_1;
+        
+            3, 1: coke_oven_tile_1;
+        
+            3, 2: coke_oven_tile_1;
+        
+            4, 0: coke_oven_tile_1;
+        
+            4, 1: coke_oven_tile_2;
+        
+            4, 2: coke_oven_tile_1;
+        
+    }
+
+    tilelayout coke_oven_industry_layout_2_tilelayout {
+        
+            0, 0: coke_oven_tile_1;
+        
+            0, 1: coke_oven_tile_1;
+        
+            0, 2: coke_oven_tile_1;
+        
+            0, 3: coke_oven_tile_1;
+        
+            1, 0: coke_oven_tile_1;
+        
+            1, 1: coke_oven_tile_2;
+        
+            1, 2: coke_oven_tile_1;
+        
+            1, 3: coke_oven_tile_1;
+        
+            2, 0: coke_oven_tile_1;
+        
+            2, 1: coke_oven_tile_1;
+        
+            2, 2: coke_oven_tile_1;
+        
+            2, 3: coke_oven_tile_1;
+        
+            3, 0: coke_oven_tile_1;
+        
+            3, 1: coke_oven_tile_1;
+        
+            3, 2: coke_oven_tile_1;
+        
+            3, 3: coke_oven_tile_1;
+        
+    }
+
+    tilelayout coke_oven_industry_layout_3_tilelayout {
+        
+            0, 0: coke_oven_tile_2;
+        
+            0, 1: coke_oven_tile_1;
+        
+            0, 2: coke_oven_tile_1;
+        
+            0, 3: coke_oven_tile_1;
+        
+            0, 4: coke_oven_tile_1;
+        
+            1, 0: coke_oven_tile_1;
+        
+            1, 1: coke_oven_tile_1;
+        
+            1, 2: coke_oven_tile_2;
+        
+            1, 3: coke_oven_tile_1;
+        
+            1, 4: coke_oven_tile_1;
+        
+            2, 0: coke_oven_tile_1;
+        
+            2, 1: coke_oven_tile_1;
+        
+            2, 2: coke_oven_tile_1;
+        
+            2, 3: coke_oven_tile_1;
+        
+            2, 4: coke_oven_tile_1;
+        
+            3, 0: coke_oven_tile_1;
+        
+            3, 1: coke_oven_tile_1;
+        
+            3, 2: coke_oven_tile_1;
+        
+            3, 3: coke_oven_tile_1;
+        
+            3, 4: coke_oven_tile_1;
+        
+    }
+
+    tilelayout coke_oven_industry_layout_4_tilelayout {
+        
+            0, 0: coke_oven_tile_1;
+        
+            0, 1: coke_oven_tile_1;
+        
+            0, 2: coke_oven_tile_1;
+        
+            0, 3: coke_oven_tile_1;
+        
+            0, 4: coke_oven_tile_1;
+        
+            1, 0: coke_oven_tile_1;
+        
+            1, 1: coke_oven_tile_1;
+        
+            1, 2: coke_oven_tile_1;
+        
+            1, 3: coke_oven_tile_2;
+        
+            1, 4: coke_oven_tile_1;
+        
+            2, 0: coke_oven_tile_1;
+        
+            2, 1: coke_oven_tile_2;
+        
+            2, 2: coke_oven_tile_1;
+        
+            2, 3: coke_oven_tile_1;
+        
+            2, 4: coke_oven_tile_1;
+        
+            3, 0: coke_oven_tile_1;
+        
+            3, 1: coke_oven_tile_1;
+        
+            3, 2: coke_oven_tile_1;
+        
+            3, 3: coke_oven_tile_1;
+        
+            3, 4: coke_oven_tile_1;
+        
+    }
+
+    tilelayout coke_oven_industry_layout_5_tilelayout {
+        
+            0, 0: coke_oven_tile_1;
+        
+            0, 1: coke_oven_tile_1;
+        
+            0, 2: coke_oven_tile_1;
+        
+            0, 3: coke_oven_tile_1;
+        
+            0, 4: coke_oven_tile_1;
+        
+            0, 5: coke_oven_tile_1;
+        
+            1, 0: coke_oven_tile_1;
+        
+            1, 1: coke_oven_tile_1;
+        
+            1, 2: coke_oven_tile_1;
+        
+            1, 3: coke_oven_tile_1;
+        
+            1, 4: coke_oven_tile_2;
+        
+            1, 5: coke_oven_tile_1;
+        
+            2, 0: coke_oven_tile_1;
+        
+            2, 1: coke_oven_tile_1;
+        
+            2, 2: coke_oven_tile_2;
+        
+            2, 3: coke_oven_tile_1;
+        
+            2, 4: coke_oven_tile_1;
+        
+            2, 5: coke_oven_tile_1;
+        
+    }
+
+
+
+
+
+switch (FEAT_INDUSTRIES, SELF, coke_oven_extra_text, economy) {
+    
+        5: return string(STR_EMPTY);
+    
+}
+
+
+
+
+
+    
+    
+        switch (FEAT_INDUSTRIES, SELF, coke_oven_cargo_subtype_display_cargo_COAL_economy_5, [
+                LOAD_PERM(3)
+            ]) {
+            0: return 0x3800 + string(STR_EMPTY);
+            return 0x3800 + string(STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG);
+        }
+    
+    switch (FEAT_INDUSTRIES, SELF, coke_oven_cargo_subtype_display_switch_cargo_economy_5, getbits(extra_callback_info2, 16, 8)) {
+        
+        
+            COAL: coke_oven_cargo_subtype_display_cargo_COAL_economy_5;
+        
+        return CB_RESULT_NO_TEXT;
+    }
+
+
+switch (FEAT_INDUSTRIES, SELF, coke_oven_cargo_subtype_display_switch_economy, economy) {
+    
+        5:  coke_oven_cargo_subtype_display_switch_cargo_economy_5;
+    
+}
+
+
+switch (FEAT_INDUSTRIES, SELF, coke_oven_cargo_subtype_display, getbits(extra_callback_info2, 8, 8)) {
+    1: coke_oven_cargo_subtype_display_switch_economy;
+    return CB_RESULT_NO_TEXT;
+}
+
+
+
+
+
+    produce (coke_oven_produce_5,
+        [
+            
+                
+                COAL: incoming_cargo_waiting("COAL");
+            
+        ],
+        [
+            
+                COKE: (LOAD_PERM(11) * 6) / 8;
+            
+                SULP: (LOAD_PERM(11) * 1) / 8;
+            
+        ],
+    0)
+
+
+    switch (FEAT_INDUSTRIES, SELF, coke_oven_produce_update_supplied_cycles_remaining_per_cargo_5,
+        [
+            
+            
+                STORE_PERM_ALT(
+                    3,
+                    (incoming_cargo_waiting("COAL") > 0)
+                    ?
+                    28
+                    :
+                    LOAD_PERM(3)
+                ),
+            
+            0 
+        ]) {
+        return 0;
+    }
+
+    switch (FEAT_INDUSTRIES, SELF, coke_oven_produce_calculate_current_production_level_5,
+        [
+            
+                
+                STORE_PERM_ALT(
+                    1,
+                    LOAD_PERM(1)
+                    +
+                    (
+                        LOAD_PERM(3)
+                        > 0 ? 8 : 0
+                    )
+                ),
+            
+            0 
+        ]) {
+        return 0;
+    }
+
+    switch (FEAT_INDUSTRIES, SELF, coke_oven_produce_calculation_5,
+            [
+                
+                STORE_PERM_ALT(1, 0),
+                
+                STORE_PERM_ALT(2, 0),
+                coke_oven_produce_update_supplied_cycles_remaining_per_cargo_5(),
+                coke_oven_produce_calculate_current_production_level_5(),
+                
+                
+                    STORE_PERM_ALT(
+                        2,
+                        LOAD_PERM(2)
+                        + ((incoming_cargo_waiting("COAL") * LOAD_PERM(1)) / 8)
+                    ),
+                
+                
+                STORE_PERM_ALT(
+                    12,
+                    LOAD_PERM(12) + LOAD_PERM(2)
+                ),
+                
+
+                
+                STORE_PERM_ALT(
+                    11,
+                    (LOAD_PERM(12) / 8) >= 1
+                    ?
+                    LOAD_PERM(12)
+                    :
+                    0
+                ),
+                STORE_PERM_ALT(
+                    12,
+                    (LOAD_PERM(12) / 8) >= 1
+                    ?
+                    0
+                    :
+                    LOAD_PERM(12)
+                ),
+                
+                
+                STORE_PERM_ALT(
+                    0,
+                    (LOAD_PERM(2) == 0)
+                    ?
+                    LOAD_PERM(0)
+                    :
+                    0
+                ),
+            ]) {
+        coke_oven_produce_5;
+    }
+
+
+switch (FEAT_INDUSTRIES, SELF, coke_oven_produce_cargo_arrival, economy) {
+    
+        5: coke_oven_produce_calculation_5;
+    
+}
+
+
+
+
+produce(coke_oven_produce_256_ticks_produce,
+    [],
+    [],
+0)
+
+
+switch(FEAT_INDUSTRIES, SELF, coke_oven_update_supplied_cycles_remaining_per_cargo,
+    [
+        
+            
+            STORE_PERM_ALT(
+                3,
+                max(
+                    0,
+                    LOAD_PERM(3)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                4,
+                max(
+                    0,
+                    LOAD_PERM(4)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                5,
+                max(
+                    0,
+                    LOAD_PERM(5)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                6,
+                max(
+                    0,
+                    LOAD_PERM(6)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                7,
+                max(
+                    0,
+                    LOAD_PERM(7)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                8,
+                max(
+                    0,
+                    LOAD_PERM(8)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                9,
+                max(
+                    0,
+                    LOAD_PERM(9)
+                    - 1
+                )
+            ),
+        
+            
+            STORE_PERM_ALT(
+                10,
+                max(
+                    0,
+                    LOAD_PERM(10)
+                    - 1
+                )
+            ),
+        
+    ]) {
+    return 0;
+}
+
+switch(FEAT_INDUSTRIES, SELF, coke_oven_produce_256_ticks,
+    [
+        coke_oven_update_supplied_cycles_remaining_per_cargo(),
+    ]) {
+    coke_oven_produce_256_ticks_produce;
+}
+
+
+switch(FEAT_INDUSTRIES, SELF, coke_oven_monthly_prod_change,
+    [
+        monthly_town_loop(
+            0,
+            2
+        )
+    ]) {
+    return CB_RESULT_IND_PROD_NO_CHANGE;
+}
+
+
+
+
+
+
+
+
+switch(FEAT_INDUSTRIES, SELF, coke_oven_check_availability_param, restrict_open_during_gameplay) {
+	1..255: return CB_RESULT_IND_NO_CONSTRUCTION;         // disallow when restrictions in place
+	return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;       // we may build
+}
+
+
+switch (FEAT_INDUSTRIES, SELF, coke_oven_check_map_gen, extra_callback_info2 == IND_CREATION_GENERATION) {
+	1: return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;
+	coke_oven_check_availability_param;
+}
+
+switch (FEAT_INDUSTRIES, SELF, coke_oven_available_game_mode, game_mode == GAMEMODE_GAME) {
+	1: coke_oven_check_map_gen;
+	return CB_RESULT_IND_PROBABILITY_FROM_PROPERTY;
+}
+
+
+
+    /* 0 */
+    switch (FEAT_INDUSTRIES, SELF, coke_oven_check_availability_5, current_date) {
+        date(0,1,1) .. date(5000000,12,31): coke_oven_available_game_mode;
+        return CB_RESULT_IND_NO_CONSTRUCTION;
+    }
+
+
+switch (FEAT_INDUSTRIES, SELF, coke_oven_check_availability, economy) {
+    
+        5: coke_oven_check_availability_5;
+    
+}
+
+
+
+
+
+
+
+    if (economy==5) {
+        item(FEAT_INDUSTRIES, coke_oven, 50) {
+            property {
+                
+                substitute: 0;
+                override: 0;
+                map_colour: 183;
+                life_type: IND_LIFE_TYPE_PROCESSING;
+                
+                
+                
+                
+                min_cargo_distr: 1;
+                layouts: [coke_oven_industry_layout_1_tilelayout,coke_oven_industry_layout_2_tilelayout,coke_oven_industry_layout_3_tilelayout,coke_oven_industry_layout_4_tilelayout,coke_oven_industry_layout_5_tilelayout];
+                spec_flags: bitmask(IND_FLAG_LONG_CARGO_TYPE_LISTS);
+                conflicting_ind_types: []; // set this prop empty, FIRS has it's own better checks for this
+                random_sound_effects: []; // set this empty to avoid spurious default industry sounds (as of May 2017 FIRS does not yet use sound effects)
+                
+                name: string(STR_IND_COKE_OVEN);
+                prob_map_gen: 5;
+                prob_in_game: 3;
+                
+                fund_cost_multiplier: 120;
+                remove_cost_multiplier: 0;
+                remove_cost_multiplier: 0;
+                
+                cargo_types: [accept_cargo("COAL"),produce_cargo("COKE",0),produce_cargo("SULP",0)];
+                nearby_station_name: string(STR_STATION, string(STR_TOWN),string(STR_STATION_BANK_TOP));
+            }
+        }
+    }
+
+
+
+
+
+    if (economy==5) {
+        item(FEAT_INDUSTRIES, coke_oven, 50) {
+            graphics {
+                construction_probability: coke_oven_check_availability;
+                produce_cargo_arrival:    coke_oven_produce_cargo_arrival;
+                produce_256_ticks:        coke_oven_produce_256_ticks;
+                monthly_prod_change:     coke_oven_monthly_prod_change;
+                random_prod_change:       CB_RESULT_IND_PROD_NO_CHANGE;
+                location_check:           coke_oven_check_location;
+                extra_text_fund:          return CB_RESULT_NO_TEXT;
+                extra_text_industry:      coke_oven_extra_text;
+                cargo_subtype_display:    coke_oven_cargo_subtype_display;
+                colour:                   switch_colour;
+            }
+        }
+    }
+

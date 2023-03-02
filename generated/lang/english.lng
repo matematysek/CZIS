@@ -81,7 +81,7 @@ STR_CARGO_NAME_EXPLOSIVES                                                       
 STR_CARGO_NAME_FERROCHROME                                                      :Ferroalloy
 STR_CARGO_NAME_FIBRES                                                           :Fibres
 # Fish is also meat
-STR_CARGO_NAME_FISH                                                             :Fish & Meat
+STR_CARGO_NAME_FISH                                                             :Fish
 STR_CARGO_NAME_FARM_SUPPLIES                                                    :Farm Supplies
 STR_CARGO_NAME_FERTILISER                                                       :Fertiliser
 STR_CARGO_NAME_FOOD_ADDITIVES                                                   :Food Additives

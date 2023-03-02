@@ -3,46 +3,18 @@ from industry import IndustrySecondary, TileLocationChecks
 industry = IndustrySecondary(
     id="cement_plant",
     accept_cargos_with_input_ratios=[("COAL", 2), ("CLAY", 2), ("LIME", 4)],
-    combined_cargos_boost_prod=True,
     prod_cargo_types_with_output_ratios=[("CMNT", 8)],
     prob_in_game="3",
     prob_map_gen="5",
     map_colour="19",
-    # the keystones are quite specific to IAHC, and location checks aren't economy specific, so this might need adjusted if other economies gain cement plant
-    location_checks=dict(
-        near_at_least_one_of_these_keystone_industries=[
-            ["quarry", "phosphate_mine"],
-            96,
-        ],
-        same_type_distance=96,
-    ),
     special_flags=["IND_FLAG_MILITARY_HELICOPTER_CAN_EXPLODE"],
     name="string(STR_IND_CEMENT_PLANT)",
     nearby_station_name="string(STR_STATION_SILO)",
     fund_cost_multiplier="203",
     pollution_and_squalor_factor=2,
 )
+industry.economy_variations["CZ"].enabled = True
 
-industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].enabled = True
-
-industry.economy_variations["STEELTOWN"].enabled = True
-industry.economy_variations["STEELTOWN"].accept_cargos_with_input_ratios = [
-    ("PETR", 2),
-    ("SAND", 2),
-    ("LIME", 4),
-]
-
-industry.economy_variations["IN_A_HOT_COUNTRY"].enabled = True
-industry.economy_variations["IN_A_HOT_COUNTRY"].accept_cargos_with_input_ratios = [
-    ("PETR", 2),
-    ("CLAY", 2),
-    ("GRVL", 4),
-]
-industry.economy_variations["IN_A_HOT_COUNTRY"].prod_cargo_types_with_output_ratios = [
-    ("BDMT", 8)
-]
-# industry.economy_variations['IN_A_HOT_COUNTRY'].accept_cargos_with_input_ratios = [('COAL', 2), ('CLAY', 2), ('GRVL', 4)]
-# industry.economy_variations['IN_A_HOT_COUNTRY'].prod_cargo_types_with_output_ratios = [('CMNT', 8)]
 
 industry.add_tile(
     id="cement_plant_tile_1",

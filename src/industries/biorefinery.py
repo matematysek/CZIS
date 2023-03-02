@@ -12,17 +12,7 @@ industry = IndustrySecondary(
     nearby_station_name="string(STR_STATION_REFINERY)",
     fund_cost_multiplier="170",
 )
-
-industry.economy_variations["STEELTOWN"].enabled = True
-industry.economy_variations["STEELTOWN"].accept_cargos_with_input_ratios = [
-    ("GRAI", 4),
-    ("FRUT", 4),  
-]
-industry.economy_variations["STEELTOWN"].prod_cargo_types_with_output_ratios = [
-    ("RFPR", 2),
-    ("PETR", 3),
-    ("C2H4", 3),
-]
+industry.economy_variations["CZ"].enabled = True
 
 industry.add_tile(
     id="biorefinery_tile_1",

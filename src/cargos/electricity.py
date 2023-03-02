@@ -1,4 +1,4 @@
-rom cargo import Cargo
+from cargo import Cargo
 
 cargo = Cargo(
     id="electricity",

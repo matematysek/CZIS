@@ -4,11 +4,11 @@ industry = IndustrySecondary(
     id="component_factory",
     accept_cargos_with_input_ratios=[
         ("STSE", 2),
-        ("PPAR", 2),
+        ("PLAS", 2),
         ("STAL", 2),
         ("POWR", 2),
+        ("ELEC", 2),
     ],
-    combined_cargos_boost_prod=True,
     prod_cargo_types_with_output_ratios=[("VPTS", 8)],
     prob_in_game="7",
     prob_map_gen="8",
@@ -19,16 +19,8 @@ industry = IndustrySecondary(
     pollution_and_squalor_factor=1,
 )
 
-industry.economy_variations["STEELTOWN"].enabled = True
-industry.economy_variations[
-    "STEELTOWN"
-].prob_in_game = "1"  # low chance of build during gameplay
+industry.economy_variations["CZ"].enabled = True
 
-"""
-industry.economy_variations['IN_A_HOT_COUNTRY'].enabled = True
-industry.economy_variations['IN_A_HOT_COUNTRY'].accept_cargos_with_input_ratios = [('FICR', 6), ('SASH', 2)]
-industry.economy_variations['IN_A_HOT_COUNTRY'].prod_cargo_types_with_output_ratios = [('YARN', 8)]
-"""
 
 industry.add_tile(
     id="component_factory_tile_1",

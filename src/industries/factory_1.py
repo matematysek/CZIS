@@ -3,8 +3,7 @@ from industry import IndustrySecondary, TileLocationChecks
 # !! layout names will need set correctly
 industry = IndustrySecondary(
     id="factory_1",
-    accept_cargos_with_input_ratios=[("GLAS", 2), ("STEL", 2), ("PLAS", 2)],
-    combined_cargos_boost_prod=True,
+    accept_cargos_with_input_ratios=[("GLAS", 2), ("STEL", 2), ("PLAS", 2), ("ELEC", 2)],
     prod_cargo_types_with_output_ratios=[("GOOD", 8)],
     prob_in_game="7",
     prob_map_gen="8",
@@ -14,19 +13,7 @@ industry = IndustrySecondary(
     fund_cost_multiplier="95",
 )
 
-industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].enabled = True
-
-industry.economy_variations['STEELTOWN'].enabled = True
-industry.economy_variations["STEELTOWN"].accept_cargos_with_input_ratios = [
-    ("STAL", 2),
-    ("STSH", 2),  
-    ("GLAS", 1),
-    ("PPAR", 1),
-    ("POWR", 1),
-    ("TYRE", 1),
-]
-
-
+industry.economy_variations["CZ"].enabled = True
 
 industry.add_tile(
     id="factory_1_tile_1",

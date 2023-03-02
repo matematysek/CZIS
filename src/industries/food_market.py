@@ -11,16 +11,11 @@ industry = IndustryTertiary(
     life_type="IND_LIFE_TYPE_BLACK_HOLE",
     special_flags=["IND_FLAG_ONLY_IN_TOWNS"],
     location_checks=dict(same_type_distance=16),
-    prospect_chance="0.75",
     name="string(STR_IND_FOOD_MARKET)",
     nearby_station_name="string(STR_STATION_TOWN_3)",
     fund_cost_multiplier="15",
 )
-
-industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].enabled = True
-
-industry.economy_variations['STEELTOWN'].enabled = True
-industry.economy_variations["STEELTOWN"].accept_cargo_types = ["FOOD", "FRUT", "FISH"]
+industry.economy_variations["CZ"].enabled = True
 
 industry.add_tile(
     id="food_market_tile_1",

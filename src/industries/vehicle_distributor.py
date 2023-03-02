@@ -14,13 +14,12 @@ industry = IndustryTertiary(
     nearby_station_name="string(STR_STATION_VEHICLE_DISTRIBUTOR)",
     fund_cost_multiplier="8",
 )
-
-industry.economy_variations["STEELTOWN"].enabled = True
+industry.economy_variations["CZ"].enabled = True
 
 industry.add_tile(
     id="vehicle_distributor_tile_1",
     location_checks=TileLocationChecks(
-        # require_road_adjacent=True,
+        require_road_adjacent=True,
         require_houses_nearby=True,
         require_effectively_flat=True,
     ),

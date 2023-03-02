@@ -2,7 +2,7 @@ from industry import IndustryTertiary, TileLocationChecks
 
 industry = IndustryTertiary(
     id="power_plant",
-    accept_cargo_types=["COAL", "PETR"],
+    accept_cargo_types=["COAL", "PETR", "POWR"],
     prod_cargo_types_with_multipliers=[("ELEC", 16)],
     prob_in_game="3",
     prob_map_gen="5",
@@ -16,10 +16,7 @@ industry = IndustryTertiary(
 )
 
 
-industry.economy_variations["BASIC_ARCTIC"].enabled = True
-industry.economy_variations["BASIC_ARCTIC"].accept_cargo_types = ["PEAT"]
-
-industry.economy_variations["STEELTOWN"].enabled = True
+industry.economy_variations["CZ"].enabled = True
 
 industry.add_tile(
     id="power_plant_tile_1",

@@ -15,12 +15,7 @@ industry = IndustryTertiary(
     nearby_station_name="string(STR_STATION_PUMPS)",
     fund_cost_multiplier="8",
 )
-
-industry.economy_variations["IN_A_HOT_COUNTRY"].enabled = True
-industry.economy_variations["IN_A_HOT_COUNTRY"].prob_map_gen = "8"
-industry.economy_variations["IN_A_HOT_COUNTRY"].prob_in_game = "8"
-
-industry.economy_variations["STEELTOWN"].enabled = True
+industry.economy_variations["CZ"].enabled = True
 
 
 industry.add_tile(

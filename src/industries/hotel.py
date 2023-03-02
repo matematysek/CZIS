@@ -9,26 +9,11 @@ industry = IndustryTertiary(
     map_colour="189",
     life_type="IND_LIFE_TYPE_BLACK_HOLE",
     location_checks=dict(same_type_distance=16),
-    prospect_chance="0.75",
     name="string(STR_IND_HOTEL)",
     nearby_station_name="string(STR_STATION_BAR_GRILL_AND_ROOMS)",
     fund_cost_multiplier="101",
 )
-
-industry.economy_variations["BASIC_TEMPERATE"].enabled = True
-
-industry.economy_variations["BASIC_TROPIC"].enabled = True
-
-industry.economy_variations["BASIC_ARCTIC"].enabled = True
-industry.economy_variations["BASIC_ARCTIC"].accept_cargo_types = [
-    "FOOD",
-    "PASS",
-]
-
-industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].enabled = True
-
-industry.economy_variations["IN_A_HOT_COUNTRY"].enabled = True
-
+industry.economy_variations["CZ"].enabled = True
 
 industry.add_tile(
     id="hotel_tile_1",

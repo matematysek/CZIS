@@ -3,41 +3,15 @@ from industry import IndustrySecondary, TileLocationChecks
 industry = IndustrySecondary(
     id="food_processor",
     accept_cargos_with_input_ratios=[("BEAN", 6), ("FRUT", 6), ("ELEC", 1), ("PACK", 1)],
-    combined_cargos_boost_prod=True,
     prod_cargo_types_with_output_ratios=[("FOOD", 8)],
     prob_in_game="3",
     prob_map_gen="5",
     map_colour="181",
-    location_checks=dict(
-        near_at_least_one_of_these_keystone_industries=[
-            ["arable_farm", "fruit_plantation", "coffee_estate", "vineyard"],
-            72,
-        ]
-    ),
     name="string(STR_IND_CANNERY)",
     nearby_station_name="string(STR_STATION_CANNERY)",
     fund_cost_multiplier="65",
 )
-
-industry.economy_variations["BASIC_TROPIC"].enabled = True
-
-industry.economy_variations["IN_A_HOT_COUNTRY"].enabled = True
-industry.economy_variations["IN_A_HOT_COUNTRY"].accept_cargos_with_input_ratios = [
-    ("NUTS", 6),
-    ("FRUT", 6),
-]
-industry.economy_variations["IN_A_HOT_COUNTRY"].prod_cargo_types_with_output_ratios = [
-    ("EOIL", 4),
-    ("FOOD", 4),
-]
-
-industry.economy_variations["STEELTOWN"].enabled = True
-industry.economy_variations["STEELTOWN"].accept_cargos_with_input_ratios = [
-    ("STSE", 2),
-    ("FISH", 2),
-    ("SALT", 2),
-    ("FRUT", 2),
-]
+industry.economy_variations["CZ"].enabled = True
 
 industry.add_tile(
     id="food_processor_tile_1",

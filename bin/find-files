@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!python.exe
 """
 Find source files.
 """
@@ -11,16 +11,8 @@ def escape_name(text):
     if len(text) == 0:
         return '""' # Empty arguments should not disappear.
 
-    # ('look for', 'replace by', 'do replace') triplets
-    replacements = [('\\', '\\\\', True), (' ', '\\ ', False), ('!', '\\!', True),
-                    ('&', '\\&', True), ('[', '\\[', True), ('"', '\\"', True) ]
-
     safe = True
-    for repl in replacements:
-        if repl[0] in text:
-            safe = False
-            break
-
+    
     if safe:
         return text # Already safe by itself
 
@@ -40,7 +32,7 @@ def collect_files(root, exts):
         return False
 
     if os.path.isfile(root):
-        if has_ext(root):
+        if has_ext(root, exts):
             yield root
 
     elif os.path.isdir(root):

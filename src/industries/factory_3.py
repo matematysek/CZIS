@@ -7,8 +7,8 @@ industry = IndustrySecondary(
         ("GLAS", 2),
         ("PLAS", 2),
         ("ALUM", 2),
+        ("ELEC", 2),
     ],
-    combined_cargos_boost_prod=True,
     prod_cargo_types_with_output_ratios=[("PACK", 8)],
     prob_in_game="7",
     prob_map_gen="8",
@@ -18,20 +18,7 @@ industry = IndustrySecondary(
     fund_cost_multiplier="95",
 )
 
-industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].enabled = True
-
-industry.economy_variations["STEELTOWN"].enabled = True
-industry.economy_variations["STEELTOWN"].accept_cargos_with_input_ratios = [
-    ("RFPR", 2),
-    ("QLME", 2),
-    ("CBLK", 2),
-    ("PLAS", 2),
-]
-industry.economy_variations["STEELTOWN"].prod_cargo_types_with_output_ratios = [
-    ("COAT", 8),
-]
-
-
+industry.economy_variations["CZ"].enabled = True
 
 
 industry.add_tile(

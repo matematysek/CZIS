@@ -5,8 +5,7 @@ from industry import IndustrySecondary, TileLocationChecks
 
 industry = IndustrySecondary(
     id="machine_works",
-    accept_cargos_with_input_ratios=[("STAL", 3), ("COPR", 2), ("RFPR", 1), ("STWR", 1), ("PLST", 1)],
-    combined_cargos_boost_prod=True,
+    accept_cargos_with_input_ratios=[("STAL", 3), ("ELEC", 3), ("COPR", 2), ("RFPR", 2)],
     prod_cargo_types_with_output_ratios=[("POWR", 8)],
     prob_in_game="3",
     prob_map_gen="5",
@@ -15,9 +14,7 @@ industry = IndustrySecondary(
     nearby_station_name="string(STR_STATION_DYNAMO)",
     fund_cost_multiplier="120",
 )
-
-industry.economy_variations['STEELTOWN'].enabled = True
-
+industry.economy_variations["CZ"].enabled = True
 industry.add_tile(
     id="machine_works_tile_1",
     animation_length=47,

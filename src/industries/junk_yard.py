@@ -14,11 +14,7 @@ industry = IndustryTownProducerPopulationDependent(
     graphics_change_dates=[1949, 1960, 1980, 2000],
 )
 
-
-industry.economy_variations["BASIC_TEMPERATE"].enabled = True
-
-industry.economy_variations["STEELTOWN"].enabled = True
-industry.economy_variations["STEELTOWN"].prob_map_gen = "14"
+industry.economy_variations["CZ"].enabled = True
 
 industry.add_tile(
     id="junk_yard_tile_1",

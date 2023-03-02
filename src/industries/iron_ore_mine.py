@@ -12,11 +12,7 @@ industry = IndustryPrimaryExtractive(
     nearby_station_name="string(STR_STATION_IRONSTONE)",
     fund_cost_multiplier="232",
 )
-
-
-industry.economy_variations["BASIC_TEMPERATE"].enabled = True
-industry.economy_variations["STEELTOWN"].enabled = True
-industry.economy_variations["STEELTOWN"].prob_map_gen = "10"
+industry.economy_variations["CZ"].enabled = True
 
 industry.add_tile(
     id="iron_ore_mine_tile_1",

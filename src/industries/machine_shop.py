@@ -3,7 +3,6 @@ from industry import IndustrySecondary, TileLocationChecks
 industry = IndustrySecondary(
     id="machine_shop",
     accept_cargos_with_input_ratios=[("STEL", 8), ("PETR", 8)],
-    combined_cargos_boost_prod=True,
     prod_cargo_types_with_output_ratios=[("FMSP", 4), ("ENSP", 4)],
     prob_in_game="3",
     prob_map_gen="5",
@@ -11,22 +10,9 @@ industry = IndustrySecondary(
     name="string(STR_IND_MACHINE_SHOP)",
     nearby_station_name="string(STR_STATION_HEAVY_EQUIPMENT_YARD)",
     fund_cost_multiplier="145",
-    intro_year=1790,
     graphics_change_dates=[1920, 1945, 1970, 1990, 2010],
 )
-
-industry.economy_variations["STEELTOWN"].enabled = True
-industry.economy_variations["STEELTOWN"].accept_cargos_with_input_ratios = [
-    ("POWR", 3),
-    ("FOCA", 2),
-    ("STSE", 2),
-    ("COAT", 1),
-]
-industry.economy_variations["STEELTOWN"].prod_cargo_types_with_output_ratios = [
-    ("GOOD", 4),
-    ("ENSP", 2),
-    ("FMSP", 2),
-]
+industry.economy_variations["CZ"].enabled = True
 
 industry.add_tile(
     id="machine_shop_tile_1",

@@ -9,10 +9,6 @@ industry = IndustrySecondary(
     prob_map_gen="5",
     substitute="14",
     map_colour="164",
-    location_checks=dict(
-        near_at_least_one_of_these_keystone_industries=[["forest"], 96],
-        same_type_distance=96,
-    ),
     fund_cost_multiplier="120",
     nearby_station_name="string(STR_STATION_MILL)",
     name="TTD_STR_INDUSTRY_NAME_PAPER_MILL",
@@ -20,17 +16,7 @@ industry = IndustrySecondary(
     pollution_and_squalor_factor=2,
 )
 
-industry.economy_variations["BASIC_ARCTIC"].enabled = True
-industry.economy_variations["BASIC_ARCTIC"].accept_cargos_with_input_ratios = [
-    ("KAOL", 2),
-    ("WOOD", 4),
-    ("SULP", 2),
-]
-industry.economy_variations["BASIC_ARCTIC"].prod_cargo_types_with_output_ratios = [
-    ("PAPR", 8)
-]
-
-
+industry.economy_variations["CZ"].enabled = True
 
 # industry uses layouts and sprites from default game, no custom layouts etc
 

@@ -2,8 +2,7 @@ from industry import IndustrySecondary, TileLocationChecks
 
 industry = IndustrySecondary(
     id="stockyard",
-    accept_cargos_with_input_ratios=[("LVST", 6)],
-    combined_cargos_boost_prod=True,
+    accept_cargos_with_input_ratios=[("LVST", 6), ("PACK", 8), ("FISH", 8)],
     prod_cargo_types_with_output_ratios=[("FOOD", 8)],
     prob_in_game="3",
     prob_map_gen="5",
@@ -14,34 +13,7 @@ industry = IndustrySecondary(
     fund_cost_multiplier="115",
     pollution_and_squalor_factor=2,
 )
-
-
-industry.economy_variations["BASIC_TEMPERATE"].enabled = True
-industry.economy_variations["BASIC_TEMPERATE"].accept_cargos_with_input_ratios = [
-    ("LVST", 6)
-]
-
-industry.economy_variations["BASIC_TROPIC"].enabled = True
-industry.economy_variations["BASIC_TROPIC"].accept_cargos_with_input_ratios = [
-    ("LVST", 6)
-]
-
-industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].enabled = True
-industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].accept_cargos_with_input_ratios = [('LVST', 6), ('MNSP', 1), ('ENUM', 1)]
-
-industry.economy_variations["IN_A_HOT_COUNTRY"].enabled = True
-industry.economy_variations["IN_A_HOT_COUNTRY"].accept_cargos_with_input_ratios = [
-    ("LVST", 6)
-]
-
-industry.economy_variations["STEELTOWN"].enabled = True
-industry.economy_variations["STEELTOWN"].accept_cargos_with_input_ratios = [
-    ("LVST", 6),
-    ("SOAP", 2),
-]
-industry.economy_variations["STEELTOWN"].prod_cargo_types_with_output_ratios = [
-    ("FISH", 8),
-]
+industry.economy_variations["CZ"].enabled = True
 
 industry.add_tile(
     id="stockyard_tile_1",

@@ -1,9 +1,7 @@
 from industry import IndustrySecondary, TileLocationChecks
-
 industry = IndustrySecondary(
     id="aluminium_plant",
     accept_cargos_with_input_ratios=[("AORE", 8), ("ACID", 8), ("ELEC", 2)],
-    combined_cargos_boost_prod=True,
     prod_cargo_types_with_output_ratios=[("ALUM", 8), ("SLAG", 8)],
     prob_in_game="3",
     prob_map_gen="5",
@@ -11,13 +9,9 @@ industry = IndustrySecondary(
     name="string(STR_IND_ALUMINIUM_PLANT)",
     nearby_station_name="string(STR_STATION_SMELTER)",
     fund_cost_multiplier="200",
-    graphics_change_dates=[1942, 1980],
-)
-
-industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].enabled = True
-
-industry.economy_variations["STEELTOWN"].enabled = True
-
+    graphics_change_dates=[1942, 1980]
+    )
+industry.economy_variations["CZ"].enabled = True
 
 industry.add_tile(
     id="aluminium_plant_tile_1",

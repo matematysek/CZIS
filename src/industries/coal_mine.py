@@ -13,13 +13,7 @@ industry = IndustryPrimaryExtractive(
     fund_cost_multiplier="252",
     pollution_and_squalor_factor=1,
 )
-
-
-industry.economy_variations["BASIC_TEMPERATE"].enabled = True
-industry.economy_variations["STEELTOWN"].enabled = True
-industry.economy_variations["STEELTOWN"].prob_map_gen = "10"
-
-# industry.economy_variations['IN_A_HOT_COUNTRY'].enabled = True
+industry.economy_variations["CZ"].enabled = True
 
 industry.add_tile(
     id="coal_mine_tile_1",

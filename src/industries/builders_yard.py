@@ -4,30 +4,19 @@ industry = IndustrySecondary(
     id="builders_yard",
     accept_cargos_with_input_ratios=[
         ("CMNT", 2),
-        ("STSE", 2),
-        ("STWR", 2),
-        ("GLAS", 2),
+        ("STSE", 3),
+        ("GLAS", 1),
     ],
     prod_cargo_types_with_output_ratios=[("GOOD", 8)],
     prob_in_game="12",
     prob_map_gen="18",
     prod_multiplier="[0, 0]",
     map_colour="169",
-    prospect_chance="0.75",
     name="string(STR_IND_BUILDERS_YARD)",
     nearby_station_name="string(STR_STATION_MERCHANTS_LANE)",
     fund_cost_multiplier="16",
 )
-
-industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].enabled = True
-
-industry.economy_variations["STEELTOWN"].enabled = True
-industry.economy_variations["STEELTOWN"].prob_in_game = "6"
-industry.economy_variations["STEELTOWN"].prob_map_gen = "9"
-
-industry.economy_variations["IN_A_HOT_COUNTRY"].enabled = True
-industry.economy_variations["IN_A_HOT_COUNTRY"].prob_map_gen = "14"
-# industry.economy_variations['IN_A_HOT_COUNTRY'].accept_cargo_types = ['CMNT', 'WDPR']
+industry.economy_variations["CZ"].enabled = True
 
 industry.add_tile(
     id="builders_yard_tile_1",

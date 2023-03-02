@@ -3,7 +3,6 @@ from industry import IndustrySecondary, TileLocationChecks
 industry = IndustrySecondary(
     id="brick_works",
     accept_cargos_with_input_ratios=[("COAL", 2), ("SAND", 2), ("CLAY", 4)],
-    combined_cargos_boost_prod=True,
     prod_cargo_types_with_output_ratios=[("BDMT", 8)],
     prob_in_game="3",
     prob_map_gen="5",
@@ -14,7 +13,7 @@ industry = IndustrySecondary(
     fund_cost_multiplier="120",
 )
 
-
+industry.economy_variations["CZ"].enabled = True
 
 industry.add_tile(
     id="brick_works_tile_1",

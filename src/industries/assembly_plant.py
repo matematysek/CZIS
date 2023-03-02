@@ -2,13 +2,12 @@ from industry import IndustrySecondary, TileLocationChecks
 
 industry = IndustrySecondary(
     id="assembly_plant",
-    accept_cargos_with_input_ratios=[("ELEC", 1), ("PACK", 1)
+    accept_cargos_with_input_ratios=[("ELEC", 1), ("PACK", 1),
         ("VPTS", 2),
         ("VBOD", 2),
         ("VENG", 2),
         ("TYRE", 4),
     ],
-    combined_cargos_boost_prod=True,
     prod_cargo_types_with_output_ratios=[("VEHI", 8)],
     prob_in_game="3",
     prob_map_gen="5",
@@ -17,11 +16,7 @@ industry = IndustrySecondary(
     nearby_station_name="string(STR_STATION_AUTOMOTIVE)",
     fund_cost_multiplier="145",
 )
-
-industry.economy_variations["STEELTOWN"].enabled = True
-industry.economy_variations[
-    "STEELTOWN"
-].prob_in_game = "1"  # low chance of build during gameplay
+industry.economy_variations["CZ"].enabled = True
 
 industry.add_tile(
     id="assembly_plant_tile_1",

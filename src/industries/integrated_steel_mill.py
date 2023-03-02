@@ -3,7 +3,6 @@ from industry import IndustrySecondary, TileLocationChecks
 industry = IndustrySecondary(
     id="integrated_steel_mill",
     accept_cargos_with_input_ratios=[("IORE", 3), ("COAL", 2), ("SCMT", 3)],
-    combined_cargos_boost_prod=True,
     prod_cargo_types_with_output_ratios=[("STEL", 8)],
     prob_in_game="3",
     prob_map_gen="5",
@@ -12,10 +11,8 @@ industry = IndustrySecondary(
     nearby_station_name="string(STR_STATION_FURNACE)",
     fund_cost_multiplier="190",
 )
+industry.economy_variations["CZ"].enabled = True
 
-
-industry.economy_variations["BASIC_TEMPERATE"].enabled = True
-industry.economy_variations["BASIC_TEMPERATE"].intro_year = 1800
 
 industry.add_tile(
     id="integrated_steel_mill_tile_1",

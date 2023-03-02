@@ -7,7 +7,6 @@ industry = IndustrySecondary(
         ("COKE", 2),
         ("LIME", 2),
     ],
-    combined_cargos_boost_prod=True,
     prod_cargo_types_with_output_ratios=[("STEL", 8)],
     prob_in_game="3",
     prob_map_gen="5",
@@ -18,8 +17,7 @@ industry = IndustrySecondary(
     pollution_and_squalor_factor=2,
 )
 
-
-industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].enabled = True
+industry.economy_variations["CZ"].enabled = True
 
 industry.add_tile(
     id="steel_mill_tile_1",

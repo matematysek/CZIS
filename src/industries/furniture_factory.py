@@ -12,9 +12,6 @@ industry = IndustrySecondary(
     fund_cost_multiplier="95",
 )
 
-industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].enabled = True
-
-
 
 industry.add_tile(
     id="furniture_factory_tile_1",
@@ -22,7 +19,7 @@ industry.add_tile(
         require_effectively_flat=True, disallow_industry_adjacent=True
     ),
 )
-
+industry.economy_variations["CZ"].enabled = True
 
 spriteset_ground = industry.add_spriteset(
     type="cobble",

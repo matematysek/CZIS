@@ -15,12 +15,7 @@ industry = IndustryPrimaryExtractive(
     pollution_and_squalor_factor=1,
 )
 
-industry.economy_variations["BASIC_TEMPERATE"].enabled = True
-industry.economy_variations["BASIC_TEMPERATE"].prod_cargo_types_with_multipliers = [
-    ("KAOL", 16)
-]
-
-
+industry.economy_variations["CZ"].enabled = True
 
 
 # 2 tiles for this industry: pit outer tile cannot be on slopes; pit inner tiles and processor tiles can be

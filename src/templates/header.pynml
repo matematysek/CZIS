@@ -1,24 +1,11 @@
 grf {
-	grfid: "JK\88\08";
+	grfid: "MG\10\01";
 	name: string(STR_GRF_NAME);
 	desc: string(STR_GRF_DESC);
 	url: string(STR_GRF_DOCS_URL);
-	version: ${git_info.get_revision()};
-	min_compatible_version: 6632;
-	param 0 {
-	    <!--! 'economy_selection' is remapped to 'economy' later because we can't control order and value separately here -->
-		economy_selection {
-			name: string(STR_PARAM_NAME_ECONOMIES);
-			desc: string(STR_PARAM_DESC_ECONOMIES);
-			min_value: 0;
-			max_value: ${len(economies)-1};
-			names: {
-			    <tal:build_economies repeat="economy economies">
-                    ${repeat.economy.index}: string(STR_PARAM_VALUE_ECONOMIES_${economy.id});
-			    </tal:build_economies>
-			};
-		}
-	}
+	version: 7000;
+	min_compatible_version: 7000;
+	
 	param 2 {
 	    <!--! legacy use of bit 2 as other bool params were deleted from here -->
 		restrict_open_during_gameplay {
@@ -94,11 +81,6 @@ basecost {
 	PR_CLEAR_INDUSTRY : 2;      // Deleting industries must also be expensive
 }
 
-<!--! Old default values for old savegames -->
-if (param[6] == 0) { param[6] = 100; }
-if (param[7] == 0) { param[7] = 100; }
-if (param[8] == 0) { param[8] = 400; }
-if (param[9] == 0) { param[9] = 300; }
 
 <!--! disable the default industries -->
 disable_item(FEAT_INDUSTRIES, 0, 36);

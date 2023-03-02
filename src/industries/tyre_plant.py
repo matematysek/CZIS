@@ -2,13 +2,7 @@ from industry import IndustrySecondary, TileLocationChecks
 
 industry = IndustrySecondary(
     id="tyre_plant",
-    accept_cargos_with_input_ratios=[
-        ("RUBR", 2),
-        ("ELEC", 2),
-        ("SULP", 2),
-        ("STWR", 2),
-    ],
-    combined_cargos_boost_prod=True,
+    accept_cargos_with_input_ratios=[("RFPR", 2), ("ELEC", 2), ("SULP", 2), ("STEL", 2),],
     prod_cargo_types_with_output_ratios=[("TYRE", 8)],
     prob_in_game="3",
     prob_map_gen="5",
@@ -19,11 +13,6 @@ industry = IndustrySecondary(
     pollution_and_squalor_factor=1,
 )
 
-industry.economy_variations["STEELTOWN"].enabled = True
-industry.economy_variations[
-    "STEELTOWN"
-].prob_in_game = "0"  # do not build during gameplay
-
 industry.add_tile(
     id="tyre_plant_tile_1",
     animation_length=71,
@@ -33,7 +22,7 @@ industry.add_tile(
         require_effectively_flat=True, disallow_industry_adjacent=True
     ),
 )
-
+industry.economy_variations["CZ"].enabled = True
 
 spriteset_ground = industry.add_spriteset(
     type="concrete",

@@ -8,23 +8,12 @@ industry = IndustrySecondary(
     prob_map_gen="5",
     map_colour="19",
     special_flags=["IND_FLAG_MILITARY_AIRPLANE_CAN_EXPLODE"],
-    location_checks=dict(
-        near_at_least_one_of_these_keystone_industries=[
-            ["blast_furnace", "basic_oxygen_furnace", "electric_arc_furnace"],
-            56,
-        ],
-        same_type_distance=72,
-    ),
     name="string(STR_IND_SLAG_GRINDING_PLANT)",
     nearby_station_name="string(STR_STATION_SILO)",
     fund_cost_multiplier="100 ",
     pollution_and_squalor_factor=2,
 )
-
-industry.economy_variations["STEELTOWN"].enabled = True
-industry.economy_variations[
-    "STEELTOWN"
-].prob_in_game = "0"  # do not build during gameplay
+industry.economy_variations["CZ"].enabled = True
 
 industry.add_tile(
     id="slag_grinding_plant_tile_1",

@@ -16,14 +16,7 @@ industry = IndustryPrimaryOrganic(
     graphics_change_dates=[1935, 1990],
     override_default_construction_states=True,
 )
-
-industry.economy_variations["BASIC_ARCTIC"].enabled = True
-industry.economy_variations["BASIC_ARCTIC"].prod_cargo_types_with_multipliers = [
-    ("WOOD", 24)
-]
-industry.economy_variations["IN_A_HOT_COUNTRY"].enabled = True
-
-
+industry.economy_variations["CZ"].enabled = True
 
 
 industry.add_tile(

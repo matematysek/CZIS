@@ -2,50 +2,17 @@ from industry import IndustrySecondary, TileLocationChecks
 
 industry = IndustrySecondary(
     id="chemical_plant",
-    accept_cargos_with_input_ratios=[("OIL_", 4), ("SULP", 2), ("PHOS", 2), ("NH3_", 2), ("NITR", 4)],
-    prod_cargo_types_with_output_ratios=[("RFPR", 8), ("FMSP", 3), ("ENSP", 3),("NHNO", 2)],
-    combined_cargos_boost_prod=True,
+    accept_cargos_with_input_ratios=[("PETR", 4), ("SULP", 2), ("NH3_", 2), ("NITR", 4)],
+    prod_cargo_types_with_output_ratios=[("RFPR", 8), ("FMSP", 3), ("ENSP", 3), ("NHNO", 2)],
     prob_in_game="3",
     prob_map_gen="5",
     map_colour="191",
-    # it's rare to force co-location of secondaries, but this one is near port by design
-    # !! this will fail if port is not available in economy
-    # wharf was added to avoid pathological case in Arctic Basic where checking for only port would often fail to yield a location (for reasons I didn't fully understand eh)
-    location_checks=dict(
-        near_at_least_one_of_these_keystone_industries=[["port", "wharf"], 96],
-        same_type_distance=128,
-    ),
     name="string(STR_IND_CHEMICAL_PLANT)",
     nearby_station_name="string(STR_STATION_HEAVY_INDUSTRY_2)",
     fund_cost_multiplier="170",
     pollution_and_squalor_factor=2,
 )
-
-industry.economy_variations["BASIC_TROPIC"].enabled = True
-
-industry.economy_variations["BASIC_ARCTIC"].enabled = True
-industry.economy_variations["BASIC_ARCTIC"].accept_cargos_with_input_ratios = [
-    ("SULP", 2),
-    ("PHOS", 2),
-    ("NH3_", 2),
-    ("POTA", 2),
-]
-industry.economy_variations["BASIC_ARCTIC"].prod_cargo_types_with_output_ratios = [
-    ("FERT", 4),
-    ("BOOM", 4),
-]
-
-# should be Specialty Chemicals Plant, and should also accept ACID??
-# also this should not be forced to be near port in BLTC
-industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].enabled = True
-industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].accept_cargos_with_input_ratios = [('SASH', 1), ('LYE_', 2), ('NH3_', 2), ('CHLO', 2), ('PHAC', 1)]
-industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].prod_cargo_types_with_output_ratios = [('SOAP', 4), ('ENUM', 4)]
-
-"""
-industry.economy_variations['IN_A_HOT_COUNTRY'].enabled = True
-industry.economy_variations['IN_A_HOT_COUNTRY'].accept_cargos_with_input_ratios = [('SULP', 2), ('PHOS', 2), ('NH3_', 2), ('POTA', 2)]
-industry.economy_variations['IN_A_HOT_COUNTRY'].prod_cargo_types_with_output_ratios = [('FMSP', 4), ('BOOM', 4)]
-"""
+industry.economy_variations["CZ"].enabled = True
 
 industry.add_tile(
     id="chemical_plant_tile_1",

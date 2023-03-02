@@ -3,7 +3,6 @@ from industry import IndustrySecondary, TileLocationChecks
 industry = IndustrySecondary(
     id="body_plant",
     accept_cargos_with_input_ratios=[("STSH", 4), ("COAT", 2), ("GLAS", 2), ("ELEC", 2)],
-    combined_cargos_boost_prod=True,
     prod_cargo_types_with_output_ratios=[("VBOD", 8)],
     prob_in_game="3",
     prob_map_gen="5",
@@ -14,11 +13,7 @@ industry = IndustrySecondary(
     pollution_and_squalor_factor=1,
 )
 
-
-industry.economy_variations["STEELTOWN"].enabled = True
-industry.economy_variations[
-    "STEELTOWN"
-].prob_in_game = "0"  # do not build during gameplay
+industry.economy_variations["CZ"].enabled = True
 
 industry.add_tile(
     id="body_plant_tile_1",

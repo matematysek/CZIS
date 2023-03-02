@@ -3,29 +3,17 @@ from industry import IndustrySecondary, TileLocationChecks
 industry = IndustrySecondary(
     id="dairy",
     accept_cargos_with_input_ratios=[("MILK", 6), ("PACK", 1)],
-    combined_cargos_boost_prod=True,
     prod_cargo_types_with_output_ratios=[("FOOD", 8)],
     prob_in_game="3",
     prob_map_gen="5",
     map_colour="169",
-    location_checks=dict(
-        near_at_least_one_of_these_keystone_industries=[["dairy_farm"], 72],
-        same_type_distance=72,
-    ),
     special_flags=["IND_FLAG_MILITARY_HELICOPTER_CAN_EXPLODE"],
     name="string(STR_IND_DAIRY)",
     nearby_station_name="string(STR_STATION_DAIRY_LANE)",
     fund_cost_multiplier="45",
 )
 
-industry.economy_variations["BASIC_TEMPERATE"].enabled = True
-industry.economy_variations["BASIC_TEMPERATE"].accept_cargos_with_input_ratios = [
-    ("MILK", 6)
-]
-
-industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].enabled = True
-industry.economy_variations['BETTER_LIVING_THROUGH_CHEMISTRY'].accept_cargos_with_input_ratios = [('MILK', 6), ('MNSP', 2)]
-
+industry.economy_variations["CZ"].enabled = True
 # tile with animation for flag
 industry.add_tile(
     id="dairy_tile_1",

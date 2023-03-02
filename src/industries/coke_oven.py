@@ -7,23 +7,12 @@ industry = IndustrySecondary(
     prob_in_game="3",
     prob_map_gen="5",
     map_colour="183",
-    location_checks=dict(
-        near_at_least_one_of_these_keystone_industries=[
-            ["blast_furnace", "coal_mine"],
-            72,
-        ],
-        same_type_distance=72,
-    ),
     name="string(STR_IND_COKE_OVEN)",
     nearby_station_name="string(STR_STATION_BANK_TOP)",
     fund_cost_multiplier="120",
     pollution_and_squalor_factor=2,
 )
-
-industry.economy_variations["STEELTOWN"].enabled = True
-industry.economy_variations[
-    "STEELTOWN"
-].prob_in_game = "0"  # do not build during gameplay
+industry.economy_variations["CZ"].enabled = True
 
 industry.add_tile(
     id="coke_oven_tile_1",

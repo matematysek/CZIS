@@ -7,19 +7,13 @@ industry = IndustrySecondary(
     prob_in_game="3",
     prob_map_gen="5",
     map_colour="194",
-    location_checks=dict(
-        near_at_least_one_of_these_keystone_industries=[["forest"], 72],
-        same_type_distance=72,
-    ),
     name="TTD_STR_INDUSTRY_NAME_SAWMILL",
     nearby_station_name="string(STR_STATION_MILL)",
     fund_cost_multiplier="97",
     pollution_and_squalor_factor=1,
 )
 
-industry.economy_variations["IN_A_HOT_COUNTRY"].enabled = True
-industry.economy_variations["BASIC_ARCTIC"].enabled = True
-
+industry.economy_variations["CZ"].enabled = True
 
 
 industry.add_tile(

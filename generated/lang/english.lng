@@ -485,7 +485,7 @@ STR_IND_PLAZA                                                                   
 STR_IND_POLYETHYLENE_PLANT                                                      :Polyethylene Plant
 STR_IND_POLYPROPYLENE_PLANT                                                     :Polypropylene Plant
 STR_IND_POLYMER_PLANT                                                           :Polymerisation Plant
-STR_IND_PORT                                                                    :Port
+STR_IND_PORT                                                                    :Warehouse
 STR_IND_POTASH_MINE                                                             :Potash Mine
 STR_IND_PYRITE_MINE                                                             :Pyrite Mine
 STR_IND_PYRITE_SMELTER                                                          :Pyrite Smelter
@@ -574,7 +574,7 @@ STR_STATION_HEAVY_INDUSTRY_2                                                    
 STR_STATION_HERDING_COOP                                                        :Lodge
 STR_STATION_INDUSTRY_ESTATE_1                                                   :Industrial Park
 STR_STATION_INDUSTRY_HARBOUR_1                                                  :Tidal Yard
-STR_STATION_INDUSTRY_HARBOUR_2                                                  :Waterside
+STR_STATION_INDUSTRY_HARBOUR_2                                                  :Logistics Area
 STR_STATION_INDUSTRY_HARBOUR_3                                                  :Landing Stage
 STR_STATION_INDUSTRY_HARBOUR_4                                                  :Shorefront
 STR_STATION_IRONSTONE                                                           :Ironstone

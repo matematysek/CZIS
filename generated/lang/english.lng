@@ -28,9 +28,9 @@ STR_PARAM_VALUE_ECONOMIES_BETTER_LIVING_THROUGH_CHEMISTRY                       
 STR_PARAM_VALUE_ECONOMIES_IN_A_HOT_COUNTRY                                      :INCOMPLETE Tropical
 STR_PARAM_VALUE_ECONOMIES_STEELTOWN                                             :Not Just Steeltown
 
-STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG                                   : {BLACK}(supplied)
-STR_EXTRA_TEXT_SECONDARY_NON_COMBINATORY                                        :{BLACK}Produces at maximum rate if {WHITE}any {BLACK}required cargo is supplied.
-STR_EXTRA_TEXT_SECONDARY_COMBINATORY                                            :{BLACK}For maximum production rate, supply {WHITE}all {BLACK}required cargos at least once every three months.
+STR_CARGO_SUBTYPE_DISPLAY_CARGO_SUPPLIED_FLAG                                   :
+STR_EXTRA_TEXT_SECONDARY_NON_COMBINATORY                                        :
+STR_EXTRA_TEXT_SECONDARY_COMBINATORY                                            :
 STR_EXTRA_TEXT_TOWN_PRODUCER                                                    :{BLACK}Production is proportional to town population. At least {WHITE}{SIGNED_WORD} units{BLACK} and not more than {WHITE}{SIGNED_WORD} units{BLACK} of cargo will be produced every month.
 STR_PRIMARY_PRODUCTION_1X                                                       :{BLACK}Current production: {YELLOW}Normal {}{}{BLACK}For {WHITE}Enhanced {BLACK}production deliver {SIGNED_WORD} crates of supplies at least once every three months.{}For {WHITE}Crankin' It {BLACK}production deliver {SIGNED_WORD} crates.
 STR_PRIMARY_PRODUCTION_2X                                                       :{BLACK}Current production: {YELLOW}Enhanced {}{}{BLACK}To keep this level, deliver {SIGNED_WORD} crates of supplies at least once every three months.{}For {WHITE}Crankin' It {BLACK}production deliver {SIGNED_WORD} crates.
@@ -87,7 +87,7 @@ STR_CARGO_NAME_FERTILISER                                                       
 STR_CARGO_NAME_FOOD_ADDITIVES                                                   :Food Additives
 STR_CARGO_NAME_FORGINGS_AND_CASTINGS                                            :Forgings & Castings
 STR_CARGO_NAME_FORMIC_ACID                                                      :Formic Acid
-STR_CARGO_NAME_FRUITS                                                           :Produce
+STR_CARGO_NAME_FRUITS                                                           :Fruits
 STR_CARGO_NAME_FURNITURE                                                        :Furniture
 STR_CARGO_NAME_GLASS                                                            :Glass
 STR_CARGO_NAME_HYDROCHLORIC_ACID                                                :Hydrochloric Acid
@@ -95,7 +95,7 @@ STR_CARGO_NAME_HYDROGEN                                                         
 STR_CARGO_NAME_KAOLIN                                                           :Kaolin
 STR_CARGO_NAME_LIMESTONE                                                        :Limestone
 STR_CARGO_NAME_LOGS                                                             :Logs
-STR_CARGO_NAME_LUMBER                                                           :Timber
+STR_CARGO_NAME_LUMBER                                                           :Lumber
 # cargo uses Sodium Hydroxide as string as it's interchangeable with Lye, but lye is convenient for filename / cargo label
 STR_CARGO_NAME_LYE                                                              :Sodium Hydroxide
 STR_CARGO_NAME_METAL                                                            :Metal
@@ -199,7 +199,7 @@ STR_CARGO_UNIT_FORMIC_ACID                                                      
 STR_CARGO_UNIT_FIBRES                                                           :{SIGNED_WORD} bale{P 0 "" s} of plant fibres
 STR_CARGO_UNIT_FISH                                                             :{WEIGHT} of fish & meat
 STR_CARGO_UNIT_FMSP                                                             :{SIGNED_WORD} crate{P 0 "" s} of farm supplies
-STR_CARGO_UNIT_FRUITS                                                           :{WEIGHT} of produce
+STR_CARGO_UNIT_FRUITS                                                           :{WEIGHT} of fruits
 STR_CARGO_UNIT_FURNITURE                                                        :{WEIGHT} of furniture
 STR_CARGO_UNIT_GLASS                                                            :{WEIGHT} of glass
 STR_CARGO_UNIT_HYDROCHLORIC_ACID                                                :{VOLUME} of hydrochloric acid
@@ -207,7 +207,7 @@ STR_CARGO_UNIT_HYDROGEN                                                         
 STR_CARGO_UNIT_KAOLIN                                                           :{WEIGHT} of kaolin
 STR_CARGO_UNIT_LIMESTONE                                                        :{WEIGHT} of limestone
 STR_CARGO_UNIT_LOGS                                                             :{WEIGHT} of logs
-STR_CARGO_UNIT_LUMBER                                                           :{WEIGHT} of timber
+STR_CARGO_UNIT_LUMBER                                                           :{WEIGHT} of lumber
 # cargo uses Sodium Hydroxide as string as it's interchangeable with Lye, but lye is convenient for filename / cargo label
 STR_CARGO_UNIT_LYE                                                              :{VOLUME} of sodium hydroxide
 STR_CARGO_UNIT_MANGANESE                                                        :{WEIGHT} of manganese
@@ -265,9 +265,9 @@ STR_CARGO_UNIT_VEHICLES                                                         
 STR_CARGO_UNIT_WOOL                                                             :{SIGNED_WORD} bale{P 0 "" s} of wool
 STR_CARGO_UNIT_YARN                                                             :{SIGNED_WORD} bale{P 0 "" s} of yarn
 STR_CARGO_UNIT_ZINC                                                             :{WEIGHT} of zinc
-STR_CARGO_UNIT_BATTERIES                                                        :{SIGNED_WORD} batter{P y  ies} of electricity
-STR_CARGO_UNIT_NOBATTERIES                                                        :{SIGNED_WORD} empty batter{P y  ies} 
-STR_CARGO_UNIT_PACK                                                             :{SIGNED_WORD} crate{P 0 "" s} of packaging
+STR_CARGO_UNIT_BATTERIES                                                        :{WEIGHT} of batter{P y  ies} of electricity
+STR_CARGO_UNIT_NOBATTERIES                                                      :{WEIGHT} of empty batter{P y  ies} 
+STR_CARGO_UNIT_PACK                                                             :{WEIGHT} of packaging
 # it seems that using 2 chars for these is a convention not a limit, I tested 4 chars and OpenTTD renders it fine - May 2020
 STR_CID_ACID                                                                    :{TINYFONT}ACID
 STR_CID_ALCOHOL                                                                 :{TINYFONT}ALCO

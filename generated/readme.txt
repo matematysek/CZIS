@@ -9,7 +9,7 @@ betatesters
 
 *SOURCE*
 https://github.com/matematysek/CZIS
-alternatively message author
+alternatively mail author at gebauer1m@gmail.com
 
 *MAIN DIFFERENCES*
 Electricity as cargo

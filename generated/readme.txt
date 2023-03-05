@@ -6,6 +6,7 @@ EmperorJake - XIS and AXIS ideas
 GarryG - Warehouse GFX
 gebik (GitHub user matematysek) - modifications for CZIS
 betatesters
+If I forgot about you, tell me.
 
 *SOURCE*
 https://github.com/matematysek/CZIS

@@ -196,7 +196,7 @@ STR_CARGO_UNIT_FOOD_ADDITIVES                                                   
 STR_CARGO_UNIT_FORGINGS_AND_CASTINGS                                            :{WEIGHT} of forgings and castings
 STR_CARGO_UNIT_FORMIC_ACID                                                      :{VOLUME} of formic acid
 STR_CARGO_UNIT_FIBRES                                                           :{SIGNED_WORD} bale{P 0 "" s} of plant fibres
-STR_CARGO_UNIT_FISH                                                             :{WEIGHT} of fish & meat
+STR_CARGO_UNIT_FISH                                                             :{WEIGHT} of fish
 STR_CARGO_UNIT_FMSP                                                             :{SIGNED_WORD} crate{P 0 "" s} of farm supplies
 STR_CARGO_UNIT_FRUITS                                                           :{WEIGHT} of fruits
 STR_CARGO_UNIT_FURNITURE                                                        :{WEIGHT} of furniture
@@ -602,7 +602,7 @@ STR_STATION_REFINERY                                                            
 STR_STATION_ROD_MILL                                                            :Rod Mill
 STR_STATION_RUBBER_COMPANY                                                      :Rubber Company
 STR_STATION_SALTPETER_WORKS                                                     :Saltpeter Works
-STR_STATION_SEAFOOD                                                             :Seafood
+STR_STATION_SEAFOOD                                                             :Carp Street
 STR_STATION_SHARP_STREET                                                        :Sharp Street
 STR_STATION_SHEEP_FOLD                                                          :Sheep Fold
 STR_STATION_SHOALS                                                              :Shoals
@@ -634,7 +634,7 @@ STR_COLOUR_LTBLUE                                                               
 STR_COLOUR_RED                                                                  :{RED}
 STR_COLOUR_YELLOW                                                               :{YELLOW}
 STR_COLOUR_WHITE                                                                :{WHITE}
-STR_GRF_NAME                                                    :CZIS 1.0.0
+STR_GRF_NAME                                                    :CZIS 1.0.1
 STR_GRF_DOCS_URL                                                :https://github.com/matematysek/CZIS
 
 STR_EMPTY                                                       :

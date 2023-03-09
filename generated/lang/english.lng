@@ -9,7 +9,7 @@ STR_PARAM_DESC_NO_OPENINGS                                                      
 STR_PARAM_NAME_COAST_DISTANCE_MARINE_INDUSTRY                                   :Maximum coastal distance of marine industries in tiles
 STR_PARAM_NAME_ECONOMIES                                                        :Economy
 STR_PARAM_NAME_NO_OPENINGS                                                      :Prevent industries opening during gameplay
-STR_PARAM_VALUE_SECONDARY_NEVER_CLOSE_0                                         :No limit
+STR_PARAM_VALUE_SECONDARY_NEVER_CLOSE_0                                         :DEPRECATED (No longer used)
 
 STR_PARAM_NAME_PRIMARY_LEVEL1_REQUIREMENT                                       :DEPRECATED (No longer used)
 STR_PARAM_NAME_PRIMARY_LEVEL2_REQUIREMENT                                       :DEPRECATED (No longer used)
@@ -51,7 +51,7 @@ STR_CARGO_NAME_ALUMINIA                                                         
 STR_CARGO_NAME_AMMONIA                                                          :Ammonia
 STR_CARGO_NAME_AMMONIUM_NITRATE                                                 :Ammonium Nitrate
 STR_CARGO_NAME_BAUXITE                                                          :Bauxite
-STR_CARGO_NAME_BEANS                                                            :Beans
+STR_CARGO_NAME_BEANS                                                            :Potatoes
 STR_CARGO_NAME_BUILDING_MATERIALS                                               :Building Materials
 STR_CARGO_NAME_CARBON_BLACK                                                     :Carbon Black
 STR_CARGO_NAME_CARBON_STEEL                                                     :Carbon Steel
@@ -168,7 +168,7 @@ STR_CARGO_UNIT_ALUMINIUM                                                        
 STR_CARGO_UNIT_AMMONIA                                                          :{VOLUME} of ammonia
 STR_CARGO_UNIT_AMMONIUM_NITRATE                                                 :{VOLUME} of ammonium nitrate
 STR_CARGO_UNIT_BAUXITE                                                          :{WEIGHT} of bauxite
-STR_CARGO_UNIT_BEANS                                                            :{WEIGHT} of beans
+STR_CARGO_UNIT_BEANS                                                            :{WEIGHT} of potatoes
 STR_CARGO_UNIT_BUILDING_MATERIALS                                               :{WEIGHT} of building materials
 STR_CARGO_UNIT_CARBON_BLACK                                                     :{WEIGHT} of carbon black
 STR_CARGO_UNIT_CARBON_STEEL                                                     :{WEIGHT} of carbon steel
@@ -502,7 +502,7 @@ STR_IND_SOAP_FACTORY                                                            
 STR_IND_SODA_ASH_MINE                                                           :Soda Ash Mine
 STR_IND_SOLVAY_PLANT                                                            :Solvay Plant
 # we use 'integrated_steel_mill' in code to avoid confusion with Steeltown mills, but it's easier to just use 'Steel Mill' for name that players see
-STR_IND_INTEGRATED_STEEL_MILL                                                   :Intgrated Steel Mill
+STR_IND_INTEGRATED_STEEL_MILL                                                   :Integrated Steel Mill
 STR_IND_STEEL_MILL																:Steel Mill
 STR_IND_SHEET_MILL                                                              :Sheet Mill
 STR_IND_SHEET_AND_PIPE_MILL                                                     :Sheet and Pipe Mill
@@ -634,7 +634,7 @@ STR_COLOUR_LTBLUE                                                               
 STR_COLOUR_RED                                                                  :{RED}
 STR_COLOUR_YELLOW                                                               :{YELLOW}
 STR_COLOUR_WHITE                                                                :{WHITE}
-STR_GRF_NAME                                                    :CZIS 1.0.2
+STR_GRF_NAME                                                    :CZIS 1.0.4
 STR_GRF_DOCS_URL                                                :https://github.com/matematysek/CZIS
 
 STR_EMPTY                                                       :

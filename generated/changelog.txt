@@ -5,6 +5,7 @@ Initial release to public
 Fixes mostly related to fish
 
 1.0.2 (2023-03-07)
+<<<<<<< HEAD
 Attempt to fix bugs.
 
 1.0.3 (2023-03-09)
@@ -12,3 +13,9 @@ Remove fish farm and fish.
 
 1.0.4 (2023-03-09)
 Beans changed to Potatoes, fix steel mills switched graphics.
+=======
+Fix Power Plant closing in February after start
+
+1.0.3 (2023-03-09)
+Fix fish farms
+>>>>>>> ea511549a926586c02e71e5cbe360fd9b124b521

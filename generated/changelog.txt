@@ -18,4 +18,7 @@ Fix Power Plant closing in February after start
 1.1.0 (2023-03-11)
 Reattempt to fix fish by removing them
 
+1.1.1 (2023-03-18)
+Fix coke oven not producing stuff
+
 

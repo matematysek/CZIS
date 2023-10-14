@@ -634,7 +634,7 @@ STR_COLOUR_LTBLUE                                                               
 STR_COLOUR_RED                                                                  :{RED}
 STR_COLOUR_YELLOW                                                               :{YELLOW}
 STR_COLOUR_WHITE                                                                :{WHITE}
-STR_GRF_NAME                                                    :CZIS 1.1.1
+STR_GRF_NAME                                                    :CZIS 1.2.1
 STR_GRF_DOCS_URL                                                :https://github.com/matematysek/CZIS
 
 STR_EMPTY                                                       :

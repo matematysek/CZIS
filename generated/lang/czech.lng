@@ -1,5 +1,7 @@
 ##grflangid 0x15
 ##plural 10
+##gender fp map f mnp m n np
+##case acc nom loc big voc ins dat small gen
 
 STR_GRF_DESC                                                                    :{ORANGE}CZIS: CZech Industry Set{}{BLACK} Navržen od gebika (github uživatel matematysek), založen na kódu FIRS 4 od andythenorth, FooBar, planetmaker, Terkhen a Yexo, s pomocí dalších. {SILVER}V readme jsou další informace včetně návodu. {BLACK}Licence: GPL v2.
 
@@ -181,7 +183,7 @@ STR_CARGO_UNIT_CHROMITE_ORE                                                     
 STR_CARGO_UNIT_CLAY                                                             :{WEIGHT} jílu
 STR_CARGO_UNIT_CLEANING_AGENTS                                                  :{WEIGHT} of cleaning agents
 STR_CARGO_UNIT_COAL_TAR                                                         :{VOLUME} of tar
-STR_CARGO_UNIT_COFFEE                                                           :{SIGNED_WORD} sack{P 0 "" s} of coffee
+STR_CARGO_UNIT_COFFEE                                                           :{SIGNED_WORD} asdf
 STR_CARGO_UNIT_COKE                                                             :{WEIGHT} koksu
 STR_CARGO_UNIT_COPPER                                                           :{WEIGHT} mědi
 STR_CARGO_UNIT_COPPER_CONCENTRATE                                               :{WEIGHT} of copper concentrate
@@ -189,13 +191,13 @@ STR_CARGO_UNIT_EDIBLE_OIL                                                       
 STR_CARGO_UNIT_ELECTRICAL_PARTS                                                 :{WEIGHT} elektrosoučástek
 STR_CARGO_UNIT_ENGINEERING_SUPPLIES                                             :{WEIGHT} inženýrských potřeb
 STR_CARGO_UNIT_ETHYLENE                                                         :{VOLUME} of monomer
-STR_CARGO_UNIT_EXPLOSIVES                                                       :{SIGNED_WORD} crate{P 0 "" s} of explosives
+STR_CARGO_UNIT_EXPLOSIVES                                                       :{SIGNED_WORD} asdf
 STR_CARGO_UNIT_FERROCHROME                                                      :{WEIGHT} of ferroalloys
 STR_CARGO_UNIT_FERTILISER                                                       :{WEIGHT} of fertiliser
 STR_CARGO_UNIT_FOOD_ADDITIVES                                                   :{WEIGHT} of food additives
 STR_CARGO_UNIT_FORGINGS_AND_CASTINGS                                            :{WEIGHT} of forgings and castings
 STR_CARGO_UNIT_FORMIC_ACID                                                      :{VOLUME} of formic acid
-STR_CARGO_UNIT_FIBRES                                                           :{SIGNED_WORD} bale{P 0 "" s} of plant fibres
+STR_CARGO_UNIT_FIBRES                                                           :{SIGNED_WORD} asdf
 STR_CARGO_UNIT_FISH                                                             :{WEIGHT} of fish
 STR_CARGO_UNIT_FMSP                                                             :{WEIGHT} farmářských potřeb
 STR_CARGO_UNIT_FRUITS                                                           :{WEIGHT} ovoce
@@ -218,7 +220,7 @@ STR_CARGO_UNIT_NAPHTHA                                                          
 STR_CARGO_UNIT_NICKEL                                                           :{WEIGHT} of nickel
 STR_CARGO_UNIT_NITRATES                                                         :{WEIGHT} dusičnanů
 STR_CARGO_UNIT_NITROGEN                                                         :{VOLUME} of nitrogen
-STR_CARGO_UNIT_NUTS                                                             :{SIGNED_WORD} sack{P 0 "" s}  of nuts
+STR_CARGO_UNIT_NUTS                                                             :{SIGNED_WORD} asdf
 STR_CARGO_UNIT_OXYGEN                                                           :{VOLUME} of oxygen
 STR_CARGO_UNIT_PACKAGING                                                        :{WEIGHT} obalů
 STR_CARGO_UNIT_PAINTS_AND_COATINGS                                              :{VOLUME} barev a laků
@@ -261,8 +263,8 @@ STR_CARGO_UNIT_VEHICLE_BODIES                                                   
 STR_CARGO_UNIT_VEHICLE_ENGINES                                                  :{WEIGHT} motorů
 STR_CARGO_UNIT_VEHICLE_PARTS                                                    :{WEIGHT} autodílů
 STR_CARGO_UNIT_VEHICLES                                                         :{WEIGHT} aut
-STR_CARGO_UNIT_WOOL                                                             :{SIGNED_WORD} bale{P 0 "" s} of wool
-STR_CARGO_UNIT_YARN                                                             :{SIGNED_WORD} bale{P 0 "" s} of yarn
+STR_CARGO_UNIT_WOOL                                                             :{SIGNED_WORD} asdf
+STR_CARGO_UNIT_YARN                                                             :{SIGNED_WORD} asdf
 STR_CARGO_UNIT_ZINC                                                             :{WEIGHT} of zinc
 STR_CARGO_UNIT_BATTERIES                                                        :{WEIGHT} nabitých akumulátorů
 STR_CARGO_UNIT_NOBATTERIES                                                      :{WEIGHT} vybitých akumulátorů
@@ -634,7 +636,7 @@ STR_COLOUR_LTBLUE                                                               
 STR_COLOUR_RED                                                                  :{RED}
 STR_COLOUR_YELLOW                                                               :{YELLOW}
 STR_COLOUR_WHITE                                                                :{WHITE}
-STR_GRF_NAME                                                    :CZIS 1.4.0
+STR_GRF_NAME                                                    :CZIS 1.5.0
 STR_GRF_DOCS_URL                                                :https://github.com/matematysek/CZIS
 
 STR_EMPTY                                                       :

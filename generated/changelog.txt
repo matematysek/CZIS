@@ -35,4 +35,7 @@ Finish Czech translation
 1.5.0 (2024-05-18)
 Fix Czech
 
+1.6.0 (2024-07-04)
+Balance Power Plants
+
 

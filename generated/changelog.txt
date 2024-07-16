@@ -38,4 +38,6 @@ Fix Czech
 1.6.0 (2024-07-04)
 Balance Power Plants
 
+1.7.0 (2024-07-16)
+Fix some cargos missing
 

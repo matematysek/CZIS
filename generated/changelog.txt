@@ -41,3 +41,5 @@ Balance Power Plants
 1.7.0 (2024-07-16)
 Fix some cargos missing
 
+2.0.0 (2024-11-30)
+Remove electricity chain due to impossible balancing

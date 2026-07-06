@@ -4,7 +4,8 @@ Welcome to CZIS - CZech Industry Set
 FIRS team including andythenorth - initial code and gfx plus help with development
 EmperorJake - XIS and AXIS ideas
 GarryG - Warehouse GFX
-gebik (GitHub user matematysek) - modifications for CZIS
+ghebeek (GitHub user matematysek) - modifications for CZIS
+CZTR team and community for testing
 betatesters
 If I forgot about you, tell me.
 
@@ -14,7 +15,7 @@ alternatively mail author at gebauer1m@gmail.com
 
 *MAIN DIFFERENCES*
 Electricity as cargo REMOVED AS OF 2.0.0 FOR BEING UNBALANCED
-Industries inputs are in four categories: Supplies (They are converted into extra production), Black Hole cargos (they are accepted but not considered for production) and Required cargos (in order for secondary production deliver those)
+Industries inputs are in three categories: Supplies (They are converted into extra production), Black Hole cargos (they are accepted but not considered for production) and Required cargos (in order for secondary production deliver those)
 
 *BLACK HOLE OVERVIEW*
 Assembly Plant: Packaging

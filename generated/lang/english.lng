@@ -1,7 +1,7 @@
 ##grflangid 0x01
 ##plural 0
 
-STR_GRF_DESC                                                                    :{ORANGE}CZIS: CZech Industry Set{}{BLACK} Designed by gebik (github user matematysek), based on FIRS 4 code by andythenorth, FooBar, planetmaker, Terkhen and Yexo, with help from many others. {SILVER}See readme for more information, including how to use CZIS. {BLACK}License: GPL v2.
+STR_GRF_DESC                                                                    :{ORANGE}CZIS: CZech Industry Set{}{BLACK} Designed by ghebeek (github user matematysek), based on FIRS 4 code by andythenorth, FooBar, planetmaker, Terkhen and Yexo, with help from many others. {SILVER}See readme for more information, including how to use CZIS. {BLACK}License: GPL v2.
 
 STR_PARAM_DESC_COAST_DISTANCE_MARINE_INDUSTRY                                   :Maximum distance of fishing grounds, oil rigs and dredging sites from the coast in tiles.
 STR_PARAM_DESC_ECONOMIES                                                        :Each economy provides a different combination of cargos and industries.{}{}For players who want simple gameplay, {SILVER}Basic {BLACK}economies contain fewer industries and cargos than other FIRS economies.{}{}The FIRS website provides detailed information about each economy.
@@ -634,7 +634,7 @@ STR_COLOUR_LTBLUE                                                               
 STR_COLOUR_RED                                                                  :{RED}
 STR_COLOUR_YELLOW                                                               :{YELLOW}
 STR_COLOUR_WHITE                                                                :{WHITE}
-STR_GRF_NAME                                                    :CZIS 2.0.0
+STR_GRF_NAME                                                    :CZIS 3.0.0
 STR_GRF_DOCS_URL                                                :https://github.com/matematysek/CZIS
 
 STR_EMPTY                                                       :

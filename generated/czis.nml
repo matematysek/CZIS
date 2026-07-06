@@ -3,8 +3,8 @@ grf {
 	name: string(STR_GRF_NAME);
 	desc: string(STR_GRF_DESC);
 	url: string(STR_GRF_DOCS_URL);
-	version: 7009;
-	min_compatible_version: 7009;
+	version: 8000;
+	min_compatible_version: 8000;
 	
 
 	param 2 {
@@ -1231,7 +1231,7 @@ item(FEAT_CARGOS, electricity_CZ, 21) {
         items_of_cargo: string(STR_CARGO_UNIT_BATTERIES);
         penalty_lowerbound: 10;
         single_penalty_length: 56;
-        capacity_multiplier: 2;
+        capacity_multiplier: 1;
         
         cargo_payment_list_colour: 8;
         station_list_colour: 8;
@@ -1262,7 +1262,7 @@ item(FEAT_CARGOS, noelectricity_CZ, 24) {
         unit_name: string(STR_CARGO_NAME_NOELECTRICITY);
         type_abbreviation: string(STR_CID_NOELECTRICITY);
         sprite: NEW_CARGO_SPRITE;
-        weight: 0.5;
+        weight: 1;
         is_freight: 1;
         cargo_classes: bitmask(CC_PIECE_GOODS);
         town_growth_effect: TOWNGROWTH_NONE;
@@ -1271,7 +1271,7 @@ item(FEAT_CARGOS, noelectricity_CZ, 24) {
         items_of_cargo: string(STR_CARGO_UNIT_NOBATTERIES);
         penalty_lowerbound: 10;
         single_penalty_length: 56;
-        capacity_multiplier: 2;
+        capacity_multiplier: 1;
         
         cargo_payment_list_colour: 8;
         station_list_colour: 8;
@@ -1303,7 +1303,7 @@ item(FEAT_CARGOS, engineering_supplies_CZ, 22) {
         unit_name: string(STR_CARGO_NAME_ENGINEERING_SUPPLIES);
         type_abbreviation: string(STR_CID_ENGINEERING_SUPPLIES);
         sprite: NEW_CARGO_SPRITE;
-        weight: 0.65;
+        weight: 1;
         is_freight: 1;
         cargo_classes: bitmask(CC_EXPRESS, CC_PIECE_GOODS);
         town_growth_effect: TOWNGROWTH_NONE;
@@ -1345,7 +1345,7 @@ item(FEAT_CARGOS, farm_supplies_CZ, 23) {
         unit_name: string(STR_CARGO_NAME_FARM_SUPPLIES);
         type_abbreviation: string(STR_CID_FARM_SUPPLIES);
         sprite: NEW_CARGO_SPRITE;
-        weight: 0.65;
+        weight: 1;
         is_freight: 1;
         cargo_classes: bitmask(CC_EXPRESS, CC_PIECE_GOODS);
         town_growth_effect: TOWNGROWTH_NONE;
@@ -1554,7 +1554,7 @@ item(FEAT_CARGOS, goods_CZ, 5) {
         unit_name: TTD_STR_CARGO_SINGULAR_GOODS;
         type_abbreviation: string(STR_CID_GOODS);
         sprite: NEW_CARGO_SPRITE;
-        weight: 0.5;
+        weight: 1;
         is_freight: 1;
         cargo_classes: bitmask(CC_EXPRESS);
         town_growth_effect: TOWNGROWTH_NONE;
@@ -1563,7 +1563,7 @@ item(FEAT_CARGOS, goods_CZ, 5) {
         items_of_cargo: TTD_STR_QUANTITY_GOODS;
         penalty_lowerbound: 10;
         single_penalty_length: 56;
-        capacity_multiplier: 2;
+        capacity_multiplier: 1;
         
         cargo_payment_list_colour: 45;
         station_list_colour: 45;
@@ -1722,7 +1722,7 @@ item(FEAT_CARGOS, livestock_CZ, 32) {
         unit_name: TTD_STR_CARGO_SINGULAR_LIVESTOCK;
         type_abbreviation: string(STR_CID_LIVESTOCK);
         sprite: NEW_CARGO_SPRITE;
-        weight: 0.3;
+        weight: 1;
         is_freight: 1;
         cargo_classes: bitmask(CC_PIECE_GOODS);
         town_growth_effect: TOWNGROWTH_NONE;
@@ -1889,7 +1889,7 @@ item(FEAT_CARGOS, mail_CZ, 2) {
         unit_name: TTD_STR_CARGO_SINGULAR_MAIL;
         type_abbreviation: string(STR_CID_MAIL);
         sprite: NEW_CARGO_SPRITE;
-        weight: 0.25;
+        weight: 1;
         is_freight: 0;
         cargo_classes: bitmask(CC_MAIL);
         town_growth_effect: TOWNGROWTH_MAIL;
@@ -1898,7 +1898,7 @@ item(FEAT_CARGOS, mail_CZ, 2) {
         items_of_cargo: TTD_STR_QUANTITY_MAIL;
         penalty_lowerbound: 6;
         single_penalty_length: 24;
-        capacity_multiplier: 2;
+        capacity_multiplier: 1;
         
         cargo_payment_list_colour: 15;
         station_list_colour: 15;
@@ -2015,7 +2015,7 @@ item(FEAT_CARGOS, oil_CZ, 37) {
         unit_name: TTD_STR_CARGO_SINGULAR_OIL;
         type_abbreviation: string(STR_CID_OIL);
         sprite: NEW_CARGO_SPRITE;
-        weight: 0.9;
+        weight: 1;
         is_freight: 1;
         cargo_classes: bitmask(CC_LIQUID);
         town_growth_effect: TOWNGROWTH_NONE;
@@ -2057,7 +2057,7 @@ item(FEAT_CARGOS, packaging_CZ, 38) {
         unit_name: string(STR_CARGO_UNIT_PACK);
         type_abbreviation: string(STR_CID_PACK);
         sprite: NEW_CARGO_SPRITE;
-        weight: 0.5;
+        weight: 1;
         is_freight: 1;
         cargo_classes: bitmask(CC_PIECE_GOODS);
         town_growth_effect: TOWNGROWTH_NONE;
@@ -2066,7 +2066,7 @@ item(FEAT_CARGOS, packaging_CZ, 38) {
         items_of_cargo: string(STR_CARGO_UNIT_PACK);
         penalty_lowerbound: 10;
         single_penalty_length: 56;
-        capacity_multiplier: 2;
+        capacity_multiplier: 1;
         
         cargo_payment_list_colour: 209;
         station_list_colour: 209;
@@ -2150,7 +2150,7 @@ item(FEAT_CARGOS, passengers_CZ, 0) {
         items_of_cargo: TTD_STR_QUANTITY_PASSENGERS;
         penalty_lowerbound: 0;
         single_penalty_length: 22;
-        capacity_multiplier: 4;
+        capacity_multiplier: 1;
         
         cargo_payment_list_colour: 152;
         station_list_colour: 152;
@@ -10030,7 +10030,7 @@ switch (FEAT_INDUSTRIES, SELF, assembly_plant_check_availability, 5) {
                 remove_cost_multiplier: 0;
                 remove_cost_multiplier: 0;
 
-                cargo_types: [accept_cargo("PACK"), accept_cargo("VPTS", produce_cargo("VEHI", 0.25)),accept_cargo("VPTS", produce_cargo("VEHI", 0.25)),accept_cargo("VBOD", produce_cargo("VEHI", 0.5)),accept_cargo("VENG", produce_cargo("VEHI", 0.25))];
+                cargo_types: [accept_cargo("PACK"), accept_cargo("VPTS", produce_cargo("VEHI", 0.5)),accept_cargo("VBOD", produce_cargo("VEHI", 0.5)),accept_cargo("VENG", produce_cargo("VEHI", 0.25))];
                 nearby_station_name: string(STR_STATION, string(STR_TOWN),string(STR_STATION_AUTOMOTIVE));
             }
         }
@@ -12117,7 +12117,7 @@ switch (FEAT_INDUSTRIES, SELF, basic_oxygen_furnace_check_availability, 5) {
                 remove_cost_multiplier: 0;
                 remove_cost_multiplier: 0;
                 
-                cargo_types: [accept_cargo("QLME"), accept_cargo("IORE", produce_cargo("STEL", 1), produce_cargo("STAL", 0.25), produce_cargo("SLAG", 0.5))];
+                cargo_types: [accept_cargo("COAL"), accept_cargo("QLME"), accept_cargo("IORE", produce_cargo("STEL", 1), produce_cargo("STAL", 0.25), produce_cargo("SLAG", 0.5))];
                 nearby_station_name: string(STR_STATION, string(STR_TOWN),string(STR_STATION_FURNACE));
             }
         }
@@ -21774,7 +21774,7 @@ switch (FEAT_INDUSTRIES, SELF, brick_works_check_availability, 5) {
                 remove_cost_multiplier: 0;
                 remove_cost_multiplier: 0;
                 
-                cargo_types: [accept_cargo("CLAY", produce_cargo("BDMT", 0.25)),accept_cargo("SAND", produce_cargo("BDMT", 0.25)),accept_cargo("COAL", produce_cargo("BDMT", 0.1))];
+                cargo_types: [accept_cargo("CLAY", produce_cargo("BDMT", 1)),accept_cargo("SAND", produce_cargo("BDMT", 1)),accept_cargo("COAL", produce_cargo("BDMT", 0.1))];
                 nearby_station_name: string(STR_STATION, string(STR_TOWN),string(STR_STATION_KILNS));
             }
         }
@@ -27266,7 +27266,7 @@ switch (FEAT_INDUSTRIES, SELF, cement_plant_check_availability, 5) {
                 remove_cost_multiplier: 0;
                 remove_cost_multiplier: 0;
                 
-                cargo_types: [accept_cargo("COAL"),accept_cargo("GRVL"),accept_cargo("QLME", produce_cargo("CMNT", 0.5)),accept_cargo("SAND", produce_cargo("BDMT", 0.5))];
+                cargo_types: [accept_cargo("COAL"),accept_cargo("GRVL"),accept_cargo("QLME", produce_cargo("CMNT", 1)),accept_cargo("SAND", produce_cargo("BDMT", 1))];
 
 				nearby_station_name: string(STR_STATION, string(STR_TOWN),string(STR_STATION_SILO));
             }
@@ -29831,7 +29831,7 @@ switch (FEAT_INDUSTRIES, SELF, chemical_plant_check_availability, 5) {
                 remove_cost_multiplier: 0;
                 remove_cost_multiplier: 0;
                 
-                cargo_types: [accept_cargo("PETR", produce_cargo("RFPR", 0.33)),accept_cargo("NH3_", produce_cargo("FMSP", 0.5)),accept_cargo("NITR", produce_cargo("NHNO", 0.5)),accept_cargo("NITR", produce_cargo("ENSP", 0.25))];
+                cargo_types: [accept_cargo("PETR", produce_cargo("RFPR", 0.8)),accept_cargo("NH3_", produce_cargo("FMSP", 1)),accept_cargo("NITR", produce_cargo("NHNO", 0.9)),accept_cargo("NITR", produce_cargo("ENSP", 0.5))];
                 				    
                 nearby_station_name: string(STR_STATION, string(STR_TOWN),string(STR_STATION_HEAVY_INDUSTRY_2));
             }
@@ -31433,7 +31433,7 @@ switch (FEAT_INDUSTRIES, SELF, civil_explosives_facility_check_availability, 5) 
                 remove_cost_multiplier: 0;
                 remove_cost_multiplier: 0;
                 
-                cargo_types: [accept_cargo("PETR", produce_cargo("ENSP", 0.25)),accept_cargo("NHNO", produce_cargo("ENSP", 0.25))];
+                cargo_types: [accept_cargo("PETR", produce_cargo("ENSP", 1)),accept_cargo("NHNO", produce_cargo("ENSP", 1))];
                 nearby_station_name: string(STR_STATION, string(STR_TOWN),string(STR_STATION_HEAVY_INDUSTRY_2));
             }
         }
@@ -124237,7 +124237,7 @@ switch (FEAT_INDUSTRIES, SELF, paper_mill_check_availability, 5) {
                 remove_cost_multiplier: 0;
                 remove_cost_multiplier: 0;
                 
-                cargo_types: [accept_cargo("KAOL",produce_cargo("GOOD",7.5),produce_cargo("PACK",7.5)),accept_cargo("WOOD",produce_cargo("GOOD",15),produce_cargo("PACK",15)),accept_cargo("SULP")];
+                cargo_types: [accept_cargo("KAOL",produce_cargo("GOOD",1),produce_cargo("PACK",1)),accept_cargo("WOOD",produce_cargo("GOOD",1),produce_cargo("PACK",1)),accept_cargo("SULP")];
                 nearby_station_name: string(STR_STATION, string(STR_TOWN),string(STR_STATION_MILL));
             }
         }
@@ -126765,7 +126765,7 @@ switch (FEAT_INDUSTRIES, SELF, plastics_plant_check_availability, 5) {
                 remove_cost_multiplier: 0;
                 remove_cost_multiplier: 0;
                 
-                cargo_types: [accept_cargo("RFPR", produce_cargo("PLAS", 0.5), produce_cargo("COAT", 0.2), produce_cargo("PACK", 0.5))];
+                cargo_types: [accept_cargo("RFPR", produce_cargo("PLAS", 0.9), produce_cargo("COAT", 0.2), produce_cargo("PACK", 0.5))];
                 nearby_station_name: string(STR_STATION, string(STR_TOWN),string(STR_STATION_MOULDINGS));
             }
         }

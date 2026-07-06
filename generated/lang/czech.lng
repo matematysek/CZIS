@@ -3,7 +3,7 @@
 ##gender fp map f mnp m n np
 ##case acc nom loc big voc ins dat small gen
 
-STR_GRF_DESC                                                                    :{ORANGE}CZIS: CZech Industry Set{}{BLACK} Navržen od gebika (github uživatel matematysek), založen na kódu FIRS 4 od andythenorth, FooBar, planetmaker, Terkhen a Yexo, s pomocí dalších. {SILVER}V readme jsou další informace včetně návodu. {BLACK}Licence: GPL v2.
+STR_GRF_DESC                                                                    :{ORANGE}CZIS: CZech Industry Set{}{BLACK} Navržen od ghebeeka (github uživatel matematysek), založen na kódu FIRS 4 od andythenorth, FooBar, planetmaker, Terkhen a Yexo, s pomocí dalších. {SILVER}V readme jsou další informace včetně návodu. {BLACK}Licence: GPL v2.
 
 STR_PARAM_DESC_COAST_DISTANCE_MARINE_INDUSTRY                                   :Maximální vzdálenost námořních průmyslů od pobřeží. (tiles)
 STR_PARAM_DESC_ECONOMIES                                                        :Každá ekonomie má jiný řetězec.{}{}Pro hráče co chtějí mít hru jednodušší, {SILVER}Základní {BLACK}ekonomie obsahují méně nákadů a průmyslů než ostatní{}{}
@@ -582,12 +582,12 @@ STR_STATION_IRONSTONE                                                           
 STR_STATION_JOINERS_SHOP                                                        :Tesařská
 STR_STATION_KILNS                                                               :Vápenka
 STR_STATION_KIMBERLITE_DEPOSITS                                                 :Kimberlite Deposits
-STR_STATION_LIMESTONE_MINES                                                     :Vápencová II.
+STR_STATION_LIMESTONE_MINES                                                     :Vápencová II
 STR_STATION_MANGANESE_MINES                                                     :Manganese Mines
 STR_STATION_MARKET                                                              :Tržnice
 STR_STATION_MERCHANTS_LANE                                                      :Obchodní
 STR_STATION_MILL                                                                :Mlýn
-STR_STATION_MINE                                                                :Důl Petr II.
+STR_STATION_MINE                                                                :Důl Petr 2
 STR_STATION_MOULDINGS                                                           :Dánská
 STR_STATION_OIL_RIG                                                             :Field
 STR_STATION_ORCHARDS                                                            :Sadová
@@ -636,7 +636,7 @@ STR_COLOUR_LTBLUE                                                               
 STR_COLOUR_RED                                                                  :{RED}
 STR_COLOUR_YELLOW                                                               :{YELLOW}
 STR_COLOUR_WHITE                                                                :{WHITE}
-STR_GRF_NAME                                                    :CZIS 2.0.0
+STR_GRF_NAME                                                    :CZIS 3.0.0
 STR_GRF_DOCS_URL                                                :https://github.com/matematysek/CZIS
 
 STR_EMPTY                                                       :

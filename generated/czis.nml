@@ -3,8 +3,8 @@ grf {
 	name: string(STR_GRF_NAME);
 	desc: string(STR_GRF_DESC);
 	url: string(STR_GRF_DOCS_URL);
-	version: 8000;
-	min_compatible_version: 8000;
+	version: 8005;
+	min_compatible_version: 8005;
 	
 
 	param 2 {
@@ -396,11 +396,7 @@ cargotable {
         CORE,
     
         POWR,
-    
-        ELEC,
         
-        NODC,
-    
         ENSP,
     
         FMSP,
@@ -482,6 +478,8 @@ cargotable {
         VPTS,
     
         VEHI,
+        
+        WSTE,
         
         
     
@@ -1204,89 +1202,7 @@ item(FEAT_CARGOS, electrical_parts_CZ, 20) {
 
             
         
-    
-
-    spriteset(icon_electricity) {
-        [10 + 20 * 5, 10 + 20 * 0, 10, 10, 0, 0,  "src/graphics/other/cargoicons.png"]
-    }
-
-
-    
-        
-           
-                
-item(FEAT_CARGOS, electricity_CZ, 21) {
-    property {
-        
-        type_name: string(STR_CARGO_NAME_ELECTRICITY);
-        unit_name: string(STR_CARGO_NAME_ELECTRICITY);
-        type_abbreviation: string(STR_CID_ELECTRICITY);
-        sprite: NEW_CARGO_SPRITE;
-        weight: 1;
-        is_freight: 1;
-        cargo_classes: bitmask(CC_PIECE_GOODS);
-        town_growth_effect: TOWNGROWTH_NONE;
-        town_growth_multiplier: 1.0;
-        units_of_cargo: TTD_STR_CRATES;
-        items_of_cargo: string(STR_CARGO_UNIT_BATTERIES);
-        penalty_lowerbound: 10;
-        single_penalty_length: 56;
-        capacity_multiplier: 1;
-        
-        cargo_payment_list_colour: 8;
-        station_list_colour: 8;
-        price_factor: 200;
-        cargo_label: "ELEC";
-        number: 21;
-    }
-    graphics {
-        icon_electricity;
-    }
-}
-
-    
-
-    spriteset(icon_noelectricity) {
-        [10 + 20 * 5, 10 + 20 * 0, 10, 10, 0, 0,  "src/graphics/other/cargoicons.png"]
-    }
-
-
-    
-        
-           
-                
-item(FEAT_CARGOS, noelectricity_CZ, 24) {
-    property {
-        
-        type_name: string(STR_CARGO_NAME_NOELECTRICITY);
-        unit_name: string(STR_CARGO_NAME_NOELECTRICITY);
-        type_abbreviation: string(STR_CID_NOELECTRICITY);
-        sprite: NEW_CARGO_SPRITE;
-        weight: 1;
-        is_freight: 1;
-        cargo_classes: bitmask(CC_PIECE_GOODS);
-        town_growth_effect: TOWNGROWTH_NONE;
-        town_growth_multiplier: 1.0;
-        units_of_cargo: TTD_STR_CRATES;
-        items_of_cargo: string(STR_CARGO_UNIT_NOBATTERIES);
-        penalty_lowerbound: 10;
-        single_penalty_length: 56;
-        capacity_multiplier: 1;
-        
-        cargo_payment_list_colour: 8;
-        station_list_colour: 8;
-        price_factor: 133;
-        cargo_label: "NODC";
-        number: 24;
-    }
-    graphics {
-        icon_noelectricity;
-    }
-}
-           
-        
-    
-
+ 
     spriteset(icon_engineering_supplies) {
         [10 + 20 * 11, 10 + 20 * 1, 10, 10, 0, 0,  "src/graphics/other/cargoicons.png"]
     }
@@ -2963,6 +2879,35 @@ item(FEAT_CARGOS, vehicles_CZ, 58) {
     }
     graphics {
         icon_vehicles;
+    }
+}
+
+item(FEAT_CARGOS, waste_cz, 59) {
+    property {
+        
+        type_name: string(STR_CARGO_NAME_WASTE);
+        unit_name: string(STR_CARGO_NAME_WASTE);
+        type_abbreviation: string(STR_CID_WSTE);
+        sprite: NEW_CARGO_SPRITE;
+        weight: 1.0;
+        is_freight: 1;
+        cargo_classes: bitmask(CC_BULK);
+        town_growth_effect: TOWNGROWTH_NONE;
+        town_growth_multiplier: 1.0;
+        units_of_cargo: TTD_STR_TONS;
+        items_of_cargo: string(STR_CARGO_UNIT_WASTE);
+        penalty_lowerbound: 15;
+        single_penalty_length: 128;
+        capacity_multiplier: 1;
+        
+        cargo_payment_list_colour: 30;
+        station_list_colour: 30;
+        price_factor: 175;
+        cargo_label: "WSTE";
+        number: 59;
+    }
+    graphics {
+        icon_goods;
     }
 }
 
@@ -6903,8 +6848,6 @@ switch (FEAT_INDUSTRIES, SELF, aluminium_plant_extra_text, 5) {
         
             ACID: aluminium_plant_cargo_subtype_display_cargo_ACID_economy_5;
         
-            ELEC: aluminium_plant_cargo_subtype_display_cargo_ELEC_economy_5;
-        
         return CB_RESULT_NO_TEXT;
     }
 
@@ -9933,9 +9876,7 @@ switch (FEAT_INDUSTRIES, SELF, assembly_plant_extra_text, 5) {
     
     switch (FEAT_INDUSTRIES, SELF, assembly_plant_cargo_subtype_display_switch_cargo_economy_5, getbits(extra_callback_info2, 16, 8)) {
         
-        
-            ELEC: assembly_plant_cargo_subtype_display_cargo_ELEC_economy_5;
-        
+                
             PACK: assembly_plant_cargo_subtype_display_cargo_PACK_economy_5;
         
             VPTS: assembly_plant_cargo_subtype_display_cargo_VPTS_economy_5;
@@ -16795,9 +16736,7 @@ switch (FEAT_INDUSTRIES, SELF, body_plant_extra_text, 5) {
             COAT: body_plant_cargo_subtype_display_cargo_COAT_economy_5;
         
             GLAS: body_plant_cargo_subtype_display_cargo_GLAS_economy_5;
-        
-            ELEC: body_plant_cargo_subtype_display_cargo_ELEC_economy_5;
-        
+                
         return CB_RESULT_NO_TEXT;
     }
 
@@ -20200,8 +20139,6 @@ switch (FEAT_INDUSTRIES, SELF, brewery_extra_text, 5) {
             FRUT: brewery_cargo_subtype_display_cargo_FRUT_economy_5;
         
             GRAI: brewery_cargo_subtype_display_cargo_GRAI_economy_5;
-        
-            ELEC: brewery_cargo_subtype_display_cargo_ELEC_economy_5;
         
             PACK: brewery_cargo_subtype_display_cargo_PACK_economy_5;
         
@@ -42671,9 +42608,7 @@ switch (FEAT_INDUSTRIES, SELF, component_factory_extra_text, 5) {
             STAL: component_factory_cargo_subtype_display_cargo_STAL_economy_5;
         
             POWR: component_factory_cargo_subtype_display_cargo_POWR_economy_5;
-        
-            ELEC: component_factory_cargo_subtype_display_cargo_ELEC_economy_5;
-        
+                
         return CB_RESULT_NO_TEXT;
     }
 
@@ -51273,9 +51208,7 @@ switch (FEAT_INDUSTRIES, SELF, engine_plant_extra_text, 5) {
             TYRE: engine_plant_cargo_subtype_display_cargo_TYRE_economy_5;
         
             RFPR: engine_plant_cargo_subtype_display_cargo_RFPR_economy_5;
-        
-            ELEC: engine_plant_cargo_subtype_display_cargo_ELEC_economy_5;
-        
+                
         return CB_RESULT_NO_TEXT;
     }
 
@@ -53045,9 +52978,7 @@ switch (FEAT_INDUSTRIES, SELF, factory_1_extra_text, 5) {
             STEL: factory_1_cargo_subtype_display_cargo_STEL_economy_5;
         
             PLAS: factory_1_cargo_subtype_display_cargo_PLAS_economy_5;
-        
-            ELEC: factory_1_cargo_subtype_display_cargo_ELEC_economy_5;
-        
+                
         return CB_RESULT_NO_TEXT;
     }
 
@@ -54284,9 +54215,7 @@ switch (FEAT_INDUSTRIES, SELF, factory_3_extra_text, 5) {
             PLAS: factory_3_cargo_subtype_display_cargo_PLAS_economy_5;
         
             ALUM: factory_3_cargo_subtype_display_cargo_ALUM_economy_5;
-        
-            ELEC: factory_3_cargo_subtype_display_cargo_ELEC_economy_5;
-        
+                
         return CB_RESULT_NO_TEXT;
     }
 
@@ -90343,7 +90272,7 @@ switch (FEAT_INDUSTRIES, SELF, hotel_check_availability, 5) {
                 remove_cost_multiplier: 0;
                 remove_cost_multiplier: 0;
                 
-                cargo_types: [accept_cargo("FOOD"),accept_cargo("BEER"),accept_cargo("PASS"),produce_cargo("PASS",10)];
+                cargo_types: [accept_cargo("FOOD"),accept_cargo("BEER"),accept_cargo("PASS"),produce_cargo("PASS",10), produce_cargo("WSTE", 8)];
                 nearby_station_name: string(STR_STATION, string(STR_TOWN),string(STR_STATION_BAR_GRILL_AND_ROOMS));
             }
         }
@@ -92371,7 +92300,7 @@ switch (FEAT_INDUSTRIES, SELF, integrated_steel_mill_check_availability, 5) {
                 remove_cost_multiplier: 0;
                 remove_cost_multiplier: 0;
                 
-                cargo_types: [accept_cargo("COKE",produce_cargo("STEL",0.4)),accept_cargo("LIME"),accept_cargo("IORE",produce_cargo("STEL",0.5))];
+                cargo_types: [accept_cargo("COKE",produce_cargo("STEL",0.4)),accept_cargo("LIME"),accept_cargo("SCMT"),accept_cargo("IORE",produce_cargo("STEL",0.5))];
                 nearby_station_name: string(STR_STATION, string(STR_TOWN),string(STR_STATION_HEAVY_INDUSTRY_2));
             }
         }
@@ -99986,6 +99915,16 @@ switch (FEAT_INDUSTRYTILES, SELF, junk_yard_switch_graphics, [
                                 ),
                                 
                                 LOAD_TEMP(3)
+                             );                
+                             WSTE: min(
+                                max(
+                                    
+                                    LOAD_TEMP(1) * 32 / 16,
+                                    
+                                    LOAD_TEMP(2)
+                                ),
+                                
+                                LOAD_TEMP(3)
                              );
             
         ],
@@ -100075,7 +100014,7 @@ switch (FEAT_INDUSTRIES, SELF, junk_yard_check_availability, 5) {
                 remove_cost_multiplier: 0;
                 remove_cost_multiplier: 0;
                 
-                cargo_types: [produce_cargo("SCMT",15)];
+                cargo_types: [produce_cargo("SCMT",15), produce_cargo("WSTE",31)];
                 nearby_station_name: string(STR_STATION, string(STR_TOWN),string(STR_STATION_BONEYARD));
             }
         }
@@ -110231,9 +110170,7 @@ switch (FEAT_INDUSTRIES, SELF, machine_works_extra_text, 5) {
         
         
             STAL: machine_works_cargo_subtype_display_cargo_STAL_economy_5;
-        
-            ELEC: machine_works_cargo_subtype_display_cargo_ELEC_economy_5;
-        
+                
             COPR: machine_works_cargo_subtype_display_cargo_COPR_economy_5;
         
             RFPR: machine_works_cargo_subtype_display_cargo_RFPR_economy_5;
@@ -110324,7 +110261,7 @@ switch (FEAT_INDUSTRIES, SELF, machine_works_check_availability, 5) {
                 remove_cost_multiplier: 0;
                 remove_cost_multiplier: 0;
                 
-                cargo_types: [accept_cargo("STAL", produce_cargo("POWR", 0.5)),accept_cargo("COPR", produce_cargo("POWR", 0.5)),accept_cargo("STAL", produce_cargo("NODC", 0.25)),accept_cargo("ACID", produce_cargo("NODC", 0.25))];
+                cargo_types: [accept_cargo("STAL", produce_cargo("POWR", 0.5)),accept_cargo("COPR", produce_cargo("POWR", 0.5))];
                 nearby_station_name: string(STR_STATION, string(STR_TOWN),string(STR_STATION_DYNAMO));
             }
         }
@@ -124716,9 +124653,7 @@ switch (FEAT_INDUSTRYTILES, SELF, petrol_pump_switch_graphics, [
             GOOD: petrol_pump_cargo_subtype_display_cargo_GOOD_economy_5;
         
             PETR: petrol_pump_cargo_subtype_display_cargo_PETR_economy_5;
-        
-            ELEC: petrol_pump_cargo_subtype_display_cargo_ELEC_economy_5;
-        
+                
         return CB_RESULT_NO_TEXT;
     }
 
@@ -124848,9 +124783,7 @@ switch(FEAT_INDUSTRIES, SELF, petrol_pump_produce_cargototal_input_cargo_deliver
                 GOOD: incoming_cargo_waiting("GOOD");
             
                 PETR: incoming_cargo_waiting("PETR");
-            
-                ELEC: incoming_cargo_waiting("ELEC");
-            
+                        
         ],
         [],
     0)
@@ -124865,9 +124798,7 @@ switch(FEAT_INDUSTRIES, SELF, petrol_pump_produce_cargototal_input_cargo_deliver
                     incoming_cargo_waiting("GOOD") +
                 
                     incoming_cargo_waiting("PETR") +
-                
-                    incoming_cargo_waiting("ELEC") +
-                
+                                
                 LOAD_PERM(35)
             ),
             
@@ -124897,15 +124828,6 @@ switch(FEAT_INDUSTRIES, SELF, petrol_pump_produce_cargototal_input_cargo_deliver
                     28
                     :
                     LOAD_PERM(3)
-                ),
-            
-                STORE_PERM(
-                    4,
-                    (incoming_cargo_waiting("ELEC") > 0)
-                    ?
-                    28
-                    :
-                    LOAD_PERM(4)
                 ),
             
         ]) {
@@ -125238,7 +125160,7 @@ switch (FEAT_INDUSTRIES, SELF, petrol_pump_check_availability, 5) {
                 remove_cost_multiplier: 0;
                 remove_cost_multiplier: 0;
                 
-                cargo_types: [accept_cargo("FOOD"),accept_cargo("GOOD"),accept_cargo("PETR"),accept_cargo("ELEC")];
+                cargo_types: [accept_cargo("FOOD"),accept_cargo("GOOD"),accept_cargo("PETR")];
                 nearby_station_name: string(STR_STATION, string(STR_TOWN),string(STR_STATION_PUMPS));
             }
         }
@@ -126679,9 +126601,7 @@ switch (FEAT_INDUSTRIES, SELF, plastics_plant_extra_text, 5) {
         
         
             RFPR: plastics_plant_cargo_subtype_display_cargo_RFPR_economy_5;
-        
-            ELEC: plastics_plant_cargo_subtype_display_cargo_ELEC_economy_5;
-        
+                
         return CB_RESULT_NO_TEXT;
     }
 
@@ -127100,9 +127020,7 @@ switch (FEAT_INDUSTRYTILES, SELF, plaza_switch_graphics, [
         
         
             PASS: plaza_cargo_subtype_display_cargo_PASS_economy_5;
-        
-            ELEC: plaza_cargo_subtype_display_cargo_ELEC_economy_5;
-        
+                
             MAIL: plaza_cargo_subtype_display_cargo_MAIL_economy_5;
         
         return CB_RESULT_NO_TEXT;
@@ -127230,9 +127148,7 @@ switch(FEAT_INDUSTRIES, SELF, plaza_produce_cargototal_input_cargo_delivered,
         [
             
                 PASS: incoming_cargo_waiting("PASS");
-            
-                ELEC: incoming_cargo_waiting("ELEC");
-            
+                        
                 MAIL: incoming_cargo_waiting("MAIL");
             
         ],
@@ -127245,8 +127161,6 @@ switch(FEAT_INDUSTRIES, SELF, plaza_produce_cargototal_input_cargo_delivered,
                 35,
                 
                     incoming_cargo_waiting("PASS") +
-                
-                    incoming_cargo_waiting("ELEC") +
                 
                     incoming_cargo_waiting("MAIL") +
                 
@@ -127261,15 +127175,6 @@ switch(FEAT_INDUSTRIES, SELF, plaza_produce_cargototal_input_cargo_delivered,
                     28
                     :
                     LOAD_PERM(1)
-                ),
-            
-                STORE_PERM(
-                    2,
-                    (incoming_cargo_waiting("ELEC") > 0)
-                    ?
-                    28
-                    :
-                    LOAD_PERM(2)
                 ),
             
                 STORE_PERM(
@@ -133669,7 +133574,7 @@ switch (FEAT_INDUSTRIES, SELF, port_check_availability, 5) {
                 remove_cost_multiplier: 0;
                 remove_cost_multiplier: 0;
                 
-                cargo_types:  [accept_cargo("BEER", produce_cargo("NITR",2), produce_cargo("COAT",2), produce_cargo("ACID",3), produce_cargo("AORE",2), produce_cargo("NH3_",3)),accept_cargo("VEHI", produce_cargo("NITR",2), produce_cargo("COAT",2), produce_cargo("ACID",3), produce_cargo("AORE",2), produce_cargo("NH3_",3)),produce_cargo("NITR",20), produce_cargo("COAT",20), produce_cargo("ACID",30), produce_cargo("AORE",20), produce_cargo("NH3_",30)];
+                cargo_types:  [accept_cargo("BEER", produce_cargo("NITR",0.3), produce_cargo("COAT",0.5), produce_cargo("ACID",0.4), produce_cargo("AORE",0.1), produce_cargo("NH3_",0.2)),accept_cargo("VEHI", produce_cargo("NITR",0.6), produce_cargo("COAT",1), produce_cargo("ACID",0.8), produce_cargo("AORE",0.2), produce_cargo("NH3_",1)),produce_cargo("NITR",20), produce_cargo("ACID",30), produce_cargo("AORE",20), produce_cargo("NH3_",30)];
                 nearby_station_name: string(STR_STATION, string(STR_TOWN),string(STR_STATION_INDUSTRY_HARBOUR_2));
             }
         }
@@ -134609,9 +134514,7 @@ switch(FEAT_INDUSTRIES, SELF, power_plant_produce_cargototal_input_cargo_deliver
                     incoming_cargo_waiting("PETR") +
                 
                     incoming_cargo_waiting("POWR") +
-                    
-                    incoming_cargo_waiting("NODC") +
-                
+                                    
                 LOAD_PERM(35)
             ),
             
@@ -134637,14 +134540,6 @@ switch(FEAT_INDUSTRIES, SELF, power_plant_produce_cargototal_input_cargo_deliver
                 STORE_PERM(
                     3,
                     (incoming_cargo_waiting("POWR") > 0)
-                    ?
-                    28
-                    :
-                    LOAD_PERM(3)
-                ),
-                STORE_PERM(
-                    3,
-                    (incoming_cargo_waiting("NODC") > 0)
                     ?
                     28
                     :
@@ -134984,7 +134879,7 @@ switch (FEAT_INDUSTRIES, SELF, power_plant_check_availability, 5) {
                 remove_cost_multiplier: 0;
                 remove_cost_multiplier: 0;
                 
-                cargo_types: [accept_cargo("POWR"),accept_cargo("COAL"),accept_cargo("PETR")];
+                cargo_types: [accept_cargo("POWR"),accept_cargo("COAL"),accept_cargo("PETR"),accept_cargo("WSTE")];
                 nearby_station_name: string(STR_STATION, string(STR_TOWN),string(STR_STATION_POWERHUNGRY));
             }
         }
@@ -151898,9 +151793,7 @@ switch (FEAT_INDUSTRIES, SELF, tyre_plant_extra_text, 5) {
         
         
             RFPR: tyre_plant_cargo_subtype_display_cargo_RFPR_economy_5;
-        
-            ELEC: tyre_plant_cargo_subtype_display_cargo_ELEC_economy_5;
-        
+                
             SULP: tyre_plant_cargo_subtype_display_cargo_SULP_economy_5;
         
             STEL: tyre_plant_cargo_subtype_display_cargo_STEL_economy_5;
@@ -161345,7 +161238,7 @@ switch (FEAT_INDUSTRIES, SELF, vineyard_check_availability, 5) {
                 remove_cost_multiplier: 0;
                 remove_cost_multiplier: 0;
                 
-                cargo_types: [accept_cargo("PACK", produce_cargo("BEER",2), produce_cargo("FRUT",1)),accept_cargo("FMSP", produce_cargo("BEER",2), produce_cargo("FRUT",1)),produce_cargo("BEER",20), produce_cargo("FRUT",10)];
+                cargo_types: [accept_cargo("PACK"),accept_cargo("FMSP"),produce_cargo("BEER",20), produce_cargo("FRUT",10)];
                 nearby_station_name: string(STR_STATION, string(STR_TOWN),string(STR_STATION_WINERY));
             }
         }

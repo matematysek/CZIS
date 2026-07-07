@@ -23,7 +23,7 @@ Basic Oxygen Furnace: Quicklime
 Blast Furnace: Coke plus Limestone
 Body Plant: Paints and Coatings plus Glass
 Brewery: Packaging
-Cement Plant: Coal
+Cement Plant: Coal and Stone
 Copper Refinery: Refined Oil
 Dairy: Packaging
 Flour Mill: Packaging

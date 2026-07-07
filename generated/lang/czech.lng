@@ -7,7 +7,7 @@ STR_GRF_DESC                                                                    
 
 STR_PARAM_DESC_COAST_DISTANCE_MARINE_INDUSTRY                                   :Maximální vzdálenost námořních průmyslů od pobřeží. (tiles)
 STR_PARAM_DESC_ECONOMIES                                                        :Každá ekonomie má jiný řetězec.{}{}Pro hráče co chtějí mít hru jednodušší, {SILVER}Základní {BLACK}ekonomie obsahují méně nákadů a průmyslů než ostatní{}{}
-STR_PARAM_DESC_NO_OPENINGS                                                      :Standartně vznikají nové budovy průmyslů.{}{}Pokud je {SILVER}zabránění otevírání {BLACK}zapnuto, hráč nebude moci zakládat nové budovy ani nebudou vznikat samy od sebe.
+STR_PARAM_DESC_NO_OPENINGS                                                      :Standardně vznikají nové budovy průmyslů.{}{}Pokud je {SILVER}zabránění otevírání {BLACK}zapnuto, hráč nebude moci zakládat nové budovy ani nebudou vznikat samy od sebe.
 STR_PARAM_NAME_COAST_DISTANCE_MARINE_INDUSTRY                                   :Maximální vzdálenost námořních průmyslů od pobřeží. (tiles)
 STR_PARAM_NAME_ECONOMIES                                                        :Ekonomie
 STR_PARAM_NAME_NO_OPENINGS                                                      :Zabránění otevírání nových průmyslových budov
@@ -161,6 +161,7 @@ STR_CARGO_NAME_ZINC                                                             
 STR_CARGO_NAME_ELECTRICITY                                                      :Elektřina (v nabitých akumulátorech)
 STR_CARGO_NAME_PACK                                                             :Obaly
 STR_CARGO_NAME_NOELECTRICITY                                                    :Vybité akumulátory
+STR_CARGO_NAME_WASTE                                                            :Odpad
 
 STR_CARGO_UNIT_ACID                                                             :{VOLUME} kyseliny
 STR_CARGO_UNIT_ALCOHOL                                                          :{VOLUME} alkoholu
@@ -269,6 +270,8 @@ STR_CARGO_UNIT_ZINC                                                             
 STR_CARGO_UNIT_BATTERIES                                                        :{WEIGHT} nabitých akumulátorů
 STR_CARGO_UNIT_NOBATTERIES                                                      :{WEIGHT} vybitých akumulátorů
 STR_CARGO_UNIT_PACK                                                             :{WEIGHT} obalů
+STR_CARGO_UNIT_WASTE                                                            :{WEIGHT} odpadu
+
 # it seems that using 2 chars for these is a convention not a limit, I tested 4 chars and OpenTTD renders it fine - May 2020
 STR_CID_ACID                                                                    :{TINYFONT}ACID
 STR_CID_ALCOHOL                                                                 :{TINYFONT}ALCO
@@ -387,6 +390,8 @@ STR_CID_ZINC                                                                    
 STR_CID_ELECTRICITY                                                             :{TINYFONT}DC
 STR_CID_NOELECTRICITY                                                           :{TINYFONT}NODC
 STR_CID_PACK                                                                    :{TINYFONT}PACK
+STR_CID_WSTE                                                                  :{TINYFONT}WSTE
+
 
 STR_ERR_CLIMATE_TOYLAND                                                         :{ORANGE}FIRS is not designed to be used with Toyland climate
 STR_ERR_OPENTTD_VERSION                                                         :{ORANGE}E00: FIRS requires OpenTTD 1.7.0 (or for those using trunk builds, r27769)
@@ -463,7 +468,7 @@ STR_IND_HARDWARE_STORE                                                          
 STR_IND_HOTEL                                                                   :Hotel
 STR_IND_HERDING_COOP                                                            :JZD
 STR_IND_IRON_WORKS                                                              :Železárny
-STR_IND_JUNKYARD                                                                :Ekologická likvidace vozidel
+STR_IND_JUNKYARD                                                                :Ekologická likvidace vozidel a Sběrný dvůr
 STR_IND_LATEX_PROCESSOR                                                         :Latex Processor
 STR_IND_LIME_KILN                                                               :Vápenka
 STR_IND_LIMESTONE_MINE                                                          :Důl na Vápenec
@@ -478,7 +483,7 @@ STR_IND_NITRATE_MINE                                                            
 STR_IND_ORCHARD_PIGGERY                                                         :Sad a Prasečák
 STR_IND_PAINT_FACTORY                                                           :Továrna na barvy
 STR_IND_PEATLANDS                                                               :Rašeliniště
-STR_IND_PETROLPUMP                                                              :Čerpací a dobíjecí stanice
+STR_IND_PETROLPUMP                                                              :Čerpací stanice
 STR_IND_PHOSPHATE_MINE                                                          :Phosphate Mine
 STR_IND_PHOSPHORIC_ACID_PLANT                                                   :Phosphoric Acid Plant
 STR_IND_PLASTICS_PLANT                                                          :Továrna na plasty
@@ -490,7 +495,7 @@ STR_IND_PORT                                                                    
 STR_IND_POTASH_MINE                                                             :Potash Mine
 STR_IND_PYRITE_MINE                                                             :Pyrite Mine
 STR_IND_PYRITE_SMELTER                                                          :Pyrite Smelter
-STR_IND_POWER_PLANT                                                             :Elektrárna
+STR_IND_POWER_PLANT                                                             :Elektrárna a Spalovna
 STR_IND_QUARRY                                                                  :Lom
 STR_IND_RANCH                                                                   :Ranč
 STR_IND_RECYCLING_DEPOT                                                         :Sběrný dvůr
@@ -636,7 +641,7 @@ STR_COLOUR_LTBLUE                                                               
 STR_COLOUR_RED                                                                  :{RED}
 STR_COLOUR_YELLOW                                                               :{YELLOW}
 STR_COLOUR_WHITE                                                                :{WHITE}
-STR_GRF_NAME                                                    :CZIS 3.0.0
+STR_GRF_NAME                                                    :CZIS 3.2.1
 STR_GRF_DOCS_URL                                                :https://github.com/matematysek/CZIS
 
 STR_EMPTY                                                       :

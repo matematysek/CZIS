@@ -44,11 +44,14 @@ Fix some cargos missing
 2.0.0 (2024-11-30)
 Remove electricity chain due to impossible balancing
 
-3.0.0 (2026-06-07)
+3.0.0 (2026-07-06)
 Fix bugs
 
-3.1.0 (2026-06-07)
+3.1.0 (2026-07-06)
 Add Waste and fix more bugs
 
-3.2.0 (2026-06-08)
+3.2.0 (2026-07-06)
 Fix more bugs and unbalancement
+
+3.2.1 (2026-07-08)
+Even more bugs fixed and electricity properly gone
